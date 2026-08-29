@@ -1,0 +1,14 @@
+# Render blueprint — B2B Blinkit + Swiggy inventory (no Zepto, no login).
+# New + -> Blueprint -> point at the repo. Free plan; filesystem is ephemeral
+# (fine — all data is committed in backend/data, nothing is written at runtime).
+services:
+  - type: web
+    name: b2b-inventory
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.5"

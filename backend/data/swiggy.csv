@@ -1,0 +1,707 @@
+city,store_id,store_name,latitude,longitude,fssai_address,fssai_number,source_folder
+,1381848.0,Instamart,12.81814133,77.66399533,"Nos. 9 and 10 ,Thirupalya Village, Jigani Hobli, Anekal Taluk, District, Hebbagodi, Bengaluru-560099",11222302002022,Swiggy
+,1402141.0,Instamart,12.792444,77.706833,"GF no 533/867 OPP SURYA NAGAR PHASE 1, CHANDAPURA-GGALURU,BANGALORE, KARNATAKA  560099",2.02411E+16,Swiggy
+,1393562.0,Instamart,12.784306,77.660056,"GF, Sy no 693, Rajapura Village, Jigani Hobli, Bangalore - 560105",11224302001147,Swiggy
+,1387560.0,Instamart,12.8319844,77.6906079,"GF, Sy no 109/1,Kammasandra Village, Attibele Hobli, Anekal Taluka, Bengaluru-560100",11223302001892,Swiggy
+,1402440.0,Instamart,12.834111,77.666417,"GF, Survey No 20/2, situated at Gollahalli village, Attibele Hobli, Anekal Taluk - 562106",2.02501E+16,Swiggy
+,1384787.0,Instamart,12.837603,77.64537,"GF,Sy. 306/6 Hulimangala Village, Jigani Hobli, Anekal Taluk Bengaluru District-560105",11223302000696,Swiggy
+,1385835.0,Instamart,12.849095,77.654592,"GF,Sy.No. 53/19 (Old Sy. No. 53/6) ,Doddathogur Village,Begur Hobli,Bengaluru South Taluk -560100",11223302091643,Swiggy
+,1380710.0,Instamart,12.84618904,77.68438361,"GF,prop No.1 ,Chikkanagamangala Village, Sarjapura Hobli, Anekal Taluk,Bengaluru District -560100",11222302001468,Swiggy
+,1382870.0,Instamart,12.858709,77.611671,"GF,Sy. No. 59/1 situated at Yelenahalli Village, Begur Hobli,  Begur Bengaluru-560068",11223334000385,Swiggy
+,1382707.0,Instamart,12.85655009,77.59375954,"Sy. No. 62/3 ,Gottigere Village, Uttarahalli Hobli ,BBMP Ward No. 194 Gottigere-Bengaluru -560083",11223334000129,Swiggy
+,1399695.0,Instamart,12.861425,77.780746,"Gf, survey no.569/2a,sarjapura village, anekal taluk,sarjapura hobli, anekal, bangalore urban, karnataka, 562125",2.02411E+16,Swiggy
+,1390219.0,Instamart,12.871839,77.542816,"First Floor,Sy no 56,54/3,53, Vajrahalli Village,Uttarahalli hobli,Bangalore south -560062",2.02403E+16,Swiggy
+,1402441.0,Instamart,12.8621571,77.6840006,"GF,K.no 82/2, situated at Doddanagamangala Bangalore Karnataka - 560068",2.02501E+16,Swiggy
+,1400922.0,Instamart,12.887056,77.458389,"Gf, bearing khatha no.43, kambipura village, kumbalagodu,bangalore urban, karnataka, 560060",2.02411E+16,Swiggy
+,1239157.0,Instamart,12.877897,77.637238,"Aratt Girija Towers,1st Floor, opposite Lake View County, Singasandra, Bengaluru, Karnataka 560068",11222334000408,Swiggy
+,1398437.0,Instamart,12.913417,77.485417,"GF, comprised in survey no 40, Kengeri village, Hobli Bangalore Karnataka -560060",2.02409E+16,Swiggy
+,1401248.0,Instamart,12.884321,77.559006,"Gf, comprised in s.no 28-1A/P1,Khata no 1375, Doddakallasandra village, Uttarahalli Bangalore-560062",2.0241E+16,Swiggy
+,1401110.0,Instamart,12.875824,77.591164,"Gf, bannerughatta road, kalena agrahara to kotthunur dinne andbommanahalli,  karnataka-560076",11224334002368,Swiggy
+,1388681.0,Instamart,12.876722,77.609472,"GF, situated at Hulimavu Village, Begur Hobli, Bengaluru South Taluk, Bengaluru -560076",11224334000204,Swiggy
+,1401463.0,Instamart,12.868222,77.657778,"GF, S.no 12/2,  Beratana Agrahara Village, Begur Hobli,Bengaluru Bengaluru -560100",2.02502E+16,Swiggy
+,1398438.0,Instamart,12.882326,77.676338,"GF, old survey no .91/8, raysandra village , anekal taluk,benagaluru , anekal, bangalore urban, karnataka, 560099""",2.02409E+16,Swiggy
+,1399354.0,Instamart,12.9022899,77.5832106,"Gf, bearing khatha no.22/a-1, puttenahalli main road, uttarahalli hobli, Bangalore, jayanagar, karnataka, 560078",2.0241E+16,Swiggy
+,1397048.0,Instamart,12.888222,77.5985,"Gf, s.no 8/1-b, 39/, Tarekere village, 2nd main road, begur hobli, bangalore, bommanahalli,karnataka, 560076",2.02408E+16,Swiggy
+,1381157.0,Instamart,12.90186387,77.72350951,"GF,sy no-24/1B,Situated at mullur village,Varthur Hobli,Bengaluru-560035",11222333002133,Swiggy
+,1396285.0,Instamart,12.92475,77.514306,"GF, land bearing m no.2460/1703/1633/1541, halagevaderahalli village, kengeri hobli, bangalore,karnataka, 560098",2.02407E+16,Swiggy
+,1237709.0,Instamart,12.894056,77.565621,"GF, No. 37, Khatha No. 6637/37 Industrial Layout in Yelachenahalli,Yelachenahalli Bengaluru-560078",11222334000247,Swiggy
+,788740.0,Instamart,12.89767,77.62088,"1st Floor, PID No. 1492/30/3/1 Kodichikkanahalli Village, Begur Hobli, Bangalore 560076",11221334001428,Swiggy
+,1113105.0,Instamart,12.900472,77.633278,"1st floor No. 1025/1007/1012/39/2 Garvebhavipalya, Mangammanapalya Bengaluru-560068",11221334002414,Swiggy
+,1392660.0,Instamart,12.892389,77.649333,"GROUND FLOOR, SY. 42/6, HARALAGUNTE VILLAGE, BANGALORE, Bommanahalli, B.B.M.P South, Karnataka, 560068",2.02404E+16,Swiggy
+,1387903.0,Instamart,12.905595,77.684547,"GF,Sy no 14/2, Junnasandra Village, Varthur Hobli,  ward no 85-Marathahalli 560035",2.02402E+16,Swiggy
+,1400215.0,Instamart,12.928417,77.740528,"GF,S.no 215/8, Gunjur Village, Varthur Hobli,Bengaluru -560087",2.02501E+16,Swiggy
+,1387077.0,Instamart,12.911707,77.556404,"First Floor , PLot no.07,Subramanyapura main road ,Chikkalasandra,Padmanabhanagar,Bangalore-560061",11223334001643,Swiggy
+,1382349.0,Instamart,12.90416123,77.6006399,"GF, Site No.177/5B, Ward No. -187 Puttenahalli, Bilekahalli Village, Begur Hobli, Bengaluru -560092",11222334002392,Swiggy
+,1386090.0,Instamart,12.904262,77.642027,"GF,Site no 1 C,Yellakunte Village,Begur Hobli,Mangammanapalya, Bangalore-560068",11223334001488,Swiggy
+,1395720.0,Instamart,12.9001419,77.6600807,"Bearing site no.3 and 4, haralur village, varthur hobli, bangalore, mahadevapura,karnataka, 560068",2.02408E+16,Swiggy
+,1392421.0,Instamart,12.909483,77.697731,"SY no- 23/5,GF Doddakannelli village, Varthur Hobli Bangalore, Karnataka -560035",11224333001432,Swiggy
+,1181690.0,Instamart,12.9296793,77.5738297,"No- 61,Gf, AK Colony,KR Road,7th Block,Jayanagar,Bangalore-560010",11221334002534,Swiggy
+,1397796.0,Instamart,12.909667,77.602889,"GF land no no.11,  n.s.palya village, begur hobli, kaverappa industrial area, bangalore, bommanahalli, b.b.m.p south, karnataka, 560076""",2.02408E+16,Swiggy
+,1392080.0,Instamart,12.912565,77.636736,"GROUND FLOOR, SITE NO.57, SECTOR-V1, HOSUR SARJAPUR ROAD LAYOUT, BANGALORE, Bommanahalli, B.B.M.P South, Karnataka, 560102",2.02404E+16,Swiggy
+,1231052.0,Instamart,12.91447708,77.6447778,"1st Floor No. 1784, Sector-1 , HSR Layout, BBMP Ward No. 174 Bengaluru-560102",11222334000160,Swiggy
+,1402605.0,Instamart,12.913961,77.666466,"FF, Ambalipura Village, Varthur Hobli, Bengaluru East Taluk, Bengaluru - 560102",2.02501E+16,Swiggy
+,1385836.0,Instamart,12.907659,77.675316,"GF,Site Nos. 9 and 10,Mahadevi Layout,Kasavanahalli Village,Bellandur Bengaluru -560035",11223335001625,Swiggy
+,1401246.0,Instamart,12.958528,77.480528,"Gf, Site No. 567/6 feet, 5th Block, Sir M. Vishveshwaraiah Layout,Bengaluru- 560098",11225332000057,Swiggy
+,788742.0,Instamart,12.9273438,77.5475607,"1st floor, No. 215, PID No. 54-33-215,Banashankari 3rd stage, Srinivas Nagar, Bangalore 560085",11221334001427,Swiggy
+,1393564.0,Instamart,12.927417,77.609639,"Gf,comprised in S.no.87/2a, tavarekere village, begur hobli, bangalore, btm layout,karnataka, 560029",2.02405E+16,Swiggy
+,1396284.0,Instamart,12.937972,77.626694,"Sy no 21/2, Ejipura village, Begur Hobli, BTM layout Bangalore, Karnataka 560095",2.02407E+16,Swiggy
+,1386714.0,Instamart,12.921787,77.677376,"GF,Sy no 68/1,Bellandur Village,Varthur Hobli,Bangalore South Taluka,Bangalore-560103",11223333002386,Swiggy
+,1382254.0,Instamart,12.93006119,77.67924249,"Sy. 15/11 and 15/12 totally 6 Guntas,Bellandur Village, Varthur Hobli,Bengaluru District-560103",11222333002727,Swiggy
+,1388998.0,Instamart,12.92336,77.695092,"GF,Survey No. 16/4 situated deva Bisanahalli village  Varthur Hobli ,Bellandur ,Bengaluru -560103",11224333000035,Swiggy
+,1402444.0,Instamart,12.935083,77.608611,"GF, Municipal No 7,Krishnanagar Industrial area, Audugodi village, Bangalore - 560034",2.02501E+16,Swiggy
+,901839.0,Instamart,12.93277,77.615379,"GF,Site no.85,PID No. 67-3-85,Koramangala Industrial Layout, 5th Block,Koramangala,Bangalore -560034",11221334001710,Swiggy
+,1390216.0,Instamart,12.927366,77.6650431,"GROUND FLOOR, BEARING SY.15, IBBALUR VILLAGE, AGARA POST, BEGUR HOBLI, BANGALORE, Bommanahalli, B.B.M.P South, Karnataka-560102",11224334000621,Swiggy
+,649831.0,Instamart,12.927372,77.670691,"1st Floor, AGR Prime, No 151, Green Glen Layout, Banglore 560103",11221333001191,Swiggy
+,1374258.0,Instamart,12.9290979,77.70326501,"GF,PK sports club,Sy. No. 6/3,Bhoganahalli Village, Varthur Hobli, Bengaluru South Taluk - 560103",11222333001812,Swiggy
+,1384788.0,Instamart,12.941094,77.72747,"GF,Sy. No. 2/1, Balagere Village, Varthur Hobli, Varthur Bengaluru-560087",11223333000890,Swiggy
+,1402670.0,Instamart,12.951867,77.548943,"PID No 41-4-142, No 176,1st Main road, Pipeline, Kasturiba Nagar, Bangalore 560026",2.02502E+16,Swiggy
+,1402948.0,Instamart,12.952091,77.594184,"Property bearing no 449/25/01, H Siddaiah Road, Wilson Garden, Bangalore - 560027",2.02501E+16,Swiggy
+,1190778.0,Instamart,12.9743252,77.6408181,"FF no- 276,Binnamangala Layout,Defence Officers Colony, Indira Nagar,Bangalore-560038",11221333002601,Swiggy
+,1387562.0,Instamart,12.936902,77.702646,"FF,Sy No 82/2,Panathur Village,Varthur Hobli,Bengaluru East Bengaaluru-560103",2.02312E+16,Swiggy
+,1386385.0,Instamart,12.95888634,77.51762154,"1st Floor, Site no 57, Western portion,Nagarbhavi Village,Yeswanthput Hobli,Bangalore,560072",11223332000935,Swiggy
+,1380521.0,Instamart,12.96700574,77.60675762,"GF,property bearing No. 126, Brigade Road, Richmond Town Bengaluru - 560001",11222333001860,Swiggy
+,1395722.0,Instamart,12.957306,77.662917,"Ground Floor ,Corporation No.6,PID No. 73-92-6 ,Civil Aviation, Konena Agrahara Varthur Hobli, Bengaluru East Taluk , BBMP Ward No. 113- Konena Agrahara Bengaluru -560017",2.02407E+16,Swiggy
+,1400610.0,Instamart,12.950417,77.690139,"first floor, survey no.126/5, amani bellandur khane village, varthur hobli, bangalore, mahadevapura,  karnataka, 560037""",2.0241E+16,Swiggy
+,1381021.0,Instamart,12.95198437,77.70102751,"GF,Site No. 108/1/25, MSR Layout ,Munnekolala BBMP, Ward No. -149 Varthur, Bengaluru-560037",11222333002177,Swiggy
+,1400609.0,Instamart,12.956667,77.719778,"Gf, sy.no.3, thubarahalli village, varthur hobli, bangalore, mahadevapura, karnataka, 560066",2.0241E+16,Swiggy
+,1382655.0,Instamart,12.95680483,77.73634972,"Site No. 704, situated at Ramagondanahalli Village, Varthur Hobli, Hagadur Bengaluru-560066",11223333000122,Swiggy
+,1387561.0,Instamart,12.9745268,77.7671685,"Gf, Sy No 113/5,Nagondanahalli Village, Whitefiled post,Bengaluru-560066",11223333002362,Swiggy
+,1380899.0,Instamart,12.97385352,77.546203,"GF,Municipal No. 54, having PID No. 33-12-54 , Manuvana Vijaynagar, Bengaluru-560040",11222332001077,Swiggy
+,1403020.0,Instamart,12.973482,77.609406,"GF, Old, New Plot No. 45/3, situated at Residency Road, Civil Station, Bangalore, Karnataka - 560025",2.02501E+16,Swiggy
+,854379.0,Instamart,12.96546,77.63825,"GF,Sy No 212/ A, Domlur Layout, 2nd stage, Bangalore 560071",11221333001695,Swiggy
+,1395721.0,Instamart,12.9624916,77.6458945,"Gf,comprised in survey no.220/1,kodihalli main road, varthur hobli, bangalore,Karnataka, 560008",2.02409E+16,Swiggy
+,565139.0,Instamart,12.9721,77.6806,"No. 158/2B1, 1st floor, Vigan Nagar Main Road, Bengaluru -560 075",11221333000906,Swiggy
+,1395425.0,Instamart,12.961962,77.704895,"GF, site no.8,  chinnapannahalli village, 4th main, 1st cross, k r puram hobli, marathahalli, bangalore, karnataka-560037",11224333002012,Swiggy
+,1388682.0,Instamart,12.999125,77.578353,"FF,Nagappa Street,Dattatreya Temple, Bengaluru-560003",11224331000012,Swiggy
+,1388112.0,Instamart,12.9781191,77.6759756,"GF, 5th Main Road, Shivabalayogi Main Road, Kaggadasapura, Bangalore : 560075",11223333002375,Swiggy
+,1382412.0,Instamart,12.976213,77.695061,"GF,Sy. No. 27/2 ,Doddanekundi Village, K R Puram Hobli, Doddanekundi Bengaluru-560037",11223333000343,Swiggy
+,1382350.0,Instamart,12.97539273,77.70557064,"GF,property No. 213,Doddanekundi Village, K R Puram Hobli, Doddanekundi Bengaluru -560048",11222333002686,Swiggy
+,1400960.0,Instamart,12.966528,77.7425,"Gf, comprised in survey no.46,  behind.casa gopalan apartment, whitefield, k r puram hobli, bangalore, mahadevapur karnataka, 560066",2.0241E+16,Swiggy
+,1401714.0,Instamart,12.991316,77.498756,"""FF,land bearing no.22/2, herohalli village, yeshwanthpura hobli, bangalore, yeshwanthapura,  karnataka, 560091""",2.0241E+16,Swiggy
+,911033.0,Instamart,12.99166,77.538017,"GF, Site No- 352,PID No. 16-1-352, West Chord Road 3rd Stage, Basaveshwara Nagara,Bangalore - 560079",11221332001404,Swiggy
+,1313712.0,Instamart,12.981516,77.601807,"GF, Zam Zam Complex property No.26 Infantry Road,Shivaji Nagar, Sampangiramnagar Bengaluru-560001",11222333000873,Swiggy
+,816648.0,Instamart,12.987999,77.618539,"FF,Above Adyar Anand Bhavan Veg Restaurant, Pulikeshi Nagar, Bengaluru, Karnataka 560005",11221333001380,Swiggy
+,1395434.0,Instamart,12.990111,77.712083,"GF, Survey No.10/1A hoodi village, KR puram , Garuacharplaya , Bengaluru -560048",2.02403E+16,Swiggy
+,1383715.0,Instamart,12.985841,77.744766,"Site No.5,6 Sy.No 139/1C,Pattandur Agrahara Village, K.R. Puram Hobli,Kadugodi Bengaluru-560067",11223333000709,Swiggy
+,969380.0,Instamart,13.00182056,77.57531738,"GF, Property 146/2, 11th Cross Rd, Malleshwaram, Bengaluru 560003",11221331001570,Swiggy
+,1387633.0,Instamart,12.995928,77.620428,"GF, No 24, khatha no :85-31-24,Sundarmurty road,Cox town,BBMP ward no 79,Bangalore-560005",11223333002265,Swiggy
+,1384139.0,Instamart,12.998405,77.674232,"Site No.5,situated at Vijinapura Village, K.R. Puram Hobli,Narayanapura Bengaluru-562135",11223333000710,Swiggy
+,1393563.0,Instamart,12.989306,77.682028,"Sy no.173/2, Mahadevpura village, K R Puram hobli, Bangalore, Karnataka - 560093",2.02406E+16,Swiggy
+,1346768.0,Instamart,12.99758919,77.70149267,"2-D2 in Sy. No. 37,38 and 39 , Dyavasandra Village, K R Puram Hobli,Devasandra Bangalore-560036",11222333001349,Swiggy
+,1385942.0,Instamart,12.993544,77.722766,"GF,Sy. Nos. 116/3 and 116/4 , Hoodi Village, Varthur K R Puram Hobli,  Hoodi Bengaluru-560067",11223333002014,Swiggy
+,1394670.0,Instamart,13.042656,77.507108,"GF, Sur no no.27, nagasandra village, yeshwantpura hobli, bangalore, yeshwanthapura,karnataka-560073""",11224331001229,Swiggy
+,816646.0,Instamart,13.018891,77.592239,"FF, Site 173, Matadahalli, RT Nagar, Higher Division, Banglore 560032",11221331001129,Swiggy
+,1381969.0,Instamart,13.010016,77.644208,"GF,Site No. 7 AM-703 situated at H.R.B.R. 1st Block Bengaluru-560043",11222333002623,Swiggy
+,1373485.0,Instamart,13.02333463,77.70608359,"GF, Sy. No. 68/3, BBMP Bhattarahalli Village, Bidarahalli Hobli,  K R Puram Bengaluru - 560016",11222333001813,Swiggy
+,1380447.0,Instamart,13.00031205,77.75112695,"GF, SRB Elite, Sy. No. 55/4, BBMP Hoodi,Belathur Village, Bidarahalli Hobli, Bengaluru -560067",11222333001814,Swiggy
+,1389251.0,Instamart,13.00845,77.759705,"GF,Sy. Nos. 98 and 99, situated at Seegehalli Village,Bengaluru-560067",2.02401E+16,Swiggy
+,1396467.0,Instamart,13.018694,77.558583,"Gf,ff marappa kalyana mantappa, site bearing no.84, in sy.no.29/2, s.c.road, malleshwaram, bangalore, karnataka, 560022",2.02402E+16,Swiggy
+,1231805.0,Instamart,13.022278,77.607834,"1 st Floor,JM Capital,Municipal no 63,Ambedkar Medical College Road,SK Garden Bangalore-560032",11222331000099,Swiggy
+,1390218.0,Instamart,13.023479,77.639465,"GF, Chellekere Village, KR Puram Hobli, Bangalore Karnataka,560043",2.02404E+16,Swiggy
+,1400930.0,Instamart,13.016234,77.650452,"Gf, bearing municipal no.51, banaswadi, bangalore, k r puram, b.b.m.p east, karnataka, 560043""",2.0241E+16,Swiggy
+,593243.0,Instamart,13.0218691,77.6875224,"1st Floor, KV venkatesh Towers, 2, 20th Cross, Azim layout,Ramamurthy Nagar, BLR 560016",11221333000907,Swiggy
+,1401462.0,Instamart,13.063778,77.504806,"GF, S,no 2 and 14/1 , Bagalagunte Village, Hesaraghatta Main Road, Bengaluru-560088",2.0241E+16,Swiggy
+,1402048.0,Instamart,13.037056,77.530278,"Gf. land bearing  situated at 3rd Main, KIADB 1 Stage, Peenya, Bengaluru  560058",2.0241E+16,Swiggy
+,1216213.0,Instamart,13.02724743,77.57961273,"1 st Floor, Site no 106-G&H,Sy No,40/1,BBMP Ward no-18,Radha Krishna Temple,Bangalore-560094",11221331001861,Swiggy
+,1386532.0,Instamart,13.033062,77.631234,"GF, Site no 875,Hennur Bellary Road,1st stage,4th block,Bengaluru-560043",11223333001807,Swiggy
+,1400929.0,Instamart,13.028861,77.762389,"Gf, carved s.no .174/4, kannamangala village, bidarahalli hobli, bangalore urban, karnataka, 560067",2.0241E+16,Swiggy
+,1238349.0,Instamart,13.030024,77.662248,"1st Floor,Site no-27/1,Khata no-165/3/27/1,Horamav Village,KR Puram Hobli,Bangalore - 560043",11222333000273,Swiggy
+,1400216.0,Instamart,13.04222,77.612453,"Gf, shree raja rajeshwari arcade, veerannapalya, nagavara, bangalore, hebbala,  karnataka, 560032",2.02409E+16,Swiggy
+,1390217.0,Instamart,13.062165,77.667314,"GF, Site no.107, Bileshivale Village, Bidarahalli Bangalore,Karnataka-560077",11224333000793,Swiggy
+,1388383.0,Instamart,13.064143,77.741196,"GF,Sy. No. 135 Bommanahalli Village, Bidrahalli Hobli, Bengaluru East Taluk, Bengaluru-560049",2.02401E+16,Swiggy
+,1382868.0,Instamart,13.0690728,77.5568697,"267/51/2,situated at Doddabommasandra Village, Yelahanka Hobli,Bengaluru-560003",11223331000079,Swiggy
+,1229990.0,Instamart,13.05629,77.576374,"1 st floor,Kodigehalli village,Yelahanka hobli,Bangalore north-560092",11222331000100,Swiggy
+,1382656.0,Instamart,13.04860289,77.60564096,"GF, 804/171A, 3rd Main Road, Coffee Board Layout, Hebbal Kempapura, Bengaluru, Karnataka 560024",11223331000103,Swiggy
+,1394669.0,Instamart,13.057804,77.63343,"S.no.101/2, GF, thanisandra village, k r puram hobli, bangalore, mahadevapura, karnataka-560077",11224333001746,Swiggy
+,762611.0,Instamart,13.05796093,77.64851963,"1st Floor, Above Empire Restaurant, Sy No. 8/1,Kothanur Village, KR Puram, Hobli, Bangalore",11221333001381,Swiggy
+,1380898.0,Instamart,13.07836013,77.52062339,"GF,Sy. No.33, situated at Abbigere Village, Yeshwanthpur, North Taluk,Bengaluru-560090",11222331001407,Swiggy
+,1401716.0,Instamart,13.067111,77.597111,"Gf, Site No 13, Survey No 6/2, Situated at Amruthahalli village, Bengaluru North Taluk, Bangalore - 560092",2.0241E+16,Swiggy
+,1400546.0,Instamart,13.067444,77.620861,"""Gf,survey n0.34/1,srirampura village,yelahanka hobli, yelahanka, b.b.m.p north, karnataka, 560064""",2.0241E+16,Swiggy
+,1393565.0,Instamart,13.081264,77.540016,"KHATHA NO - 309/75/127721, SINGAPURA VILLAGE, YELAHANKA HOBLI, BANGALORE, YELAHANKA, B.B.M.P NORTH, KARANATAKA, 560097",2.02407E+16,Swiggy
+,1399355.0,Instamart,13.091389,77.601417,"GF,Survey No. 23/4/1, situated at Village Shivanahalli, Yelahanka Hobli, Bangalore-560064",2.02411E+16,Swiggy
+,1396660.0,Instamart,13.088326,77.634172,"Gf, thirumenahalli village, yelahanka hobli, bangalore, yelahanka, karnataka, 560064",2.02407E+16,Swiggy
+,1382164.0,Instamart,13.07819504,77.64651866,"Sy. No. 27/2,Nagareshwaranagenahalli Village, K R Puram,Hobli,Horamavu Bengaluru-560077",11222333002624,Swiggy
+,1386712.0,Instamart,13.098619,77.574441,"FF,No 2,3,4, Khatha no775/757/732/594,Chikkabommasandra,Yelahanka Satelite town,Bengaluru-560065",11223331001379,Swiggy
+,1386386.0,Instamart,13.114128,77.571561,"GF, Site no 176,Sy No 69,Ananthpura Village,Yelahanka Hobli,Bengaluru North,-Attur ,560064",11223331001298,Swiggy
+,1397024.0,Instamart,13.123083,77.623694,"GF, kattigenahalli village, jala hobli, bengaluru, bangalore north, karnataka, 562114",2.02409E+16,Swiggy
+,1400545.0,Instamart,13.133806,77.570667,"Gf,S. No. 51/2A ,Avalahalli Village, Yelahanka Hobli,  Bengaluru-560064",2.02409E+16,Swiggy
+Bangalore,1384787.0,,12.837603,77.64537,"GF,Sy. 306/6 Hulimangala Village, Jigani Hobli, Anekal Taluk Bengaluru District-560105",11223302000696,Swiggy instamart.xlsx
+Bangalore,1381848.0,,12.81814133,77.66399533,"Nos. 9 and 10 ,Thirupalya Village, Jigani Hobli, Anekal Taluk, District, Hebbagodi, Bengaluru-560099",11222302002022,Swiggy instamart.xlsx
+Bangalore,1402440.0,,12.834111,77.666417,"GF, Survey No 20/2, situated at Gollahalli village, Attibele Hobli, Anekal Taluk - 562106",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1393562.0,,12.784306,77.660056,"GF, Sy no 693, Rajapura Village, Jigani Hobli, Bangalore - 560105",11224302001147,Swiggy instamart.xlsx
+Bangalore,1403688.0,,12.808097,77.676819,"Gf, S.no 4/1,Yarandahalli Village, Jigani Hobli, Anekal Taluk, Bengaluru Bengaluru- 560099",2.02502E+16,Swiggy instamart.xlsx
+Bangalore,1402141.0,,12.792444,77.706833,"GF no 533/867 OPP SURYA NAGAR PHASE 1, CHANDAPURA-GGALURU,BANGALORE, KARNATAKA  560099",2.02411E+16,Swiggy instamart.xlsx
+Bangalore,1387560.0,,12.8319844,77.6906079,"GF, Sy no 109/1,Kammasandra Village, Attibele Hobli, Anekal Taluka, Bengaluru-560100",11223302001892,Swiggy instamart.xlsx
+Bangalore,1403144.0,,12.842334,77.58992,"GF,S.no 17/3 , situated at Basavanapura, Begur Hobli, Bangalore Karnataka-560076",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1385835.0,,12.849095,77.654592,"GF,Sy.No. 53/19 (Old Sy. No. 53/6) ,Doddathogur Village,Begur Hobli,Bengaluru South Taluk -560100",11223302091643,Swiggy instamart.xlsx
+Bangalore,1380710.0,,12.84618904,77.68438361,"GF,prop No.1 ,Chikkanagamangala Village, Sarjapura Hobli, Anekal Taluk,Bengaluru District -560100",11222302001468,Swiggy instamart.xlsx
+Bangalore,1404168.0,,12.866308,77.535332,"No. 37, Thalaghattapura Village, Uttarahalli Hobli, Bangalore 560062",2E+16,Swiggy instamart.xlsx
+Bangalore,1402443.0,,12.86057,77.541535,"Gf, New Survey No 26/1, sqft, Uttarahalli Hobli, Bangalore - 560061",2E+16,Swiggy instamart.xlsx
+Bangalore,1403175.0,,12.863351,77.569071,"Gf,S.no 10/2, Gollahalli, Elethothadapalya Road, Gollahalli Village, Bengaluru - 560062",2E+16,Swiggy instamart.xlsx
+Bangalore,1382870.0,,12.858709,77.611671,"GF,Sy. No. 59/1 situated at Yelenahalli Village, Begur Hobli,  Begur Bengaluru-560068",11223334000385,Swiggy instamart.xlsx
+Bangalore,1399695.0,,12.861425,77.780746,"Gf, survey no.569/2a,sarjapura village, anekal taluk,sarjapura hobli, anekal, bangalore urban, karnataka, 562125",2.02411E+16,Swiggy instamart.xlsx
+Bangalore,1382707.0,,12.85655009,77.59375954,"Sy. No. 62/3 ,Gottigere Village, Uttarahalli Hobli ,BBMP Ward No. 194 Gottigere-Bengaluru -560083",11223334000129,Swiggy instamart.xlsx
+Bangalore,1402441.0,,12.8621571,77.6840006,"GF,K.no 82/2, situated at Doddanagamangala Bangalore Karnataka - 560068",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1400922.0,,12.887056,77.458389,"Gf, bearing khatha no.43, kambipura village, kumbalagodu,bangalore urban, karnataka, 560060",2.02411E+16,Swiggy instamart.xlsx
+Bangalore,1239157.0,,12.877897,77.637238,"Aratt Girija Towers,1st Floor, opposite Lake View County, Singasandra, Bengaluru, Karnataka 560068",11222334000408,Swiggy instamart.xlsx
+Bangalore,1403722.0,,12.89231,77.542526,"#48/55, Gubbalala main road,  Shani mahathma temple subramanyapura, Banglore",2E+16,Swiggy instamart.xlsx
+Bangalore,1401110.0,,12.875824,77.591164,"Gf, bannerughatta road, kalena agrahara to kotthunur dinne andbommanahalli,  karnataka-560076",11224334002368,Swiggy instamart.xlsx
+Bangalore,1403723.0,,12.8687,77.6161,"#1, Yelanahalli Main Road,Akshaya Nagar Opp Fullinfaws College,Bengaluru-560068",2.02503E+16,Swiggy instamart.xlsx
+Bangalore,1401463.0,,12.868222,77.657778,"GF, S.no 12/2,  Beratana Agrahara Village, Begur Hobli,Bengaluru Bengaluru -560100",2.02502E+16,Swiggy instamart.xlsx
+Bangalore,1398438.0,,12.882266,77.676314,"GF, old survey no .91/8, raysandra village , anekal taluk,benagaluru , anekal, bangalore urban, karnataka, 560099""",2.02409E+16,Swiggy instamart.xlsx
+Bangalore,1403463.0,,12.895498,77.701214,"Gf, S.no 48/2,  Hadosiddapura Village, Varthur Hobli, Bangalore- 560035",2.02502E+16,Swiggy instamart.xlsx
+Bangalore,1399354.0,,12.9022899,77.5832106,"Gf, bearing khatha no.22/a-1, puttenahalli main road, uttarahalli hobli, Bangalore, jayanagar, karnataka, 560078",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1397048.0,,12.888222,77.5985,"Gf, s.no 8/1-b, 39/, Tarekere village, 2nd main road, begur hobli, bangalore, bommanahalli,karnataka, 560076",2.02408E+16,Swiggy instamart.xlsx
+Bangalore,1392660.0,,12.892389,77.649333,"GROUND FLOOR, SY. 42/6, HARALAGUNTE VILLAGE, BANGALORE, Bommanahalli, B.B.M.P South, Karnataka, 560068",2.02404E+16,Swiggy instamart.xlsx
+Bangalore,1381157.0,,12.90186387,77.72350951,"GF,sy no-24/1B,Situated at mullur village,Varthur Hobli,Bengaluru-560035",11222333002133,Swiggy instamart.xlsx
+Bangalore,1398437.0,,12.913417,77.485417,"GF, comprised in survey no 40, Kengeri village, Hobli Bangalore Karnataka -560060",2.02409E+16,Swiggy instamart.xlsx
+Bangalore,1396285.0,,12.92475,77.514306,"GF, land bearing m no.2460/1703/1633/1541, halagevaderahalli village, kengeri hobli, bangalore,karnataka, 560098",2.02407E+16,Swiggy instamart.xlsx
+Bangalore,788740.0,,12.89767,77.62088,"1st Floor, PID No. 1492/30/3/1 Kodichikkanahalli Village, Begur Hobli, Bangalore 560076",11221334001428,Swiggy instamart.xlsx
+Bangalore,1385836.0,,12.907659,77.675316,"GF,Site Nos. 9 and 10,Mahadevi Layout,Kasavanahalli Village,Bellandur Bengaluru -560035",11223335001625,Swiggy instamart.xlsx
+Bangalore,1387903.0,,12.905595,77.684547,"GF,Sy no 14/2, Junnasandra Village, Varthur Hobli,  ward no 85-Marathahalli 560035",2.02402E+16,Swiggy instamart.xlsx
+Bangalore,1400215.0,,12.928417,77.740528,"GF,S.no 215/8, Gunjur Village, Varthur Hobli,Bengaluru -560087",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1382349.0,,12.90416123,77.6006399,"GF, Site No.177/5B, Ward No. -187 Puttenahalli, Bilekahalli Village, Begur Hobli, Bengaluru -560092",11222334002392,Swiggy instamart.xlsx
+Bangalore,1403421.0,,12.899682,77.636131,"S.no 50, 51, 80 and 81,Hongasandra Village, Begur Hobli, Muniyappa Layout, Karnataka - 560068",2.02503E+16,Swiggy instamart.xlsx
+Bangalore,1386090.0,,12.904262,77.642027,"GF,Site no 1 C,Yellakunte Village,Begur Hobli,Mangammanapalya, Bangalore-560068",11223334001488,Swiggy instamart.xlsx
+Bangalore,1402605.0,,12.913961,77.666466,"FF, Ambalipura Village, Varthur Hobli, Bengaluru East Taluk, Bengaluru - 560102",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1400961.0,,12.914578,77.559952,"GF,17/2, BBMP K.No. 3/17/2,Kadirenahalli, Subramanyapura Main Road,Bangalore- 560070",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1392080.0,,12.912565,77.636736,"GROUND FLOOR, SITE NO.57, SECTOR-V1, HOSUR SARJAPUR ROAD LAYOUT, BANGALORE, Bommanahalli, B.B.M.P South, Karnataka, 560102",2.02404E+16,Swiggy instamart.xlsx
+Bangalore,1231052.0,,12.91447708,77.6447778,"1st Floor No. 1784, Sector-1 , HSR Layout, BBMP Ward No. 174 Bengaluru-560102",11222334000160,Swiggy instamart.xlsx
+Bangalore,1392421.0,,12.909483,77.697731,"SY no- 23/5,GF Doddakannelli village, Varthur Hobli Bangalore, Karnataka -560035",11224333001432,Swiggy instamart.xlsx
+Bangalore,1403224.0,,12.93657,77.484436,"no.4, nagadevanahalli, near NPS school, Bangalore -560056",2E+16,Swiggy instamart.xlsx
+Bangalore,788742.0,,12.9273438,77.5475607,"1st floor, No. 215, PID No. 54-33-215,Banashankari 3rd stage, Srinivas Nagar, Bangalore 560085",11221334001427,Swiggy instamart.xlsx
+Bangalore,1181690.0,,12.9296793,77.5738297,"No- 61,Gf, AK Colony,KR Road,7th Block,Jayanagar,Bangalore-560010",11221334002534,Swiggy instamart.xlsx
+Bangalore,1393564.0,,12.927417,77.609639,"Gf,comprised in S.no.87/2a, tavarekere village, begur hobli, bangalore, btm layout,karnataka, 560029",2.02405E+16,Swiggy instamart.xlsx
+Bangalore,1396284.0,,12.937972,77.626694,"Sy no 21/2, Ejipura village, Begur Hobli, BTM layout Bangalore, Karnataka 560095",2.02407E+16,Swiggy instamart.xlsx
+Bangalore,1386714.0,,12.921787,77.677376,"GF,Sy no 68/1,Bellandur Village,Varthur Hobli,Bangalore South Taluka,Bangalore-560103",11223333002386,Swiggy instamart.xlsx
+Bangalore,1382254.0,,12.93006119,77.67924249,"Sy. 15/11 and 15/12 totally 6 Guntas,Bellandur Village, Varthur Hobli,Bengaluru District-560103",11222333002727,Swiggy instamart.xlsx
+Bangalore,1388998.0,,12.92336,77.695092,"GF,Survey No. 16/4 situated deva Bisanahalli village  Varthur Hobli ,Bellandur ,Bengaluru -560103",11224333000035,Swiggy instamart.xlsx
+Bangalore,1402442.0,,12.941389,77.754111,"No 13/1, Sorahunase Village, Varthur Main road, Varthur Hobli, Bangalore - 560087",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1390216.0,,12.927366,77.6650431,"GROUND FLOOR, BEARING SY.15, IBBALUR VILLAGE, AGARA POST, BEGUR HOBLI, BANGALORE, Bommanahalli, B.B.M.P South, Karnataka-560102",11224334000621,Swiggy instamart.xlsx
+Bangalore,649831.0,,12.927372,77.670691,"1st Floor, AGR Prime, No 151, Green Glen Layout, Banglore 560103",11221333001191,Swiggy instamart.xlsx
+Bangalore,1374258.0,,12.9290979,77.70326501,"GF,PK sports club,Sy. No. 6/3,Bhoganahalli Village, Varthur Hobli, Bengaluru South Taluk - 560103",11222333001812,Swiggy instamart.xlsx
+Bangalore,1384788.0,,12.941094,77.72747,"GF,Sy. No. 2/1, Balagere Village, Varthur Hobli, Varthur Bengaluru-560087",11223333000890,Swiggy instamart.xlsx
+Bangalore,1401246.0,,12.958528,77.480528,"Gf, Site No. 567/6 feet, 5th Block, Sir M. Vishveshwaraiah Layout,Bengaluru- 560098",11225332000057,Swiggy instamart.xlsx
+Bangalore,1402670.0,,12.951867,77.548943,"PID No 41-4-142, No 176,1st Main road, Pipeline, Kasturiba Nagar, Bangalore 560026",2.02502E+16,Swiggy instamart.xlsx
+Bangalore,1402948.0,,12.952091,77.594184,"Property bearing no 449/25/01, H Siddaiah Road, Wilson Garden, Bangalore - 560027",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1402444.0,,12.935083,77.608611,"GF, Municipal No 7,Krishnanagar Industrial area, Audugodi village, Bangalore - 560034",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1190778.0,,12.9743252,77.6408181,"FF no- 276,Binnamangala Layout,Defence Officers Colony, Indira Nagar,Bangalore-560038",11221333002601,Swiggy instamart.xlsx
+Bangalore,1387562.0,,12.936902,77.702646,"FF,Sy No 82/2,Panathur Village,Varthur Hobli,Bengaluru East Bengaaluru-560103",2.02312E+16,Swiggy instamart.xlsx
+Bangalore,1403749.0,,12.9647712,77.5338256,"Gf,No. 314/1 Kempapura Agrahara, C Subanna Garden, Vijayanagar, Attiguppe, Bengaluru",2.02503E+16,Swiggy instamart.xlsx
+Bangalore,1403353.0,,12.96623002,77.6047213,"Gf, Indraprastha Invictus, Richmond road  Bangalore 560025",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1395722.0,,12.957306,77.662917,"Ground Floor ,Corporation No.6,PID No. 73-92-6 ,Civil Aviation, Konena Agrahara Varthur Hobli, Bengaluru East Taluk , BBMP Ward No. 113- Konena Agrahara Bengaluru -560017",2.02407E+16,Swiggy instamart.xlsx
+Bangalore,1400610.0,,12.950417,77.690139,"first floor, survey no.126/5, amani bellandur khane village, varthur hobli, bangalore, mahadevapura,  karnataka, 560037""",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1381021.0,,12.95198437,77.70102751,"GF,Site No. 108/1/25, MSR Layout ,Munnekolala BBMP, Ward No. -149 Varthur, Bengaluru-560037",11222333002177,Swiggy instamart.xlsx
+Bangalore,1400609.0,,12.956667,77.719778,"Gf, sy.no.3, thubarahalli village, varthur hobli, bangalore, mahadevapura, karnataka, 560066",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1382655.0,,12.95680483,77.73634972,"Site No. 704, situated at Ramagondanahalli Village, Varthur Hobli, Hagadur Bengaluru-560066",11223333000122,Swiggy instamart.xlsx
+Bangalore,1402774.0,,12.978532,77.511703,"Gf, S. No. 13A situated at 3rd Block, Nagarbhavi, 2nd Stage, Bengaluru- 560072",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,1403020.0,,12.973482,77.609406,"GF, Old, New Plot No. 45/3, situated at Residency Road, Civil Station, Bangalore, Karnataka - 560025",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,854379.0,,12.96546,77.63825,"GF,Sy No 212/ A, Domlur Layout, 2nd stage, Bangalore 560071",11221333001695,Swiggy instamart.xlsx
+Bangalore,1395721.0,,12.9624916,77.6458945,"Gf,comprised in survey no.220/1,kodihalli main road, varthur hobli, bangalore,Karnataka, 560008",2.02409E+16,Swiggy instamart.xlsx
+Bangalore,1395425.0,,12.961962,77.704895,"GF, site no.8,  chinnapannahalli village, 4th main, 1st cross, k r puram hobli, marathahalli, bangalore, karnataka-560037",11224333002012,Swiggy instamart.xlsx
+Bangalore,1387561.0,,12.9745268,77.7671685,"Gf, Sy No 113/5,Nagondanahalli Village, Whitefiled post,Bengaluru-560066",11223333002362,Swiggy instamart.xlsx
+Bangalore,1380899.0,,12.97385352,77.546203,"GF,Municipal No. 54, having PID No. 33-12-54 , Manuvana Vijaynagar, Bengaluru-560040",11222332001077,Swiggy instamart.xlsx
+Bangalore,1388682.0,,12.999125,77.578353,"FF,Nagappa Street,Dattatreya Temple, Bengaluru-560003",11224331000012,Swiggy instamart.xlsx
+Bangalore,1388112.0,,12.9781191,77.6759756,"GF, 5th Main Road, Shivabalayogi Main Road, Kaggadasapura, Bangalore : 560075",11223333002375,Swiggy instamart.xlsx
+Bangalore,1382412.0,,12.976213,77.695061,"GF,Sy. No. 27/2 ,Doddanekundi Village, K R Puram Hobli, Doddanekundi Bengaluru-560037",11223333000343,Swiggy instamart.xlsx
+Bangalore,1382350.0,,12.97539273,77.70557064,"GF,property No. 213,Doddanekundi Village, K R Puram Hobli, Doddanekundi Bengaluru -560048",11222333002686,Swiggy instamart.xlsx
+Bangalore,1400960.0,,12.966528,77.7425,"Gf, comprised in survey no.46,  behind.casa gopalan apartment, whitefield, k r puram hobli, bangalore, mahadevapur karnataka, 560066",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1401714.0,,12.991316,77.498756,"""FF,land bearing no.22/2, herohalli village, yeshwanthpura hobli, bangalore, yeshwanthapura,  karnataka, 560091""",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,911033.0,,12.99166,77.538017,"GF, Site No- 352,PID No. 16-1-352, West Chord Road 3rd Stage, Basaveshwara Nagara,Bangalore - 560079",11221332001404,Swiggy instamart.xlsx
+Bangalore,969380.0,,13.00182056,77.57531738,"GF, Property 146/2, 11th Cross Rd, Malleshwaram, Bengaluru 560003",11221331001570,Swiggy instamart.xlsx
+Bangalore,1313712.0,,12.981516,77.601807,"GF, Zam Zam Complex property No.26 Infantry Road,Shivaji Nagar, Sampangiramnagar Bengaluru-560001",11222333000873,Swiggy instamart.xlsx
+Bangalore,1384139.0,,12.998405,77.674232,"Site No.5,situated at Vijinapura Village, K.R. Puram Hobli,Narayanapura Bengaluru-562135",11223333000710,Swiggy instamart.xlsx
+Bangalore,1395434.0,,12.990111,77.712083,"GF, Survey No.10/1A hoodi village, KR puram , Garuacharplaya , Bengaluru -560048",2.02403E+16,Swiggy instamart.xlsx
+Bangalore,1403354.0,,12.977218,77.725749,"GF,P.no-120-A3 Phase 1, Hoodi Village, Krishnarajapuram Hobli, Whitefield, Bangalore- 560048",2.02502E+16,Swiggy instamart.xlsx
+Bangalore,1403019.0,,12.987618,77.729741,"Gf, S.no 220-D3 Sadarmangala I/A, M D Pura Sadaramangala, Kodigehalli Road 560067",2.02501E+16,Swiggy instamart.xlsx
+Bangalore,816648.0,,12.987999,77.618539,"FF,Above Adyar Anand Bhavan Veg Restaurant, Pulikeshi Nagar, Bengaluru, Karnataka 560005",11221333001380,Swiggy instamart.xlsx
+Bangalore,1387633.0,,12.995928,77.620428,"GF, No 24, khatha no :85-31-24,Sundarmurty road,Cox town,BBMP ward no 79,Bangalore-560005",11223333002265,Swiggy instamart.xlsx
+Bangalore,1393563.0,,12.989306,77.682028,"Sy no.173/2, Mahadevpura village, K R Puram hobli, Bangalore, Karnataka - 560093",2.02406E+16,Swiggy instamart.xlsx
+Bangalore,1346768.0,,12.99758919,77.70149267,"2-D2 in Sy. No. 37,38 and 39 , Dyavasandra Village, K R Puram Hobli,Devasandra Bangalore-560036",11222333001349,Swiggy instamart.xlsx
+Bangalore,1385942.0,,12.993544,77.722766,"GF,Sy. Nos. 116/3 and 116/4 , Hoodi Village, Varthur K R Puram Hobli,  Hoodi Bengaluru-560067",11223333002014,Swiggy instamart.xlsx
+Bangalore,1394670.0,,13.042656,77.507108,"GF, Sur no no.27, nagasandra village, yeshwantpura hobli, bangalore, yeshwanthapura,karnataka-560073""",11224331001229,Swiggy instamart.xlsx
+Bangalore,1403138.0,,13.026179,77.588593,"Gf,10 th Cross, CBI Road, Ganganagar, RTNagar, Bangalore, Karnataka - 560032",2.02502E+16,Swiggy instamart.xlsx
+Bangalore,1381969.0,,13.010016,77.644208,"GF,Site No. 7 AM-703 situated at H.R.B.R. 1st Block Bengaluru-560043",11222333002623,Swiggy instamart.xlsx
+Bangalore,1380447.0,,13.00031205,77.75112695,"GF, SRB Elite, Sy. No. 55/4, BBMP Hoodi,Belathur Village, Bidarahalli Hobli, Bengaluru -560067",11222333001814,Swiggy instamart.xlsx
+Bangalore,1389251.0,,13.00845,77.759705,"GF,Sy. Nos. 98 and 99, situated at Seegehalli Village,Bengaluru-560067",2.02401E+16,Swiggy instamart.xlsx
+Bangalore,1401462.0,,13.063778,77.504806,"GF, S,no 2 and 14/1 , Bagalagunte Village, Hesaraghatta Main Road, Bengaluru-560088",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1403515.0,,13.02885,77.545227,"2md cross Raghavendra Layout, Ward no 2 Bangalore",2.02503E+16,Swiggy instamart.xlsx
+Bangalore,1231805.0,,13.022278,77.607834,"1 st Floor,JM Capital,Municipal no 63,Ambedkar Medical College Road,SK Garden Bangalore-560032",11222331000099,Swiggy instamart.xlsx
+Bangalore,1400930.0,,13.016234,77.650452,"Gf, bearing municipal no.51, banaswadi, bangalore, k r puram, b.b.m.p east, karnataka, 560043""",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,593243.0,,13.0218691,77.6875224,"1st Floor, KV venkatesh Towers, 2, 20th Cross, Azim layout,Ramamurthy Nagar, BLR 560016",11221333000907,Swiggy instamart.xlsx
+Bangalore,1373485.0,,13.02333463,77.70608359,"GF, Sy. No. 68/3, BBMP Bhattarahalli Village, Bidarahalli Hobli,  K R Puram Bengaluru - 560016",11222333001813,Swiggy instamart.xlsx
+Bangalore,1402048.0,,13.037056,77.530278,"Gf. land bearing  situated at 3rd Main, KIADB 1 Stage, Peenya, Bengaluru  560058",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1396467.0,,13.018694,77.558583,"Gf,ff marappa kalyana mantappa, site bearing no.84, in sy.no.29/2, s.c.road, malleshwaram, bangalore, karnataka, 560022",2.02402E+16,Swiggy instamart.xlsx
+Bangalore,1394669.0,,13.057804,77.63343,"S.no.101/2, GF, thanisandra village, k r puram hobli, bangalore, mahadevapura, karnataka-560077",11224333001746,Swiggy instamart.xlsx
+Bangalore,1400929.0,,13.028861,77.762389,"Gf, carved s.no .174/4, kannamangala village, bidarahalli hobli, bangalore urban, karnataka, 560067",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1400216.0,,13.04222,77.612453,"Gf, shree raja rajeshwari arcade, veerannapalya, nagavara, bangalore, hebbala,  karnataka, 560032",2.02409E+16,Swiggy instamart.xlsx
+Bangalore,762611.0,,13.05796093,77.64851963,"1st Floor, Above Empire Restaurant, Sy No. 8/1,Kothanur Village, KR Puram, Hobli, Bangalore",11221333001381,Swiggy instamart.xlsx
+Bangalore,1390218.0,,13.023479,77.639465,"GF, Chellekere Village, KR Puram Hobli, Bangalore Karnataka,560043",2.02404E+16,Swiggy instamart.xlsx
+Bangalore,1403049.0,,13.053649,77.48471,"GF,Chikkabidarakallu Village, Madanayakanahalli CMC Bengaluru 560073",2.02502E+16,Swiggy instamart.xlsx
+Bangalore,1229990.0,,13.05629,77.576374,"1 st floor,Kodigehalli village,Yelahanka hobli,Bangalore north-560092",11222331000100,Swiggy instamart.xlsx
+Bangalore,1403417.0,,13.0433,77.68114,"S.no. 1/2, Channasandra Village, Krishnarajapura Hobli, Horamavu Post, Bengaluru- 560113",2.02502E+16,Swiggy instamart.xlsx
+Bangalore,1382868.0,,13.0690728,77.5568697,"267/51/2,situated at Doddabommasandra Village, Yelahanka Hobli,Bengaluru-560003",11223331000079,Swiggy instamart.xlsx
+Bangalore,1382656.0,,13.04860289,77.60564096,"GF, 804/171A, 3rd Main Road, Coffee Board Layout, Hebbal Kempapura, Bengaluru, Karnataka 560024",11223331000103,Swiggy instamart.xlsx
+Bangalore,1390217.0,,13.062165,77.667314,"GF, Site no.107, Bileshivale Village, Bidarahalli Bangalore,Karnataka-560077",11224333000793,Swiggy instamart.xlsx
+Bangalore,1401716.0,,13.067111,77.597111,"Gf, Site No 13, Survey No 6/2, Situated at Amruthahalli village, Bengaluru North Taluk, Bangalore - 560092",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1400546.0,,13.067444,77.620861,"""Gf,survey n0.34/1,srirampura village,yelahanka hobli, yelahanka, b.b.m.p north, karnataka, 560064""",2.0241E+16,Swiggy instamart.xlsx
+Bangalore,1393565.0,,13.081264,77.540016,"KHATHA NO - 309/75/127721, SINGAPURA VILLAGE, YELAHANKA HOBLI, BANGALORE, YELAHANKA, B.B.M.P NORTH, KARANATAKA, 560097",2.02407E+16,Swiggy instamart.xlsx
+Bangalore,1382164.0,,13.07819504,77.64651866,"Sy. No. 27/2,Nagareshwaranagenahalli Village, K R Puram,Hobli,Horamavu Bengaluru-560077",11222333002624,Swiggy instamart.xlsx
+Bangalore,1380898.0,,13.07836013,77.52062339,"GF,Sy. No.33, situated at Abbigere Village, Yeshwanthpur, North Taluk,Bengaluru-560090",11222331001407,Swiggy instamart.xlsx
+Bangalore,1403746.0,,13.086134,77.548491,"91, Anugraha Complex, MS Palya Main Road, Sambhram College  Vidyaranyapura Bangalore 560097",2E+16,Swiggy instamart.xlsx
+Bangalore,1399355.0,,13.091389,77.601417,"GF,Survey No. 23/4/1, situated at Village Shivanahalli, Yelahanka Hobli, Bangalore-560064",2.02411E+16,Swiggy instamart.xlsx
+Bangalore,1396660.0,,13.088326,77.634172,"Gf, thirumenahalli village, yelahanka hobli, bangalore, yelahanka, karnataka, 560064",2.02407E+16,Swiggy instamart.xlsx
+Bangalore,1386712.0,,13.098619,77.574441,"FF,No 2,3,4, Khatha no775/757/732/594,Chikkabommasandra,Yelahanka Satelite town,Bengaluru-560065",11223331001379,Swiggy instamart.xlsx
+Bangalore,1386386.0,,13.114128,77.571561,"GF, Site no 176,Sy No 69,Ananthpura Village,Yelahanka Hobli,Bengaluru North,-Attur ,560064",11223331001298,Swiggy instamart.xlsx
+Bangalore,1397024.0,,13.123083,77.623694,"GF, kattigenahalli village, jala hobli, bengaluru, bangalore north, karnataka, 562114",2.02409E+16,Swiggy instamart.xlsx
+Bangalore,1400545.0,,13.133806,77.570667,"Gf,S. No. 51/2A ,Avalahalli Village, Yelahanka Hobli,  Bengaluru-560064",2.02409E+16,Swiggy instamart.xlsx
+Hyderabad,1391894.0,,17.327657,78.545482,"Unit NO. F1, First floor of the Building, Bearing plot NOs. 71, 72, 73, 74 and 75, Survey NO.58/1/F, Situated at Satyadev Enclave, Hasthinapuram, Karmanghat Village , Saroor Nagar Circle No.05, Hyderabad, Telangana, 500070",2.02404E+16,Swiggy instamart.xlsx
+Hyderabad,1402448.0,,17.3321425,78.4391203,"FF, CSK Colony, Shivarampally, Rajendra Nagar Mandal, Ranga Reddy Telangana 500052",13625015000064,Swiggy instamart.xlsx
+Hyderabad,1392530.0,,17.329996,78.568657,"FF, Vanasthalipuram Residential Complex, Under MIG Category Phase II, Saheb Nagar Kalan Village , Hayathnagar, Rangareddi, Telangana-500070",13624010000393,Swiggy instamart.xlsx
+Hyderabad,1386533.0,,17.347019,78.391463,"FF,Unit No.F1,Plot No.46, Vikas Nagar, Bandlaguda Jagir Village ,Ranga Reddy Dist, Telangana-500093",2.0231E+16,Swiggy instamart.xlsx
+Hyderabad,1400220.0,,17.353944,78.471556,"Gf, Shop Nos. 1 to 11 ,Sakina Tower, H. Nos. 20-4-199/2/8G,Plot Nos. 8, 9, 10 and 11 , situated at Chowk Aspan, Shah Ali Banda, Hyderabad-500065.",2.02412E+16,Swiggy instamart.xlsx
+Hyderabad,1295144.0,,17.35864735,78.51892199,"1 st Floor, Hno-16-2-835/c/1,Zahoorbagh,sankesar bazar,Saidabad,Hyderabad-500059",13622012000289,Swiggy instamart.xlsx
+Hyderabad,1380523.0,,17.36236239,78.39493261,"UGF,Plot No-73,Sy no-15/1,Kadaari,Abyudhaya Nagar,Hydershakote Village,RR Dist-500048",13622010000634,Swiggy instamart.xlsx
+Hyderabad,1386816.0,,17.355889,78.419833,"GF, Plot Nos. 10, 11,12 Upperpally Village, Rajendra nagar, Ranga Reddy District, Telangana 500030",2.02309E+16,Swiggy instamart.xlsx
+Hyderabad,1400221.0,,17.375389,78.514694,"FF, D.no. 16-11, Situated at Village Teegalagadda, Charminar Taluk,  Hyderabad, Telangana, 500036",2.02411E+16,Swiggy instamart.xlsx
+Hyderabad,1404574.0,,17.3617,78.52219,"Ground floor,H.no 16-2-752/121/A,Sbh colony,saidabad,Hyderabad-500059",2.111E+16,Swiggy instamart.xlsx
+Hyderabad,1403835.0,,17.363103,78.557613,"Gf, Unit no.1,CSR Complex,ALKAPURI X ROADS,NAGOLE,Hyderabad,telangan 500068",13625012000223,Swiggy instamart.xlsx
+Hyderabad,1400550.0,,17.380417,78.429583,"Gf, M.no 13-6-431/D/79/2, Situated at Kanakadurga Colony, Jaffariguda Hyderabad, Telangana, 500028",2.02411E+16,Swiggy instamart.xlsx
+Hyderabad,1398749.0,,17.377472,78.489833,"FF, H. Nos. 16-6-33/P/4 &5 Chaderghat, Hyderabad- 500024, Telangana,500024",2.02409E+16,Swiggy instamart.xlsx
+Hyderabad,762613.0,,17.37062406,78.54031463,"Anitha Dayakar Reddy Complex , 1st Flr Above Pizza Hut, New Nagole Road ,RangaReddy Telangana-500035",13621012000622,Swiggy instamart.xlsx
+Hyderabad,1396293.0,,17.387358,78.366058,"S.no S4 - S6, GF-  Ananda Bay Hills, in the AmenitiesNeknampur Village, Gandipet, Rangareddi, Telangana, 500089",2.02407E+16,Swiggy instamart.xlsx
+Hyderabad,1084118.0,,17.3953633,78.3373463,"FF,H No-4-114/2 survey no 124,Prakash Nagar,Kokapet,Hyderabad-500075",13600000000000,Swiggy instamart.xlsx
+Hyderabad,1381355.0,,17.39438314,78.50012587,"GF,H no-3-4-1005/6,Plot no.1 DANTAPALLY CHAMBERS,Barkatpura,Hyderabad-500027",13622011001498,Swiggy instamart.xlsx
+Hyderabad,1382981.0,,17.40026239,78.40676476,"GF, H NO-8-1-39/SA,Plot no-94,95 & 96,Tolichowki, Hyderabad-500008",2.02302E+16,Swiggy instamart.xlsx
+Hyderabad,988472.0,,17.398398,78.450706,"Gul Mohar garden,shop no 1&2,Ground Floor,Masab Tank,Lakdikapool hyderabad-500004",13621011001443,Swiggy instamart.xlsx
+Hyderabad,1397628.0,,17.391417,78.470333,"GF, Building known as  Gopi Lodge  at Nampally Railway Station Road, Mehdipatnam Circle No 12, Hyderabad, Telangana, 500001",2.02408E+16,Swiggy instamart.xlsx
+Hyderabad,1398453.0,,17.403028,78.374722,"U.no 101 to 104, FF Synergy A Orion, Manikonda Jagir Village, Jubilee Hills Circle No 18, Hyderabad, Telangana-500089",13624011001188,Swiggy instamart.xlsx
+Hyderabad,1223632.0,,17.4030028,78.3891997,"GF,Plot No 67 HIG,Sy No 4,Tanashah Nagar Residential Complex,Rajendra Nagar Mandal,RR Dist-500001",13621015000701,Swiggy instamart.xlsx
+Hyderabad,1267913.0,,17.40860659,78.44997807,"GF,H no-8-2-629,Building name YAMUNA,Road No 1,Banjara Hills,Hyderabad-500034",13622011000410,Swiggy instamart.xlsx
+Hyderabad,1385944.0,,17.40528105,78.5439745,"FF, Plot No.1 and Plot No.2,situated at Habsiguda Village, Uppal Mandal, Telangana. Pin- 500007",13623012000596,Swiggy instamart.xlsx
+Hyderabad,1396294.0,,17.401222,78.567028,"U no -F1, NO. 2-3-35/1, New Vijaypuri Colony, Uppal Hyderabad, Telangana, 500039",2.02407E+16,Swiggy instamart.xlsx
+Hyderabad,1402058.0,,17.409083,78.6,"FF,H.no.13-238,medipally,ghateskar mandal,medchal,telangana-500098",2.02501E+16,Swiggy instamart.xlsx
+Hyderabad,1385563.0,,17.42325,78.328844,"H.no.4-63,Sy.No224,Vattinagulapally village,Ranga reddy disctrict, Telangana State 500032",2.02306E+16,Swiggy instamart.xlsx
+Hyderabad,1386268.0,,17.40701239,78.37925541,"LGF,Unit No.B1, Door No.2-1-260, Datar Manzil, Manikonda Jagir Village, Ranga Reddy,Telangana-500089",13623010000727,Swiggy instamart.xlsx
+Hyderabad,1385839.0,,17.426454,78.506699,"GF,Door No. 6-1-289/1/1/101 to 105/2 Gharonda Apartments,Padmaraonagar, Secunderabad - 500025",13623014000908,Swiggy instamart.xlsx
+Hyderabad,1399810.0,,17.401995,78.503281,"Gf, B.Bearing H.  No.1-8-588/1/A, bearing plot no. 21/6, situated at Industrial Area, Azamabad,Hyderabad, Telangana-500020",13624011001570,Swiggy instamart.xlsx
+Hyderabad,1387565.0,,17.422039,78.347434,"GF,U No.F2, H.No.2-58, Sri Sai Gayatri Towers,Nanakramguda Ranga Reddy Dist, Telangana-500032",2.0231E+16,Swiggy instamart.xlsx
+Hyderabad,1401470.0,,17.413194,78.377056,"U.no. G1, G2, G3, on the Gf of spectrum elite  janachaitanya colony,  gandipet, telangana, 500089",2.02412E+16,Swiggy instamart.xlsx
+Hyderabad,1383572.0,,17.4259923,78.4142841,"1st Floor,Road No 64,Jubille hills coop house building society,Jubille Hills,Hyderabad-500033",13623011000472,Swiggy instamart.xlsx
+Hyderabad,816649.0,,17.428589,78.532424,"Venkat Plaza,Construction Building Secunderabad, Telangana State - 500007",13621014000824,Swiggy instamart.xlsx
+Hyderabad,1229994.0,,17.420833,78.442604,"GF,Unit no G3 & G4,Plot No 5,Sy No,388,Susheela Ratna Complex,Banjara Hills,Hyderabad-500034",13622011000119,Swiggy instamart.xlsx
+Hyderabad,1402256.0,,17.436472,78.553167,"FF,Plot No.P-6/1,  Road No. 2, IDA Nacharam, Ranga Reddy Telangana 500076",13625012000119,Swiggy instamart.xlsx
+Hyderabad,1401257.0,,17.446944,78.573028,"U.no F1, FF under Block No 1, building known as Bingi Eswar Goud Plaza,  K L Reddy Nagar, Mallapur Village, GHMC Kapra  Circle, Malkajgiri Hyderabad, Telangana, 500076",2.02412E+16,Swiggy instamart.xlsx
+Hyderabad,1400561.0,,17.44541,78.356194,"GF, land bearing no 11/V, Situated at Village Gachibowli, Serilingampally, Hyderabad, Telangana, 500032",2.02411E+16,Swiggy instamart.xlsx
+Hyderabad,737088.0,,17.438922,78.39823,"Sri Sampadha Hitech, Plot 2 & 4, Kavuri Hills, Guttala Begumpet Village, Hyderabad 500081",13622013001108,Swiggy instamart.xlsx
+Hyderabad,1155153.0,,17.4688144,78.4808474,"First Floor,Signature square,Bapuji Nagar,New Bowenpally,secunderabad-500011",13621014001243,Swiggy instamart.xlsx
+Hyderabad,1381160.0,,17.461238,78.308484,"1st floor,H no- 2-55, Kancha gachibowli village,Serlingampalli Mandal,Rangareddy Dist-502221",13622013001630,Swiggy instamart.xlsx
+Hyderabad,1397057.0,,17.454361,78.387,"GF, Survey no 11/7, Situated at Khanamet Village, Kondapur , Hyderabad, Telangana-500084",13624013001425,Swiggy instamart.xlsx
+Hyderabad,886521.0,,17.43329,78.427051,"FF,H.No. 8-3-231/A/44 & 45, Sri Krishna Nagar, Yousufguda, Hyderabad, Telangana State - 500045",13622011001444,Swiggy instamart.xlsx
+Hyderabad,1380448.0,,17.44925247,78.44705722,"GF,H.No-7-1-282/c/76/2,plot no 6,sree ram nagar,balkampet,hyderabad-500038",13622011001174,Swiggy instamart.xlsx
+Hyderabad,1402449.0,,17.447796,78.449524,"GF,FF SPC Vision towers,H.No.38-8,Madhura nagar, medchal-malkajigiri,telanagan-500062",2.02502E+16,Swiggy instamart.xlsx
+Hyderabad,1402983.0,,17.443639,78.46513,"GF,Prajay Corporate House,Hno:1-10-63&64,chikoti gardens,Begumpet,Hyderabad-500016",13621014001289,Swiggy instamart.xlsx
+Hyderabad,1393828.0,,17.449091,78.504005,"H.no - 3-6-202, Bhoosareddiguda West Maredpally,Begumpet Circle no 30 Hyderabad, Telangana - 500026",2.02405E+16,Swiggy instamart.xlsx
+Hyderabad,1396289.0,,17.45175,78.536028,"GF, pallavi Ashray bearing H.NO. 5-25 and 27, Situated at Anand Bagh, Old Malkajgiri, Malkajgiri Hyderabad, Telangana, 500047",2.02408E+16,Swiggy instamart.xlsx
+Hyderabad,1386815.0,,17.464018,78.28669,"First Floor,Unit No.F1,Tellapur Village Ramchandrapuram Mandal, Sanga Reddy Dist, Telangana 502022",2.0231E+16,Swiggy instamart.xlsx
+Hyderabad,1061926.0,,17.4635604,78.3695787,"Sai Balaji Capital, 1st Floor, Ravi Enclave, Prakash Nagar, Kondapur, Hyderabad 500084",13621013001655,Swiggy instamart.xlsx
+Hyderabad,1389638.0,,17.458318,78.432707,"FF, Unit No. F1   Prem Nagar, Erragadda, Hyderabad, Telangana State- 500018",13624011000333,Swiggy instamart.xlsx
+Hyderabad,1398441.0,,17.461389,78.558306,"S.no 1 to 4, FF  Roshan Plaza, S.no H.no 41- 27/1,  Moula - Ali, Malkajgiri, Hyderabad, Telangana-500040",13624014000763,Swiggy instamart.xlsx
+Hyderabad,1237255.0,,17.4770569,78.3051705,"FF,Hno-7-1-89&90/MIG/FF,Nallagandla Residential,Anandi Heights,Ranga Reddy Dist,Telangana-500019",13622013000418,Swiggy instamart.xlsx
+Hyderabad,1393827.0,,17.468596,78.413518,"GF, House No. 12-7-135 Mystic Hills. Anjaneya Nagar,  Moosapet Circle No 23, Hyderabad, Telangana, 500018",2.02406E+16,Swiggy instamart.xlsx
+Hyderabad,1386269.0,,17.46447,78.345367,"FF, Unit No.F1,Plot No.1, TCS Synergy Park, Kondapur Village,Ranga Reddy Dist, Telangana - 500084",13623013001443,Swiggy instamart.xlsx
+Hyderabad,1382391.0,,17.468918,78.3487325,"1st floor,D NO-1-55/SY-88/134/P&135/2FMadhava Hills,kondapur,RR Dist-500032",13622013002031,Swiggy instamart.xlsx
+Hyderabad,1383129.0,,17.480457,78.394226,"1st floor,Lakshmi Arcade,Plot no 59&60,5th Phase KPHB colony,Hyderabad-500085",13623013000323,Swiggy instamart.xlsx
+Hyderabad,1386093.0,,17.48837406,78.38126064,"FF,Plot No. 492 in Sy. No. 78, GokulVenkataramana Colony, Hafeezpet, Ranga Reddy District 500085",13623013001339,Swiggy instamart.xlsx
+Hyderabad,1389688.0,,17.499211,78.413856,"GF,Unit No. G-1,Addagutta, Allwyn Colony, Kukatpally, Medchal-Malkajgiri District,Telangana- 500072",2.02402E+16,Swiggy instamart.xlsx
+Hyderabad,1381278.0,,17.51211688,78.46433528,"GF,H NO-7-024,/8/A/1,Subash nagar,Jedimetla,Qutuhballapur mandal,RR Dist-500015",13622014001042,Swiggy instamart.xlsx
+Hyderabad,1401473.0,,17.474867,78.498569,"FF ""SMR Estate"", Situated at Teachers Colony, Pedda Kamela, Trimulgherry, Hyderabad, Telangana-500019",13625014000025,Swiggy instamart.xlsx
+Hyderabad,1402610.0,,17.483117,78.541729,"GF,FF SPC Vision towers,H.No.38-8,Madhura nagar, medchal-malkajigiri,telanagan-500062",2.02502E+16,Swiggy instamart.xlsx
+Hyderabad,1388311.0,,17.498984,78.31697,"U.no- F2, GF Sy. No. 205, Aparna Hill Park, Ameenpur Road, Serilingampally Mandal,Hyderabad, Telangana-500050",13623013002052,Swiggy instamart.xlsx
+Hyderabad,1389637.0,,17.507491,78.335653,"GF, U.no G1 and G2 ,V.S.Ps Bhavana Plaza,Madhavapuri Town,Telangana State- 500050",13624026000060,Swiggy instamart.xlsx
+Hyderabad,1261840.0,,17.495708,78.367612,"GF,Plot no 180,DSR SHEL PLAZA,Matrusri co-operative housing society,Miyapur,Hyderabad-500049",13622013000437,Swiggy instamart.xlsx
+Hyderabad,1237254.0,,17.512562,78.542142,"GF,shop no 4,5&6,Dokuris Meghadri Heights,Balaji nagar road,Yapral,Hyderabad-500087",13622014000172,Swiggy instamart.xlsx
+Hyderabad,1402257.0,,17.49527,78.564934,"GF,H NO.1-2-34/1/1, Krishna nagar,yellareddy guda,Kushaiguda,telangana -500062",2.02502E+16,Swiggy instamart.xlsx
+Hyderabad,1388385.0,,17.503279,78.58725,"GF, U No.G1 ,H.No.8-597,Narasaiah Colony,Dammaigudai District,Telangana State - 500083",2.02312E+16,Swiggy instamart.xlsx
+Hyderabad,1386717.0,,17.513169,78.479014,"GF,Shed No.1,Indust shed No 4-47,Petbasheerabad village,Medchal-Malkajigiri Dist,Telangana-500067",13623014000798,Swiggy instamart.xlsx
+Hyderabad,1386716.0,,17.52652,78.513229,"GF,unit No.G1,H.No.2-2-105/2/7/A & B,Macha bolarum,Malkajgiri Dist,Telangana 500082",2.02311E+16,Swiggy instamart.xlsx
+Hyderabad,1387634.0,,17.530593,78.294638,"FF,H.no -15-100071AMR complex,Green Meadows,sanga Reddy district , Telangana - 502032",13623013001834,Swiggy instamart.xlsx
+Hyderabad,1238352.0,,17.5266505,78.3694765,"U.no 1,Gf Hno-3-2/2/SH/7-8,Vision Arcade,Pragathi nagar,Bachupally village,Ranga Reddy Dist 500090",13622034000076,Swiggy instamart.xlsx
+Hyderabad,1396027.0,,17.515111,78.395,"Ground Floor, Shop Nos. 1 to 3, “Sri Krishna Lake View”, House No. 1-189/D, Plot Nos. 270 and 271, situated at Block No.11, Bachupally Village and Mandal, Pragathi Nagar , Medchal-Malkajgiri District, Telangana State, India - 500090",2.02406E+16,Swiggy instamart.xlsx
+Hyderabad,1402611.0,,17.529721,78.324604,"Gf,Plot no.18,Sai ambica layoutk,meenpur village,sanga reddy,telangana, 502032",2.02504E+16,Swiggy instamart.xlsx
+Hyderabad,1082432.0,,17.538314,78.393675,"FF,Plot no's 8-26/3615, block no 201,Sai krishna colony,Pragathi nagar,Hyderabad-500090",2.02211E+16,Swiggy instamart.xlsx
+Hyderabad,1401107.0,,17.527389,78.418472,"Gf,Comprised of S.No. 467,Gajularamaram Village, Quthbullapur Hyderabad, Telangana, 500055",2.02501E+16,Swiggy instamart.xlsx
+Hyderabad,1388312.0,,17.5443971,78.4926065,"GF,H.no.1-40/1,situated at Kompally village,Kompally,Medchal-Malkajigiri district,Telangana -500014",2.02312E+16,Swiggy instamart.xlsx
+Hyderabad,1387564.0,,17.547,78.363,"FF, Unit No.F1,Kranthi Nagar Colony, Bachupally Village, Medchal-Malkajgiri,Telangana - 500090",2.02311E+16,Swiggy instamart.xlsx
+Mumbai,1404448.0,,18.913799,72.824384,"Gf,Mumbai Port Trust Godown, Nanabhai Moosa Marg, Sasoon Dock,Mumbai-400005",2.02505E+16,Swiggy instamart.xlsx
+Mumbai,1383130.0,,18.936506,72.838211,"GF,15/17, Kumtha St, Ballard Estate, Fort, Mumbai, Maharashtra 400001",11523001000049,Swiggy instamart.xlsx
+Mumbai,1396282.0,,18.969984,72.814278,"GF, B C.S. NO. 728 of Malabar and Csituated at 156-D.J, Dadajee Road, Mumbai, Maharashtra, 400034",2.02408E+16,Swiggy instamart.xlsx
+Mumbai,1135722.0,,18.966492,72.827891,"GF, Shops C.S No. 290, Shankar Pupala Marg,opp-15th Kamathipura Lane,Nagpada Junction,Mumbai- 40000",11521002000491,Swiggy instamart.xlsx
+Mumbai,1396283.0,,18.975889,72.838389,"Gf, bearing plot no 49,49A,50, Mustafa bazaar, Mazgaon Mumbai Maharahstra 400010",2.02407E+16,Swiggy instamart.xlsx
+Mumbai,1392531.0,,19.000903,72.830223,"U.no- 4, GF, Podder Chamber, Mathuradas Mills Estate, Senapati Bapat Marg, Mumbai, Mumbai Greater Mumbai, Maharashtra, 400013",2.02404E+16,Swiggy instamart.xlsx
+Mumbai,1396295.0,,19.022056,72.86825,"GF, Basement, B. No. 4, Situated at Antop Hill, Wadala, Mumbai, Greater Mumbai,Maharashtra, 400037",2.02407E+16,Swiggy instamart.xlsx
+Mumbai,1398760.0,,19.014972,72.844694,"U.no 18, Gf of Shatrunjay Tower, Marathi Patrakar Granthalaya Marg, Dadar, Mumbai Maharashtra, 400014",2.02409E+16,Swiggy instamart.xlsx
+Mumbai,1381967.0,,19.0361932,72.8467828,"GF,Shop No 8 & 9, A wing , Devdarshan CHS,Pandit Satavalekar Marg, Mogul lane,Mahim,Mumbai -400016",2.02211E+16,Swiggy instamart.xlsx
+Mumbai,969383.0,,19.056184,72.833307,"1st Floor, Gitaneel Arcade, 85, Hill Rd, Bandra West, Mumbai, Maharashtra 400050",11521006000689,Swiggy instamart.xlsx
+Mumbai,1385841.0,,19.012255,72.832961,"LGF, Zink Plaza 37, Gokhale Rd S, Dadar West, Dadar, Mumbai, Maharashtra 400028",2.02307E+16,Swiggy instamart.xlsx
+Mumbai,1113109.0,,19.0450204,72.8680399,"Godown No.5  Industrial Area, Industrial Road, Opp. Nehru Garden, Sion (E), Mumbai 400 022",11521003000402,Swiggy instamart.xlsx
+Mumbai,1387703.0,,19.047268,72.90815,"FF, Kakson House, Sion - Trombay Rd, Opp. R.K. Studio, Chembur, Mumbai, Maharashtra 400071",2.0231E+16,Swiggy instamart.xlsx
+Mumbai,1391897.0,,19.0588409,72.8907382,"Shop Nos. 1 & 2 on GF Ruparel Orion,Village Chembur, Greater Mumbai,Greater Mumbai, Maharashtra, 400071",2.02404E+16,Swiggy instamart.xlsx
+Mumbai,1381500.0,,19.04992356,72.91657932,"GF,Gala no,4&5,SATYAM INDUSTRIAL ESTATE,Govandi station road,Mumbai-400088",2.02211E+16,Swiggy instamart.xlsx
+Mumbai,1403030.0,,19.071075,72.864707,"Gf, U.no. 2 “Sheil Estate” DaniCorporate Park, Kalina Santacruz East, Mumbai- 400098",2.02503E+16,Swiggy instamart.xlsx
+Mumbai,1319696.0,,19.0655998,72.8331468,"Upper Basement Level, Link Corner TPS III, Off Linking Road, Behind KFC Bandra West, Mumbai 400050.",11522006000312,Swiggy instamart.xlsx
+Mumbai,1062416.0,,19.0818121,72.896165,"Neelkanth Corpo IT Park, Shop no 8,Vidyavihar Society, Ghatkopar West, Mumbai, Maharashtra 400086",11521008000455,Swiggy instamart.xlsx
+Mumbai,1381966.0,,19.0662856,72.8918191,"GF,Shop no-6,7&8,B-Wing, Radhika Residency, Tilak nagar,Chembur,kurla,Mumbai-400089",2.02211E+16,Swiggy instamart.xlsx
+Mumbai,1190780.0,,19.0866481,72.8374707,"GF,kamala space,shop no 6,khira nagar, s v road, santacruz (w) mumbai 400054",11521006000905,Swiggy instamart.xlsx
+Mumbai,1298955.0,,19.09506265,72.91765478,"GF,RAHEJA PLAZA-1,LBS Marg,Ghatkopar West,Mumbai-400086",11522008000159,Swiggy instamart.xlsx
+Mumbai,1403210.0,,19.084843,73.009155,"Gf, S.No18-22 Gf,and ff “Goodwill Wisteria”, P.no.1, Sector 19-D, Vasi, Navi Mumbai- 400703",2E+16,Swiggy instamart.xlsx
+Mumbai,1399809.0,,19.110389,72.887194,"GF, Krislon House ,Survey No. 662/11 ,situated at Saki Vihar Road, Andheri East, Mumbai- 400072",2.0241E+16,Swiggy instamart.xlsx
+Mumbai,810367.0,,19.122327,72.926729,"Suyog Industrial Estate Unt no G-10, Opp Vitrum Factory,Vikhroli West,Mumbai, Maharashtra 400083",11521013000188,Swiggy instamart.xlsx
+Mumbai,1397051.0,,19.104799,72.838066,"U no A-5, GF, Golden Tabacco Limited, SF Block, S.V. Road, Vile Parle West, Greater Mumbai Ward-K/W, Greater Mumbai, Maharashtra, 400056",2.02408E+16,Swiggy instamart.xlsx
+Mumbai,1295147.0,,19.1147357,72.8502962,"Ground Floor,sHOP NO G 3,HUBTOWN SOLARIS,Gundavali village,Andheri East,Mumbai-400069",11522005000225,Swiggy instamart.xlsx
+Mumbai,1384969.0,,19.114611,72.888444,"Shah Industrial Estate,opp-Huntsman Building, Ganesh Nagar, Andheri East, Mumbai, Maharashtra 400072",2.02305E+16,Swiggy instamart.xlsx
+Mumbai,1135720.0,,19.1188,72.9052,"2nd Floor Shop No- 2A3,Picasso Commercial Complex,Adhi Shankaracharya Road,Powai,Mumbai,400078",11521013000348,Swiggy instamart.xlsx
+Mumbai,1385645.0,,19.112493,73.007007,"GF,Mahavir Amol, 397-421,Santoshi Mata Mandir Marg, Savoli,Ghansoli,Navi Mumbai, Maharashtra 400701",2.02307E+16,Swiggy instamart.xlsx
+Mumbai,1398452.0,,19.137528,72.833722,"Gf, Plot Nos. B-59-60,  Oshiwara, Andheri West,Greater Mumbai, Maharashtra, 400053",2.02411E+16,Swiggy instamart.xlsx
+Mumbai,810366.0,,19.1198744,72.861152,"GF, Unit No 1,2 &3, Classique Centre,Mahal Industrial Estate, Mahakali Caves,Andheri,Mumbai 400093",11521005000519,Swiggy instamart.xlsx
+Mumbai,1382657.0,,19.1417706,72.83469,"Shop no 1&2,Global chambers,Off link road,Adarsh nagar,Mumbai-400053",2.02301E+16,Swiggy instamart.xlsx
+Mumbai,1238358.0,,19.13659,72.86274,"1st Floor, Bhagat House, CTS NO-27A,Village Majas,Jogeshwari East,Andheri,Mumbai-400060",11522005000138,Swiggy instamart.xlsx
+Mumbai,1398759.0,,19.1426207,72.9913945,"GF, Shop No. 1 to 11, A wing, Millennium Avanish ,Sector 10A, Airoli Node Navi Mumbai-400708",2.02409E+16,Swiggy instamart.xlsx
+Mumbai,1390224.0,,19.133278,72.813,"Unit No. 210, GF and FF, Aaram Nagar Part 2, Versova , Greater Mumbai,Maharashtra, 400053",2.02404E+16,Swiggy instamart.xlsx
+Mumbai,1230883.0,,19.173818,72.856488,"1 St Floor,Italian Printers Compound,Goregaon Mulund Link Road,Goregaon East,Mumbai-400063",2.02201E+16,Swiggy instamart.xlsx
+Mumbai,788745.0,,19.158428,72.941495,"GF, Shamal Motors, Vaity Wadi, Opp. Bhagtani Enclave, Bhandup (West), Mumbai - 400078",11521013000176,Swiggy instamart.xlsx
+Mumbai,1239162.0,,19.17681,72.83422,"Unit No 4,gf, Knox Plaza, Road khar(WEST)Chincholi bunder,Mumbai-400064",11522009000153,Swiggy instamart.xlsx
+Mumbai,1402064.0,,19.179056,72.874028,"Gf,CTS No. 827A/1A, situated at Pimpri Pada, Malad East, Mumbai 400097",2.02501E+16,Swiggy instamart.xlsx
+Mumbai,1402806.0,,19.139512,72.928823,"U.no H and I Gf, Sheet No. 24,Village Kanjur, Taluka Kurla,Bhandup, Mumbai 400078",2E+16,Swiggy instamart.xlsx
+Mumbai,1400231.0,,19.208417,72.825028,"Basement + GF + FF, ABCD at Kandivali Industrial Estate, Charkop Kandivali, Greater Mumbai, Maharashtra, 400067",2.02411E+16,Swiggy instamart.xlsx
+Mumbai,1278165.0,,19.170386,72.953872,"GF, PRATAP PALACE B,Plot no B S No 1000 village mulund west,Mumbai suburban,Mumbai-400080",11522009000194,Swiggy instamart.xlsx
+Mumbai,929911.0,,19.1932313,72.956769,"Unit no- A-39, GF, Yojit Estates,Wagale Industrial Estate, Panchpakhadi Thane, Maharashtra 400604",11521014001014,Swiggy instamart.xlsx
+Mumbai,1381643.0,,19.20830329,72.97739836,"GF,Unit No 1,2 Vardhaman Industrial Complex, Gokul Nagar , Thane west,Mumbai-400607",2.02211E+16,Swiggy instamart.xlsx
+Mumbai,1231809.0,,19.194192,72.833778,"1 st Floor,MMC Centre,plot no 59,Ever Shine Nagar Road,Mith Chowki,Malad West,Mumbai-400064",2.02201E+16,Swiggy instamart.xlsx
+Mumbai,1190779.0,,19.201663,72.859273,"GF,Shiv Rise ,Shop no 1to8A,Akruli Road,Kandivali,Ashok Nagar,Khandavali East,Mumbai-400101",11521011000412,Swiggy instamart.xlsx
+Mumbai,1237261.0,,19.231257,72.860731,"1 st Floor,Shivam Building,Carter road no 9,Opp ST Bus Depot,Borivali East,Mumbai-400066",11522012000082,Swiggy instamart.xlsx
+Mumbai,1382439.0,,19.20579,72.8741,"GF,Shital House,Singh Estate,Samata Nagar,Thakur village,Kandivali East,Mumbai-400101",2.02212E+16,Swiggy instamart.xlsx
+Mumbai,1336659.0,,19.22801462,72.9756959,"GF,Shop no.3,4,&5h, Varun Arcade  Chitalsar Manpada,Ghodbunder Road,Thane-Mumbai-400607",11522014000411,Swiggy instamart.xlsx
+Mumbai,1403051.0,,19.236029,72.837357,"Gf, S.no. 221/6 (Part), Village Eksar, Taluka Borivali, District Mumbai- 400092",2.02503E+16,Swiggy instamart.xlsx
+Mumbai,1062418.0,,19.251583,72.858646,"First Floor, Kuber palace, LT Road, Mhatrewadi, Dahisar West, Mumbai 400068",11521011000365,Swiggy instamart.xlsx
+Mumbai,1396296.0,,19.265951,72.965698,"B. unit no. g-11, Gf, building no.D, MBC park, ghodbunder road,kasarwadavli, thane, zone 5, maharashtra, 400607",2.02408E+16,Swiggy instamart.xlsx
+Mumbai,1381833.0,,19.27995,72.878778,"Gala No. F/7, Gf, Survey No. 94, 95, 96&97,Revenue Village,Ghodbunder,District Thane. 401107",11523014000011,Swiggy instamart.xlsx
+Mumbai,1346590.0,,19.285109,72.876539,"Hubtown Gardenia, Shopping Premises Co-op Housing Society,Shantiwan , Mira Road East - 401107",2.02206E+16,Swiggy instamart.xlsx
+Mumbai,1381561.0,,19.27613387,72.96023835,"Gf, Shop 05,06,07,08,11,12 & 13 subodh building,hanuman mandir,G B road,ovala,Thane 400615",2.02211E+16,Swiggy instamart.xlsx
+Mumbai,1388687.0,,19.300099,72.85513,"First Floor , H.M . Trade Centr , Village Goddev, Thane - 401105",2.02402E+16,Swiggy instamart.xlsx
+Mumbai,1314371.0,,19.384573,72.830382,"GF- shop no 13 to 24,North Lanes,stastion road,Vasai west,Palghar,Mumbai-401201",11522019000384,Swiggy instamart.xlsx
+Delhi,1401469.0,,28.410722,76.90725,"GF, Village Dhorka, Gurgaon, Haryana-122505",2.02501E+16,Swiggy instamart.xlsx
+Delhi,1387568.0,,28.398878,76.955192,"GF,Rec.No. 11,forming 5/6th part of Killa No. 20/2/1,Sikanderpur Badha,Dist-Gurugram, Haryana-122004",2.02312E+16,Swiggy instamart.xlsx
+Delhi,1402055.0,,28.387579,76.976972,"GF,Near Aapno ghar,Delhi-Jaipur expressway,VillageSikohpur,Gurgaon,122004",2.02502E+16,Swiggy instamart.xlsx
+Delhi,1382258.0,,28.39456193,77.03499428,"GF, Khewat No. 196/225,situated at Mauja Badshahpur, Tehsil and District Gurgaon, Haryana-122001",10822005001991,Swiggy instamart.xlsx
+Delhi,1398454.0,,28.408583,77.062444,"U.no  105,106,108, 04, 110-112, gf to 7th floor  Revenue Estate of Village Badshahpur, Sector 50, Gurgaon,  Haryana, 122108",2.02409E+16,Swiggy instamart.xlsx
+Delhi,1278169.0,,28.391181,77.057603,"Basement 1,Hub 66,ISV Estate,Sector 66,Gurgaon,Haryana-122001",10822005000639,Swiggy instamart.xlsx
+Delhi,1387911.0,,28.420505,77.090661,"First floor , bearing no. 1, block f, sushant lok phase 2, sector-57, Gurgaon-122001",2.02311E+16,Swiggy instamart.xlsx
+Delhi,1402254.0,,28.406073,77.091881,"Gf, Bearing Plot No. 957, Village Ullawas, Wazirabad, Gurgaon,Haryana, 122101",2.02501E+16,Swiggy instamart.xlsx
+Delhi,1393826.0,,28.3919602,77.2935421,"Plot no 3-C/63 NIT , Faridabad, Haryana, 121001",2.02405E+16,Swiggy instamart.xlsx
+Delhi,1391900.0,,28.409797,77.318897,"Basement floor, SCO NO. 5, sector-16, urban estate, faridabad-121002",2.02403E+16,Swiggy instamart.xlsx
+Delhi,1403725.0,,28.4042,77.3485,"K No. 71//69, Khasra No. 10//16/1, Budhena, Haryana - 121002",2.02504E+16,Swiggy instamart.xlsx
+Delhi,1381444.0,,28.41824,77.349749,"Basement floor,SALASAR TOWER,Sec 88,Village baselva,Faridabad-121002",10822003000513,Swiggy instamart.xlsx
+Delhi,1402607.0,,28.426149,76.936973,"GF, Khe.no 696/604 min.Village hayatpur, , tehsil harsaru, Gurgaon, Haryana-122505",2.02502E+16,Swiggy instamart.xlsx
+Delhi,1389633.0,,28.412856,77.04265,"GF,Palmwood 10, Unit number A-9A ,Dhani,Tatvam Villas, Sector 47, Gurugram, Haryana 122001",2.02402E+16,Swiggy instamart.xlsx
+Delhi,1390226.0,,28.421674,77.288015,"GF, mouza ankhir tehsil and district faridabad 121012",2.02402E+16,Swiggy instamart.xlsx
+Delhi,1397028.0,,28.426861,77.04575,"GF,Hadbast Wazirabad, Gurgaon, Haryana, 122001",2.02408E+16,Swiggy instamart.xlsx
+Delhi,1389006.0,,28.449587,77.001076,"GF,Khewat/Khata no.543/555, Village -Kadipur, Gurgaon, Haryan- 122101",2.02402E+16,Swiggy instamart.xlsx
+Delhi,1392083.0,,28.441902,77.094724,"Ground Floor, Land Bearing No. 681 Situated at Residential Colony Namely No. 681, Sarasvati Kunj Cooperative House Building Society Limited Sector 53 Wazirabad, Gurgaon, Gurugram, Haryana, 122001",2.02403E+16,Swiggy instamart.xlsx
+Delhi,1395428.0,,28.43975,77.103333,"Basem P.no 1, Saraswati Kunj, Wazirabad, Gurgaon Haryana- 122002",2.02407E+16,Swiggy instamart.xlsx
+Delhi,1402057.0,,28.434528,77.13475,"GF, Rectangle No. 48, Qila No.5, Village Gwal Pahari,Gurgaon, Haryana-122018",2.02501E+16,Swiggy instamart.xlsx
+Delhi,1391899.0,,28.455094,77.311602,"P.no 37-G, DLF Estate No-1, Sector 32, Faridabad, Haryana -121003",2.02404E+16,Swiggy instamart.xlsx
+Delhi,1402056.0,,28.435222,77.033611,"Gf, Killa No. 425, situated at Islampur, Badshahpur, Gurgaon, Haryana, 122018",2.02501E+16,Swiggy instamart.xlsx
+Delhi,1400549.0,,28.4444684,77.060062,"GF, B-12, sector-45, near greenwood city, Gurgaon-122003",2.02501E+16,Swiggy instamart.xlsx
+Delhi,762551.0,,28.45296959,77.08170687,"GF, Shriram Complex, C Block, Sushant Lok Phase 1, Sector 43, Gurgaon 122009",10821005001569,Swiggy instamart.xlsx
+Delhi,1400968.0,,28.47416,76.962768,"Gf, Kh. No. 59/12/2/1 Mouza Dhankot Village, Mandir, Tehsil Gurgaon, Haryana, 122505",2.02412E+16,Swiggy instamart.xlsx
+Delhi,1394450.0,,28.492417,77.184889,"FF, Kh.no 810,village Chattarpur,H.no 1, South Delhi, Hauz Khas, Delhi- 110030",2.02406E+16,Swiggy instamart.xlsx
+Delhi,1394451.0,,28.47073,77.041298,"Plot no 34/B and 34/C block- B old DLF Colony New Market Scheme village, Gurgaon Haryana - 122001",2.02405E+16,Swiggy instamart.xlsx
+Delhi,1298919.0,,28.472171,77.071091,"Basement Floor, SCO 389p & 390,Sector 29,City Centre,Urban Estate,Gurgaon-122001",10822005000802,Swiggy instamart.xlsx
+Delhi,1239163.0,,28.4627016,77.087471,"Unit no C-002,Gf, Super mart-1 Building,DLF City, Village chakkarpur,Gurgaon,Haryana-122002",10822005000634,Swiggy instamart.xlsx
+Delhi,1389005.0,,28.480102,76.989115,"GF,Khewat/Khata no.322/387 Mustil no.32 Killa no.21(80),22(2-10) Village -Dhanwapur, Gurgaon- 122006",2.02403E+16,Swiggy instamart.xlsx
+Delhi,1382659.0,,28.483541,77.021668,"LGF,OM Tower 2,Khasra no-2762,Situated at Vaka Mauja,Guragaon-122001",2.02301E+16,Swiggy instamart.xlsx
+Delhi,1402248.0,,28.502103,77.318222,"GF, Khasra No. 759, Village Molarband, Jaitpur Main Road, Kalakaji, Delhi-110044",2.02502E+16,Swiggy instamart.xlsx
+Delhi,1380623.0,,28.48944066,77.09683819,"Basement floor,Plot no U-59/17 DLF Phase III,Gurgaon-122010",10822005001640,Swiggy instamart.xlsx
+Delhi,1384513.0,,28.5016315,77.04455361,"R/o H.no-124, Cartarpuri alias Daulatpur, nasirabad 63 gurgaon, Haryana-122017",2.02308E+16,Swiggy instamart.xlsx
+Delhi,1398757.0,,28.506139,77.069167,"GF, Shiv Ashram Compound, Old Delhi, Gurgaon Road, Opposite Potash Research Institute, Village Dundahera, Gurgaon, Haryana, 122016",2.02411E+16,Swiggy instamart.xlsx
+Delhi,1382964.0,,28.514786,77.206167,"Basement floor,Khasra no -70,Situated in revenue estate,saidulajab,Tehsil Mehrauli,New Delhi-110017",2.02302E+16,Swiggy instamart.xlsx
+Delhi,1384146.0,,28.517735,77.037374,"Khewat No. 13637, Khata No. 3608/3955, Kanal 10 Marla,Village Choma, District Gurgaon,-122001",2.02304E+16,Swiggy instamart.xlsx
+Delhi,1403184.0,,28.495284,77.020353,"Ground Floor, C-2 Block, Palam Vihar, Gurugram, Haryana-122017",2E+16,Swiggy instamart.xlsx
+Delhi,1399699.0,,28.541028,77.129278,"P.no 815 g.f block- k-2 village mahipalpur mata chowk, mehrauli, south , Delhi, 110037",2.0241E+16,Swiggy instamart.xlsx
+Delhi,1386536.0,,28.52532,77.15428,"First floor,Khasra no. 478/396/87/1, 68 revenue estate of village masoodpur New Delhi-110070",2.02309E+16,Swiggy instamart.xlsx
+Delhi,1386387.0,,28.502809,77.38639,"GF,Village Wajidpur, Pargana Dadri, Gautam Buddha Nagar, District Gautam Buddha Nagar,UP-201304",2.02308E+16,Swiggy instamart.xlsx
+Delhi,1399700.0,,28.534481,77.218636,"Gf, K.no 2248/1011/68, property no JC-42, situated at village khirki, Malviya Nagar, Saket Delhi - 110017",2.02411E+16,Swiggy instamart.xlsx
+Delhi,1389690.0,,28.54237,77.257278,"FF, Plot n0.3-4, LSC at site no. 37-38 , kalkaji, New Delhi-110019",2.02402E+16,Swiggy instamart.xlsx
+Delhi,1383383.0,,28.564283,77.050354,"Basement floor,Plot no-3,Dwaraka Sector-23A,New Delhi-110026",2.02302E+16,Swiggy instamart.xlsx
+Delhi,1381357.0,,28.549068,77.294615,"LGF,GF and 3 UF (Said Building), being part of Khasra No. 208, Old Village Jasola, New Delhi 110025",2.0221E+16,Swiggy instamart.xlsx
+Delhi,1398130.0,,28.540333,77.3725,"Plot no.7 situated in village bhangel begumpur noida ,gautam buddha nagar , uttar pradesh, 201301",2.02408E+16,Swiggy instamart.xlsx
+Delhi,810368.0,,28.55629,77.174751,"1st floor, L 92, Pratap market, Munirka Delhi 110067",13321009000435,Swiggy instamart.xlsx
+Delhi,406774.0,,28.538353,77.2146898,"40B, Marashi Dayanand Marg, Corner Market, Malviya Nagar, Delhi 110017",13321002000390,Swiggy instamart.xlsx
+Delhi,1387704.0,,28.57283,77.272838,"GF,84 - flat no 6 village khizrabad New Delhi- 110025",2.02311E+16,Swiggy instamart.xlsx
+Delhi,1383134.0,,28.558014,77.346292,"Ground floor,plot no-A1,Khasra no-16M,Defence Enclave,Village sadarpur,Sector 44,Noida,UP-201301",2.02302E+16,Swiggy instamart.xlsx
+Delhi,406773.0,,28.549139,77.363111,"Tulip Mall, B-156A, Sector-46, Noida, Uttar Pradesh -201303",2.02209E+16,Swiggy instamart.xlsx
+Delhi,1398755.0,,28.562528,77.2115,"Basement Sudarshan Basement to Uf, Gautam Nagar, New Delhi- 110049",2.02409E+16,Swiggy instamart.xlsx
+Delhi,1267917.0,,28.557799,77.236092,"1st Floor,Plot No 143, Opp, LSR College,Jamrudpur,Greater Kailash-1,New Delhi-110048",13322002000307,Swiggy instamart.xlsx
+Delhi,1402457.0,,28.577344,77.050337,"GF, Khasra N0. 56/9 village Amberhai, New Delhi-110075",2E+16,Swiggy instamart.xlsx
+Delhi,1229998.0,,28.567368,77.189545,"Basement Floor, A-2/8, Safdarjung Enclave,African Avenue,New Delhi- 110029",13322009000121,Swiggy instamart.xlsx
+Delhi,1382494.0,,28.57112486,77.25832889,"GF,Khasra No. 68/1, Mauja Kilokri, situated at Village Kilokari, New Delhi  110014",13322002000918,Swiggy instamart.xlsx
+Delhi,1395430.0,,28.581507,77.322784,"BASEMENT, GROUND FLOOR, FIRST FLOOR, SECOND FLOOR/TERRACE, PLOT NO 9, BLOCK A, SECTOR-04, NOIDA, DISTRICT GAUTAM BUDHH NAGAR, NOIDA CITY ZONE-1, GAUTAM BUDDA NAGAR, UTTAR PRADESH, 201301",2.02407E+16,Swiggy instamart.xlsx
+Delhi,1382871.0,,28.5847988,77.06909539,"Ground Floor,D 470,471,Ramphal chowk,Dwaraka sector 7,New Delhi-110077",2.02302E+16,Swiggy instamart.xlsx
+Delhi,1401649.0,,28.593732,77.08742,"Gf,SH. G.S. Solanki, Plot No. RZ-542/4, KH. NO. 542, Palam Colony, Delhi-110045",2.02503E+16,Swiggy instamart.xlsx
+Delhi,1404584.0,,28.5654,77.1996,"Gf, Kamal Talkies Safdarjung Development Scheme New Delhi 110016",2.02505E+16,Swiggy instamart.xlsx
+Delhi,1383851.0,,28.572895,77.227996,"Plot bearing No. 141,situated at Arjun Nagar, Kotla Mubarakpur, New Delhi,pin code- 110003",2.02303E+16,Swiggy instamart.xlsx
+Delhi,1099458.0,,28.6080012,77.2924796,"1st Floor,Plot no 37/38,Gomti complex,shashi park road,phase 1,Mayur Vihar,New Delhi-110091",13321003000613,Swiggy instamart.xlsx
+Delhi,1386943.0,,28.595272,77.319807,"Ground floor, C-28, Sector-06, GB Nagar, Noida, UP-201301",2.02312E+16,Swiggy instamart.xlsx
+Delhi,1388200.0,,28.568164,77.36916,"GF, plot no 19 & 20, old abadi village Barola ,district Gautam budh nagar, Uttar Pradesh 201304",2.02401E+16,Swiggy instamart.xlsx
+Delhi,1384143.0,,28.594436,77.025226,"Plot no-13,B block,Pocket 3,Sec 17 Dwaraka,New Delhi-110075",2.02304E+16,Swiggy instamart.xlsx
+Delhi,1388690.0,,28.602409,77.058014,"Basement Floor , Village palam , k block rajapuri madhu vihar new delhi -110059",2.02402E+16,Swiggy instamart.xlsx
+Delhi,1383133.0,,28.60668364,77.36476633,"GF,B-42,pLPT NO-420,B-Block,Sector-59,Noida,UP-201304",2.02302E+16,Swiggy instamart.xlsx
+Delhi,1401654.0,,28.620583,77.117194,"Ground Floor, Land Bearing No. C-148, Temporary Industrial Area, Mayapuri Phase-2, SARASWATI VIHAR, North West , Delhi, 110064",2.02412E+16,Swiggy instamart.xlsx
+Delhi,1387705.0,,28.62036916,77.04032745,"GF,Plot no 105,106,mohan garden,uttam nagar kakrola road, west new delhi 110059",2.02311E+16,Swiggy instamart.xlsx
+Delhi,762550.0,,28.6215296,77.0832374,"Ground Floor, Plot no. 7, block- C2, janakpuri, Delhi-110058",13321011000480,Swiggy instamart.xlsx
+Delhi,1403311.0,,28.63353,77.13722,"Ground Floor, A-71, Naraina Industrial Area, Phase-01, New Delhi-110028",2.02503E+16,Swiggy instamart.xlsx
+Delhi,1389689.0,,28.622128,77.069461,"GF, Plot no 285 block -A phankha road residential colony janakpuri new delhi -110058",2.02403E+16,Swiggy instamart.xlsx
+Delhi,1386535.0,,28.640551,77.119766,"First floor,J-12/19,rajouri garden, tagor garden, S O West delhi - 110027",2.02308E+16,Swiggy instamart.xlsx
+Delhi,1381835.0,,28.64429079,77.17663786,"LGF, shop no-S-1,S-2,B-1 & B-2,SETHI BHAVAN,7 Rajendra place,New Delhi-110008",13322005000872,Swiggy instamart.xlsx
+Delhi,1062419.0,,28.644846,77.200924,"GF, Property No. 1-E/8, Plot No. 8, Block 1-E, Jhandewalan Extension, New Delhi 110055",13321005000061,Swiggy instamart.xlsx
+Delhi,1386719.0,,28.64151,77.234238,"LGF,3/7,Asaf ali road,New delhi,110002",2.02309E+16,Swiggy instamart.xlsx
+Delhi,1403206.0,,28.628297,77.27872,"Gf, K.no 264, sakarpur  block shkarpur shahdara new delhi 110092",2.02503E+16,Swiggy instamart.xlsx
+Delhi,1230886.0,,28.626045,77.303794,"1st Floor,D-590,Mandawali,Fazalpur West Vinod Nagar,Delhi-110092",13322003000087,Swiggy instamart.xlsx
+Delhi,1399806.0,,28.642278,77.334667,"P.no rc-1/2 sector-1 vaishali, ghaziabad, uttar pradesh, 201019",2.0241E+16,Swiggy instamart.xlsx
+Delhi,1400548.0,,28.639064,77.069527,"Gf,P. No. 2, GF, Shop 3,Village Budhela, Vikaspuri, Delhi- 110018",2.02501E+16,Swiggy instamart.xlsx
+Delhi,1099457.0,,28.63501728,77.09112262,"WZ-1, First floor, Ganesh Nagar, Tilkar nagar, Main Najafgarh road. New Delhi-110018",13322006000128,Swiggy instamart.xlsx
+Delhi,1062420.0,,28.6401352,77.1077267,"LGF , D-61, Ajay Enclave, Subhash Nagar, New Delhi-110018",13321006000186,Swiggy instamart.xlsx
+Delhi,1229997.0,,28.65022,77.161232,"Plot No BP-08,West Patel Nagar,New Delhi-110008",13322006000126,Swiggy instamart.xlsx
+Delhi,1386450.0,,28.644719,77.352034,"FF, Bearing Plot no.CS-2 & Plot no.CS-4, Gyan Khand -II Indirapuram , Ghaziabad,UP-201014",2.02309E+16,Swiggy instamart.xlsx
+Delhi,1401267.0,,28.64275,77.360167,"P.no 1087, Gf Niti Khand-1, Indirapuram, Ghaziabad, Ghaziabad Nagar,Uttar Pradesh, 201010",2.02501E+16,Swiggy instamart.xlsx
+Delhi,649851.0,,28.6485387,77.123928,"A-57, Rajouri Garden, Delhi 110027",13321007000465,Swiggy instamart.xlsx
+Delhi,649841.0,,28.6418916,77.2822511,"A-10, Priyadarshini Vihar, Lakshmi Nagar, Delhi 110092",13321003000284,Swiggy instamart.xlsx
+Delhi,1261842.0,,28.651164,77.141291,"GF,Block F,F-50,Kirti Nagar,New Delhi-110003",13322006000346,Swiggy instamart.xlsx
+Delhi,1099459.0,,28.6559234,77.2818721,"1st floor,plot no 13,block C9,Gondi Abadi,Krishna Nagar,Shahadara,New Delhi-110051",13321004000354,Swiggy instamart.xlsx
+Delhi,1385945.0,,28.66404,77.321404,"Basement Floor, Sector-12, THA, Block-D, Chander Nagar, Ghaziabad, UP 201014",2.02311E+16,Swiggy instamart.xlsx
+Delhi,1400967.0,,28.682167,77.058778,"Ground Floor, Plot No. 4, Khasra No. 35/18, Situated in Village Nangloi Jat, Main Rohtak Road, Nangloi Extension 1- B, Delhi, PUNJABI BAGH, West , Delhi, 110041",2.02411E+16,Swiggy instamart.xlsx
+Delhi,1403208.0,,28.670467,77.083404,"UGF, Guru har Kishan  Nagar , Sai Baba road Near Union Bank ,Paschim Vihar ,pin110087",2.02503E+16,Swiggy instamart.xlsx
+Delhi,1400924.0,,28.662389,77.155944,"Unit 2, Gf Plot No. 53-B, Industrial Area, Najafgarh Road, Delhi, 110015",2.02411E+16,Swiggy instamart.xlsx
+Delhi,1400226.0,,28.654556,77.361778,"Gf, Shop No. 1 to 12, Madhav Complex, Sector 15, Vasundhara, Ghaziabad, Ghaziabad Tahsil, Ghaziabad, Uttar Pradesh, 201012",2.02411E+16,Swiggy instamart.xlsx
+Delhi,1402052.0,,28.673,77.170306,"Gf, Partsvnath metro mall, Inderlok Metro Station-New Delhi-110035",2.02502E+16,Swiggy instamart.xlsx
+Delhi,1403207.0,,28.658655,77.20243,"UG Flr ,Plot 10130, Katra chajju pandit, main  Rani Jhasi Road, New Delhi-110005",2.02503E+16,Swiggy instamart.xlsx
+Delhi,1404450.0,,28.672993,77.093109,"Gf -5, Bhera Enclave Paschim VIhar New Delhi -110087",2.02505E+16,Swiggy instamart.xlsx
+Delhi,1386271.0,,28.702855,77.147173,"GF,plot bearing No. 01, admeasuring 283.50 sq. mtrs, HP, Pitampura, New Delhi 110034",2.02308E+16,Swiggy instamart.xlsx
+Delhi,1402776.0,,28.688144,77.195408,"Gf, P.no 10,Gur ki mandi village, rajpura, model town, keshavpuram zone, Delhi-110007",2.02503E+16,Swiggy instamart.xlsx
+Delhi,1380671.0,,28.690066,77.283795,"GF,A-38,old no-396/37,main 100 futa road,kabir nagar,babarpur shahdara ,new delhi-110032",13322004000265,Swiggy instamart.xlsx
+Delhi,1403179.0,,28.687647,77.291998,"Gf,A-1, Khasra No.749/85, Jyoti Colony, Shahdra Main Road, Delhi-110032",13325004000085,Swiggy instamart.xlsx
+Delhi,1388689.0,,28.678051,77.314262,"GF,Plot no. 09 dilshad garden , Village Jhilmil tahirpur , GT Road , Shahdra ,new Delhi 110095",2.02402E+16,Swiggy instamart.xlsx
+Delhi,1401468.0,,28.67776208,77.35549535,"Gf,Bearing P.no 41, situated in Sector 5, THA Rajendra Nagar, Ghaziabad Tahsil, Ghaziabad, Uttar Pradesh, 201005",2.02412E+16,Swiggy instamart.xlsx
+Delhi,1384511.0,,28.715442,77.138837,"Plot No. 1,located in Block  E, layout plan of Prashant Vihar Residential Scheme, Delhi-110085",2.02304E+16,Swiggy instamart.xlsx
+Delhi,1400547.0,,28.700417,77.163306,"Plot No 39, Ground Floor, Block-A, Wazipur Industrial Area, Landmark Fire Brigade, KARAWALNAGAR, North East , Delhi, 110052",2.02411E+16,Swiggy instamart.xlsx
+Delhi,1325203.0,,28.71032279,77.20547655,"Basement & Ground Floor,42-A,Radio Colony,Paramanand Road,Dhakka,Mukherjee Nagar,New Delhi-110009",13322005000337,Swiggy instamart.xlsx
+Delhi,1062023.0,,28.716239,77.114781,"GF,Units 25, 26, 29 to 31, 55 to 58, Kings Mall,Twin District Center, Sector-10,Rohini, Delhi-110085",13321001001367,Swiggy instamart.xlsx
+Delhi,1402249.0,,28.71899,77.265877,"Gf,D-1/206 to 208,Village Mustafabad, D-Block, Dayalpur Illaqa Shahdra, Delhi-110094",2.02501E+16,Swiggy instamart.xlsx
+Delhi,1403518.0,,28.682836,77.34622,"Shop No. 2, Plot No. 4, Vrindavan Garden, Sahibabad,Ghaziabad Uttar Pradesh - 201005",2E+16,Swiggy instamart.xlsx
+Delhi,1402053.0,,28.73925,77.197722,"Gf, P.No. 2, 3, located in Abadi Area Village Buruf, Main 100 Futa Road, Sant Nagar, CIVIL LINES, Central, Delhi, 110084",2.02501E+16,Swiggy instamart.xlsx
+Delhi,1294674.0,,28.746553,77.130366,"GF,Plot No 68,Badli industrial Area,Phase 2,Badli,New Delhi-110042",13322008000296,Swiggy instamart.xlsx
+Chennai,1403024.0,,12.82125,80.204582,"FF,N S. No. 95/56,Pudhupakkam Village, Vandalur, MR Radha Road, Chengalpattu- 603103",2.02503E+16,Swiggy instamart.xlsx
+Chennai,1385475.0,,12.798207,80.224434,"Sy.No.462/5,OMR,Padur, Chengalpattu, pincode -603103,Land mark - Wingz badminton academy",2.02309E+16,Swiggy instamart.xlsx
+Chennai,1380531.0,,12.79141622,80.21811101,"GF, Dno-9 SF No-305/3B,Vandalur Road,Koilmaniyan,Kelambakkam,Chennai-603103",12422008003665,Swiggy instamart.xlsx
+Chennai,1402246.0,,12.846789,80.211545,"Gf, Plot No.37,38, 39,Natham Salai, Road),Thalambur,Chennai:600130",2.02501E+16,Swiggy instamart.xlsx
+Chennai,1381832.0,,12.83785828,80.23081769,"No.12,S.no.12/5,Sri Seshadri Avenue, Egattur Village, Thiruporur taluk, kancheepuram district,603110",12422008004985,Swiggy instamart.xlsx
+Chennai,1391892.0,,12.878833,80.212833,"GF, Plot no 728 & 729,Semmancheri, Ganpati Sundicate colony, 1st street St. Thomas Mount Block, Kancheepuram, TN - 600119",12424008002186,Swiggy instamart.xlsx
+Chennai,1393568.0,,12.858278,80.068611,"B.plot no.69 and 70, urapakkam village, vaigai nagar,, kattankulathur block, kancheepuram, tamil nadu, 603210",2.02407E+16,Swiggy instamart.xlsx
+Chennai,1402802.0,,12.885146,80.150657,"FF, No. 1A, 1st Cross Street, Lakshmi Nagar Extension, Selaiyur Chennai",2E+16,Swiggy instamart.xlsx
+Chennai,1381753.0,,12.898953,80.141121,"Sy.no 68/7A Agaram main road thiruvancheri village Tambaram Taluk,Chennai-600126",12422008005050,Swiggy instamart.xlsx
+Chennai,1386267.0,,12.8967,80.232597,"GF, Door No 135, Village High Road, Shollinganallur, Chennai -600119",2.02309E+16,Swiggy instamart.xlsx
+Chennai,1395723.0,,12.918083,80.15775,"S.no.98/6, sathya sai nagar, rajakilpakkam, kancheepuram  kancheepuram, tamil nadu, 600073",2.02408E+16,Swiggy instamart.xlsx
+Chennai,1388138.0,,12.906743,80.205681,"Naga Complex, Plot No.32, 33 and 34,Shanthi Nagar, Perumbakkam, Chennai-600100",2.02311E+16,Swiggy instamart.xlsx
+Chennai,1386264.0,,12.9261783,80.1112602,"FF,Door No.7, Meenakshi mahal, Brindavan colony, Tambaram west, Chennai-600045.",2.02308E+16,Swiggy instamart.xlsx
+Chennai,1385476.0,,12.927463,80.194938,"FF,Sy.No -132/C,132/2A and 132/2B ,Medavakam village,kancheepuram district,chennai Tamil Nadu-600100",2.02307E+16,Swiggy instamart.xlsx
+Chennai,1383824.0,,12.918017,80.233521,"Sy.Nos.123/8, 123/6 & 123/7 Karapakkam,Sholinganallur,Chennai-600044",2.02305E+16,Swiggy instamart.xlsx
+Chennai,1397026.0,,12.932956,80.141286,"Gf s.no 97/1A,97/2A and 97/B1, Chitlapakkam lenin street Tambaram, Kancheepuram Tamil Nadu -600064",2.02409E+16,Swiggy instamart.xlsx
+Chennai,1394671.0,,12.954334,80.186035,"GF, survey no 334/7, Meddavakkam, Keelkattalai, Chennai Pallavaram Mpty, Kancheepuram, TN -600117",2.02406E+16,Swiggy instamart.xlsx
+Chennai,1002694.0,,12.9423776,80.2060724,"Plot no 46, 2 main road,Narayanapuram,pallikaranai,chennai-600100",12421008003831,Swiggy instamart.xlsx
+Chennai,1386265.0,,12.947086,80.236888,"First Floor,Door no - 2/279, Pillaiyar koil street, Thoraipakkam, Chennai 600097",2.02308E+16,Swiggy instamart.xlsx
+Chennai,1388683.0,,12.974854,80.258486,"GF, T.S.No.52 situated at Kannappa Nagar 1st Main Road, Kottivakkam, Thiruvanmiyur, Chennai-600041",2.02312E+16,Swiggy instamart.xlsx
+Chennai,1390221.0,,12.945399,80.13596,"GF, Sy. No.-317, GST Road , Pallavaram village ,chrompet Chennai-600044",2.02403E+16,Swiggy instamart.xlsx
+Chennai,854384.0,,12.964448,80.152523,"GF,Door no:183,183/1B,Dharga Road,Pallavaram,Chennai-43.",12421008002906,Swiggy instamart.xlsx
+Chennai,1402049.0,,12.954982,80.205718,"Gf, Plot No 64 ssri Balaji Nagar of Madipakkam village saidapet Chennai-600091",2.02503E+16,Swiggy instamart.xlsx
+Chennai,1401250.0,,12.965889,80.108917,"Gf,SNo.375/1,Thirumudivakkam,Sriperumbudur Taluk,Kanchiburam Chennai 600044",2.02501E+16,Swiggy instamart.xlsx
+Chennai,1397630.0,,12.974557,80.2211,"FF, SF, sri narayana complex, velachery village,  ward - 177, chennai, tamil nadu, 600042",2.02408E+16,Swiggy instamart.xlsx
+Chennai,1381276.0,,12.99134524,80.19895271,"GF,No-1,Erikarai street,Adabakkam,Chennai-600088",12422008004478,Swiggy instamart.xlsx
+Chennai,810362.0,,12.9720049,80.2479561,"First Floor,Door No.366, Nehru Nagar, Kottivakkam, Chennai - 600068",12421008002759,Swiggy instamart.xlsx
+Chennai,1403356.0,,12.984448,80.128502,"Ground Floor ,No.4 Jawaharlal nehru road anakaputhur chennai-600070.",2.02503E+16,Swiggy instamart.xlsx
+Chennai,1389252.0,,12.968462,80.133513,"First Floor ,Door No 7, 4th cross street, Anna Salai, MGR Nagar, Pammal, 600075",2.02401E+16,Swiggy instamart.xlsx
+Chennai,1369819.0,,13.00127442,80.25743031,"1st floor,Old no-20,New no-58,1 st avenue,Shastri Ngar,Adyar,Chennai-600020",12422002002911,Swiggy instamart.xlsx
+Chennai,1400923.0,,13.016222,80.139111,"FF, building,plot no.57,gerugambakkam village,sriperumdur, kancheepuram, tamil nadu, 600116",2.02411E+16,Swiggy instamart.xlsx
+Chennai,1402445.0,,13.017778,80.166583,"2/48,BALAMURUGAN KOIL STREET 2 ND S ET,PORUR,CHENNAI,KANCHEEPURAM, TAMIL NADU",2.02501E+16,Swiggy instamart.xlsx
+Chennai,1395426.0,,13.029606,80.256622,"D. no 66, Oxford Centre, C.P Ramaswamy road, Alwarpet Chennai corp, Tamil Nadu - 600018",2.02406E+16,Swiggy instamart.xlsx
+Chennai,1403833.0,,13.031044,80.114007,"Gf, OS no: 488/2,East Kamatchi Amman Street, Mangadu, Kancheepuram – 600122",2.02504E+16,Swiggy instamart.xlsx
+Chennai,1399697.0,,13.029389,80.204472,"No. 124B, Bharathidasan Street, Thiru Nagar, Jafferkhanpet, Chennai Corp. Ward - 138, Chennai, Tamil Nadu, 600083",2.02411E+16,Swiggy instamart.xlsx
+Chennai,1401251.0,,13.03825,80.247611,"First floor, municipal nos.443 and 445, guna complex, anna salai, corp. ward - 122, chennai, tamil nadu, 600018",2.0241E+16,Swiggy instamart.xlsx
+Chennai,1393566.0,,13.039583,80.134778,"GF, p.no 32 and 33, iyappanthangal village, chengalpet district, chennai kancheepuram, Tamil nadu- 600056",2.02406E+16,Swiggy instamart.xlsx
+Chennai,1386266.0,,13.0411638,80.1741688,"FF,No 55, Arcot Road, Valsaravakkam, Chennai 600087",2.02308E+16,Swiggy instamart.xlsx
+Chennai,1386449.0,,13.029426,80.170441,"First Floor,No.173,mount ponnamalee high road,porur,chennai-600116",2.02308E+16,Swiggy instamart.xlsx
+Chennai,1386941.0,,13.039177,80.236443,"GF, Door no 3 Sundaram Iyer Street T Nagar Chennai 600017",2.02309E+16,Swiggy instamart.xlsx
+Chennai,1400604.0,,13.047333,80.271278,"SJS villas, ff survey no.76/77, avvai shanmugam salai,royapettah,  chennai, tamil nadu, 600014",2.02411E+16,Swiggy instamart.xlsx
+Chennai,1393567.0,,13.050631,80.112807,"Unit no 2, First floor, Senneerkuppam village, Poonamalee Taluk, Avadi Road, Seenckuppam, Poonamalle , Chennai, Poonamalle block, Thiruvallur, TamilNadu, 600056",2.02405E+16,Swiggy instamart.xlsx
+Chennai,1403832.0,,13.057863,80.179719,"FF,Old S.No.327, New S.no 327/1A1,6th Street, Govarthana Nagar, Nerkundram, Chennai – 600107",2E+16,Swiggy instamart.xlsx
+Chennai,1399696.0,,13.053917,80.225472,"Old Door No. 347/1, New No. 80, Arcot Road, Kodambakkam, Ward - 132, Chennai, Tamil Nadu, 600024",2.02411E+16,Swiggy instamart.xlsx
+Chennai,1403313.0,,13.076758,80.125557,"Gf,Collectrate Colony, Govindan Street,  Chennai, Tamil Nadu, 600029",2.02503E+16,Swiggy instamart.xlsx
+Chennai,1380670.0,,13.07856115,80.14983553,"GF,Door no-20,vellalar street,ponniamman nagar salai,Ayanambakkam,Chennai-600095",12422023002245,Swiggy instamart.xlsx
+Chennai,1382426.0,,13.08786043,80.20058285,"First Floor, TS No-8(220/3)13th main road,Anna Nagar,Chennai-600040",2.02212E+16,Swiggy instamart.xlsx
+Chennai,1402050.0,,13.089889,80.286528,"FF, D.No. 1/3, Re. Sy.No.11514,  Francis Joseph Street, VOC Nagar, George Town, Chennai- 600001",2.02501E+16,Swiggy instamart.xlsx
+Chennai,1398756.0,,13.074728,80.168022,"Gf, situated at Nolambur Village, Saidapet, Taluk, Thiruvallore District- 600095",2.02501E+16,Swiggy instamart.xlsx
+Chennai,1402801.0,,13.06898,80.224457,"Ground floor ,No.18/2c puliyambedu village noombal chennai -600077",2.02503E+16,Swiggy instamart.xlsx
+Chennai,1386448.0,,13.055384,80.247602,"GF, New Door No.22/2 ,Thirumoorthy Nagar 1st Street, Nungambakkam , Chennai-600034",2.02309E+16,Swiggy instamart.xlsx
+Chennai,1386974.0,,13.088815,80.25045,"FF Mekala Theatre building , door no 128 bricklin road Purasaiwalkam 600007",2.02309E+16,Swiggy instamart.xlsx
+Chennai,1400603.0,,13.064333,80.266944,"U.no B1 -B4,Gf -Prince kushal tower,Anna Salai, chennai,ward - 100,  Tamil nadu, 600002""",2.02411E+16,Swiggy instamart.xlsx
+Chennai,1401467.0,,13.094722,80.107167,"Survey No.42/86,Door No.27,Poonamallee Road, Paruthipattu, Avadi, Thiruvallur, Tamil Nadu, 600071",2.02501E+16,Swiggy instamart.xlsx
+Chennai,1399698.0,,13.09905,80.185091,"D.no 879, MTH Road, Padi, Chennai, Ambathur Thiruvallur, Tamil Nadu, 600050",2.02411E+16,Swiggy instamart.xlsx
+Chennai,1403023.0,,13.0904154,80.2144364,"Gf, P.no 4057,Mullam Town,Aminjikarai Taluk, Anna Nagar,Chennai-600040",2.02503E+16,Swiggy instamart.xlsx
+Chennai,1403357.0,,13.09577,80.149918,"Gf, No.110 B Vanniyar street ambattur kuppam ambattur chennai -600058",2.02503E+16,Swiggy instamart.xlsx
+Chennai,1390222.0,,13.105695,80.279349,"FF, Door Nos. 94 & 95 comprised in Sy. No. 1798/3, situated at Basin Bridge Road, Chennai-600021",2.02403E+16,Swiggy instamart.xlsx
+Chennai,1398439.0,,13.114778,80.230944,"FF, door no.81/1,peravallur village, ayanavaram taluk, agram, chennai, chennai ward - 69, chennai, tamil nadu, 600082""",2.02409E+16,Swiggy instamart.xlsx
+Chennai,1403025.0,,13.126184,80.124443,"Gf,S.no 698/2B situated at Thirumullaivoyal Devi Nagar, Cholambedu, Avadi, Chennai- 600053",2.02503E+16,Swiggy instamart.xlsx
+Chennai,1237710.0,,13.119708,80.202114,"GF,No.139, Senthil Nagar 3rd Street, 200 Feet Ring Road, Uma Nagar, Korattur, Chennai  600099",2.02202E+16,Swiggy instamart.xlsx
+Chennai,1387907.0,,13.118256,80.152606,"FF,202/A , Sy no 594/3A ,M.T.H Road, Venkatapuram, Ambattur -600053",2.02311E+16,Swiggy instamart.xlsx
+Chennai,1396287.0,,13.1253059,80.1949019,"GF,  t.s.no.37/4, korattur, ambattur town, water canal road korattur, ambattur taluk, chennai thiruvallur, tamil nadu, 600080""",2.02409E+16,Swiggy instamart.xlsx
+Chennai,1402775.0,,13.128516,80.250358,"GF, S.No.70/1 Kalasathamman Street,Lakshmi Amman Nagar,Tamil Nadu,Chennai 600118",2E+16,Swiggy instamart.xlsx
+Chennai,1401249.0,,13.13375,80.292611,"Gf,Tondiarpet Village, Town, Thiruvetriyur High Road, Tondiarpet, Chennai-600081",2.02501E+16,Swiggy instamart.xlsx
+Chennai,1400219.0,,13.134806,80.228306,"Gf, S.no 1195/1A1Part, situated at Madhavaram Village, Nethaji Street, Ponniammanmedu, Thiruvallur District- 600110",2.02409E+16,Swiggy instamart.xlsx
+Chennai,1403177.0,,13.166327,80.295342,"Gf, situated at Thiruvottiyur Village, Balakrishna Nagar, Chennai -600019",2.02503E+16,Swiggy instamart.xlsx
+Kolkata,1402805.0,,22.4477221,88.3029298,"Gf,HM Plaza Warehousing DH Road Yani Sarani Charial Opp Vidyasagar Park Kolkata 700139",2E+16,Swiggy instamart.xlsx
+Kolkata,901840.0,,22.48099034,88.35476218,"164/A, Unit No: 1D & 1E, First floor, Netaji Subhash Chandra Bose Road, Kolkata 700040",12821019002684,Swiggy instamart.xlsx
+Kolkata,1237258.0,,22.46831,88.373531,"1 st Floor,no 269/1,Omkar Tower NSC Bose Road,Kolkata-700047",12822019000834,Swiggy instamart.xlsx
+Kolkata,1386270.0,,22.465599,88.391485,"1st Floor, Mouza  Barhans Fartabad,Pargana  Medanmalla, R.S. Garia Road, Kolkata-700084",2.02308E+16,Swiggy instamart.xlsx
+Kolkata,1314370.0,,22.43045998,88.4043648,"Swaagn,Near Shalimar gate, 254,Ukhila,Paikpara Rathatala,Narendrapur,Kolkata-700103",12822017000236,Swiggy instamart.xlsx
+Kolkata,1400223.0,,22.483667,88.295472,"GF, Touza No. 65, TL, Bombay Bagan Road, Thakurpukur, Biren Roy Road,Kolkata, WB- 700061",2.02411E+16,Swiggy instamart.xlsx
+Kolkata,1403415.0,,22.483118,88.338387,"FF, W No 115,Mahatma Gandhi Road, P.S. Thakurpukur, Kolkata – 700082",2E+16,Swiggy instamart.xlsx
+Kolkata,1167234.0,,22.479996,88.390406,"GF,No 2084, Chak Garia,Kolkata-700099",12822019000334,Swiggy instamart.xlsx
+Kolkata,1403460.0,,22.495899,88.396439,"P.no 152 situated at Barakhola Pargana Khaspur, P.S. Kasba, Parganas, 700099",2.02503E+16,Swiggy instamart.xlsx
+Kolkata,1135719.0,,22.5170665,88.323571,"GF,No 16/5, Block A,New Alipore Development Scheme, New Alipore, Kolkata-700053",12822019000004,Swiggy instamart.xlsx
+Kolkata,1380524.0,,22.494008,88.363442,"1st Floor, Administrative building,phase-2,Golf green urban complex,kolkata-700095",12822019002772,Swiggy instamart.xlsx
+Kolkata,1391895.0,,22.512056,88.418194,"GF, R. S Sonarpur, South 24 Anchai Panchayat, Sonarpur West Bengal - 700150",2.02401E+16,Swiggy instamart.xlsx
+Kolkata,1395725.0,,22.508194,88.298778,"GF, Premises No. 1094,Situated at Mouza Behala, Pargana Balia, South 24 Parganas, Kolkata, West Bengal, 700060",2.02407E+16,Swiggy instamart.xlsx
+Kolkata,1169284.0,,22.5210357,88.34539,"15 A, Sadananda Road,Kalighat,Kolkata-700026",12822019000625,Swiggy instamart.xlsx
+Kolkata,1386096.0,,22.523093,88.385927,"GF- 15, Dharmatala Road, P.S. Kasba ,Kolkata -700042",2.02309E+16,Swiggy instamart.xlsx
+Kolkata,1380621.0,,22.52533708,88.3601333,"1 st floor, D no:61 B/1,Hazra Road,Kolkata-700029",12822019002335,Swiggy instamart.xlsx
+Kolkata,1400551.0,,22.543167,88.385472,"GF, P.no- 86B/12, Topsia Road(South), Topsia  Beniapukur, Mahendra Roy Lane Kolkata West Bengal, 700046",2.02411E+16,Swiggy instamart.xlsx
+Kolkata,1385840.0,,22.544794,88.360291,"GF,Premises No. 8, Acharyya Jagadish Chandra Bose Road,Calcutta - Kolkata 700017",2.02308E+16,Swiggy instamart.xlsx
+Kolkata,1402452.0,,22.572903,88.459447,"Gf, HAL Touzi No 10 Ward No 27 RS Rajarhat Now Under Newtown PGS.700102.",2.02504E+16,Swiggy instamart.xlsx
+Kolkata,1400971.0,,22.555389,88.363583,"Gf, Situated at P.no 76C, Ward No. 62, A.J.C. Bose Road, Kolkata, West Bengal, 700014",2.02412E+16,Swiggy instamart.xlsx
+Kolkata,1386097.0,,22.57451,88.399753,"GF,71/1, Canal Circular Road P.S. Phool Bagan ,Kolkata 700054",2.02308E+16,Swiggy instamart.xlsx
+Kolkata,1391896.0,,22.582382,88.364813,"PREMISES NO 1 FIRST FLOOR SARKAR LANE GIRISH PARK , KOLKATA MUNICIPAL CORPORATION, Kolkata, West Bengal, 700007",2.02404E+16,Swiggy instamart.xlsx
+Kolkata,1388197.0,,22.586517,88.424866,"Second floor , Plot no /building no CK-3,4 ,48 & 49 , Salt Lake Sector -II Kolkata- 700091",2.02401E+16,Swiggy instamart.xlsx
+Kolkata,1382353.0,,22.59611679,88.43364543,"Ward No.  25, Bidhannagar Municipal Corporation, Rajarhat Newtown, P.S.  Baguhati, Kolkata  700102.",12823013000038,Swiggy instamart.xlsx
+Kolkata,1397622.0,,22.626302,88.382019,"GF, Premises No. 150A, South Sinthee Road, Kolkata, West Bengal, 700050",2.02408E+16,Swiggy instamart.xlsx
+Kolkata,1388313.0,,22.607573,88.402094,"GF, Plot no.857 , Mouza Patipukar , Lake town block-A under Lake town ,Kolkata -700089",2.02312E+16,Swiggy instamart.xlsx
+Kolkata,867466.0,,22.624182,88.439263,"GF, 176 & 178, R.S. No. 116, Tegharia, J.L. No. 9, Ward No-7, Rajarhat, Kolkata 700157",12821013000832,Swiggy instamart.xlsx
+Kolkata,1382982.0,,22.64279871,88.42160584,"GF, Plot no-168/1,P.K Guha Road,Kolkata-700028",12823013000502,Swiggy instamart.xlsx
+Kolkata,1395726.0,,22.6651321,88.3700169,"GF, Prem No. 6, Alipore Collectorate, Dumdum District North 24 Parganasm, North Twenty Four Parganas, West Bengal, 700057",2.02407E+16,Swiggy instamart.xlsx
+Kolkata,1387910.0,,22.6333811,88.467138,"First Floor ,Holding No. 2010, Raigachi (West), Kolkata -700135",2.02311E+16,Swiggy instamart.xlsx
+Kolkata,1389000.0,,22.69072,88.46492,"FF, Khatian No. 99,311,Mouza Dohana P.S. Barasat, Municipality Barasat , WB- 700080",2.02401E+16,Swiggy instamart.xlsx
+Kolkata,1403472.0,,22.728048,88.497757,"Gf,Jessore Road, Ramkrishnapur, PO - Kajipara, PS - Barasat, West Bengal - 700125",2.02503E+16,Swiggy instamart.xlsx
+Pune,1386163.0,,18.457106,73.787371,"GF, Survey no. 10/11/1A/ Village Nanded, near komodini ice factory, Pune 411068",2.02308E+16,Swiggy instamart.xlsx
+Pune,1402466.0,,18.449528,73.872028,"GF, S.no 35/1/1A,Road: Katraj Kondhawa Road, Location: Gokul Nagar, Katraj, Pune - 411046",2.02501E+16,Swiggy instamart.xlsx
+Pune,1395729.0,,18.45324,73.91541,"Gf, Survey No. 60/2/2,  Village Undri, Samor, Taluka Haveli, District Pune, Maharashtra, 411060",2.02411E+16,Swiggy instamart.xlsx
+Pune,1399709.0,,18.47639,73.93253,"Gf, S.no 67/3A/1/1/1, Situated at Village Hadapsar, Taluka Haveli District Pune, Haveli, Pune, Maharashtra, 411028",2.02412E+16,Swiggy instamart.xlsx
+Pune,1389002.0,,18.486022,73.858525,"Ground Floor, Survey no 732B, Hissa No.1B, Sitautaed at Taluka Pune 411043",2.02402E+16,Swiggy instamart.xlsx
+Pune,1382354.0,,18.477629,73.893953,"Lonkar Lawns, Behind CEAT Balaji Tyres,NIBM Road,SN-16A/1/1,GAT-4/3/2/2/2/1 KONDHWA,Pune-411048",11523080000002,Swiggy instamart.xlsx
+Pune,1403040.0,,18.500857,73.747303,"Gf,comprised in Survey No. 532/1/B, Bhugaon, Taluka Mulshi,  Pune- 4122115",2.02505E+16,Swiggy instamart.xlsx
+Pune,1402268.0,,18.484639,73.810583,"LGF, U.no 6-7, “Skylark” Karve Nagar, Village Kopare Gaothan, Hingane Budruk, Pune 411052",2.02501E+16,Swiggy instamart.xlsx
+Pune,1394673.0,,18.48775,73.952528,"GF, Survey No.211/3, Village Fursungi, Taluka Haveli, Haveli, Pune, Maharashtra, 412308",2.02408E+16,Swiggy instamart.xlsx
+Pune,1398754.0,,18.48931,73.793789,"S.no. 4, Gf, in D Wing  K.J. Towers, Survey No. 113/1, Situated at Warje, Pune, Bhawani Peth, Maharashtra, 411042",2.0241E+16,Swiggy instamart.xlsx
+Pune,1385649.0,,18.51921,73.769716,"GF,Survey no 321, DSK ranwara road, near Chellaram Hoapital Bavdhan Budruk, pune 411021",2.02306E+16,Swiggy instamart.xlsx
+Pune,1388314.0,,18.505552,73.901195,"Ground Floor , Shop no 1&2, S no. 17A hissa no 1/2 and 1/3 village Wanwadi Pune 411040",2.02312E+16,Swiggy instamart.xlsx
+Pune,1403453.0,,18.530588,73.832592,"Gf, Village Bhamburda, Near Deep Bunglow Chowk,Pune- 411016",11525035000089,Swiggy instamart.xlsx
+Pune,1403455.0,,18.53208,73.874367,"Plot no 136, Survey no 5./1 7 C Tadiwala road, Pune 411001",2.02504E+16,Swiggy instamart.xlsx
+Pune,1401109.0,,18.512999,73.939142,"GF, Milkat No. 1501, Sukkon Village, Tupe Nagar, Hadapsar, District Pune- 411028",2.02501E+16,Swiggy instamart.xlsx
+Pune,1390229.0,,18.543676,73.793862,"GF, Pashan Taluka haveli Pashan Baner link road oppposite Shanti Niketan, Aundh, Pune Maharahstra- 411021",11524036000197,Swiggy instamart.xlsx
+Pune,1385564.0,,18.551125,73.904483,"GF, Plot No.79/9 North Avenue lane, 10 kothari house, Yervada ,Pune 411006",11523035000354,Swiggy instamart.xlsx
+Pune,1381445.0,,18.52557106,73.95863566,"GF,sharada market,manjri bydruk,pune-412307",2.0221E+16,Swiggy instamart.xlsx
+Pune,1383575.0,,18.549416,73.765974,"GF,Survey no 51,Hissa no -2,Village Baner,Taluka Haveli,Pune-411045",11523036000141,Swiggy instamart.xlsx
+Pune,1389691.0,,18.5511399,73.9309252,"Nirmal Estates, GF 'Warehouse Premises'  Road: Kharadi Pune, Location: Pune 411014",2.02402E+16,Swiggy instamart.xlsx
+Pune,1397626.0,,18.560361,73.949389,"Gf, S.no. 58/2/D, situated at Taluka Haveli, Kharadi, Haveli, Pune, Maharashtra, 411014",2.0241E+16,Swiggy instamart.xlsx
+Pune,1389001.0,,18.564926,73.77609,"GF,Survey No. 119/2,situated at Village Baner, Taluka Haveli, District Pune 411045",2.02402E+16,Swiggy instamart.xlsx
+Pune,1383135.0,,18.562691,73.801971,"Yashoda Park,Seasons road,opp-allahabad bank,Aundh,Pune-411007",11523036000105,Swiggy instamart.xlsx
+Pune,1382708.0,,18.5757279,73.9131688,"Gat No-214/1/3 pot kharba,Lohegaon road,Tehsil Haveli,pune-411047",2.02301E+16,Swiggy instamart.xlsx
+Pune,1400557.0,,18.579306,73.884861,"Gf, Survey No. 90/ A/1/1A,  Village DhanorI, Mulshi, Pune, Maharashtra, 411014",2.02412E+16,Swiggy instamart.xlsx
+Pune,1403044.0,,18.583642,73.744713,"Gf, S.no 279/1/2, Village Hinjewadi,  District Pune- 411033",2.02503E+16,Swiggy instamart.xlsx
+Pune,1390228.0,,18.6015,73.780139,"GF, Survey No. 25/1/1 Situated at village Rahatani, Haveli, Pune, Maharashtra, 411027",2.02402E+16,Swiggy instamart.xlsx
+Pune,1401652.0,,18.596342,73.907738,"GF,s.no. 261/1/1, village lohgaon, taluka haveli, Pune 411015",11523083000571,Swiggy instamart.xlsx
+Pune,1382710.0,,18.59501026,73.75890068,"GF, Waghmore corner, survey no.167/9,Village wakad.Taluka haveli,Pune-411057",2.02301E+16,Swiggy instamart.xlsx
+Pune,1393574.0,,18.593686,73.803717,"Survey no.66/4, GF pimple saudagar village,  haveli taluka and pune  district,maharashtra, 411017",2.02408E+16,Swiggy instamart.xlsx
+Pune,1403046.0,,18.586868,73.969421,"Gf, S.no 1424, situated at Village Wagholi Taluka Haveli and District Pune- 412207",2.02505E+16,Swiggy instamart.xlsx
+Pune,1393573.0,,18.616601,73.752173,"GF, Survey No. 59 , Tathawade Taluka, Mulshi, Pune, Maharashtra, 411033",2.02405E+16,Swiggy instamart.xlsx
+Pune,1383574.0,,18.632801,73.802771,"GF,Survey no-36/9/1,CTS NO-5843,Village Pimpri,Waghere,Pune-411017",11523082000089,Swiggy instamart.xlsx
+Pune,1402464.0,,18.6127854,73.9143157,"Gf, S.no 302/3B, Village Lohgaon, Pune, Maharashtra, 410047",2.02503E+16,Swiggy instamart.xlsx
+Pune,1389254.0,,18.655879,73.744494,"Ground Floor, Shop No A,B,1,2,3 & 4, N B Plaza, Survey no 105 (P), Ravet Pune - 412101",2.02402E+16,Swiggy instamart.xlsx
+Pune,1402476.0,,18.651917,73.783333,"U.no 1-8, GF ""Pentagon Business Hub"", Village Akurdi, Pimpri Chinchwad, Mawal, Pune, Maharashtra, 411003",2.02501E+16,Swiggy instamart.xlsx
+Pune,1403215.0,,18.664806,73.888458,"Gf,Survey No. 151/3,  Village Chovisawadi TalukaHaveli Pune- 411025",2.02503E+16,Swiggy instamart.xlsx
+Pune,1400927.0,,18.681222,73.838417,"Gf, Survey No. 226, village Borhadewadi, Taluka Haveli, Pune, Maharashtra, 412105",2.02411E+16,Swiggy instamart.xlsx
+Ahmedabad,1402438.0,,22.95280564,72.60029374,"GF,Unit No. 12, S.Nos. 597/2, 606, Situated at Village Vatva, District Ahmedabad 382440",2.02501E+16,Swiggy instamart.xlsx
+Ahmedabad,1386811.0,,22.996097,72.510688,"GF,Shop No. 9 to 16, Opp.Ahmedabad RuraJ Police Headquarters, Near OHW Tank Vejalpur -380514",2.02309E+16,Swiggy instamart.xlsx
+Ahmedabad,1386812.0,,23.022988,72.556744,"GF, Shop No.1to 4, Shiti Ratna, Panchvati Rd, EIJisbridge, Ahmedabad- 380009",2.02309E+16,Swiggy instamart.xlsx
+Ahmedabad,1402796.0,,23.008919,72.615433,"Gf, Uno. 27, 28, 32, 33, 34 and 35 “Sharanam-4”Opp Ashima Mall Kokhara Ahmedabad 380008",2.02503E+16,Swiggy instamart.xlsx
+Ahmedabad,1400957.0,,23.021742,72.662255,"Unit no 22 and 23, GF, opp MNU Industrial Estate, Odhav GIDC, Ahmedabad, Gujarat - 382415",2.02412E+16,Swiggy instamart.xlsx
+Ahmedabad,1402439.0,,23.043167,72.58925,"Gf,U.no B-1 to B-5 Sumel 11- Indian Textile Plaza” Village Dariapur-Kazipur, Reliance Hypermart, Shahibaug, Ahmedabad- 380004",2.02501E+16,Swiggy instamart.xlsx
+Ahmedabad,1385642.0,,23.033834,72.558546,"GF,FNH Girls Hostel, Ground floor unit no 1 & 2 Navrangpura Ahmedabad 380009",2.02307E+16,Swiggy instamart.xlsx
+Ahmedabad,1383570.0,,23.037697,72.511901,"Basement floor,Pashwa building,Near Pakwan cross road,SG Highway,Bodakdev,Ahmedabad-380054",2.02305E+16,Swiggy instamart.xlsx
+Ahmedabad,1403690.0,,23.0284,72.53022,"Gf, S.no 7, 8, 9 and 10 ""Ratnakar Nine Square Phase-1,Vastrapur, Ahmedabad- 380015",2.02503E+16,Swiggy instamart.xlsx
+Ahmedabad,1403829.0,,23.043175,72.547928,"S.no 1,2,3,4 on GF,FF Aarya Epoch, constructed on the land bearing F.P no 335,  Sabarmati Ahmedabad - 380009",2.02505E+16,Swiggy instamart.xlsx
+Ahmedabad,1397023.0,,23.074738,72.521431,"GF, Unit No. 1-8, Skara Pearl Town Planning Scheme No. 43, Village Sola Taluka Ghatlodiya, Ahmedabad, Gujarat, 380060",2.02408E+16,Swiggy instamart.xlsx
+Ahmedabad,1401245.0,,23.058873,72.538831,"Gf, Unit 1 - 8 Utsav Aalayam, FP No 466 Naranpura, Cross Road, Sola Road Ahmedabad 380061",2.02412E+16,Swiggy instamart.xlsx
+Ahmedabad,1388195.0,,23.106505,72.597883,"GF, Unit no.01, Dev Business Hub, Near I.I.T. Engineering College, Ahmedabad-382424",2.02312E+16,Swiggy instamart.xlsx
+Ahmedabad,1388194.0,,23.096482,72.549681,"GF,Opp. Prathna Elegance, B/H. Vandematram Icon, Near by Aryan city, Gota, Ahmedabad - 382481",2.02311E+16,Swiggy instamart.xlsx
+Raipur,1400982.0,,21.226124,81.626907,"GF, K.no 1750/2 part & 1750/3 part, Mauza Raipurkhas, under Mahamaya Mandir, Raipur, Chhattisgarh, 492001",2.02411E+16,Swiggy instamart.xlsx
+Raipur,1400987.0,,21.223642,81.667877,"GF, Khasra No. 18/118, Village Amlidih, Main Road, Ganga Vihar, DHARSIWA, Raipur, Chhattisgarh, 492001",2.02411E+16,Swiggy instamart.xlsx
+Raipur,1400981.0,,21.255424,81.592628,"GF, Bearing No. 9/1, Khasra No. 116, 118 & 119/2, Village Doomartalab, G.E. Road, DHARSIWA, Raipur, Chhattisgarh, 492010",2.02411E+16,Swiggy instamart.xlsx
+Raipur,1400986.0,,21.261362,81.644775,"GF, Khasra No. 349 & 350, Village Fafadih, Devendra Nagar, DHARSIWA, Raipur, Chhattisgarh, 492001",2.02411E+16,Swiggy instamart.xlsx
+Siliguri,1403752.0,,26.705435,88.415833,"Gf,Dwarika Kashi Tower,LG Burdwan Siliguri Dist - Darjeeling 734005",2E+16,Swiggy instamart.xlsx
+Siliguri,1402077.0,,26.734333,88.404111,"Ground Floor, N11 Near Gas Godown Ujanu Shiv Nagar, Siliguri 734003",2.02501E+16,Swiggy instamart.xlsx
+Siliguri,1402809.0,,26.740038,88.427261,Ground Floor Gandhinagar Near Arjun Garage PO Siliguri 734001,2.02503E+16,Swiggy instamart.xlsx
+Siliguri,1403751.0,,26.762159,88.446121,"Gf, Reliance Superstore Campus, Sevoke Road Salugara, Dist - Darjeeling 734008",2.02503E+16,Swiggy instamart.xlsx
+Jodhpur,1402626.0,,26.264889,72.9935,"GF,3rd Light Industrial Area,Behind Shastri Nagar Police Station,Jodhpur,Rajasthan-342003",2.02502E+16,Swiggy instamart.xlsx
+Thanjavur,1403456.0,,10.757196,79.123787,"FF, P.no 18,19,20 NAGAR, PUDUKOTTAI ROAD, NEELAKIRI THERKU THOTTAM, THANJAVUR - 613005",2.02503E+16,Swiggy instamart.xlsx
+Thanjavur,1402069.0,,10.77411,79.138534,"GF,T.S No.2851/6,Petha Perumal Colony, Thanjavur District 613001",2.02501E+16,Swiggy instamart.xlsx
+Rajkot,1402086.0,,22.265305,70.799861,"Gf, U.No. 1 & 2, ""Syamantak"", Bearing Survey No. 5467, situated at Plot No. 5, Rajkot,  Gujarat, 360004",2.02412E+16,Swiggy instamart.xlsx
+Rajkot,1395731.0,,22.30232,70.79595,"Shop No. G-1, GF, SS Annex, Plot No. B/1 & Plot No. B/2,  Part B, Rajkot, Gujarat, 360001",2.02408E+16,Swiggy instamart.xlsx
+Rajkot,1402467.0,,22.323926,70.767906,"GF, U.no 1-3, Infinity Commercial Complex Madhapur, Near Ayodhya Circle, Rajkot- 360006",2.02501E+16,Swiggy instamart.xlsx
+Thrissur,1403048.0,,10.506684,76.211044,"Gf, S.no. 32/5, situated at Koorkenchery Village, Thrissur District -680027",2.02503E+16,Swiggy instamart.xlsx
+Thrissur,1395735.0,,10.5268894,76.2018233,"52/654, Jyothi Complex,Guruvayur road, Poothale Ayyanthole Village, Thrissur - Kerala - 680004",2.02407E+16,Swiggy instamart.xlsx
+Thrissur,1395734.0,,10.5062547,76.2316267,"Ground Floor, Kollannur,Door no.296/5&amp;296/5/A,Ward no.24-Valarkkavu,Thrissur-680006",2.02407E+16,Swiggy instamart.xlsx
+Thrissur,1403142.0,,10.529137,76.256164,"Gf, Krishanapuram, Pauls’ Arcade, Ollukkara, Mannuthy, Thrissur - 680655",2.02503E+16,Swiggy instamart.xlsx
+Thrissur,1402455.0,,10.548174,76.227562,"GF, Mar Geevargheese Sahada Church, Cheroor, Thrissur, Kerala",2.02502E+16,Swiggy instamart.xlsx
+Thrissur,1402071.0,,10.552611,76.170972,"S.no 169/4/2,  Chilankaliyath House, Muthuvara Village, Puzhakkal, Thrissur, Kerala, 680553",2.02501E+16,Swiggy instamart.xlsx
+Mangalore,1398444.0,,12.86720941,74.86484909,"Gf, bearing shop B01 and B02,mark park square mangalore taluk, mangalore city, karnataka, 575002",2.02409E+16,Swiggy instamart.xlsx
+Mangalore,1394683.0,,12.897166,74.842186,"UGF, Agnel Ville- ,Kadri B Village, D.K. District, Mangalore-575006",2.02406E+16,Swiggy instamart.xlsx
+Mangalore,1403465.0,,12.8942,74.8903,"Shop No. 1B, GF, Kulshekar Chowki, R, Dakshina Kannada, Mangalore-575005",2.02504E+16,Swiggy instamart.xlsx
+Mangalore,1403191.0,,12.89778611,74.8450556,"FF, situated at 87 B Kadri AJ Hospital, Kuntikana, Mangalore- 575006",2.02501E+16,Swiggy instamart.xlsx
+Kanpur,1402623.0,,26.412292,80.385895,"GF, mouza safaipur, kanpur, ramadevi chouraha,kanpur, UP-208007",2.02502E+16,Swiggy instamart.xlsx
+Kanpur,1398750.0,,26.427917,80.320389,"GF, Plot No. 13, Block K, Kidwai Nagar, Kanpur Nagar, Uttar Pradesh, 208014",2.02409E+16,Swiggy instamart.xlsx
+Kanpur,1397090.0,,26.478083,80.294583,"LGF, Bsmnt,GF,2 UF, Block Scheme No. 1, Kakadeo, Kanpur Nagar, Uttar Pradesh, 208025",2.02408E+16,Swiggy instamart.xlsx
+Kanpur,1398751.0,,26.501667,80.25575,"Plot no.36, block-c-38 kalyanpur, kanpur nagar, uttar pradesh, 208001",2.0241E+16,Swiggy instamart.xlsx
+Udaipur,1399804.0,,24.567083,73.714611,"plot no.1 kh no. 76 to 79 revenue village madri paneriyo , girwa, udaipur, rajasthan, 313001",2.0241E+16,Swiggy instamart.xlsx
+Udaipur,1397089.0,,24.591948,73.697639,"Bsmnt, GF, UPF, bhatt ji ki bari, udaipur ward 20, udaipur, rajasthan, 313001""",2.02408E+16,Swiggy instamart.xlsx
+Udaipur,1398451.0,,24.621278,73.706611,"GF,(Old Khasra No. 549), Village Bhuwana, Girwa, Udaipur, Rajasthan, 313001",2.02409E+16,Swiggy instamart.xlsx
+Warangal,1395433.0,,18.00152,79.556793,"GF, H.no 1-8-554, Balasamudram, Nakkalagutta, Hanamkonda, Hanamkonda, Telangana, 506001",2.02407E+16,Swiggy instamart.xlsx
+Warangal,1400985.0,,18.033165,79.540973,"U.no G1, Gf,  Ward No. 55, Bheemavaram Village, Hasanparthy Mandal, Hanamkonda, Hasanparthy, Hanamkonda, Telangana, 506015",2.02412E+16,Swiggy instamart.xlsx
+Salem,1398447.0,,11.641389,78.151167,"Gf, building,survey no.12/1/67/8p, tadagapatti village,salem taluk, salem Tamil nadu, 636006",2.02409E+16,Swiggy instamart.xlsx
+Salem,1395732.0,,11.676684,78.138031,"Comprised in survey no.103/1d5, GF, reddiyur village, sriram nagar,Salem, tamil nadu, 636016",2.02407E+16,Swiggy instamart.xlsx
+Amritsar,1397088.0,,31.630861,74.881778,"Basement, B. House No. 111, 112/2 min, Amritsar Urban Circle No. 110, Abadi Kot Atma Singh, Amritsar-1  Amritsar, Punjab, 143001",2.02408E+16,Swiggy instamart.xlsx
+Amritsar,1404306.0,,31.631193,74.815299,"LGF, OHM Omjee Cinema Grand Trunk road, Khandwala Chheharta Amritsar Punjab 143005",2.02504E+16,Swiggy instamart.xlsx
+Bhopal,1393825.0,,23.174469,77.43728,"GF, Khasra no - 95/1/2/2/2, Bawadia kalan village, Bhopal, MP- 462042",2.02406E+16,Swiggy instamart.xlsx
+Bhopal,1403830.0,,23.18343,77.461945,"Gf, Araiza Plaza, Deepak Housing Society, Jyoti Nagar, Beside Hoshangabad Road, Bhopal, MP - 462026",2E+16,Swiggy instamart.xlsx
+Bhopal,1403205.0,,23.219551,77.390572,"Gf, Unit No. 1land bearing M.I.G. M.A-107, Kotra Sultanabad, Bhopal- 462003",2.02502E+16,Swiggy instamart.xlsx
+Bhopal,1399345.0,,23.234306,77.432444,"B Plot No. 223, situated at Zone 1, M.P. Nagar, Bhopal, Bhopal, Madhya Pradesh, 462011",2.0241E+16,Swiggy instamart.xlsx
+Bhopal,1403753.0,,23.251731,77.496158,"Plot No. 9, A Sector, Patel Nagar, Bhopal 462022",2.02503E+16,Swiggy instamart.xlsx
+Bhopal,1399344.0,,23.254083,77.412278,"GF, Plot No. 3/8, Situated at Zawabit Line, Barkhedi, Jahangirabad, Bhopal, Bhopal, Bhopal, Madhya Pradesh, 462001",2.0241E+16,Swiggy instamart.xlsx
+Bhopal,1397619.0,,23.277427,77.462238,"GF, Survey No. 206/10, Situated at Village Dhamkheda, Tehsil Hujur, District Bhopal, Madhya Pradesh, 462022",2.02408E+16,Swiggy instamart.xlsx
+Bhopal,1403691.0,,23.30365,77.414948,"Gf, Village Karhod Kalan,Opp BMHRC, Karond Bypass Road, Bhopal- 462038",2E+16,Swiggy instamart.xlsx
+Varanasi,1402074.0,,25.253306,82.978389,"Gf, Arazi Nos. 1734, 1732, main road of Village Susuwati, Pargon Dehat Amanat, Varanasi Uttar Pradesh, 221104",2.02412E+16,Swiggy instamart.xlsx
+Varanasi,1396292.0,,25.274778,82.984139,"Arazi No. 212,  Mouza Karaundi, Pargana Dehat, Amanat,  Varanasi Tahsil,  Uttar Pradesh, 221005",2.02407E+16,Swiggy instamart.xlsx
+Varanasi,1394452.0,,25.307583,82.983861,"Ground floor, D59/78-C-B, Shivpura, Dasaswamedh, Varanasi- UP-221010",2.02407E+16,Swiggy instamart.xlsx
+Varanasi,1401660.0,,25.366236,83.005478,"Ground Floor, Arazi/Khasra No. 300, Situated at Village Aktha, Pargana Shivpur, Ward Sarnath, Varanasi Tahsil, Varanasi, Uttar Pradesh, 221007",2.02412E+16,Swiggy instamart.xlsx
+Ludhiana,1401264.0,,30.8772529,75.7990515,"Basement,lodhi club road, near sham nagar, model town,dugri, pau, haibowal, ludhiana, punjab,141012",2.02412E+16,Swiggy instamart.xlsx
+Ludhiana,1404447.0,,30.902227,75.910682,"Ahluwalia colony, jamalpur Ludhiana Punjab - 141008",2.02505E+16,Swiggy instamart.xlsx
+Ludhiana,1395727.0,,30.9136237,75.8684544,"GF,B. No.B-23-5034/5-E  Samrala Road, District Ludhiana, LJodhewal, Salem Tarbri, Ladowal, Punjab, 141001""",2.02407E+16,Swiggy instamart.xlsx
+Ludhiana,1397034.0,,30.916722,75.823333,"Basement, Plot No. 2-E, Mahaal Bhagat,Abadi Tagore Nagar, Ludhiana, Punjab, 141001",2.02408E+16,Swiggy instamart.xlsx

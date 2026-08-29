@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+.DS_Store
+# keep catalog_lite.db + CSVs (needed at runtime) — only ignore SQLite side files
+backend/data/*.db-wal
+backend/data/*.db-shm

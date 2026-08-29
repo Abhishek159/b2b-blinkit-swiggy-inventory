@@ -1,0 +1,866 @@
+city,store_id,store_name,latitude,longitude,source_folder
+,,BLR-Chandapura,12.78979486,77.70420581,Zepto
+,,BLR-Kannika Nagar,12.79803706,77.66311187,Zepto
+,,BLR-Neo Town,12.81998463,77.66277018,Zepto
+,,BLR-Electronic city network,12.8373766,77.64362247,Zepto
+,,BLR-Electronic City New,12.83610023,77.66492453,Zepto
+,,BLR-Bommasandra,12.8321446,77.69085963,Zepto
+,,BLR-Sunrise Layout,12.84495985,77.59398467,Zepto
+,,BLR-Yelenahalli,12.86077262,77.61333628,Zepto
+,,BLR-Silicon Town,12.852472,77.675972,Zepto
+,,BLR-Golahalli,12.864209,77.569285,Zepto
+,,BLR-Electronic City Network-2,12.85202043,77.65224877,Zepto
+,,BLR-Sompura,12.86423227,77.77015527,Zepto
+,,BLR-RAGHAVENDRA LAYOUT NETWORK 2,12.8666929,77.5357013,Zepto
+,,BLR-Anjanapura,12.86034948,77.54171841,Zepto
+,,BLR-KOTHNUR,12.86922,77.58182,Zepto
+,,BLR-Bannerghatta Network,12.86591329,77.59627361,Zepto
+,,BLR-Mico Layout Network,12.87771825,77.64508193,Zepto
+,,BLR-Singasandra Network,12.86296,77.67777,Zepto
+,,BLR-BANNERGHATTA,12.87747,77.60264,Zepto
+,,BLR-Bannerghatta Network 2,12.86837,77.61872,Zepto
+,,BLR-SINGASANDRA,12.870083,77.659171,Zepto
+,,BLR-RAGHAVENDRA LAYOUT,12.88438622,77.54084471,Zepto
+,,BLR-RAGHAVENDRA LAYOUT NETWORK,12.8845944,77.55881835,Zepto
+,,BLR-JP Nagar Network-2,12.887526,77.586572,Zepto
+,,BLR-MICO LAYOUT,12.89027,77.62579,Zepto
+,,BLR-Choodasandra,12.8821174,77.6733285,Zepto
+,,BLR-Kumaraswamy Layout,12.89481283,77.56436304,Zepto
+,,JP Nagar,12.89581,77.58179,Zepto
+,,BLR-BTM-3,12.89932425,77.60549641,Zepto
+,,BLR-Kudlu,12.8906552,77.6456667,Zepto
+,,BLR-Silver County,12.89366814,77.66299978,Zepto
+,,BLR-Junnasandra,12.90252,77.68669,Zepto
+,,BLR-Doddakannelli,12.90619582,77.69767734,Zepto
+,,BLR-Carmelaram,12.908522,77.71151,Zepto
+,,BLR-RR Nagar Network,12.9031547,77.51191762,Zepto
+,,BLR-Banashankari Network,12.91552164,77.5456912,Zepto
+,,BLR-Mico layout network-2,12.9036896,77.62857765,Zepto
+,,BLR-HSR-3,12.905778,77.637514,Zepto
+,,BLR-HSR-2,12.899316,77.651296,Zepto
+,,BLR-Sarjapur-2,12.9026566,77.6613229,Zepto
+,,Sarjapur,12.908418,77.67613,Zepto
+,,BLR-BEML Layout,12.91703243,77.49891252,Zepto
+,,BLR-RR NAGAR,12.9199,77.5192,Zepto
+,,BLR-Kadarenahalli,12.914745,77.559864,Zepto
+,,BLR-JP Nagar Network,12.91322648,77.57300634,Zepto
+,,BLR-BTM-2,12.91177954,77.60319877,Zepto
+,,BLR-HSR Layout New,12.91183266,77.64398388,Zepto
+,,BLR-GUNJUR,12.9286633,77.7380822,Zepto
+,,BLR-Kengeri,12.92355387,77.49306732,Zepto
+,,BLR-BTM LAYOUT NEW,12.9266331,77.60991496,Zepto
+,,BLR-BTM Layout Network-3,12.92504226,77.61740928,Zepto
+,,BLR-Narayana reddy Layout,12.939045,77.62645,Zepto
+,,BLR-27th Main Road,12.92066697,77.64927694,Zepto
+,,BLR-Bellandur 6,12.92153068,77.6778849,Zepto
+,,BLR-BELLANDUR - 2,12.91910594,77.69695312,Zepto
+,,BANASHANKARI,12.934989,77.546885,Zepto
+,,BLR-JAYANAGAR New,12.941703,77.580188,Zepto
+,,BLR-Bellandur new,12.92856098,77.67066436,Zepto
+,,BLR-Agrahara Road,12.931722,77.682389,Zepto
+,,BLR-Bellandur-3,12.93828097,77.6954677,Zepto
+,,BLR-Bellandur-5,12.93003117,77.70444465,Zepto
+,,BLR-GUNJUR Network,12.93949838,77.72908936,Zepto
+,,BLR-Ullal,12.958532,77.479896,Zepto
+,,BLR- Sonnenahalli New,12.96170119,77.49901482,Zepto
+,,BLR-Koramangala Network,12.9444629,77.6181869,Zepto
+,,BLR-BELLANDUR-4,12.94884312,77.68669714,Zepto
+,,BLR-Vijay Nagar Network,12.960476,77.519569,Zepto
+,,BLR-VIJAY NAGAR,12.96845,77.5381,Zepto
+,,BLR-Chickpet New,12.95477912,77.57899927,Zepto
+,,BLR-RICHMOND TOWN,12.96637618,77.60692112,Zepto
+,,BLR-INDIRANAGAR NEW,12.962298,77.645909,Zepto
+,,BLR-Marathahalli-4,12.94915445,77.70329588,Zepto
+,,BLR-Marathahalli New,12.95188627,77.71964524,Zepto
+,,BLR-Siddapura,12.9569822,77.72966019,Zepto
+,,BLR-Chamrajpet,12.960098,77.559489,Zepto
+,,BLR-CV Raman Nagar Network-2,12.96657501,77.67172065,Zepto
+,,BLR-Marathahalli-3,12.96160746,77.70483424,Zepto
+,,BLR-ITPL Layout,12.96191262,77.71678497,Zepto
+,,BLR-WHITEFIELD,12.96953,77.74954,Zepto
+,,BLR-Nagondanahalli,12.97486139,77.7718582,Zepto
+,,BLR-Malagala,12.97812065,77.51643345,Zepto
+,,BLR-Marathahalli 2,12.97467998,77.69700174,Zepto
+,,BLR-Whitefield Network-2,12.97187036,77.7349202,Zepto
+,,BLR-Magadi Road,12.99005606,77.48523812,Zepto
+,,BLR-Yallapa Garden,12.983662,77.5487921,Zepto
+,,BLR-Malleshwaram new,12.987709,77.561344,Zepto
+,,BLR-SHIVAJI NAGAR,12.99288,77.60675,Zepto
+,,BLR-CV RAMAN NAGAR NEW,12.97905901,77.67836866,Zepto
+,,BLR-BROOKEFIELD,12.98497,77.71066,Zepto
+,,BLR-Kadugodi,12.98612069,77.7450889,Zepto
+,,BLR-HOPE FARM,12.98031,77.7509,Zepto
+,,BLR-JC Nagar,13.0031742,77.5308889,Zepto
+,,BLR-SHIVAJI NAGAR Network,13.00264558,77.59946146,Zepto
+,,BLR-CV Raman Nagar Network,12.996864,77.673218,Zepto
+,,BLR-Brookfield Network,12.99616854,77.69103524,Zepto
+,,BLR-Brookfield Network-2,12.9951836,77.7201213,Zepto
+,,BLR-YESHWANTPUR,13.010808,77.540878,Zepto
+,,BLR-KALYAN NAGAR NEW,13.006655,77.641639,Zepto
+,,BLR-BASAVANAPURA,13.015649,77.70943,Zepto
+,,BLR-Basavanapura Network,13.00442,77.72122,Zepto
+,,BLR-Belathur,12.9996667,77.7464722,Zepto
+,,BLR-Mathikere,13.0265,77.558028,Zepto
+,,BLR-Kalyan Nagar Network,13.01482,77.62778,Zepto
+,,BLR-Kasturinagar,13.0047881,77.6629972,Zepto
+,,BLR-Dooravani Nagar,13.01020348,77.66771313,Zepto
+,,BLR-Ramamurthy Nagar Network,13.01813845,77.6597251,Zepto
+,,BLR-RAMAMURTHY NAGAR NEW,13.03362107,77.68593737,Zepto
+,,BLR-Kannamangala,13.01745885,77.7593783,Zepto
+,,BLR-Goraguntepalya,13.02475,77.537306,Zepto
+,,BLR-Sanjaynagar,13.03273924,77.58054019,Zepto
+,,BLR-Cholayanakanalli,13.02922,77.59377,Zepto
+,,BLR-HEBBAL NEW,13.0324086,77.61231342,Zepto
+,,BLR-Challakere,13.02629,77.64364,Zepto
+,,BLR-Sattava East,13.02716623,77.74726407,Zepto
+,,BLR-Peenya Network,13.049816,77.487928,Zepto
+,,BLR-Peenya New,13.04549024,77.50877381,Zepto
+,,BLR-JALAHALLI,13.039108,77.550843,Zepto
+,,BLR-HBR Layout,13.03663419,77.62425878,Zepto
+,,BLR-HENNUR,13.037714,77.650826,Zepto
+,,BLR-Banjara Layout,13.03608037,77.66570773,Zepto
+,,BLR-BASAVANAPURA NETWORK 2,13.03206661,77.70806469,Zepto
+,,BLR-Pipeline Road,13.042529,77.54833,Zepto
+,,BLR - Bhadrappa Layout,13.04753258,77.57837343,Zepto
+,,BLR-Nagavara,13.038049,77.617309,Zepto
+,,BLR-Dasarahalli,13.051424,77.607561,Zepto
+,,BLR-Jakkur Network,13.059459,77.622438,Zepto
+,,BLR-Budigere Cross,13.063784,77.741966,Zepto
+,,BLR-Bagalakunte,13.06371941,77.50432545,Zepto
+,,BLR-Vidyaranyapura,13.0695733,77.5589887,Zepto
+,,BLR-BHADRAPPA LAYOUT NETWORK,13.05902074,77.58133229,Zepto
+,,BLR-JAKKUR,13.064655,77.609338,Zepto
+,,BLR-Narayanapura Network,13.06274846,77.63500348,Zepto
+,,BLR-Narayanapura,13.06382134,77.6492007,Zepto
+,,BLR-Singapura,13.090409,77.53952,Zepto
+,,BLR-RWF Yelahanka,13.106778,77.580361,Zepto
+,,BLR-Nehru Nagar,13.09133919,77.60125138,Zepto
+,,BLR-Nikoo Home New,13.07977074,77.64375554,Zepto
+,,BLR-Kogilu Road,13.10307433,77.63013442,Zepto
+,,BLR-YELAHANKA NEW TOWN,13.09784,77.56664,Zepto
+,,BLR-Bagalur,13.12263575,77.62344754,Zepto
+,,BLR-Yelahanka Network,13.13749897,77.56327961,Zepto
+Mumbai,98ee4a78-f196-4bd1-9f00-1c27b126d231,MUM-Colaba,18.91248758,72.82453235,Zepto india.xlsx
+Mumbai,fac79573-63ae-4dd4-a7b5-bd8d8fa61ce2,MUM-Fort,18.93769313,72.83331561,Zepto india.xlsx
+Mumbai,81822dd8-20a3-4da0-b460-671c9d1f6d27,MUM-Malabar Hill,18.95189266,72.79484352,Zepto india.xlsx
+Mumbai,743eb98c-c506-4a2c-b9d4-ee218bb5b202,MUM-Parel Network 2,18.963986,72.840103,Zepto india.xlsx
+Mumbai,3b579acc-ff7e-4e12-8b96-8e144cff0aa7,MUM-Girgaon,18.95725247,72.81948612,Zepto india.xlsx
+Mumbai,a2af220f-8ad2-4869-abc7-62dc2476af8c,MUM-MUMBAI CENTRAL,18.9676669,72.81718615,Zepto india.xlsx
+Mumbai,c2279e92-0a29-4470-861e-28a8798e031f,Mum-Parel,18.99228242,72.84805585,Zepto india.xlsx
+Mumbai,f48e88cb-0bbb-4ce1-9ce3-8005cc76c1e6,MUM-Worli,18.992952,72.82207664,Zepto india.xlsx
+Mumbai,72655f9e-d9be-4b01-b2ac-62e61d2efd47,MUM-LOWER PAREL NEW,18.999098,72.830425,Zepto india.xlsx
+Mumbai,71ca681c-6ee4-467d-9d0a-8d761ce8400f,MUM-DADAR EAST,19.0125566,72.8498979,Zepto india.xlsx
+Mumbai,c07ed217-8442-40d6-87cc-d39ce00a1051,MUM-Sumer Trinity,19.01204326,72.82966651,Zepto india.xlsx
+Mumbai,fab4fc54-b957-4a4b-9e1b-eb5642c9e224,MUM- Lower Parel Network,19.01505491,72.83806561,Zepto india.xlsx
+Mumbai,973a6df0-7634-4291-be0d-cd48a816516b,MUM-Mahim,19.04216016,72.84312361,Zepto india.xlsx
+Mumbai,bc6a4a81-1c35-457e-a732-7ca7198ee2ef,MUM-Wadala,19.03411447,72.87563451,Zepto india.xlsx
+Mumbai,c0f86a88-b92e-4d88-a528-c154235282c1,MUM-Dharavi,19.0484056,72.8593943,Zepto india.xlsx
+Mumbai,56290154-dc98-4aed-bc38-d4dc13f4bda3,MUM-Diamond garden,19.052412,72.90155,Zepto india.xlsx
+Mumbai,9ab4aaf2-f0b5-477c-b633-b3a555b0db42,MUM-CHEMBUR NEW,19.05033,72.9095,Zepto india.xlsx
+Mumbai,6ad459f8-927e-4a94-8a80-432502af0e8c,MUM-Pali Hill,19.06253386,72.82817204,Zepto india.xlsx
+Mumbai,9231fcfd-2b2e-434d-bec7-0de208e0f10d,MUM-KURLA EAST,19.05900095,72.89085733,Zepto india.xlsx
+Mumbai,cbf9f315-5b12-45f1-af0e-9d374c17d261,MUM-Bandra,19.0705956,72.83963739,Zepto india.xlsx
+Mumbai,6540fda4-aa7e-4998-8e2a-8f61536a5d3e,MUM-BKC Network,19.0665482,72.84795197,Zepto india.xlsx
+Mumbai,9b551767-f8de-4baf-b027-addad074b739,MUM-BKC NEW,19.07162685,72.86546832,Zepto india.xlsx
+Mumbai,4a54d5f5-0bd9-4b8f-b08a-120d8e7926d7,MUM-Kurla W,19.08264128,72.87952775,Zepto india.xlsx
+Mumbai,48018697-39cd-458a-a2dc-b6ac22e6b5c0,MUM-Tilak Nagar,19.06785932,72.8986223,Zepto india.xlsx
+Mumbai,cc72f206-e146-43c5-a01b-56ddc8d11464,MUM-SANTACRUZ,19.08670969,72.8361653,Zepto india.xlsx
+Mumbai,a0cf8634-2b62-4ead-8cd7-5ee6c5d11192,MUM-GHATKOPAR WEST,19.0862533,72.9018333,Zepto india.xlsx
+Mumbai,769200e9-30cc-47a2-81d4-58904ed953cc,MUM-Vile parle,19.10486962,72.83888637,Zepto india.xlsx
+Mumbai,f9e3aef6-a8b9-4bb4-9177-a7ca316dfd71,MUM-Park Road,19.10068894,72.85325786,Zepto india.xlsx
+Mumbai,50be453c-91e9-4a62-913c-3d6add84eb57,Marol,19.10881615,72.88048553,Zepto india.xlsx
+Mumbai,13d9641e-8c4f-4bca-b2e9-a1f6ceaa55dd,MUM-Marol Network-2,19.110294,72.8867926,Zepto india.xlsx
+Mumbai,460836cf-9dbb-49e3-b460-ef7fecdb7b13,MUM-GHATKOPAR (W) NETWORK,19.096821,72.906784,Zepto india.xlsx
+Mumbai,87980e31-e60f-409d-bc05-e5a0e2bc90d5,MUM-Chakala,19.11673614,72.85845223,Zepto india.xlsx
+Mumbai,8ed5c7b3-4d8b-473e-bd94-77fa2e9eda19,MUM-POWAI NETWORK,19.11126859,72.8930008,Zepto india.xlsx
+Mumbai,751c003c-bbe4-453d-ae3d-404380528149,Powai,19.1183474,72.9050423,Zepto india.xlsx
+Mumbai,84745439-e529-4287-ae44-7b4a516da253,MUM-Andheri West Network,19.13389588,72.8139297,Zepto india.xlsx
+Mumbai,37b900f0-25c0-448b-825a-74d62c8ceb41,MUM-Andheri West,19.13490847,72.83589319,Zepto india.xlsx
+Mumbai,c6df9a09-1e44-4dae-ac93-4f9aab709a3a,MUM-Andheri East New,19.122382,72.86289,Zepto india.xlsx
+Mumbai,250d0a67-ee4b-4cdd-ac75-0c5e65c25ee9,MUM-Marol Network,19.11564642,72.88302819,Zepto india.xlsx
+Mumbai,8988d40f-12d3-42d5-9a8e-243712f8e37f,MUM-Vikhroli East,19.12824417,72.93787759,Zepto india.xlsx
+Mumbai,8be2198a-76dd-42c7-a351-d1c2b80d459e,MUM-Lokhandwala,19.1348674,72.8254786,Zepto india.xlsx
+Mumbai,ab94c840-ae17-491f-95b5-b32bf84ca808,MUM-Jogeshwari East,19.1363314,72.8500343,Zepto india.xlsx
+Mumbai,662012a6-9b5c-4471-8051-f83675b0d84c,Mum-Bhandup network,19.1453923,72.932539,Zepto india.xlsx
+Mumbai,e5ca9102-5008-4cae-9766-5a22e9f5659e,MUM-Andheri West Network 2,19.14436,72.837044,Zepto india.xlsx
+Mumbai,c688da38-967b-4e15-862f-458ce8ea6821,MUM-MALAD Network 2,19.14982153,72.84506828,Zepto india.xlsx
+Mumbai,a5d48a70-31d9-4c5f-b61f-daae4ab4e3b3,MUM-GOREGAON EAST,19.1708709,72.8536443,Zepto india.xlsx
+Mumbai,5f5e8200-1796-4df9-9da6-3c80b0e3c6ce,MUM-Bhandup New,19.1614372,72.9367809,Zepto india.xlsx
+Mumbai,a20f91f9-3e2c-48fd-a720-a6bf6685a6fe,MUM-MALAD,19.1723881,72.8484384,Zepto india.xlsx
+Mumbai,adde7b23-779c-4288-ab05-e2fbdaf499af,MUM-Goregaon East Network,19.17479213,72.87416005,Zepto india.xlsx
+Mumbai,2e7ec440-fd1b-441e-90ee-9c8611648bb6,MUM-Bhandup Network-2,19.1710333,72.9428368,Zepto india.xlsx
+Mumbai,50cf7835-361c-4c3f-822a-9fc9be0d2d33,MUM-Mulund East,19.16523688,72.96329865,Zepto india.xlsx
+Mumbai,edf1aca4-600d-45b6-b7f8-8d83157bb84f,MUM-WAGHLE ESTATE,19.19617471,72.94593367,Zepto india.xlsx
+Mumbai,d50a3a1a-4ab0-4a0e-b87d-e032776daff9,MUM-Kandivali West New,19.20472507,72.82723531,Zepto india.xlsx
+Mumbai,d390ee2b-1c8f-4236-9c8b-b60173fd330a,MUM-Malad Network,19.18963269,72.83888913,Zepto india.xlsx
+Mumbai,500bffb6-dfb4-468f-832f-3f305f575f1f,MUM-KANDIVALI EAST Network,19.19405204,72.86572139,Zepto india.xlsx
+Mumbai,9a639073-d72a-4bf1-8bda-bc2840c817ef,MUM-Naupada,19.19841478,72.97405999,Zepto india.xlsx
+Mumbai,7333c09a-d46f-4c45-845d-360e2ed38c8e,MUM-Waghle Estate Network,19.20052626,72.96042612,Zepto india.xlsx
+Mumbai,7fda3ccf-78cb-4aa8-a910-b1046fd0baf0,MUM-Charkop,19.20992428,72.82369507,Zepto india.xlsx
+Mumbai,5f267ad5-446b-4a8b-86f0-df174ad545dd,MUM-Sai Baba Nagar,19.21321673,72.84813124,Zepto india.xlsx
+Mumbai,238a227d-697c-4fa9-a4f5-4fd064760098,MUM-Thakur Village,19.2138889,72.8685556,Zepto india.xlsx
+Mumbai,0dee4754-034b-43ec-bcab-2664340690dd,MUM-KOTHARI COMPOUND Network 1,19.21659162,72.9757421,Zepto india.xlsx
+Mumbai,551d5b20-6c19-465c-aaf8-0624166cbf93,MUM-Borivali West,19.22356982,72.85172035,Zepto india.xlsx
+Mumbai,01185b5e-b794-4cfb-99c9-625397e548ac,MUM-Shivai Nagar,19.219176,72.954332,Zepto india.xlsx
+Mumbai,b8f93707-6d8d-4c31-8b58-627f09ba83cf,MUM-MHB Colony,19.24075,72.8359167,Zepto india.xlsx
+Mumbai,bc2668de-4e8e-4ffb-a2c9-91bf4a5dd846,MUM-KOTHARI COMPOUND NEW,19.2367013,72.96898783,Zepto india.xlsx
+Mumbai,2050a7de-e13c-4947-bac7-7995d8c6e72d,MUM-Ashok Van,19.2404431,72.8670403,Zepto india.xlsx
+Mumbai,51c21317-e191-44cc-8af2-9a25f9146b8c,MUM-WAGHBIL NEW,19.2495658,72.9747437,Zepto india.xlsx
+Mumbai,329deb14-183d-4581-90eb-8c40a5e91fd5,MUM-KASARVADAVALI,19.26571464,72.967804,Zepto india.xlsx
+Mumbai,2ed65df1-196d-4877-93dd-cc1ae94fe3c7,MUM-Mahajan Wadi,19.270811,72.88152621,Zepto india.xlsx
+Mumbai,cf7f18ae-84f3-429a-a19d-f35f08e97c58,MUM-Bhayendarpada,19.2764529,72.95811157,Zepto india.xlsx
+Mumbai,8eec86a7-817c-4719-b317-7e2118611b1e,MUM-MIRA ROAD NEW,19.28087099,72.87677473,Zepto india.xlsx
+Mumbai,1b11ac6b-6de6-411b-80bf-a72874a80c51,MUM-Bhayandar New,19.29990081,72.85527356,Zepto india.xlsx
+Delhi,6917bb0a-e50f-4a8e-99aa-5d1cc6bed71a,GGN-Sector 95,28.410694,76.90725,Zepto india.xlsx
+Delhi,e09e8bac-2aad-4634-9d2c-d19833956f3a,GGN-Sector 86,28.394882,76.933179,Zepto india.xlsx
+Delhi,b2daed2f-9d3a-495a-a005-a0b0bc04a445,GGN- Sector 82,28.39908847,76.95452254,Zepto india.xlsx
+Delhi,14f1a8ec-192a-49d1-95fd-514b5e14f919,GGN-Sector 70 A,28.38621,77.02198,Zepto india.xlsx
+Delhi,5d205066-36a5-4929-982a-7571c60f876b,GGN-Sector 69 New,28.39477383,77.03515906,Zepto india.xlsx
+Delhi,1879c01a-f20c-4987-9ce4-0f47f75ad4f9,GGN-Vatika City,28.400079,77.044423,Zepto india.xlsx
+Delhi,9a51d2b1-9708-4648-a294-0f5a5909cf5a,GGN-Sector66,28.40211,77.059,Zepto india.xlsx
+Delhi,760bb995-e9d4-4372-8a03-6d34c08cec8d,GGN-Sector 66 Network,28.394653,77.073013,Zepto india.xlsx
+Delhi,02d2c306-7699-434b-947e-88c99afc54f9,GGN-Sector 62,28.4051193,77.0920438,Zepto india.xlsx
+Delhi,77d27ceb-e171-4aa5-bd86-58c0e8bf7512,FBD-Sainik Colony,28.396046,77.267029,Zepto india.xlsx
+Delhi,3d277bf6-7a5f-498a-a956-56fd8ab9ef82,FBD- NIT,28.3858894,77.2895509,Zepto india.xlsx
+Delhi,b463b5a9-6661-4ee9-b58b-03b285ac536e,FBD-NIT 2,28.4040795,77.2994235,Zepto india.xlsx
+Delhi,8f4404df-c3e2-4a76-9e9c-ade81e757c3e,FBD- Sector-16,28.412155,77.314736,Zepto india.xlsx
+Delhi,2398d252-ec15-485b-bd2f-2b03432ea794,FBD-Sector 79,28.389159,77.36254,Zepto india.xlsx
+Delhi,ebc97fa4-aae3-4ece-9ce9-8025aa679e49,GGN- Hayatpur,28.421887,76.934209,Zepto india.xlsx
+Delhi,00f978ab-683f-435d-8a45-f1a3c4dac568,GGN-SECTOR 71,28.41196,77.02917,Zepto india.xlsx
+Delhi,82dffafa-bf7f-4752-a0b2-561dc1349c4a,GGN-SECTOR 49,28.410107,77.051341,Zepto india.xlsx
+Delhi,1aeea608-4e80-48a1-9c8a-0d0ac28eb876,FBD-Sector-86,28.411383,77.347755,Zepto india.xlsx
+Delhi,c2e46a52-b65f-4fbe-8332-06856db49e25,GGN-Sector 10A,28.44296713,77.01065435,Zepto india.xlsx
+Delhi,e3103271-697b-419a-b8fa-f2d1e7da62de,GGN-SECTOR 51,28.42600423,77.06762183,Zepto india.xlsx
+Delhi,9fdfe35c-2262-4bdd-9974-4676c5558a04,GGN-Ardee City,28.429491,77.088255,Zepto india.xlsx
+Delhi,225cd095-2106-490a-81c8-de5faa97ac65,GGN - SUN CITY,28.425148,77.105662,Zepto india.xlsx
+Delhi,58d6551e-edf2-48df-828c-7deb5a25033f,GGN-Gwal Pahari,28.42412152,77.14675741,Zepto india.xlsx
+Delhi,fb48fc60-af3a-421b-9cce-928e2c0cb95f,FBD-Sector-21,28.420583,77.287403,Zepto india.xlsx
+Delhi,d56e42a4-7150-4aa4-b7fc-84f9caa43963,GGN-Sector 39 NETWORK-4,28.42736676,77.0459533,Zepto india.xlsx
+Delhi,48c6fc6b-daa9-4795-a1d7-a1a424e74009,FBD-Sector 31,28.439545,77.310188,Zepto india.xlsx
+Delhi,48a75423-507c-4e6d-8eaa-603c77f48b05,GGN-Sector 12 Network-2,28.45482,77.03863,Zepto india.xlsx
+Delhi,f234bb80-5551-416a-ac32-e3734ecd6258,GGN-SECTOR 38,28.434254,77.047958,Zepto india.xlsx
+Delhi,90f2f25e-b21f-4999-957f-a96a81f01dfb,GGN-SECTOR 39 NEW,28.444382,77.05648,Zepto india.xlsx
+Delhi,1b66cb9f-a71a-4a96-896f-a420974a2b32,GGN-Sector 52,28.435337,77.078114,Zepto india.xlsx
+Delhi,2e591664-44a8-491a-9add-0af20446f0cc,GGN-SECTOR 53,28.44344,77.09568,Zepto india.xlsx
+Delhi,19196ae9-a62a-4eee-a6c3-b6243c9b3f01,GGN-Sector 37,28.455115,76.990607,Zepto india.xlsx
+Delhi,4e5abfcd-fda7-4e76-8f19-96ef2c343491,GGN-Sector 41 New,28.45574026,77.06236287,Zepto india.xlsx
+Delhi,2809502a-1c2c-4305-9b1d-f00d75bf65c3,GGN-Sushant Lok,28.45309149,77.08238304,Zepto india.xlsx
+Delhi,1c31b7f9-1213-49ea-8346-4879856906a4,GGN-Sector 27 new,28.46331087,77.09432046,Zepto india.xlsx
+Delhi,6a871d62-f77e-41ca-bd6e-b9754de4a90b,FBD-Greenfield,28.461109,77.28316,Zepto india.xlsx
+Delhi,fee9d74d-9384-4a9d-9325-d4bdf7ee2ffb,GGN-Sector 102,28.4748083,76.9626118,Zepto india.xlsx
+Delhi,607dfe88-5e9b-4db8-bfb0-73bea3e8fb54,GGN-Sector 4,28.47327417,77.00347274,Zepto india.xlsx
+Delhi,f5e682bc-1124-4bcf-8fca-734bd8b59d7f,GGN-Sector-12 New,28.469519,77.034067,Zepto india.xlsx
+Delhi,e9aae2cf-8473-4e4c-ba53-3aa73354576c,GGN-SECTOR 39 NETWORK-3,28.459997,77.057077,Zepto india.xlsx
+Delhi,6596a71b-54df-4556-9119-7de895a9c300,GGN-Sector 12 network,28.4789007,77.0249138,Zepto india.xlsx
+Delhi,6d49da9f-b749-4a7e-9b1b-928847d021fc,GGN-Sector 28,28.476348,77.084721,Zepto india.xlsx
+Delhi,33879b19-7a4e-41bd-86d5-66402c04dd03,FBD-Sector 37,28.47478036,77.31043552,Zepto india.xlsx
+Delhi,005dcc9a-d50c-442f-ae5e-f89f35d1a01a,GGN-Sector 104,28.493103,76.998031,Zepto india.xlsx
+Delhi,105471df-6c84-4bcf-87d7-d9308fd4df4a,GGN-Sector 14,28.479793,77.04665,Zepto india.xlsx
+Delhi,baa090fc-be13-4b34-87c5-2aea256fd4c4,GGN-Udyog Vihar New,28.506127,77.069438,Zepto india.xlsx
+Delhi,55bbe2f9-33f4-4ce0-a864-9730284b2a7c,DEL-Ghitorni,28.494128,77.145755,Zepto india.xlsx
+Delhi,ccb84935-4941-4c2f-a0cf-a65d8a6cf57a,FBD-Charmswood,28.48821899,77.29025717,Zepto india.xlsx
+Delhi,fd647cf6-e1e8-417e-b2ce-e3f9cb4fbb4f,GGN-Palam Vihar,28.503209,77.031636,Zepto india.xlsx
+Delhi,4db16931-a992-4b6a-805d-be5d594941ba,GGN-Sector 24 New,28.49603,77.109233,Zepto india.xlsx
+Delhi,10655b62-1ead-42a2-a02c-d7a749951d48,DEL-CHATTARPUR,28.495495,77.185081,Zepto india.xlsx
+Delhi,3072e208-7b9a-4821-a000-e121ba8a43fa,DEL-Khanpur,28.500805,77.235137,Zepto india.xlsx
+Delhi,5ee3f39d-3d7b-44b2-bbeb-b17e8457dc4e,DEL-Chattarpur Enclave,28.5017175,77.1858712,Zepto india.xlsx
+Delhi,c620a3ce-ee2e-493f-a83d-5555531fd861,DEL-Neb Sarai,28.506309,77.198648,Zepto india.xlsx
+Delhi,5858e2d0-74e9-4250-bdca-c6949282438b,GGN-Sector 112,28.512795,77.012309,Zepto india.xlsx
+Delhi,9bfb7127-8a86-4de2-968a-e7cd9d1b8d51,GGN-Palam Vihar Network,28.515994,77.038629,Zepto india.xlsx
+Delhi,5ebdb9c0-59e0-436c-9e67-5594e00a45af,DEL-VASANT KUNJ,28.5251672,77.1545416,Zepto india.xlsx
+Delhi,01e98a7e-46d7-48f1-bbcd-8e864116e992,DEL-Vasant Kunj 2,28.514304,77.164948,Zepto india.xlsx
+Delhi,266fb1d0-6495-4f65-9bcd-f03b54724799,DEL-Kalkaji Network,28.52276,77.261513,Zepto india.xlsx
+Delhi,da285a58-89f2-448e-b5d7-dddce15e9bba,DEL-Malviya Nagar Network,28.537299,77.207585,Zepto india.xlsx
+Delhi,321b0b48-7137-4832-ab17-f131421bdb78,DEL-MALVIYA NAGAR NEW,28.535521,77.223434,Zepto india.xlsx
+Delhi,96a968d7-aca7-4b78-9302-ef72fbb1cc57,DEL-Mahipalpur,28.544371,77.128642,Zepto india.xlsx
+Delhi,93cd2e82-b141-41bc-91c5-2805396da43d,DEL-Sarita Vihar,28.537425,77.296626,Zepto india.xlsx
+Delhi,8a63a860-9ec1-4fcc-b37a-523a34647742,DEL-Dwarka Sector 10 Network-4,28.558292,77.050021,Zepto india.xlsx
+Delhi,4b54927e-5c54-4564-8c9f-1e518e6488e3,DEL-Munirka,28.556305,77.173222,Zepto india.xlsx
+Delhi,84f9975d-cc19-4d21-aa76-43e3aab9779a,DEL-Kalkaji New,28.5449,77.2623,Zepto india.xlsx
+Delhi,8628a7a0-4fb1-4002-95d3-f5ab2061181f,DEL-JASOLA VIHAR,28.54523037,77.29151914,Zepto india.xlsx
+Delhi,32ac84e0-0a29-4c1f-865a-c33780173389,DEL-South Extension Network,28.56269211,77.21138522,Zepto india.xlsx
+Delhi,5dbd7e40-75db-452c-bd76-7dac3d7c0c0b,DEL - East of Kailash,28.554289,77.243605,Zepto india.xlsx
+Delhi,3422fce9-9587-44a5-8cff-8ee60c65617d,NOD-Sector 46 Network,28.556297,77.350386,Zepto india.xlsx
+Delhi,7e586f3d-8e30-4859-8851-4476b8a965f4,DEL-RK PURAM,28.567889,77.189055,Zepto india.xlsx
+Delhi,73b0c599-728d-4642-a0e3-1e5b68836327,DEL-South Extension New,28.573257,77.228054,Zepto india.xlsx
+Delhi,db68a1c5-3c18-49d4-bd83-87b4f580fd45,DEL-East Of Kailash Network,28.56098539,77.25185553,Zepto india.xlsx
+Delhi,65b4f18b-34d3-43f7-a3ce-361471b15345,DEL-Khizrabad,28.572,77.2759,Zepto india.xlsx
+Delhi,863a8052-6764-48c2-8dfd-445d0fd30e34,Del-Dwarka Sector 19,28.5773584,77.05046,Zepto india.xlsx
+Delhi,d9b656fe-41ad-4645-9fad-af3bf1cf7d8f,DEL-Bagdola,28.57344104,77.07253362,Zepto india.xlsx
+Delhi,5cad640b-fe79-43bb-aac2-849733defb55,DEL-Krishna Market,28.5756389,77.2426667,Zepto india.xlsx
+Delhi,4954030c-39da-4fc6-8e33-c880095cc345,DEL-Jangpura,28.5774712,77.2598391,Zepto india.xlsx
+Delhi,0ed3c6ae-9a69-4458-aac5-b6c3342c8954,NOD-Sector-31,28.57549,77.343254,Zepto india.xlsx
+Delhi,8fe0a1ee-0ea0-4a84-ba34-80b0d266ad31,DEL-Dwarka Sector 10 New,28.58763684,77.06823238,Zepto india.xlsx
+Delhi,3ed41d5c-5bb0-4ea9-b041-4d40c2b1f963,NOD-Sector 4,28.58336104,77.31994863,Zepto india.xlsx
+Delhi,3a8029df-cae5-4c17-88ea-814f8366b814,DEL-Dwarka Sec 17,28.59409345,77.02550957,Zepto india.xlsx
+Delhi,9550ef6d-d1b6-4eb1-b379-580404d9c1d3,DEL-Mahavir Enclave Network,28.598741,77.091854,Zepto india.xlsx
+Delhi,5c5665dc-dc3a-4a6e-9829-acecadfe49d5,DEL-Trilokpuri,28.598169,77.300041,Zepto india.xlsx
+Delhi,695b2cc3-3e79-4e8e-99dc-85ddfb90d256,NOD-Sector-10 New,28.59504615,77.33037886,Zepto india.xlsx
+Delhi,ac3b884c-75d1-48a6-b477-0a0782cf19b4,DEL-Najafgarh,28.6119975,76.9890681,Zepto india.xlsx
+Delhi,41b702ce-4302-4b24-8997-c9bd507d5ea7,DEL-Dwarka Sector 12 Network,28.607881,77.033508,Zepto india.xlsx
+Delhi,08562d04-1972-4d6f-819c-4111321529e6,DEL-Rajapuri,28.603142,77.057077,Zepto india.xlsx
+Delhi,73952e1c-38a1-40a3-b71f-a4150849ee52,DEL-MAHAVIR ENCLAVE,28.606888,77.081238,Zepto india.xlsx
+Delhi,2fa35ecf-4334-4ec6-b6de-5bae11a3dbf7,DEL-UTTAM NAGAR NETWORK,28.61611894,77.0469049,Zepto india.xlsx
+Delhi,6118ee4c-ee70-4b20-b071-f8e5e39fb7be,DEL-Uttam Nagar New,28.61748993,77.06902674,Zepto india.xlsx
+Delhi,0c865653-8eac-4a33-900c-d2ed7f3c0477,DEL-MAYUR VIHAR,28.6088517,77.2936104,Zepto india.xlsx
+Delhi,ebc222f1-119b-457b-a137-3a4cfa10c571,DEL-Kondli,28.6103954,77.32689332,Zepto india.xlsx
+Delhi,dad7f2ba-1d52-4c30-8c5a-c7fa01f705a1,DEL-JANAKPURI,28.621729,77.082744,Zepto india.xlsx
+Delhi,42d58798-26cc-429a-aea6-92dbbecae776,DEL-Mayapuri,28.624069,77.118918,Zepto india.xlsx
+Delhi,c951a741-faf1-4189-be8c-e441b6985190,DEL-IP EXTENSION,28.631945,77.297721,Zepto india.xlsx
+Delhi,1585f304-7c1d-404d-b925-84bd48e90433,DEL-Rajapur Khurd,28.634025,77.03862,Zepto india.xlsx
+Delhi,aa443b4b-bf3b-499c-a846-bf5196d444ae,DEL-Vikaspuri,28.638731,77.070444,Zepto india.xlsx
+Delhi,4f0e57e8-9610-41b9-acb0-efe2cd7eb7d9,DEL-Janakpuri Network,28.63086684,77.08216796,Zepto india.xlsx
+Delhi,05c5bd1a-d9b2-4ea3-848c-d8ae96b1d04a,DEL-RAJOURI GARDEN NEW,28.64262202,77.10423887,Zepto india.xlsx
+Delhi,4ba5f414-34e0-442c-938e-ef76fc9804bf,DEL-KIRTI NAGAR NETWORK,28.63907433,77.12978363,Zepto india.xlsx
+Delhi,c2c05ffc-0eb1-4164-86cc-49cb1271d92a,DEL-KIRTI NAGAR,28.654999,77.143668,Zepto india.xlsx
+Delhi,3d03e7a7-4ded-458a-9349-2978cd333ef0,DEL-Connaught Place,28.641493,77.234596,Zepto india.xlsx
+Delhi,ead42923-cfd0-4a7d-bb71-b879631773f1,DEL-ANAND VIHAR,28.648976,77.302663,Zepto india.xlsx
+Delhi,5bc98314-fe7f-490b-a41c-cb478ab34dd9,GZB-Gyan Khand,28.643889,77.349417,Zepto india.xlsx
+Delhi,f70fa1be-1eea-45a4-a692-219b12d85b24,DEL-Keshopur,28.648392,77.07913,Zepto india.xlsx
+Delhi,5d8ec059-9f5f-4867-8520-b232a1ebde3d,DEL-Janta Market,28.6409342,77.12115066,Zepto india.xlsx
+Delhi,93515725-fe2e-4ef3-9154-d4e23cd39c2f,DEL-East Patel Nagar,28.64389623,77.17236463,Zepto india.xlsx
+Delhi,70bbc5c2-af73-43f1-a5ee-e76a9ca9019f,DEL-Karol Bagh Main New,28.65133441,77.19587294,Zepto india.xlsx
+Delhi,08d249a3-3f40-428b-8ec5-cd9beb33ed41,DEL-Nirman Vihar,28.641917,77.28227,Zepto india.xlsx
+Delhi,5c012bfa-7eab-4aa6-9285-60683ed3107c,GZB-VAISHALI,28.646249,77.334833,Zepto india.xlsx
+Delhi,852818aa-dfa5-4943-b2b5-1cd51c26bdd5,DEL-Rajauri Garden Network,28.653296,77.11833,Zepto india.xlsx
+Delhi,5502b2be-b0ae-42b3-a2cd-1cb97051dfb7,DEL-KAROL BAGH,28.64946,77.1619,Zepto india.xlsx
+Delhi,444a442d-982b-437d-a8eb-9ca9385eaed5,DEL-Anand Vihar Network,28.6557301,77.2756487,Zepto india.xlsx
+Delhi,31a8b99d-0d1a-4f32-a367-e6cf62bb8603,DEL-Nangloi,28.661143,77.084335,Zepto india.xlsx
+Delhi,c46cc946-f7eb-4f5b-aaff-cf6fdcba6618,DEL-Paschim Vihar,28.669035,77.104414,Zepto india.xlsx
+Delhi,656bef79-0f91-45cd-9f93-8fedf1a932ce,DEL-Kirti Nagar Network-2,28.6618098,77.1528689,Zepto india.xlsx
+Delhi,cd3f5394-9700-484e-97d7-7d68e3a620af,GZB-Sahibabad New,28.66749031,77.33111451,Zepto india.xlsx
+Delhi,bc4b39b0-c1c4-4b68-aef5-076a323e8cf4,DEL-Nangloi Extension,28.678831,77.065048,Zepto india.xlsx
+Delhi,7e7b4df8-a5a1-4acb-9aa4-b5ecf86a6f2b,DEL-SHAKTI NAGAR,28.684013,77.196556,Zepto india.xlsx
+Delhi,34420157-825b-4822-acc8-9f20ae822fe3,DEL-Dilshad Garden New,28.677253,77.308197,Zepto india.xlsx
+Delhi,57fbfbc2-6ec0-4465-aff3-81e771faf303,DEL-PITAMPURA NEW,28.690002,77.134438,Zepto india.xlsx
+Delhi,2522b064-b9af-4967-9c41-2bfffe8786d3,DEL-WAZIRPUR,28.7022786,77.1674819,Zepto india.xlsx
+Delhi,b8aed0f4-59e0-4387-825d-406800150b71,DEL-Shahdara,28.689378,77.273315,Zepto india.xlsx
+Delhi,f090d50a-60ed-4b98-9493-3f0d9751a3f3,DEL-Durgapuri,28.689691,77.296863,Zepto india.xlsx
+Delhi,8a93c269-b281-4e2d-98b8-cce217827cd0,GZB-Shyam Park,28.68095815,77.34536166,Zepto india.xlsx
+Delhi,b5c0eebd-0709-4d34-9530-d4540f4db62f,DEL-Vijay Vihar Phase 2,28.70743854,77.10099292,Zepto india.xlsx
+Delhi,261b9c45-eb5b-4398-be1c-909ccde6f629,DEL-ROHINI SECTOR 3,28.697833,77.114542,Zepto india.xlsx
+Delhi,e1befcff-e3d0-4fce-929c-50b9b6ae296f,DEL-Kalyan Vihar,28.687703,77.195064,Zepto india.xlsx
+Delhi,526b1499-dbae-4fc6-b67d-70e350768cae,GZB-Gagan Vihar,28.701712,77.33354,Zepto india.xlsx
+Delhi,ad2daf79-44db-459d-9a45-d7807b5b37a2,DEL-Rohini Sector 21,28.71142,77.06297,Zepto india.xlsx
+Delhi,3325a4aa-354c-4c9a-9230-178cbb4286f6,DEL-Pitampura network,28.716004,77.134997,Zepto india.xlsx
+Delhi,dc8d6b1b-1d01-46bd-809c-606fca125ab1,DEL-Model Town Network,28.704421,77.195459,Zepto india.xlsx
+Delhi,f2e8316d-0937-4104-bae3-a24d608bb09c,DEL-Rohini Sector 23,28.72253985,77.08796347,Zepto india.xlsx
+Delhi,1edbc6f5-f8dd-4dd0-9555-a8a5d90dd2d7,DEL-ROHINI Sector 15,28.731067,77.133079,Zepto india.xlsx
+Delhi,f36075d2-40c9-4e63-a9d0-4fe36b2ca31f,DEL-Wazirpur Network,28.720401,77.167386,Zepto india.xlsx
+Delhi,56c431da-a864-4121-be49-15e003139701,DEL-ROHINI Sector 15 Network,28.743214,77.123118,Zepto india.xlsx
+Delhi,f02ef084-eab2-4651-8168-a4814b97ca06,DEL-Santnagar,28.747121,77.197725,Zepto india.xlsx
+Delhi,7cd92d37-ce25-4917-949c-9e12cafd0b4b,DEL-Sanoth Village,28.81696288,77.0685038,Zepto india.xlsx
+Delhi,c73b0824-ac1e-43eb-98e4-ed5b849a651b,DEL-Narela,28.8531944,77.1017222,Zepto india.xlsx
+Delhi,2b25b1fd-8ab2-4065-9f8b-caef224c087c,SON-Kundli,28.900177,77.117607,Zepto india.xlsx
+Bangalore,c647bfb4-1b5a-433d-ba29-0c75c2da883e,BLR-Kannika Nagar,12.79803706,77.66311187,Zepto india.xlsx
+Bangalore,e6ebaf4d-7f47-44bd-bb8f-f7ab1e884191,BLR-Chandapura,12.78979486,77.70420581,Zepto india.xlsx
+Bangalore,2240913f-e14f-46cc-94e8-ff6f5c32ffab,BLR-Neo Town,12.81998463,77.66277018,Zepto india.xlsx
+Bangalore,5565a614-f2a6-428f-9396-5237db1828e7,BLR-Sunrise Layout,12.84495985,77.59398467,Zepto india.xlsx
+Bangalore,dbf340e3-54d9-4842-98da-e11d23d7e3ac,BLR-Electronic city network,12.8373766,77.64362247,Zepto india.xlsx
+Bangalore,044a06cd-5792-44a6-be6b-d5747683349b,BLR-Electronic City New,12.83610023,77.66492453,Zepto india.xlsx
+Bangalore,6762f1e3-7f70-4aad-b8fe-8cfde4d37730,BLR-Bommasandra,12.8321446,77.69085963,Zepto india.xlsx
+Bangalore,a7e2806a-ae58-46e2-87ac-a937360ad74f,BLR-Yelenahalli,12.86077262,77.61333628,Zepto india.xlsx
+Bangalore,874241a8-e4fc-439e-a816-ee65aceba124,BLR-Silicon Town,12.852472,77.675972,Zepto india.xlsx
+Bangalore,595183e5-c95f-451c-82b4-38f2de65cd09,BLR-Anjanapura,12.86034948,77.54171841,Zepto india.xlsx
+Bangalore,f0ee4637-9124-43be-a8af-025edb341570,BLR-Golahalli,12.864209,77.569285,Zepto india.xlsx
+Bangalore,416b9549-1413-435d-b08b-1d150131f6cd,BLR-Electronic City Network-2,12.85202043,77.65224877,Zepto india.xlsx
+Bangalore,276795b6-81e7-40f5-9054-efa418de5561,BLR-RAGHAVENDRA LAYOUT NETWORK 2,12.8666929,77.5357013,Zepto india.xlsx
+Bangalore,afc14c75-c874-46d8-9877-e66bfa0c7299,BLR-Kothnur New,12.87009657,77.58372383,Zepto india.xlsx
+Bangalore,eeea2403-3a6e-49b7-874b-3d8743ef3cd8,BLR-Bannerghatta Network,12.86591329,77.59627361,Zepto india.xlsx
+Bangalore,d6e7afa1-5e3c-48e4-be20-227555f7984c,BLR-Mico Layout Network,12.87771825,77.64508193,Zepto india.xlsx
+Bangalore,6abd3309-1e45-4411-943a-81f5c32fef41,BLR-Singasandra Network,12.86296,77.67777,Zepto india.xlsx
+Bangalore,ff1fc8e6-9f22-4c75-b7cf-15a5bd19be91,BLR-BANNERGHATTA,12.87747,77.60264,Zepto india.xlsx
+Bangalore,5678bc9a-0e9e-4d5e-a78c-4b418df692eb,BLR-Bannerghatta Network 2,12.86837,77.61872,Zepto india.xlsx
+Bangalore,0921a0f1-6acb-46da-bbf8-c85018e6fdb1,BLR-SINGASANDRA,12.870083,77.659171,Zepto india.xlsx
+Bangalore,fccfee31-fe80-4c19-bde6-986f2e01cd84,BLR-RR Nagar Network,12.9031547,77.51191762,Zepto india.xlsx
+Bangalore,ae43241e-255b-4c36-8275-c775b91b4028,BLR-RAGHAVENDRA LAYOUT,12.88438622,77.54084471,Zepto india.xlsx
+Bangalore,f3aab636-1e25-4da4-b9f4-e8a1ccde5b4a,BLR-RAGHAVENDRA LAYOUT NETWORK,12.8845944,77.55881835,Zepto india.xlsx
+Bangalore,b8ba1570-2582-4f6d-a467-330ec39ec6da,BLR-JP Nagar Network-2,12.887526,77.586572,Zepto india.xlsx
+Bangalore,f6807d7c-9f71-49c7-9a15-50919b30fccf,BLR-Mico layout New,12.892833,77.628083,Zepto india.xlsx
+Bangalore,631ed664-2717-487d-9979-1e294b7a1b4e,BLR-Choodasandra,12.8821174,77.6733285,Zepto india.xlsx
+Bangalore,ccc9dc9b-9c6f-421e-bedc-f2e7463a75e9,BLR-Kumaraswamy Layout,12.89481283,77.56436304,Zepto india.xlsx
+Bangalore,23e6d099-8f3c-4cce-b269-82783be7427e,JP Nagar,12.89581,77.58179,Zepto india.xlsx
+Bangalore,a9270a93-3b09-47de-a1f0-b24dda248a6f,BLR-Arekere,12.885917,77.6083204,Zepto india.xlsx
+Bangalore,0c02c311-65e5-4495-bcb4-ee96476882bb,BLR-Kudlu,12.8906552,77.6456667,Zepto india.xlsx
+Bangalore,6ceb23b1-672d-4fd7-a89c-66163925a764,BLR-Silver County,12.89366814,77.66299978,Zepto india.xlsx
+Bangalore,64ce964a-4464-4cc7-b726-d6befbaa27f9,BLR-Junnasandra,12.90252,77.68669,Zepto india.xlsx
+Bangalore,d5da3809-1327-4050-b59b-43342ea74482,BLR-Doddakannelli,12.90619582,77.69767734,Zepto india.xlsx
+Bangalore,16755fdd-f32e-40f1-a39b-397bc73f7e5d,BLR-Carmelaram,12.908522,77.71151,Zepto india.xlsx
+Bangalore,1fc622b2-7469-494a-818f-61f354d4f110,BLR-Kadarenahalli,12.914745,77.559864,Zepto india.xlsx
+Bangalore,29b4c8b1-587b-497c-b4d9-bd2177fefb34,BLR-BTM-3,12.89932425,77.60549641,Zepto india.xlsx
+Bangalore,391731c1-dd52-4f25-850d-d388f0520713,BLR-Mico layout network-2,12.9036896,77.62857765,Zepto india.xlsx
+Bangalore,5e36e56b-2449-4262-b397-f8af3464f5e3,BLR-HSR-3,12.905778,77.637514,Zepto india.xlsx
+Bangalore,21d42ce9-9a73-428f-89ef-75323784c3b8,BLR-HSR-2,12.899316,77.651296,Zepto india.xlsx
+Bangalore,0f2d3f82-cf97-45e8-bd80-759fe5dfbf6c,BLR-Sarjapur-2,12.9026566,77.6613229,Zepto india.xlsx
+Bangalore,58c8d052-7d22-4240-a853-91638fbc3736,BLR-BEML Layout,12.91703243,77.49891252,Zepto india.xlsx
+Bangalore,1541236b-63c6-42ce-b34e-9a57b7221ab5,BLR-RR NAGAR,12.9199,77.5192,Zepto india.xlsx
+Bangalore,d23be55e-2fd8-41d4-8926-71db05186604,BLR-Banashankari Network,12.91552164,77.5456912,Zepto india.xlsx
+Bangalore,a1cbdf77-8824-4c12-85b4-3b114318497d,BLR-JP Nagar Network,12.91322648,77.57300634,Zepto india.xlsx
+Bangalore,cf1fab3e-edc1-4a8a-8054-5abe91c20f69,BLR-TMC Layout,12.91025,77.58977,Zepto india.xlsx
+Bangalore,40382f4d-61eb-4e99-9a0f-201fd9926f40,BLR-BTM-2,12.91177954,77.60319877,Zepto india.xlsx
+Bangalore,7e5a1821-59ed-4d8a-8431-a3705afb22d2,BLR-HSR Layout New,12.91183266,77.64398388,Zepto india.xlsx
+Bangalore,17db8f86-ef55-4838-9e08-886596591965,BLR-Sarjapur New,12.90853465,77.67692834,Zepto india.xlsx
+Bangalore,43dc610a-b80c-43e1-ac35-2d899d88795d,BLR-GUNJUR,12.9286633,77.7380822,Zepto india.xlsx
+Bangalore,7000d78e-6700-49e6-94ac-b4caa221a0f1,BLR-Kengeri,12.92355387,77.49306732,Zepto india.xlsx
+Bangalore,87743594-26c0-495e-a18c-3ef545edcc37,BLR-BTM LAYOUT NEW,12.9266331,77.60991496,Zepto india.xlsx
+Bangalore,796c71f3-568e-4d6d-8767-87285ad4f23a,BLR-BTM Layout Network-3,12.92504226,77.61740928,Zepto india.xlsx
+Bangalore,92cd8931-88ef-4042-a452-0e2ecce17676,BLR-Narayana reddy Layout,12.939045,77.62645,Zepto india.xlsx
+Bangalore,bf1b6356-328b-4cfa-840e-0b555dab374f,BLR-27th Main Road,12.92066697,77.64927694,Zepto india.xlsx
+Bangalore,ff1faef1-3d57-48e0-acce-b6fa68b925e1,BLR-Bellandur 6,12.92153068,77.6778849,Zepto india.xlsx
+Bangalore,0f5f31f2-f764-498a-9cc5-606cf82f4f2e,BLR-BELLANDUR - 2,12.91910594,77.69695312,Zepto india.xlsx
+Bangalore,0a357d97-30cb-4eb4-a4b8-0e1fba2471d8,BANASHANKARI,12.934989,77.546885,Zepto india.xlsx
+Bangalore,cf384ecd-5e1f-47e9-9194-8e9dc940e8c3,BLR-JAYANAGAR New,12.941703,77.580188,Zepto india.xlsx
+Bangalore,5ac90c68-3608-41c5-b3e3-dc59ff0f0a91,BLR-Bellandur new,12.92856098,77.67066436,Zepto india.xlsx
+Bangalore,3f1d2280-a5ff-48c0-a1fa-470988df7803,BLR-Agrahara Road,12.931722,77.682389,Zepto india.xlsx
+Bangalore,9eebbbc9-3fb9-45c1-ab71-312606cf9852,BLR-Bellandur-3,12.93828097,77.6954677,Zepto india.xlsx
+Bangalore,e044093d-2a02-4fd7-a1e9-5542edbe746a,BLR-GUNJUR Network,12.93949838,77.72908936,Zepto india.xlsx
+Bangalore,5a365997-32ca-4016-a42c-7108b5701d65,BLR-Ullal,12.958532,77.479896,Zepto india.xlsx
+Bangalore,5400933d-3c5d-4015-a767-daed27781a0d,BLR- Sonnenahalli New,12.96170119,77.49901482,Zepto india.xlsx
+Bangalore,90fc9dad-9c9d-4a35-8cda-ef07da7811ef,BLR-Avalahalli Main,12.946167,77.549333,Zepto india.xlsx
+Bangalore,bfbc21c9-ff7a-4f5b-acf1-b773024507b7,BLR-Koramangala Network,12.9444629,77.6181869,Zepto india.xlsx
+Bangalore,320121c9-8af7-4921-9eea-5c456b7a900d,BLR-BELLANDUR-4,12.94884312,77.68669714,Zepto india.xlsx
+Bangalore,4778fa3d-0494-484a-b488-e2b40088ddd7,BLR-Vijay Nagar Network,12.960476,77.519569,Zepto india.xlsx
+Bangalore,4f54ea62-0269-4b93-87cd-ef7ed796c6b1,BLR-Chickpet New,12.95477912,77.57899927,Zepto india.xlsx
+Bangalore,b1403534-cd6b-49d0-a7cd-ce20e6497768,BLR-RICHMOND TOWN,12.96637618,77.60692112,Zepto india.xlsx
+Bangalore,7de4838b-ae7c-44d0-bf24-fb2040666654,BLR-INDIRANAGAR NEW,12.962298,77.645909,Zepto india.xlsx
+Bangalore,94528e28-a7cb-4b41-8127-6a5625f4516f,BLR-Marathahalli-4,12.94915445,77.70329588,Zepto india.xlsx
+Bangalore,0cde9637-ca43-45b6-a89c-08c1e32bae57,BLR-Marathahalli New,12.95188627,77.71964524,Zepto india.xlsx
+Bangalore,425e2ef0-02bc-4c87-b423-cfbc6e56984a,BLR-Siddapura,12.95761396,77.72956081,Zepto india.xlsx
+Bangalore,7c3e8dc3-8781-489c-a2c7-8f8f67149083,BLR-VIJAY NAGAR,12.96845,77.5381,Zepto india.xlsx
+Bangalore,300a1056-ad32-430e-b5e4-41624b0494ed,BLR-Chamrajpet,12.960098,77.559489,Zepto india.xlsx
+Bangalore,ba537e2f-5d2b-460c-8e18-adedaea3a91f,BLR-CV Raman Nagar Network-2,12.96657501,77.67172065,Zepto india.xlsx
+Bangalore,376dd638-f05e-4171-b4e1-b97650b79fe7,BLR-Marathahalli-3,12.96160746,77.70483424,Zepto india.xlsx
+Bangalore,4e507e91-6be7-4f3c-8dfe-aaa051a6d0c8,BLR-ITPL Layout,12.96191262,77.71678497,Zepto india.xlsx
+Bangalore,a16e98dd-a208-4aa2-9627-69eef07e8d69,BLR-Malagala,12.97812065,77.51643345,Zepto india.xlsx
+Bangalore,97acd88b-1a82-499b-acf1-c7e365eab5ce,BLR-Marathahalli 2,12.97467998,77.69700174,Zepto india.xlsx
+Bangalore,7ae361e2-d507-4d10-a5c7-e8d14fded59d,BLR-Whitefield Network-2,12.97187036,77.7349202,Zepto india.xlsx
+Bangalore,a1c67132-94e3-41b9-975b-4ef4e4851406,BLR-Magadi Road,12.99005606,77.48523812,Zepto india.xlsx
+Bangalore,6f08827d-5bea-4c32-8bea-ba8a34ae7ed9,BLR-Yallapa Garden,12.983662,77.5487921,Zepto india.xlsx
+Bangalore,97301572-98d1-4b4d-8e40-d52748fe5233,BLR-Malleshwaram new,12.987709,77.561344,Zepto india.xlsx
+Bangalore,f4259b1e-db6c-4266-9524-dbf0a2d54dfa,BLR-SHIVAJI NAGAR,12.99288,77.60675,Zepto india.xlsx
+Bangalore,cd653888-0a9a-4251-8d70-7df4c8c2f22a,BLR-CV RAMAN NAGAR NEW,12.97905901,77.67836866,Zepto india.xlsx
+Bangalore,3a44ca1a-adde-4f8e-9e0c-613a98d348b7,BLR-BROOKEFIELD,12.98497,77.71066,Zepto india.xlsx
+Bangalore,1a2ba310-07de-4a70-946c-b54f2a487646,BLR-Kadugodi,12.98612069,77.7450889,Zepto india.xlsx
+Bangalore,5556e883-5d07-4742-8fd9-215bdcda277b,BLR-JC Nagar,13.0031742,77.5308889,Zepto india.xlsx
+Bangalore,2ed5a568-da07-4497-b5c7-29237e478a38,BLR-Margosa road,13.0059977,77.5695793,Zepto india.xlsx
+Bangalore,3fdf2ec3-0ac0-4e8d-a7f0-e184ef12fbe6,BLR-SHIVAJI NAGAR Network,13.00264558,77.59946146,Zepto india.xlsx
+Bangalore,2fc208e2-13ec-407a-b947-51c8fe777f71,BLR-CV Raman Nagar Network,12.996864,77.673218,Zepto india.xlsx
+Bangalore,75946a5e-942e-4db1-9e7c-5fe2eb85088b,BLR-Brookfield Network,12.99616854,77.69103524,Zepto india.xlsx
+Bangalore,03b26203-507f-4489-b0ff-b34eb42a2215,BLR-Brookfield Network-2,12.9951836,77.7201213,Zepto india.xlsx
+Bangalore,917d20a7-58e4-4574-95dd-dfe3513dd1b2,BLR-YESHWANTPUR,13.010808,77.540878,Zepto india.xlsx
+Bangalore,17141f08-6ccd-4d8b-ae18-0bd9ebbb8a40,BLR-KALYAN NAGAR NEW,13.006655,77.641639,Zepto india.xlsx
+Bangalore,70587079-1b46-4f4e-85fa-e84acebcd919,BLR-Dooravani Nagar,13.01020348,77.66771313,Zepto india.xlsx
+Bangalore,0a5e41a0-7252-43f6-9e8f-9a1e5d48ddd3,BLR-BASAVANAPURA,13.015649,77.70943,Zepto india.xlsx
+Bangalore,9fb087cf-076d-40a0-b974-8d26eaa69f44,BLR-Basavanapura Network,13.00442,77.72122,Zepto india.xlsx
+Bangalore,e58fff62-7695-44c2-aba0-6bc96074bc64,BLR-Belathur,12.9996667,77.7464722,Zepto india.xlsx
+Bangalore,4b085c97-667a-4149-ade7-d61c8a7fa42f,BLR-Kalyan Nagar Network,13.01482,77.62778,Zepto india.xlsx
+Bangalore,e65fe048-7b72-4698-8aac-03359d3171a3,BLR-Kasturinagar,13.0047881,77.6629972,Zepto india.xlsx
+Bangalore,34404f78-ff38-402a-a367-29b31e477ca3,BLR-Goraguntepalya,13.02475,77.537306,Zepto india.xlsx
+Bangalore,e791004e-f7d8-4a2b-9e05-ac0a95bd2706,BLR-Mathikere,13.0265,77.558028,Zepto india.xlsx
+Bangalore,dc47f38a-1d35-4144-a6b2-d1470a32faf3,BLR-Sanjaynagar,13.03273924,77.58054019,Zepto india.xlsx
+Bangalore,ff56ec59-36c7-41a0-ab98-1a3390126da5,BLR-Cholayanakanalli,13.02922,77.59377,Zepto india.xlsx
+Bangalore,c48dd700-4314-4cc1-bffa-e1344e0298dc,BLR-HEBBAL NEW,13.0324086,77.61231342,Zepto india.xlsx
+Bangalore,5f97e876-bbea-4c00-8df2-2005db7db8dc,BLR-Challakere,13.02629,77.64364,Zepto india.xlsx
+Bangalore,92a53fbb-3e34-4c74-9362-faff5a5cf154,BLR-Ramamurthy Nagar Network,13.01813845,77.6597251,Zepto india.xlsx
+Bangalore,3169658f-77f5-47a3-a87d-e9016e7f3ebe,BLR-RAMAMURTHY NAGAR NEW,13.03362107,77.68593737,Zepto india.xlsx
+Bangalore,3077baf7-7bd2-41d0-a221-27cf9d1ec392,BLR-TC Palaya,13.02279349,77.68802221,Zepto india.xlsx
+Bangalore,9994adc8-71a8-48c9-9892-6f2a3b247ff6,BLR-Seegehalli,13.019792,77.724615,Zepto india.xlsx
+Bangalore,1ad29aa7-34e9-4268-9238-5a3a3fcd1bd2,BLR-Sattava East,13.02716623,77.74726407,Zepto india.xlsx
+Bangalore,c9d7d275-70b0-4f96-a48f-2a49801fdee8,BLR-Peenya Network,13.049816,77.487928,Zepto india.xlsx
+Bangalore,6c257905-3f92-469d-971d-3acc8d41156b,BLR-Peenya New,13.04549024,77.50877381,Zepto india.xlsx
+Bangalore,2a03ca86-cefc-4372-b2e8-eb577889f48c,BLR-HBR Layout,13.03663419,77.62425878,Zepto india.xlsx
+Bangalore,2d36aa4d-f410-4fd9-8b9b-cbfd02460e51,BLR-Hennur New,13.03859871,77.64591263,Zepto india.xlsx
+Bangalore,b91d4052-6ea1-4b97-9aba-d6a642735146,BLR-Banjara Layout,13.03608037,77.66570773,Zepto india.xlsx
+Bangalore,97bf23f5-dc0c-4783-ba7d-9d6da842066b,BLR-BASAVANAPURA NETWORK 2,13.03206661,77.70806469,Zepto india.xlsx
+Bangalore,1d752bc7-1802-4e2c-8068-aeabcdacc756,BLR-Pipeline Road,13.042529,77.54833,Zepto india.xlsx
+Bangalore,6047c8fe-15ed-4c61-8d3e-060e800702f5,BLR - Bhadrappa Layout,13.04753258,77.57837343,Zepto india.xlsx
+Bangalore,5c85fffa-7130-43f2-9b34-0decc06beddc,BLR-Nagavara,13.038049,77.617309,Zepto india.xlsx
+Bangalore,eac97b88-bf27-4af5-95ed-15d85d8236c8,BLR-Dasarahalli,13.051424,77.607561,Zepto india.xlsx
+Bangalore,a3d3505f-b5c5-4ba6-8bec-2ea6533a02de,BLR-Jakkur Network,13.059459,77.622438,Zepto india.xlsx
+Bangalore,37531a1f-495c-4f67-bd1e-e3a6158fbf10,BLR-Budigere Cross,13.063784,77.741966,Zepto india.xlsx
+Bangalore,e749e734-9e20-4090-b5c3-a66ed53b5e23,BLR-Bagalakunte,13.06371941,77.50432545,Zepto india.xlsx
+Bangalore,50928523-a4f4-42ad-8c57-e2eedf5f19cd,BLR-Vidyaranyapura,13.0695733,77.5589887,Zepto india.xlsx
+Bangalore,266f0f16-dcf8-4ab0-bbfb-2860b57c3c9b,BLR-BHADRAPPA LAYOUT NETWORK,13.05902074,77.58133229,Zepto india.xlsx
+Bangalore,0053a04d-aeb4-46b5-99fe-d740491e3843,BLR-Jakkur New,13.06662468,77.6092697,Zepto india.xlsx
+Bangalore,1d852498-590f-4ffa-babf-aae026e3584d,BLR-Narayanapura Network,13.06274846,77.63500348,Zepto india.xlsx
+Bangalore,5a7da89a-1be1-430e-b00e-8a1c71f66e82,BLR-Narayanapura,13.06382134,77.6492007,Zepto india.xlsx
+Bangalore,68c16fa4-b598-4f88-a656-a573186596c7,BLR-Abbigere,13.074063,77.519827,Zepto india.xlsx
+Bangalore,5c0e30fc-969b-4051-a30a-e9e5be4affdd,BLR-Nikoo Home New,13.07977074,77.64375554,Zepto india.xlsx
+Bangalore,1ac44aad-7c9b-46ca-9df0-d0908355de55,BLR-Singapura,13.090409,77.53952,Zepto india.xlsx
+Bangalore,99949ff5-2335-4704-bbdf-b8f86a90c811,BLR-RWF Yelahanka,13.106778,77.580361,Zepto india.xlsx
+Bangalore,779c2c0e-a826-463f-8019-78b46a6e6498,BLR-Nehru Nagar,13.09133919,77.60125138,Zepto india.xlsx
+Bangalore,58c5b67d-32d8-494a-8451-a720173b6b8e,BLR-Kogilu Road,13.10307433,77.63013442,Zepto india.xlsx
+Bangalore,6845a550-4826-4d3c-bfe8-eeb7d793a148,BLR-YELAHANKA NEW TOWN,13.09784,77.56664,Zepto india.xlsx
+Bangalore,9a06ad35-7abd-4a32-bb2d-ae5a46fb3620,BLR-Bagalur,13.12263575,77.62344754,Zepto india.xlsx
+Bangalore,c30df9f0-06c1-4d33-97ff-10ed99190a4d,BLR-Yelahanka Network,13.13749897,77.56327961,Zepto india.xlsx
+Hyderabad,bd86f0fb-6044-45d9-be30-8b58c26e3688,HYD-Bandlaguda,17.32266369,78.48882528,Zepto india.xlsx
+Hyderabad,6c29b2d5-b725-49c6-908e-11fca9619a44,HYD-Champapet,17.34588938,78.52279126,Zepto india.xlsx
+Hyderabad,e9c206f4-5e36-40ea-9d34-071b0c016be3,HYD-BAIRAMALGUDA,17.33527595,78.55255546,Zepto india.xlsx
+Hyderabad,b32bcacd-f047-47c1-a3b8-c1ccacf364a8,HYD-Vanasthalipuram,17.336359,78.571198,Zepto india.xlsx
+Hyderabad,d3b1134c-67ad-483b-ae21-de0d090cd4df,HYD-Bairaghiguda,17.3570581,78.3854925,Zepto india.xlsx
+Hyderabad,31405d9d-2f32-4f47-b1c0-6df1ad5b405d,HYD-Chintalmet,17.3493007,78.4177916,Zepto india.xlsx
+Hyderabad,2a3b1c03-c42a-484e-bdd9-bc853efd6fca,HYD-Kings colony,17.3256389,78.4500278,Zepto india.xlsx
+Hyderabad,51105160-a1d9-4c13-a33b-42f59c0ab7d1,HYD-Indis Pble City,17.35383641,78.36980127,Zepto india.xlsx
+Hyderabad,6671859b-cb7c-4dc7-bba6-d6554b27b7b2,HYD-Chanchalguda,17.366977,78.492063,Zepto india.xlsx
+Hyderabad,0da49a11-dc9d-46d6-aff6-c33d197f8992,HYD-Kothapet Network New,17.3671867,78.5207456,Zepto india.xlsx
+Hyderabad,cf3c7b38-d1af-4f20-ba14-8f1386ea3c45,HYD-LB Nagar,17.35207396,78.5543485,Zepto india.xlsx
+Hyderabad,83e33858-a13f-4c67-a016-07de0cce8043,HYD-Attapur,17.36568314,78.42128094,Zepto india.xlsx
+Hyderabad,adec0623-e83c-46cc-9eef-d33b4486d054,HYD-KOTHAPET New,17.373297,78.543314,Zepto india.xlsx
+Hyderabad,b9641f44-b385-4cbd-816e-6dceeff911b0,HYD-APCO Colony,17.368778,78.576139,Zepto india.xlsx
+Hyderabad,b1bd6011-b070-4300-81cd-07f886eca089,HYD-Nampally,17.390136,78.4553022,Zepto india.xlsx
+Hyderabad,1c165a3a-e315-4aa5-a644-5a17b307b68e,HYD-KOTHAPET NETWORK-2,17.37629936,78.5566788,Zepto india.xlsx
+Hyderabad,8c84e7ae-6e94-48f2-b4c8-af6c199aef1b,HYD-Neknampur,17.393,78.376462,Zepto india.xlsx
+Hyderabad,bb713aac-cd12-4b4d-9026-704e3deaaac3,HYD-MEHDIPATNAM,17.394537,78.426308,Zepto india.xlsx
+Hyderabad,8f97a712-462e-4382-a597-32da737f7260,HYD-Gudimalkapur,17.3828056,78.43375,Zepto india.xlsx
+Hyderabad,8275a3ee-3b08-4201-9be3-6e12aed69ea9,HYD-HimayatNagar New,17.39430829,78.48648504,Zepto india.xlsx
+Hyderabad,a898c8dc-70a7-4af3-9bf8-7907d6d6f5de,HYD-RAMANTHAPUR,17.3956491,78.52678736,Zepto india.xlsx
+Hyderabad,ed887f36-42af-4fcb-92b8-e626ff12058b,HYD-Kokapet,17.383792,78.341412,Zepto india.xlsx
+Hyderabad,351f1ba8-e6e4-4f44-97bc-40f0a23568f2,HYD-Manikonda Network,17.39326289,78.35983441,Zepto india.xlsx
+Hyderabad,2b293e1e-3e46-4377-aa87-b860c58730c9,HYD-MEHDIPATNAM Network 1,17.4053611,78.4071667,Zepto india.xlsx
+Hyderabad,f275b3c5-5538-46b4-940f-82d9358dba84,HYD-Kachiguda,17.3948246,78.5003449,Zepto india.xlsx
+Hyderabad,b2b8106d-74fa-4f6c-8edb-e491da91ddf1,HYD-Habsiguda,17.399693,78.542595,Zepto india.xlsx
+Hyderabad,dbd6a04a-5071-4177-aaa9-b7ce6950fd2b,HYD-UPPAL,17.407021,78.569405,Zepto india.xlsx
+Hyderabad,95bc5024-3ef7-49b5-80a9-9c9df49638dc,HYD-Medipalli,17.403365,78.592185,Zepto india.xlsx
+Hyderabad,1cd83478-5874-45ea-8d9a-d2ac95d461e3,HYD-Manikonda New,17.40248658,78.38178394,Zepto india.xlsx
+Hyderabad,b9881384-2b90-44c7-8af2-e22c10f20ca2,HYD-Bhola Nagar,17.40773315,78.44162204,Zepto india.xlsx
+Hyderabad,c970d888-4dd3-4658-bb86-07830d78296c,HYD-Domalguda,17.4074167,78.4824722,Zepto india.xlsx
+Hyderabad,2cfbd70a-856b-4e58-8d32-0b5d389c4458,HYD-Ramnagar,17.40636658,78.50750374,Zepto india.xlsx
+Hyderabad,9cb04932-56b9-4c1b-9989-6fd69be4cc12,HYD-Financial District,17.41181071,78.34279672,Zepto india.xlsx
+Hyderabad,36cd2c76-4ad6-4cb7-8ee2-beebba1d15ad,HYD-Manikonda Network 2,17.41368,78.377369,Zepto india.xlsx
+Hyderabad,77acda94-75cc-4146-952c-813f5bd745dd,HYD-Banjara Hills new,17.41484441,78.45113748,Zepto india.xlsx
+Hyderabad,b2b682f4-7010-4945-b0bf-6e55df78f39d,HYD-JUBLEEHILLS,17.424047,78.412773,Zepto india.xlsx
+Hyderabad,63df153e-ec91-4081-9edd-244c640d4649,HYD-MUSHEERABAD,17.4221303,78.5012416,Zepto india.xlsx
+Hyderabad,1712e422-5717-4540-88ff-b22ef46f4963,HYD-TARNAKA,17.433454,78.555628,Zepto india.xlsx
+Hyderabad,4565fffb-f4fa-4808-91e1-31e69f6ac9df,HYD-Uppal Network,17.4193227,78.5720739,Zepto india.xlsx
+Hyderabad,cd6c08c9-56dc-4f63-8aee-c53fbd38927b,HYD-Chengicherla,17.432703,78.597353,Zepto india.xlsx
+Hyderabad,936f8969-5c1b-4ebc-976b-ee4324c0accb,HYD-Singapore Town Ship,17.436627,78.643496,Zepto india.xlsx
+Hyderabad,3f391c43-b41c-43e8-b378-34f272c6296c,HYD-Hitech City,17.4317775,78.3734138,Zepto india.xlsx
+Hyderabad,9b18a79d-a985-45e3-a5a1-ced049e58324,HYD-AMEERPET,17.43025162,78.43601941,Zepto india.xlsx
+Hyderabad,5dce0ecb-2c78-4578-92b8-b76780ec63bd,HYD-Begumpet Network,17.44463251,78.46286575,Zepto india.xlsx
+Hyderabad,ada60f46-a0a6-4737-9ed4-614f58c1b6ed,HYD- BEGUMPET,17.435793,78.483413,Zepto india.xlsx
+Hyderabad,a711add6-8a26-4dde-b204-d68ea1e9386a,HYD-Mallapur,17.441291,78.563521,Zepto india.xlsx
+Hyderabad,5ca7734d-e625-4328-8588-a4a102966b36,HYD-Hitech City Network,17.44529653,78.35592404,Zepto india.xlsx
+Hyderabad,ebad4c79-770a-495f-88bf-6d99b2acc4e8,HYD-Kavuri Hills,17.4396869,78.3964842,Zepto india.xlsx
+Hyderabad,1d4f476d-d3b5-4d50-b5c6-59e884db47b3,HYD-Moti Nagar Phase III,17.450874,78.422597,Zepto india.xlsx
+Hyderabad,ab5ca9c7-151c-45c6-97df-5a4844e981ea,HYD-Moosapet Network 2,17.4499448,78.45024532,Zepto india.xlsx
+Hyderabad,ebda3286-c632-4006-9315-f16801470a0a,HYD-SECUNDERABAD,17.448543,78.508933,Zepto india.xlsx
+Hyderabad,63e388dc-b10f-48eb-9ee5-4f680d5b8824,HYD-Secunderabad Network,17.4494167,78.5314167,Zepto india.xlsx
+Hyderabad,13ffc117-24d6-4854-a53e-a51d7330973e,HYD-MADHAPUR NETWORK,17.4514128,78.3901131,Zepto india.xlsx
+Hyderabad,5fdd59f9-d697-4c3e-994f-546e61ede738,HYD-Chanda Naik Nagar,17.45501576,78.3965608,Zepto india.xlsx
+Hyderabad,6c7369eb-b309-4cab-b165-6ed9d54b5b96,HYD-ECIL,17.462265,78.561768,Zepto india.xlsx
+Hyderabad,8ecd89b5-1413-49cd-8087-320f363c0ede,HYD-Sri Ram Nagar,17.46043491,78.35278414,Zepto india.xlsx
+Hyderabad,4c79b92b-aa06-420e-8af9-c385a233be62,HYD-KONDAPUR NETWORK 2,17.46759483,78.36751091,Zepto india.xlsx
+Hyderabad,6893b298-d63b-4c4f-b155-2e4a0ca502d5,HYD-Moosapet New,17.45930686,78.42360236,Zepto india.xlsx
+Hyderabad,cf454a02-0633-4d96-8d45-9c90076d3b04,HYD-Bowenpally New,17.471487,78.48217,Zepto india.xlsx
+Hyderabad,7f29c0fa-d7a3-4171-8b8b-36f9df214049,HYD-Malkajgiri,17.4687763,78.545844,Zepto india.xlsx
+Hyderabad,2d8ae8c3-c7c3-4826-8802-e386af7f5385,HYD-KONDAPUR NEW,17.47037888,78.35928345,Zepto india.xlsx
+Hyderabad,cc426fcd-a674-42dd-bae4-12b871b14758,HYD-Bharat Nagar,17.4733889,78.4246389,Zepto india.xlsx
+Hyderabad,75da7658-287b-4977-8274-a9f62c2e00a7,HYD-RTC Colony,17.4745243,78.4985598,Zepto india.xlsx
+Hyderabad,a2271e79-a91e-4f7a-8a89-c69982cb5fbc,HYD-Kukatpally new,17.48880868,78.38138731,Zepto india.xlsx
+Hyderabad,f9e3fcb4-fe52-4901-b9d8-f8817d8f9045,HYD-KPHB Phase 6,17.4854021,78.3895281,Zepto india.xlsx
+Hyderabad,1b997590-99e0-4da0-96a6-4eeeaf13ca2e,HYD-Sumitra Nagar Colony,17.48913882,78.41357257,Zepto india.xlsx
+Hyderabad,ce354a55-f185-4de0-ba8b-50d62ea483d1,HYD-Vivekananda nagar New,17.49343878,78.42433866,Zepto india.xlsx
+Hyderabad,aed3e474-bd2f-4577-bd79-b74b53ce9e4e,HYD-Vinobha Nagar Colony,17.4829801,78.5417257,Zepto india.xlsx
+Hyderabad,18073c2e-7d0d-4096-b0e0-c8b5f7454446,HYD_MIYAPUR,17.49290969,78.35278853,Zepto india.xlsx
+Hyderabad,2dd497f8-2aae-496d-a104-9b996b743016,HYD-SUCHITRA,17.506794,78.46656,Zepto india.xlsx
+Hyderabad,ca648d74-89e2-415d-98d5-7ff5c233898c,HYD- Sainikpuri New,17.5027568,78.54592262,Zepto india.xlsx
+Hyderabad,c96055f6-ed06-46e5-93af-58fa1a374792,HYD-DAMMAIGUDA,17.5013263,78.5877951,Zepto india.xlsx
+Hyderabad,26ec9b6b-b566-4f36-b5dd-eb6fb92a0caf,HYD-Miyapur Network,17.5042463,78.3585064,Zepto india.xlsx
+Hyderabad,1a13c8ef-91b4-462b-b27d-45451693f7a2,HYD-NIZAMPET NETWORK 2,17.5056111,78.3914722,Zepto india.xlsx
+Hyderabad,43b12c97-dc99-431a-9ba3-e3cde9c716bb,HYD-Vivekanand Nagar Network,17.5060386,78.4083068,Zepto india.xlsx
+Hyderabad,819d4daf-ab7a-4291-be40-3070ebb46cec,HYD-ALWAL,17.51427474,78.48976788,Zepto india.xlsx
+Hyderabad,6d4b8a87-d966-4f00-bd1a-69919409731b,HYD-Nizampet New,17.51580559,78.38155987,Zepto india.xlsx
+Hyderabad,8303b80f-8aea-4d15-9c54-ef1b3c12b6e5,HYD-BOLARUM,17.5265278,78.5129444,Zepto india.xlsx
+Hyderabad,b38414a7-3fac-439c-a764-2133973bf49e,HYD-Bolaram Industrial Area,17.529276,78.357285,Zepto india.xlsx
+Hyderabad,6fdc556b-2daf-480a-b272-b48c18e4460c,HYD-Hill County,17.52218217,78.37476449,Zepto india.xlsx
+Hyderabad,d54cc989-bc58-4cb9-9c2e-3a3468546c3f,HYD-PRAGATHI NAGAR,17.53127614,78.39400556,Zepto india.xlsx
+Hyderabad,a466fff3-62f1-4065-bfab-4ed019c39afc,HYD-Jeedimetla,17.526245,78.428032,Zepto india.xlsx
+Hyderabad,ad36d77c-bdd7-427c-bbab-089efa9b5b1e,HYD-Kompally,17.526434,78.484016,Zepto india.xlsx
+Hyderabad,c58033dc-cb75-414a-8c20-b1e0825c812d,HYD-Dulapally,17.542619,78.47593963,Zepto india.xlsx
+Hyderabad,8ffc7380-5ace-4a2b-b8c9-f4e85364d14c,HYD-Bachupally New,17.53993,78.3660868,Zepto india.xlsx
+Hyderabad,29f978f1-5bc3-4358-a811-4b817ebebfcb,HYD-Mallampet,17.5585283,78.3612617,Zepto india.xlsx
+Hyderabad,700d1509-0a10-4ca8-87b9-f8c3e612fb5c,HYD-Gundlapochampally,17.5660556,78.4802222,Zepto india.xlsx
+Chennai,bc653ab4-3f2c-48d9-bd75-451553e01323,CHN-KELAMBAKKAM,12.7957885,80.2217006,Zepto india.xlsx
+Chennai,7435fb66-e8cd-436b-9471-199862cc9fa1,CHN-Navalur Network,12.82142,80.20477,Zepto india.xlsx
+Chennai,5a9291a1-3743-44ad-9c10-9d458d5b6325,CHN-Navalur New,12.8433031,80.227891,Zepto india.xlsx
+Chennai,27f14bc8-3989-446f-b877-52a87b4f39fb,CHN-Perumbakkam Network,12.877048,80.198829,Zepto india.xlsx
+Chennai,600240d4-efb5-484c-ac8a-2dbfe997975a,CHN-Sithalapakkam,12.884915,80.109885,Zepto india.xlsx
+Chennai,aae1e2ef-3de3-4662-ab2d-b5734264b384,CHN-Sathyavani,12.8933,80.23208,Zepto india.xlsx
+Chennai,0e3197dd-32d8-47f6-88ce-bf4e94bbd0f8,CHN-Madambakkam Network-2,12.89781,80.142832,Zepto india.xlsx
+Chennai,b4d53703-4b49-4a38-85ca-7e321d1d5222,MADAMBAKKAM,12.916194,80.152222,Zepto india.xlsx
+Chennai,0cbae3af-26e3-4aec-9c71-65fe9547f131,CHN-MEDAVAKKAM NEW,12.91012096,80.1971283,Zepto india.xlsx
+Chennai,f7f23e4a-92a3-4b7a-b913-28df57301982,CHN-Irumbuliyur,12.912454,80.105023,Zepto india.xlsx
+Chennai,3c87aea3-d63e-4765-bf86-2fd7a8c1ebff,CHN-Santosh Nagar,12.911353,80.182789,Zepto india.xlsx
+Chennai,cd810e0e-6373-4ae8-b18d-c040393a4191,CHN-Sholinganallur New,12.930555,80.232566,Zepto india.xlsx
+Chennai,cbb87b63-9d7e-44bc-a5e5-38972f48f45e,CHN-ECR,12.93670482,80.25222146,Zepto india.xlsx
+Chennai,2e2bb69c-1bee-4ae1-b0ad-5d74128d8ebf,CHN-Mudichur Network,12.920139,80.090598,Zepto india.xlsx
+Chennai,4f1a8aec-600b-429b-81e8-c9ecebf9b5da,TAMBARAM,12.92866855,80.11548708,Zepto india.xlsx
+Chennai,4094e2e2-e495-4375-843d-1376747202c5,CHN-CHITLAPAKKAM,12.927312,80.144457,Zepto india.xlsx
+Chennai,56b257df-32c7-482f-9963-01ec865624c3,CHN-Medavakkam Network,12.9279,80.20017,Zepto india.xlsx
+Chennai,3054cc18-1476-426c-a67b-51028bd50319,CHN-Kovilambakkam,12.93949209,80.18215,Zepto india.xlsx
+Chennai,b51017b6-8aed-4bff-a391-ba12ec8f9cee,CHN-Chromepet,12.944697,80.140698,Zepto india.xlsx
+Chennai,86ec9fc6-ed4b-4674-8175-68c88c75c16f,CHN-Narayanapuram,12.939346,80.204684,Zepto india.xlsx
+Chennai,083a3e0d-4b0c-4353-927f-02c4614e6f47,CHN-Pammal new,12.9681951,80.13349775,Zepto india.xlsx
+Chennai,3587d930-d517-4847-8e2c-c48ecabeba45,CHN-PALLAVARAM,12.963639,80.163972,Zepto india.xlsx
+Chennai,37e0300a-af5d-494a-a88e-de79f61c4dde,CHN-Perungudi,12.953948,80.235458,Zepto india.xlsx
+Chennai,e842cdf7-9206-4281-9724-f8ac8bf69cdc,CHN-Tirumudivakkam,12.968377,80.105767,Zepto india.xlsx
+Chennai,6940d67b-8f25-4a93-a0b1-9bad67479c03,CHN-Nanganallur New,12.968399,80.189262,Zepto india.xlsx
+Chennai,64b8c907-1b43-4f03-a739-fa20d2ac339f,CHN-Nanganallur Network,12.96493421,80.21121709,Zepto india.xlsx
+Chennai,4ab9ad5d-75ba-4cca-93cd-9f40062825c7,CHN-Thoraipakkam New,12.96051,80.2468,Zepto india.xlsx
+Chennai,642dfd00-9fe4-4066-954c-40a9ba8c73f0,CHN-ADYAR NETWORK,12.97633,80.259243,Zepto india.xlsx
+Chennai,fb0d381c-e38f-4bcc-a5f8-872e3e033e62,CHN-Velachery Network,12.97692,80.21513,Zepto india.xlsx
+Chennai,443fffe1-024b-4c04-9b3a-eaf3af01c83d,CHN-Pammal Network 2,12.979998,80.13662,Zepto india.xlsx
+Chennai,3ad99f22-61be-4afe-8f58-d2958dae7f39,CHN-Velachery New,12.988306,80.203389,Zepto india.xlsx
+Chennai,ee6f8d8a-94dc-47c7-a4c5-7ea1efe3031b,CHN-ADYAR,13.00196701,80.25600876,Zepto india.xlsx
+Chennai,848f8163-34e5-49ea-8da1-f7ca9ae06aaf,CHN-Sakthi Avenue,13.016382,80.138919,Zepto india.xlsx
+Chennai,65833924-5a42-4378-9556-8d10945f5a37,CHN-GERUGAMBAKKAM NETWORK,13.019159,80.166867,Zepto india.xlsx
+Chennai,aff88637-57fd-492a-91a6-52c08d65b44b,CHN-Nandambakam New,13.020427,80.202178,Zepto india.xlsx
+Chennai,c8f9f22d-b083-4eb1-894d-47b4daeeb2b5,CHN-Saidapet,13.023149,80.226517,Zepto india.xlsx
+Chennai,7cc8853d-4ba2-4537-808d-95a7adfcf500,CHENNAI-MYLAPORE,13.03872,80.25241,Zepto india.xlsx
+Chennai,efe487f5-0138-496c-9360-ba76a80cd46f,CHN-KUMANANCHAVADI,13.04614,80.11744,Zepto india.xlsx
+Chennai,efd2842c-1082-4dbe-9081-59268d89cf0c,CHN-Iyyappanthangal,13.042644,80.134988,Zepto india.xlsx
+Chennai,8e706906-0373-4de9-b9f7-cbfcc5ab2bca,CHN-KK Nagar Network New,13.034808,80.169856,Zepto india.xlsx
+Chennai,7fbf2dd5-101c-4f92-802d-728264804add,CHN-KKNAGAR NEW,13.0452296,80.1932739,Zepto india.xlsx
+Chennai,691e4cd7-b08a-421b-a35d-6c89173b796e,CHN-TNAGAR Network,13.0333634,80.2202217,Zepto india.xlsx
+Chennai,5e8d4098-c224-4159-b6a3-6f6086e5ba96,CHN-TNAGAR NEW,13.041139,80.238083,Zepto india.xlsx
+Chennai,198b7ff3-353f-4735-bf3f-75b180544478,CHN-Thirunagar,13.053239,80.21262,Zepto india.xlsx
+Chennai,839c4631-7b88-4c92-b55f-fe1fd4a12303,CHN-VGM Street,13.053661,80.24532,Zepto india.xlsx
+Chennai,22cd61da-18f7-490b-9394-24abc3780214,CHN-Mylapore Network-2,13.0568179,80.2584586,Zepto india.xlsx
+Chennai,2699f532-61f3-431f-aab3-db586ec14085,CHN-Vanagram,13.06894806,80.15324054,Zepto india.xlsx
+Chennai,ffb97d6d-e865-4bf7-a4e4-4b95ebc3b7d9,CHN-KK Nagar Network-2,13.0612,80.184319,Zepto india.xlsx
+Chennai,a98f0f81-73ab-4839-8d06-4e9427680054,CHN-Nungambakkam new,13.065389,80.229306,Zepto india.xlsx
+Chennai,5a1efe1d-fe99-4c6a-a79f-fe807d6ea14d,CHN-Nolambur,13.077016,80.168452,Zepto india.xlsx
+Chennai,aa16c37d-46a9-4e32-84b3-0e2401bd196f,CHN-Anna Nagar Network,13.07716071,80.20862054,Zepto india.xlsx
+Chennai,724dc9c8-70fc-4d10-abac-486a8cadc555,CHN-MOGAPPAIR,13.078278,80.180889,Zepto india.xlsx
+Chennai,a52ebbf0-7cb9-4f42-b93a-bae2fc72f4ab,CHN-OTTERI,13.08887607,80.25064602,Zepto india.xlsx
+Chennai,2a82431b-9c30-453e-a6b9-4dc586ae5e75,CHN-Govarthanagiri,13.098921,80.108276,Zepto india.xlsx
+Chennai,956303ea-b445-47a0-94b3-7e3ab9066b5f,CHN-TNHB Layout,13.09531094,80.14660066,Zepto india.xlsx
+Chennai,eae819e6-830f-4bc1-95ef-514cab9dbdbd,CHN-Mogappair Network,13.10177749,80.19337759,Zepto india.xlsx
+Chennai,9b9d7e88-ebbd-4da8-8895-6c3909bd2860,CHN-Anna Nagar New,13.090293,80.215347,Zepto india.xlsx
+Chennai,01c75445-012e-4df6-b075-6856318038cc,CHN-Ayanavaram,13.095466,80.233032,Zepto india.xlsx
+Chennai,5d83d37a-c7fa-4891-b9dd-72c9d308f862,CHN-Parrys,13.10333543,80.281471,Zepto india.xlsx
+Chennai,e778b1ff-3517-4038-a2b8-674d99d937f4,CHN-Avadi,13.1176536,80.0943567,Zepto india.xlsx
+Chennai,8c0bdb95-9f6b-4cd1-bd88-c304f5fce8e2,CHN-AMBATTUR,13.11844236,80.15887434,Zepto india.xlsx
+Chennai,6db09732-73a0-424c-b528-1778ad7ba7e5,CHN-PERAMBUR NEW,13.11858136,80.22831024,Zepto india.xlsx
+Chennai,13e48e2d-b274-45cf-a675-0b6b7a05a36b,CHN-Vyasarpadi,13.127247,80.258125,Zepto india.xlsx
+Chennai,d605b9c6-d32b-4771-a7db-87c450a5f34c,CHN-Ambattur Network,13.126177,80.148302,Zepto india.xlsx
+Chennai,65505923-68ad-4bd1-8258-cbff0d32e938,CHN-Puthagram,13.133006,80.192203,Zepto india.xlsx
+Chennai,0f8103ff-a85c-40ac-8658-ffecaa4fb853,CHN-Sivan Nagar,13.138587,80.288094,Zepto india.xlsx
+Chennai,ea4890e8-3b15-48bc-9bcf-3da119ebbbd8,CHN-KKR Nagar,13.14502007,80.23475124,Zepto india.xlsx
+Chennai,3e8e86b0-7446-4d8f-96b6-f5666be04ee9,CHN-KK Thazhai,13.163742,80.254553,Zepto india.xlsx
+Chennai,49e487f6-07bf-48f9-b379-203f76c11964,CHN-Sothupakkam,13.1934874,80.1829507,Zepto india.xlsx
+Kolkata,56b34f56-7705-43b0-8fee-64125becba91,KOL-Joka New,22.44882398,88.301147,Zepto india.xlsx
+Kolkata,6de9aaa0-268d-44a5-8e39-aa2130d5354a,KOL-Kamalgachi,22.44137224,88.39319931,Zepto india.xlsx
+Kolkata,d613f8a4-718e-44e8-b3a3-cad4d092bfe2,KOL-Haridevpur,22.4658468,88.3356827,Zepto india.xlsx
+Kolkata,b90c1ea5-9619-46d9-8eb0-ac656bc470b9,KOL-Diamond City,22.48419115,88.29623409,Zepto india.xlsx
+Kolkata,cd098e80-d516-4508-b4fc-3d7f10461033,KOL-Jadavpur New,22.48677579,88.35056847,Zepto india.xlsx
+Kolkata,5fdc5ed4-7a93-4c29-88bc-f40964758005,KOL-SANTOSHPUR,22.48677639,88.38748927,Zepto india.xlsx
+Kolkata,6de0ff52-a112-489b-bbb4-da655f8943ce,KOL-Behala New,22.50588747,88.32895283,Zepto india.xlsx
+Kolkata,a935152c-9baa-46c1-b2ac-37701a227a19,KOL-Lake Gardens,22.5080718,88.3535269,Zepto india.xlsx
+Kolkata,9cc80a80-f39d-4da4-9ce6-14fad42e470e,KOL-Nazirabad,22.512722,88.417444,Zepto india.xlsx
+Kolkata,74039f14-48e6-4a32-b70f-7ddda4c42900,KOL-BALLYGANJ,22.52449709,88.37156695,Zepto india.xlsx
+Kolkata,547ab61d-8d0e-47b5-a5b4-82952f43e814,KOL-Acropolis,22.52194,88.385964,Zepto india.xlsx
+Kolkata,4d3f28cf-646c-49cb-833b-0dbce82498d5,KOL-Bhawanipore New,22.5287374,88.3518097,Zepto india.xlsx
+Kolkata,e6020704-f789-4a3f-9f3a-1f289bcb343f,KOL-Topsia,22.5388218,88.37665444,Zepto india.xlsx
+Kolkata,a747aca8-5583-4f32-aa16-e804cefaa95a,KOL-Park street network,22.54421287,88.35109405,Zepto india.xlsx
+Kolkata,805076d8-aa2c-49c6-870b-413044b130bf,KOL-Tangra,22.547184,88.389073,Zepto india.xlsx
+Kolkata,f5a49f9a-8888-481e-b96c-f7a191ea1256,KOL-Park Street,22.555206,88.36338,Zepto india.xlsx
+Kolkata,8bf314ef-f9e5-4425-a4a9-9a535764e613,KOL-Shibpur,22.573475,88.328352,Zepto india.xlsx
+Kolkata,5f828396-54d9-4441-b4a2-4a1d47eac622,KOL-PHOOLBAGAN,22.5620436,88.3972557,Zepto india.xlsx
+Kolkata,eedbad6f-ada7-40cd-922e-828198efed50,KOL-Maniktala,22.58986671,88.37580364,Zepto india.xlsx
+Kolkata,30dc951d-cd0e-4703-9f84-583ef7de1794,KOL-Baisakhi,22.598938,88.423108,Zepto india.xlsx
+Kolkata,0af692ee-167f-4903-bf7c-959643e47899,KOL-NEW TOWN,22.582489,88.46281,Zepto india.xlsx
+Kolkata,553c9cfa-5a00-4b98-a1d5-152c813e12d2,KOL-Kestopur,22.59477361,88.43478454,Zepto india.xlsx
+Kolkata,ad4637de-2e3e-4276-a524-0546f33fa0d9,KOL-Liluah,22.617645,88.348427,Zepto india.xlsx
+Kolkata,22c1e59e-db0c-4fc4-b5f0-82b6c33ff15f,KOL-Amarpalli,22.61564934,88.41176398,Zepto india.xlsx
+Kolkata,f953916f-d684-447e-b750-c1f4ca34bc33,KOL-BARANAGAR,22.625759,88.381961,Zepto india.xlsx
+Kolkata,d4965e43-bb99-400e-9107-7371e08cf06a,KOL-RAJARHAT,22.6180581,88.443721,Zepto india.xlsx
+Kolkata,ab3bee45-6ef0-4dbe-bf5f-253d0817ceb5,KOL-DumDum,22.62759195,88.42375019,Zepto india.xlsx
+Kolkata,17532e16-28d2-4271-bbac-c48b9b3f8dd1,KOL-Kamarhati,22.67153941,88.37841808,Zepto india.xlsx
+Pune,dd520c1a-80de-4060-9e8a-7b2156223efe,PUN-Katraj,18.44510808,73.88534402,Zepto india.xlsx
+Pune,db4ee2ab-1f56-4e37-9969-3407620c48f5,PUN-Ambegaon,18.4485458,73.8363517,Zepto india.xlsx
+Pune,77b4900a-7b8f-4a89-8c76-6731c578aa95,PUN-Undri,18.44904007,73.91126583,Zepto india.xlsx
+Pune,68e86539-d883-4fc2-b735-0ab599643721,PUN-Nanded City,18.45723905,73.7871817,Zepto india.xlsx
+Pune,4b7a4e49-97dc-4bab-a168-52fcc8711105,PUN-Kondhwa,18.470199,73.891835,Zepto india.xlsx
+Pune,76763e89-ac03-4897-b7c4-f2569eb37f35,PUN-NIBM ROAD,18.46877196,73.90035156,Zepto india.xlsx
+Pune,c7c3f33e-7fdb-4be2-9693-9809420f5200,PUN-HADAPSAR,18.48067137,73.92812434,Zepto india.xlsx
+Pune,3c8e6f2e-5b5d-4654-8e41-a1e0109e3972,PUN-SINHGAD,18.481515,73.825156,Zepto india.xlsx
+Pune,4cc5f8ae-6495-44d0-9212-b63fe11a3af5,PUN-WARJE,18.49061505,73.78994295,Zepto india.xlsx
+Pune,ff61b724-51c4-4472-b728-e6298807dc09,PUN-Kothrud New,18.500078,73.79577,Zepto india.xlsx
+Pune,a6aaf608-0a95-47fd-a981-a52d1a5e5e2a,PUN-Mayur Coloney,18.503927,73.815033,Zepto india.xlsx
+Pune,e8d2b0f5-541c-4bc5-812d-67f6ed429043,PUN-Bhekrai Nagar,18.4877462,73.9525255,Zepto india.xlsx
+Pune,252ed3f4-d99b-4793-951e-ae673cb9ebbf,PUN-Magarpatta New,18.51127658,73.94451072,Zepto india.xlsx
+Pune,97a88d32-5435-4ba1-b678-b881529ce97d,PUN-Bavdhan,18.5189577,73.76990496,Zepto india.xlsx
+Pune,ca7b9f78-e53b-480a-8e1b-11ebd8cde4e2,PUN-Amanora,18.52101836,73.93595721,Zepto india.xlsx
+Pune,596b77f1-86e7-4246-ad37-f87897a9779a,PUN_KOREGAON PARK,18.53356905,73.88536766,Zepto india.xlsx
+Pune,befaa444-90e6-4691-a2d0-614d59ac0f1d,PUN-Kalyani Nagar,18.55383756,73.90595708,Zepto india.xlsx
+Pune,d5350a6a-f6d4-454f-9c53-205dfefec328,PUN-Kharadi Network-2,18.533524,73.9423298,Zepto india.xlsx
+Pune,3d346812-5c23-4f69-883e-cba67acaa658,PUN-Pashan,18.54213424,73.78940136,Zepto india.xlsx
+Pune,e9da3e70-081c-4c4d-abad-5d88303ced92,PUN-AUNDH,18.5503786,73.8097831,Zepto india.xlsx
+Pune,315e9d84-2c4a-45b2-88fb-f6733794efba,PUN-Kharadi Network,18.54711,73.931427,Zepto india.xlsx
+Pune,0058ed07-4fa8-44ef-9cf1-bb8c038fb0b8,PUN-KHARADI,18.54871,73.94934,Zepto india.xlsx
+Pune,ea738588-4a4c-4d6c-b5c7-380d49dd06ea,PUN-Baner Network-2,18.55062493,73.7632809,Zepto india.xlsx
+Pune,60252717-a8c5-4891-9b23-3db778b14477,PUN-BANER,18.5640721,73.7691598,Zepto india.xlsx
+Pune,4ba4eee4-2869-4f08-8ba8-ccf06a2b4e3c,PUN-Pimple Nilakh,18.565983,73.7922303,Zepto india.xlsx
+Pune,ab0913f7-59e4-4cd7-b2b1-56d50fc56096,PUN-Tingre Nagar,18.57984812,73.884976,Zepto india.xlsx
+Pune,04b8b5aa-15dd-49f9-ada0-df4d94f119a4,PUN-Viman Nagar New,18.56733646,73.90759408,Zepto india.xlsx
+Pune,3a15115a-c99e-4421-bfcc-5b97a2716da5,PUN-Kharadi Network-3,18.56396746,73.95438124,Zepto india.xlsx
+Pune,559d99e4-56b4-4659-9022-07abdf9329b2,PUN-Mhalunge Road,18.57223717,73.7537584,Zepto india.xlsx
+Pune,7c05017d-f3fd-4845-9a6f-81e9f9a60231,PUN-Pimple Gaurav,18.58613853,73.82183101,Zepto india.xlsx
+Pune,f68f6daf-2bba-450e-9a05-082e29e9129d,PUN-HINJEWADI PHASE-1 NEW,18.58198863,73.7401389,Zepto india.xlsx
+Pune,cb822812-1d29-440c-8759-b33d31f78248,PUN-Balewadi,18.581723,73.767667,Zepto india.xlsx
+Pune,83561210-ebc8-42d7-b63f-1cb5e3117b08,PUN-Pimple Saudagar Network-2,18.597253,73.765,Zepto india.xlsx
+Pune,fe4a16ca-6c7c-4f1a-88a7-fecda52d8057,PUN-PIMPLE SAUDAGAR,18.6039,73.791804,Zepto india.xlsx
+Pune,f737581f-b7f3-450a-8cf7-f5fb6e6184a0,PUN-Dhanori,18.59958313,73.90875236,Zepto india.xlsx
+Pune,74dfeece-0ec5-4b41-a83b-576add66078e,PUN-Pimple Saudagar Network,18.6060224,73.7556266,Zepto india.xlsx
+Pune,53aeab86-e3e6-4183-bc51-da47cf967c24,PUN-Nimbalkar Nagar,18.61247389,73.91337569,Zepto india.xlsx
+Pune,dd73c1bc-4757-4993-896b-cc949247ba76,PUN-Laxmi Chowk,18.59941717,73.73563016,Zepto india.xlsx
+Pune,7fe0f5bc-d9c2-4883-b9c2-35fc8f36e1c1,PUN-Atma Nagar,18.6328,73.80276,Zepto india.xlsx
+Pune,7644b7fa-98d0-4bdd-a093-965dac5a807b,PUN-Dighi,18.61789848,73.85725457,Zepto india.xlsx
+Pune,8f1d26b5-d168-42b5-9aa2-fc76bbd55a9f,PUN-RAVET,18.64149294,73.75666901,Zepto india.xlsx
+Ahmedabad,863ee650-1df1-418c-a988-2a64f2c555e3,AHM-Makarba,22.99632335,72.5109498,Zepto india.xlsx
+Ahmedabad,84bf9085-f4e6-4c8c-9cf6-9876beafada3,AHM-Vastral,22.99219816,72.65352631,Zepto india.xlsx
+Ahmedabad,71e632bb-df6a-45e2-9fa2-08fa0f5cdbe9,AHM-Vraj Vihar 3,23.01690222,72.51887677,Zepto india.xlsx
+Ahmedabad,dc62c1e8-21cf-4d94-920d-e5e08a110322,AHM-Navrangpura,23.04050665,72.55775173,Zepto india.xlsx
+Ahmedabad,885c5a49-6ecc-47fa-ac1e-87310b08de65,AHM-Thaltej,23.04635735,72.50421326,Zepto india.xlsx
+Ahmedabad,9c6fce71-3aec-455c-969f-075ba74fa0d5,AHM-Sundar Nagar,23.047321,72.558009,Zepto india.xlsx
+Ahmedabad,37abf3a3-594f-4498-97df-be8059e950d4,AHM-Sola,23.0794562,72.5073023,Zepto india.xlsx
+Ahmedabad,5c720bb8-ef8e-45c7-a249-be01de180a15,AHM-New Ranip,23.0881521,72.56212356,Zepto india.xlsx
+Ahmedabad,46b54f69-c5ff-4595-934d-3d98fbf33ec0,AHM-Gota,23.097435,72.541955,Zepto india.xlsx
+Surat,b13fc494-3fe6-4797-a8e5-1038a797140d,SUR-Bharthana,21.14264562,72.77300274,Zepto india.xlsx
+Surat,2cad2a10-1a07-4006-971e-6b305738e8e4,SUR-Bhimrad,21.13534019,72.79504847,Zepto india.xlsx
+Surat,a08faf0a-3921-4ebd-a076-a551e2a9c91d,SUR-Dindoli,21.14583,72.87778,Zepto india.xlsx
+Surat,5c849951-0ba3-4878-9b29-eb2d3ef252eb,SUR-Majura Gate,21.173552,72.823647,Zepto india.xlsx
+Surat,8377168d-5d92-4937-943c-75dff1ed8575,SUR-Palanpur,21.20437036,72.76941507,Zepto india.xlsx
+Surat,d2020a3b-0420-4886-8c55-3128f6a3f592,SUR-Adajan,21.19389953,72.78632357,Zepto india.xlsx
+Surat,ebc8fa1c-02ba-4a0a-a544-0854ce8beead,SUR-Tadwadi,21.2101866,72.7951279,Zepto india.xlsx
+Surat,62648dc2-e2ea-48d9-8d26-314169b943ac,SUR-Amroli,21.24244118,72.85200981,Zepto india.xlsx
+Surat,8ea7989c-7d2a-4093-9713-a17b6c3d9bc8,SUR-Mota Varacha,21.23775,72.87485,Zepto india.xlsx
+Surat,ffa16021-e499-4c0b-80b1-aabca4b46cfd,SUR-Sarthana,21.23775161,72.91002749,Zepto india.xlsx
+Surat,a48b87fa-9d3b-4781-ab51-eb926cbde151,SUR-Jahangir pura,21.24123878,72.78430294,Zepto india.xlsx
+Jaipur,c56338b2-6871-4193-b594-445cdb7706b3,JAI-Kankha Di Dhani,26.814305,75.763155,Zepto india.xlsx
+Jaipur,455d4f27-20fa-488a-ab60-54cb113e4f26,JAI-Pratap Nagar,26.806125,75.83429,Zepto india.xlsx
+Jaipur,ecd420a4-fb9a-4d21-b002-fafa41a685ff,JAI-Jagatpura,26.803806,75.8729429,Zepto india.xlsx
+Jaipur,02dc6b57-1dfe-4efe-a57b-4324a830de78,JAI-Railway Colony,26.82617214,75.84603357,Zepto india.xlsx
+Jaipur,f7caefb4-fd0c-43ee-bf5e-593a7bb33860,JAI-Kalyanpura,26.846189,75.759039,Zepto india.xlsx
+Jaipur,085097a9-564c-45fe-98d8-23d7fd268328,JAI-Indira Gandhi Nagar,26.83972367,75.87101554,Zepto india.xlsx
+Jaipur,4db672ad-efd4-44f3-bd91-300233162d1c,JAI-Patrika Gate,26.8508893,75.8035401,Zepto india.xlsx
+Jaipur,d15971f7-4774-4119-badc-8c239a0b88ca,JAI-Mansarovar,26.864712,75.76753,Zepto india.xlsx
+Jaipur,2036c1f6-0885-407c-a607-6a237897ae33,JAI-Nirman Nagar,26.885461,75.749982,Zepto india.xlsx
+Jaipur,32989280-a610-4395-aca5-5ba4823af4bd,JAI-Tonk Phatak,26.876097,75.790882,Zepto india.xlsx
+Jaipur,e4a1792d-8ffa-4015-a415-e91fe2f01493,JAI-Hawasadak,26.891841,75.770729,Zepto india.xlsx
+Jaipur,188961a6-213a-4ab6-9d5d-2aaa495042aa,JAI-Chordia City,26.901199,75.7096577,Zepto india.xlsx
+Jaipur,b1f236d6-edfd-47eb-a6fe-dd5bbca86e4d,JAI-Adarsh Nagar,26.907474,75.830045,Zepto india.xlsx
+Jaipur,c833cd5c-df44-42c9-865f-2035f4aa3c4e,JAI-Krishna Nagar,26.923404,75.730658,Zepto india.xlsx
+Jaipur,07b1b3f7-203d-4d37-9297-1ea22235fe2c,JAI-Bani Park,26.933465,75.797009,Zepto india.xlsx
+Jaipur,5c9e9548-d311-4206-adc5-6d3918731d90,JAI-Suraj Nagar,26.945454,75.739318,Zepto india.xlsx
+Jaipur,78e1bf13-4f66-4f97-ba1c-720e7cadcbb2,JAI-Shastri Nagar,26.94573742,75.79889619,Zepto india.xlsx
+Jaipur,133688fc-cadd-4750-bb5f-f595c5eca821,JAI-Vidhya Nagar,26.958593,75.778522,Zepto india.xlsx
+Lucknow,72b84119-233b-4472-9e3c-651bd462d16f,LKO-Eldeco Udyan 2,26.759374,80.932982,Zepto india.xlsx
+Lucknow,aa0cbb4d-1d2d-4ec6-9ed9-bc998260760f,LKO-Eldeco,26.75932713,80.951681,Zepto india.xlsx
+Lucknow,587eef72-e4e2-4743-a0d0-17c903a9d061,LKO-Sharda Nagar,26.78089,80.925019,Zepto india.xlsx
+Lucknow,913cea7d-879a-46d4-a31d-375e6272a237,LKO-Defense Colony,26.773574,80.955148,Zepto india.xlsx
+Lucknow,f4bba239-1eaa-447f-bca5-8ac8d536cec1,LKO-Golf City,26.77888982,80.99924366,Zepto india.xlsx
+Lucknow,c1490eb7-318a-4ee3-b14c-37e943e3b44a,LKO-Krishna Nagar,26.794554,80.881897,Zepto india.xlsx
+Lucknow,f44aaa81-4dd2-4f45-8695-57b7faa3e66e,LKO-Arjunganj,26.80775,80.9962222,Zepto india.xlsx
+Lucknow,2d176779-fc34-4f74-9e2b-cf260ef82d26,LKO-Gomti Nagar,26.825569,81.008189,Zepto india.xlsx
+Lucknow,a13c8b45-35e4-4fd1-beae-f898dd2b9e93,LKO-Rajajipuram,26.84682424,80.88005731,Zepto india.xlsx
+Lucknow,2f8b56d8-3d1a-4dd3-ad94-2fc67df39b4f,LKO-Rajendra Nagar,26.846269,80.903521,Zepto india.xlsx
+Lucknow,2140ad97-8423-4f24-9961-ed3ad44306c0,LKO-Hazratganj,26.84853515,80.94252322,Zepto india.xlsx
+Lucknow,c42a2c0f-9fd7-4843-8b42-7c71b32be093,LKO-Vikas Khand,26.85219707,80.9995068,Zepto india.xlsx
+Lucknow,cf175154-9362-4fe8-af7a-8b88d60b978f,LKO-Ashraf Vihar Colony,26.8674984,81.036498,Zepto india.xlsx
+Lucknow,562cb7b1-abca-43e3-a6c9-051c96f50712,LKO-Dubagga,26.87342849,80.8695171,Zepto india.xlsx
+Lucknow,b4be4358-8c60-4b61-9d4c-0a2f44c1b2cc,LKO-Chowk,26.867813,80.905173,Zepto india.xlsx
+Lucknow,871ffc63-229f-4a33-b9f5-13644d79fb07,LKO-Daliganj,26.8758096,80.9355816,Zepto india.xlsx
+Lucknow,4bbfd2a7-633f-40bf-91e3-3cfdd08fd6cc,LKO-vijaya Khand,26.86719,81.01611,Zepto india.xlsx
+Lucknow,22892d78-685c-4bba-8760-dec1e47621e1,LKO-Mahanagar,26.87307434,80.957294,Zepto india.xlsx
+Lucknow,57a0a941-0dd1-4f11-8c58-92e33fd9e2fd,LKO-Chinhat,26.8873056,81.0525833,Zepto india.xlsx
+Lucknow,1df7d024-3938-424e-a351-0c61f146c944,LKO-Aliganj,26.89829768,80.94414524,Zepto india.xlsx
+Lucknow,52e787a0-2b5c-4184-8ba9-437d1d3408d8,LKO-Tedhi Pulia,26.8995,80.966841,Zepto india.xlsx
+Lucknow,75ce4477-9307-4db7-b750-a640a90e0e51,LKO-Manas Enclave,26.902775,81.002369,Zepto india.xlsx
+Lucknow,b0caee9f-aa50-45bf-92bb-b533d55b50a0,LKO-IIM,26.931493,80.907628,Zepto india.xlsx
+Lucknow,63a0ab1c-b753-47cb-83a6-5362d31f5d17,LKO- Jankipuram,26.931303,80.943974,Zepto india.xlsx
+Lucknow,0bb92297-286f-45a2-8b94-40bb25c86e55,LKO-Gudamba,26.9221491,80.9703959,Zepto india.xlsx
+Kanpur,1a96b304-c2cb-4a59-88cc-8e3496e1b525,KNU-Kidwai Nagar,26.427685,80.321483,Zepto india.xlsx
+Kanpur,54c72546-0ffd-4491-b075-faadc90e4cb0,KNU-Lal Bangla,26.422324,80.390759,Zepto india.xlsx
+Kanpur,30a65b0b-3941-4a5f-a0e4-8d0626b37c89,KNU-Barra,26.436009,80.296192,Zepto india.xlsx
+Kanpur,8b5992ad-b397-4fdb-be52-0d780c7cc501,KNU-Shastri Nagar,26.46220406,80.29723625,Zepto india.xlsx
+Kanpur,6272824c-8e49-42e1-a31d-19f76894bf74,KNU-Awas Vikas,26.48942044,80.25380283,Zepto india.xlsx
+Kanpur,d8ced7ed-2331-40d8-9f41-5154bb1ced89,KNU-Arya Nagar,26.483097,80.318459,Zepto india.xlsx
+Kanpur,bd6781b9-bdcd-4cc2-ad88-6872c8c2bfe5,KNU-Indira Nagar,26.510931,80.265783,Zepto india.xlsx
+Kanpur,01084781-096d-4da8-bc1c-cd56769e8d87,KNU-Azad Nagar,26.508984,80.294056,Zepto india.xlsx
+Nagpur,31a7478c-9eed-4599-881a-9616df850bfe,NAG-Besa,21.084562,79.103836,Zepto india.xlsx
+Nagpur,0e6cd72b-6e91-42a7-88cc-3412100ee5ad,NAG-Khamla,21.109161,79.062457,Zepto india.xlsx
+Nagpur,5bbd5e39-81de-4d1a-9706-25cbe2cb58af,NAG-Raghuji Nagar,21.1285609,79.1046203,Zepto india.xlsx
+Nagpur,8851f149-0658-4c0f-9995-1fcf9ca5404b,NAG-Garoba Maidan,21.138921,79.125938,Zepto india.xlsx
+Nagpur,f2c5a570-9b33-4094-9b3b-614319c81f8e,NAG-Gokulpeth,21.1466389,79.0542934,Zepto india.xlsx
+Nagpur,a2ee7763-c871-4b5e-ab33-fbc48e923b7b,NAG-MHADA City,21.1399541,79.0909916,Zepto india.xlsx
+Nagpur,ea7bcce0-6cbf-4a46-a731-3cc66449e073,NAG-Bhupesh Nagar,21.18091227,79.06012809,Zepto india.xlsx
+Nagpur,2b28a8f0-7027-4c5b-8a0b-63c748e5e29d,NAG-Zingabai Takali,21.19269,79.07063,Zepto india.xlsx
+Indore,75c44b6e-b7eb-4590-85db-6d5e51907bbf,IDR-Chandan Nagar,22.705659,75.829245,Zepto india.xlsx
+Indore,a02cc832-e25e-4851-b7bd-3330a61c2158,IDR-Bicholi,22.709183,75.922589,Zepto india.xlsx
+Indore,61d4ef22-b293-4f2b-a1ef-faa0f49c4322,IDR-Tilak Nagar,22.71828807,75.89388135,Zepto india.xlsx
+Indore,f23052ce-4b53-4acb-a283-3045e50ba5ea,IDR-LIG Colony,22.735437,75.876537,Zepto india.xlsx
+Indore,6cb7f877-c543-4be9-8c74-5fd19956f937,IDR-Scheme 54,22.748108,75.890003,Zepto india.xlsx
+Indore,61064aad-9e86-41f1-a52c-03f0fd5ae970,IDR-Nipania,22.764219,75.923556,Zepto india.xlsx
+Indore,6fee31f5-1ec7-43e1-9d2f-1bc462d5fee9,IDR-Niranjanpur,22.77507301,75.8955752,Zepto india.xlsx
+Thane,1033be80-5713-4c0e-86c4-38254f9964f0,MUM-KOPARKHAIRNE,19.11838541,72.99761508,Zepto india.xlsx
+Thane,66343bcf-0c12-4c87-b3b8-5e582e518ca7,MUM-Vashi New,19.08575657,72.99873719,Zepto india.xlsx
+Thane,178dbe40-5ad9-4ddf-99ec-18192cb71db7,MUM-Airoli,19.16459083,72.99547915,Zepto india.xlsx
+Thane,884a853d-1386-4114-a4eb-d60cc898406f,MUM-Shilphata,19.1499223,73.0439121,Zepto india.xlsx
+Thane,b7c3c400-9275-4d75-afa3-62e0a6abfaac,MUM-Kalwa,19.20067835,73.00029164,Zepto india.xlsx
+Thane,2c911eaa-a276-47bc-92d8-447d166f2dfa,MUM-MAJIWADA,19.220213,72.986282,Zepto india.xlsx
+Thane,f4877d26-05ba-4844-8609-1de598d206a5,MUM-Waghbil Network-3,19.228714,72.9858148,Zepto india.xlsx
+Vadodara,a12779ec-72d7-4af2-b557-8d8d70e92679,VAD-Tandalja,22.288164,73.1352,Zepto india.xlsx
+Vadodara,1a376afe-b235-48a4-9153-b33342739fd9,VAD-Alkapuri,22.30942135,73.16868421,Zepto india.xlsx
+Vadodara,3c0de1fa-d7b5-4cef-b867-cad33562463c,VAD-Harni,22.31368698,73.23808341,Zepto india.xlsx
+Vadodara,e5eedfad-51fc-488d-9061-f56ebaed8440,VAD-Panchvati,22.3321412,73.14433546,Zepto india.xlsx
+Vadodara,007c5273-56fd-4f81-a8e6-69d2e0db52b4,VAD-Karelibaug,22.341301,73.20376,Zepto india.xlsx
+Ghaziabad,082229f8-d7ec-4b29-8220-db1d7776d7e9,NOD-Sector 58,28.606783,77.358765,Zepto india.xlsx
+Ghaziabad,0e027a98-e51d-488b-af9b-f81381bb9837,NOD-Sector 73 Network,28.583612,77.371656,Zepto india.xlsx
+Ghaziabad,03d8fbd1-ffe6-4f0f-981d-b83f129bb0e2,NOD-SECTOR 73 NOIDA,28.591555,77.381076,Zepto india.xlsx
+Ghaziabad,b85a5165-14eb-433e-b1c9-bcc435f89d26,NOD-Bahlopur,28.611323,77.397793,Zepto india.xlsx
+Ghaziabad,eb6b329a-e514-4f86-b1b0-d11991efc00a,NOD-NOIDA EXTENSION NETWORK,28.601754,77.44594,Zepto india.xlsx
+Ghaziabad,9f128d50-def8-471b-bc47-b041d95b885a,NOD_SECTOR 63 NOIDA,28.618837,77.378237,Zepto india.xlsx
+Ghaziabad,31daaa17-a00e-4c92-b4bc-34fb69d5bba7,GZB-GAUR CITY,28.619894,77.417216,Zepto india.xlsx
+Ghaziabad,4f8f3e7f-09f6-4bea-924e-c29764c91e48,NOD-Noida Extension,28.61133048,77.4464719,Zepto india.xlsx
+Ghaziabad,e94a9a29-8a14-449a-95d0-f9beb57f3904,GZB-Gaur City Network,28.62422556,77.42507971,Zepto india.xlsx
+Ghaziabad,4fd851db-0ec5-499e-9c7b-724a03966eb8,GZB-Crossing Republic,28.626005,77.43981,Zepto india.xlsx
+Ghaziabad,6065ae05-53da-45bf-89ce-474215022b49,GZB- Nyay Khand,28.638189,77.359465,Zepto india.xlsx
+Ghaziabad,46447215-f214-4e66-9e93-26a5d8509daa,GZB-Indirapuram Network-3,28.64172,77.371997,Zepto india.xlsx
+Ghaziabad,08c4b285-4a72-4fe8-b25d-6d4b24982703,GZB-Pratap Vihar,28.655726,77.4010239,Zepto india.xlsx
+Ghaziabad,9979be1b-cc60-4f14-9a4b-853338c8561b,GZB-New Gandhi Nagar,28.656541,77.43613,Zepto india.xlsx
+Ghaziabad,1a87a0c1-4634-4bd9-987e-8bb455d96027,GZB-Wave City,28.651505,77.511108,Zepto india.xlsx
+Ghaziabad,227bb9ab-e8bd-41f3-99d7-4c6916401166,GZB-INDIRAPURAM Network 2,28.65466393,77.3618118,Zepto india.xlsx
+Ghaziabad,aa4c6307-c5ae-46c8-8c4d-9750b2bf193f,GZB-Indirapuram Network-4,28.658135,77.377902,Zepto india.xlsx
+Ghaziabad,47a77387-059f-44fc-be76-a81b7ff97e0a,GZB-Shastri nagar,28.662885,77.462688,Zepto india.xlsx
+Ghaziabad,2027ae67-e366-4f60-ab7d-64ffbebfeee0,GZB-RAJ NAGAR,28.672102,77.439757,Zepto india.xlsx
+Ghaziabad,7ace5e2b-b072-4daf-978c-4577484a363d,GZB- Harson,28.677582,77.475938,Zepto india.xlsx
+Ghaziabad,d955c760-9c2f-4001-b7bd-24b8b4ce38b0,GZB-Sector 2,28.6813333,77.3598611,Zepto india.xlsx
+Ghaziabad,961f1f02-65c5-403a-a32f-edaf705eadfd,GZB-Loni Road,28.680484,77.379311,Zepto india.xlsx
+Ghaziabad,6e5b43c7-af2f-4b55-af47-72c69fb22bf9,GZB-Sanjay Nagar,28.694916,77.454758,Zepto india.xlsx
+Ghaziabad,b0e1957d-a3c6-4f2e-9b73-ab0c026194e2,GZB-Sehani Khurd,28.699104,77.422867,Zepto india.xlsx
+Ghaziabad,0ea53a34-8b00-4f97-b9c1-9cab4eba4f40,GZB-MADHUBAN BAPUDHAM,28.698249,77.486097,Zepto india.xlsx
+Ghaziabad,8d0f1225-d15a-408c-876e-6cc42d2c229a,GZB-Raj Nagar Extension Network,28.706309,77.417538,Zepto india.xlsx
+Ghaziabad,4ab87b63-ecc0-48ff-9f76-1ab67b5495bd,GZB-Jalalabad,28.7170927,77.455915,Zepto india.xlsx
+Ludhiana,7bd58b6d-6d2d-4056-8d6e-830f6d9f6e09,LDH-Urban Estate,30.866365,75.843149,Zepto india.xlsx
+Ludhiana,9fb7a7ca-e61c-4904-b339-749b6b45bf09,LDH-Sarabha Nagar,30.890367,75.799782,Zepto india.xlsx
+Ludhiana,146ab60b-09e2-4856-8aa2-2f7c1a6977e6,LDH-Jamalpur,30.9023575,75.9106893,Zepto india.xlsx
+Ludhiana,9ac5f009-7623-4d1f-9b6a-d86e2f7c073e,LDH-Ferozepur road,30.903934,75.832245,Zepto india.xlsx
+Ludhiana,94ec12c0-9fd4-45fe-aea4-1e41e70413fb,LDH-Rishi Nagar,30.916811,75.805462,Zepto india.xlsx
+Agra,3e923d42-7bf6-4c91-8f17-19058109b19b,AGR-Tajganj,27.1523252,78.0565715,Zepto india.xlsx
+Agra,49e49285-a768-494f-9429-89a6cf673007,AGR-Jaipur House,27.189279,77.984588,Zepto india.xlsx
+Agra,805ea004-3262-4094-9df6-0b87ad6d1476,AGR-Dayalbagh,27.228526,77.996917,Zepto india.xlsx
+Nashik,b83c1f4e-b73d-42ee-9a82-648e14c2e8e3,NAS-Jagtap Mala,19.9520053,73.8323569,Zepto india.xlsx
+Nashik,bc299560-8f6b-43ba-b146-879f3594ea7e,NAS-Rane Nagar,19.96040875,73.771445,Zepto india.xlsx
+Nashik,4be1c14d-98a6-42a7-aea9-488538abd03c,NAS-CIDCO,19.98259114,73.76242753,Zepto india.xlsx
+Nashik,da931d01-2519-4d80-89ae-9d74dbb71918,NAS-Indira Nagar,19.97452111,73.78760208,Zepto india.xlsx
+Nashik,36924e6d-5307-4b1e-af42-2143e748a664,NAS-Dasak,19.978547,73.827885,Zepto india.xlsx
+Nashik,0975536b-fda2-455c-89cd-c7d4b0149fd8,NAS-Panchvati,20.0060692,73.80134884,Zepto india.xlsx
+Nashik,1794eede-9e42-4a9c-b132-0be5b0e4e4a4,NAS-Ganpati Nagar,20.01234675,73.74804823,Zepto india.xlsx
+Nashik,72a5dc2f-b97c-406d-b3e4-090e99736baf,NAS-Balram Nagar,20.0208236,73.83442737,Zepto india.xlsx
+Faridabad,24419582-74c5-42eb-b56b-2ae54181e752,FBD-Ballabgarh,28.347248,77.336472,Zepto india.xlsx
+Faridabad,425e3ad2-0f08-4dbb-b90b-c892dc41be83,FBD-Sector 10 New,28.375138,77.327767,Zepto india.xlsx
+Meerut,9d0727d9-8296-4b1f-adc1-80e720f049f5,MRT-PVS Mall,28.954647,77.733437,Zepto india.xlsx
+Meerut,bd5c7fca-c35a-404c-a803-ce735acbeea5,MRT-Mangal Pandey Nagar,28.969224,77.735525,Zepto india.xlsx
+Meerut,73731b71-1ef1-403c-b1e0-e214f7c78b20,MRT-Defence Colony,29.011046,77.749799,Zepto india.xlsx
