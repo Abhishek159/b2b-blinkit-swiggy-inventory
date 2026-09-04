@@ -155,9 +155,12 @@ def check(product_id: str, stores: list, cap: int = 12):
         inv = node.get("inventory", {}) or {}
         pr = node.get("price", {}) or {}
         instock = bool(inv.get("in_stock"))
+        # inv["total"] is the true stock count (verified against raw response). Do NOT use
+        # cart_allowed_quantity/max_allowed_quantity -- those are per-order purchase caps
+        # and understate real stock (e.g. total=12 in stock but allowedQuantity=2).
         out.append({"store_id": s.store_id,
                     "status": "in" if instock else "oos",
-                    "qty": inv.get("quantity") if instock else 0,
+                    "qty": inv.get("total") if instock else 0,
                     "price": pr.get("offer_price"), "mrp": pr.get("mrp") or mrp0,
                     "detail": "matched" if instock else "zero_stock"})
         time.sleep(0.3)   # pace
