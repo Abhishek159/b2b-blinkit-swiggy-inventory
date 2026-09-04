@@ -16,7 +16,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 import dark_stores as ds
@@ -141,6 +141,12 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
             "stores": [{"platform": "blinkit", "store_id": s.store_id, "name": s.name,
                         "locality": s.locality, "lat": s.lat, "lng": s.lng, "status": "pending"}
                        for s in stores_[:20]]}
+
+
+@app.get("/")
+def root():
+    # frontend/ has no index.html (only b2b.html) -- a bare share link should still work
+    return RedirectResponse("/b2b.html")
 
 
 if FRONTEND.exists():
