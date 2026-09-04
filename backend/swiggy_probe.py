@@ -66,7 +66,14 @@ def _triple(product_id: str):
 
 
 def _probe_one(sess, lat, lng, store_id, item, spin):
-    """One store, one product -> the matched cart node (has inventory/price) or None."""
+    """One store, one product -> (matched cart node, None) | (None, reason).
+
+    reason distinguishes an honest "this store's cart doesn't carry it" (HTTP 200
+    both calls, no matching node — Swiggy itself confirming absence) from an actual
+    technical failure (network exception / non-200), which earlier code conflated
+    into a single "na" bucket and the UI then mislabeled as "unreachable" even when
+    it was a confirmed non-stock result.
+    """
     jar = dict(sess["jar"])
     jar["lat"] = "s%3A" + str(lat)
     jar["lng"] = "s%3A" + str(lng)
@@ -82,11 +89,13 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
                                "annotation": "", "clientId": "INSTAMART-APP"}})
     try:
         rl = requests.post(SELECT_LOC, headers=headers, data=loc, impersonate="chrome124", timeout=20)
+        if rl.status_code != 200:
+            return None, "failed"
         for k, v in dict(rl.cookies).items():
             jar[k] = v
         headers["Cookie"] = "; ".join(f"{k}={v}" for k, v in jar.items())
     except Exception:
-        return None
+        return None, "failed"
     sid = re.sub(r"\D", "", str(store_id)) or "0"
     pid, parent = item[0], item[1]
     cart_items = [{"productId": parent, "quantity": 1, "itemId": pid, "spin": spin,
@@ -101,10 +110,10 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
     try:
         r = requests.post(CART, headers=headers, data=json.dumps(payload), impersonate="chrome124", timeout=25)
         if r.status_code != 200:
-            return None
+            return None, "failed"
         data = r.json()
     except Exception:
-        return None
+        return None, "failed"
     found = {}
 
     def walk(o):
@@ -117,7 +126,8 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
             for v in o:
                 walk(v)
     walk(data)
-    return found.get(str(spin)) or (next(iter(found.values())) if found else None)
+    node = found.get(str(spin)) or (next(iter(found.values())) if found else None)
+    return (node, None) if node else (None, "not_carried")
 
 
 def check(product_id: str, stores: list, cap: int = 12):
@@ -130,9 +140,17 @@ def check(product_id: str, stores: list, cap: int = 12):
     item = (pid, parent)
     out = []
     for s in stores[:cap]:
-        node = _probe_one(sess, s.lat, s.lng, s.store_id, item, spin)
+        node, reason = _probe_one(sess, s.lat, s.lng, s.store_id, item, spin)
         if node is None:
-            out.append({"store_id": s.store_id, "status": "na"})
+            if reason == "not_carried":
+                # Swiggy's cart confirmed (HTTP 200, no error) this store doesn't stock the
+                # SKU at all -- a real "not available here", same league as zero_stock, not
+                # an unknown/unreachable result. See DETAIL_LABEL taxonomy in b2b.html.
+                out.append({"store_id": s.store_id, "status": "oos", "qty": 0,
+                            "price": None, "mrp": mrp0, "detail": "not_carried"})
+            else:
+                out.append({"store_id": s.store_id, "status": "na", "detail": reason or "failed"})
+            time.sleep(0.3)
             continue
         inv = node.get("inventory", {}) or {}
         pr = node.get("price", {}) or {}
@@ -140,6 +158,7 @@ def check(product_id: str, stores: list, cap: int = 12):
         out.append({"store_id": s.store_id,
                     "status": "in" if instock else "oos",
                     "qty": inv.get("quantity") if instock else 0,
-                    "price": pr.get("offer_price"), "mrp": pr.get("mrp") or mrp0})
+                    "price": pr.get("offer_price"), "mrp": pr.get("mrp") or mrp0,
+                    "detail": "matched" if instock else "zero_stock"})
         time.sleep(0.3)   # pace
     return out

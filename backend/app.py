@@ -96,10 +96,15 @@ def _summary(rows):
     na = sum(1 for r in rows if r["status"] == "na")
     reach = inn + oos
     prices = [r["price"] for r in rows if r.get("price") is not None]
+    detail_counts: dict = {}
+    for r in rows:
+        d = r.get("detail")
+        if d:
+            detail_counts[d] = detail_counts.get(d, 0) + 1
     return {"in_stock": inn, "out_of_stock": oos, "na": na,
             "availability_pct": round(100 * inn / reach) if reach else None,
             "avg_price": round(sum(prices) / len(prices)) if prices else None,
-            "detail_counts": {"zero_stock": oos}}
+            "detail_counts": detail_counts}
 
 
 @app.get("/api/b2b/inventory")
@@ -120,11 +125,12 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
         by_id = {p["store_id"]: p for p in per}
         rows = []
         for s in stores_[:12]:
-            p = by_id.get(s.store_id, {"status": "na"})
+            p = by_id.get(s.store_id, {"status": "na", "detail": "not_scraped"})
             rows.append({"platform": "swiggy", "store_id": s.store_id, "name": s.name,
                          "locality": s.locality, "lat": s.lat, "lng": s.lng,
                          "status": p.get("status", "na"), "qty": p.get("qty"),
-                         "price": p.get("price"), "mrp": p.get("mrp"), "detail": "zero_stock"})
+                         "price": p.get("price"), "mrp": p.get("mrp"),
+                         "detail": p.get("detail") or "not_scraped"})
         return {"platform": "swiggy", "product_id": product_id, "name": name, "city": city,
                 "locality": locality, "total_stores": len(stores_), "probed": len(rows),
                 "stores": rows, "summary": _summary(rows), "cached": bool(hit)}

@@ -951,7 +951,7 @@
       : `<div style="font-weight:700;margin-bottom:3px">Inventory (qty ∝ dot size)</div>
          <div class="lg"><span class="dot" style="background:${STATUS_COLOR.in}"></span>In stock</div>
          <div class="lg"><span class="dot" style="background:${STATUS_COLOR.oos}"></span>Out of stock</div>
-         <div class="lg"><span class="dot" style="background:#fff;border:2px solid ${STATUS_COLOR.na}"></span>NA — unreachable${naCount ? " (" + naCount + ")" : ""}</div>`;
+         <div class="lg"><span class="dot" style="background:#fff;border:2px solid ${STATUS_COLOR.na}"></span>NA — ${naBreakdown(d.summary && d.summary.detail_counts)}${naCount ? " (" + naCount + ")" : ""}</div>`;
   }
 
   function inventoryGraph(rows, allMode) {
