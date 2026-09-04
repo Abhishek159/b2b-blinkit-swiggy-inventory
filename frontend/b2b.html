@@ -610,11 +610,14 @@
   // dead end (every hit is guaranteed probeable in THIS platform).
   const IPLABEL = { blinkit: "Blinkit", zepto: "Zepto", swiggy: "Instamart" };
   const IPCLASS = { blinkit: "ib", zepto: "iz", swiggy: "is" };
-  // Blinkit/Zepto probe by product_id; Swiggy probes by its global spinId
-  // (falls back to product_id). This returns the EXACT id used for the live
-  // probe so it can be shown on the card and cross-checked.
-  const IDLABEL = { blinkit: "ID", zepto: "ID", swiggy: "SPIN" };
-  const probeIdOf = it => (it.platform === "swiggy" ? (it.spin_id || it.product_id) : it.product_id) || "";
+  // All platforms probe by product_id -- this deployable app's swiggy_probe.py
+  // resolves parent_id/spin_id internally from catalog_lite.db by product_id
+  // (unlike the bigger original app, which needed spin_id directly). Sending
+  // spin_id here made every Swiggy /inventory lookup fail to resolve (silent
+  // "na"/not_scraped for every store) -- this is the EXACT id used for the
+  // live probe so it can be shown on the card and cross-checked.
+  const IDLABEL = { blinkit: "ID", zepto: "ID", swiggy: "ID" };
+  const probeIdOf = it => it.product_id || "";
   // Card thumbnails: Zepto's CDN returns huge white-padded images (h up to ~3800px),
   // which load slowly and make white products look blank. Rewrite to a small,
   // no-pad thumbnail (fills the tile, loads instantly). Other CDNs pass through.
