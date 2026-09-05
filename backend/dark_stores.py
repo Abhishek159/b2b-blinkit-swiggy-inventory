@@ -409,6 +409,10 @@ def _load_ds_csv(path: Path, platform: str, name_field: str | None) -> list[Stor
 _AREA_RE = re.compile(r"^[A-Za-z]{2,4}-(.+)$")   # "CHN-Sholinganallur New" -> area
 _SNAP_KM = 7.0   # snap stores to the nearest clean locality within this
 _MAX_DERIVED_LOCS = 25   # per city: cap the auto-derived snap targets (bounds sprawl)
+# Hard cap on how many sub-areas ANY city may expose. Snapping alone still left the
+# big metros at ~30 areas, which is an unusable dropdown. Past this cap the closest
+# pair of areas is merged repeatedly ("HSR Layout-Koramangala") until the city fits.
+_MAX_LOCALITIES_PER_CITY = 12
 _CITY_ALIAS = {
     "bangalore": "Bengaluru", "bengaluru": "Bengaluru", "bombay": "Mumbai",
     "delhi": "Delhi NCR", "new delhi": "Delhi NCR", "gurugram": "Delhi NCR",
@@ -565,7 +569,70 @@ def _enrich_geo(base: dict[str, list[Store]]) -> dict[str, list[Store]]:
                     na = nearest_area(s.lat, s.lng, s.city)
                     if na:
                         s.locality = na
+
+    # 4) cap each city at _MAX_LOCALITIES_PER_CITY areas. Snapping bounds sprawl but
+    # still leaves the metros near 30 — too many to pick from. Merge the geographically
+    # closest pair of areas repeatedly (agglomerative, store-count-weighted centroids)
+    # until the city fits, so adjacent areas fuse first and far-apart ones stay distinct.
+    _apply_locality_cap(base)
     return base
+
+
+def _merged_name(members: dict) -> str:
+    """Name a merged area after its two biggest members: "HSR Layout-Koramangala".
+    Three or more keeps the label readable with a +N rather than a run-on chain."""
+    ordered = sorted(members.items(), key=lambda kv: (-kv[1], kv[0]))
+    head = "-".join(n for n, _ in ordered[:2])
+    return f"{head} +{len(ordered) - 2}" if len(ordered) > 2 else head
+
+
+def _apply_locality_cap(base: dict) -> None:
+    """Rewrite Store.locality in place so no city exposes more than the cap."""
+    # centroid + store count per (city, locality), pooled across platforms so every
+    # platform ends up with the SAME area names (the UI switches platform freely).
+    agg: dict = {}
+    for stores in base.values():
+        for s in stores:
+            if not s.city or s.city == "Other" or not s.locality:
+                continue
+            d = agg.setdefault(s.city, {}).setdefault(s.locality, [0.0, 0.0, 0])
+            d[0] += s.lat; d[1] += s.lng; d[2] += 1
+
+    renames: dict = {}
+    for city, areas in agg.items():
+        if len(areas) <= _MAX_LOCALITIES_PER_CITY:
+            continue
+        # each cluster: [lat, lng, count, {member_name: member_count}]
+        clusters = [[v[0] / v[2], v[1] / v[2], v[2], {name: v[2]}] for name, v in areas.items()]
+        while len(clusters) > _MAX_LOCALITIES_PER_CITY:
+            # Absorb the SMALLEST area into its nearest neighbour — never "merge the two
+            # closest", which is rich-get-richer: the dense core keeps winning and ends up
+            # one giant blob while sparse outskirts each keep a slot. Smallest-first folds
+            # thin areas into the recognisable ones next door and keeps sizes even.
+            j = min(range(len(clusters)), key=lambda k: (clusters[k][2], clusters[k][0]))
+            i = min((k for k in range(len(clusters)) if k != j),
+                    key=lambda k: haversine_km(clusters[k][0], clusters[k][1],
+                                               clusters[j][0], clusters[j][1]))
+            a, b = clusters[i], clusters[j]
+            n = a[2] + b[2]
+            merged_members = dict(a[3])
+            for k, v in b[3].items():
+                merged_members[k] = merged_members.get(k, 0) + v
+            clusters[i] = [(a[0] * a[2] + b[0] * b[2]) / n,      # count-weighted centroid
+                           (a[1] * a[2] + b[1] * b[2]) / n, n, merged_members]
+            clusters.pop(j)
+        for c in clusters:
+            if len(c[3]) > 1:
+                label = _merged_name(c[3])
+                for member in c[3]:
+                    renames[(city, member)] = label
+
+    if renames:
+        for stores in base.values():
+            for s in stores:
+                new = renames.get((s.city, s.locality))
+                if new:
+                    s.locality = new
 
 
 def _load_all() -> dict[str, list[Store]]:
