@@ -1,0 +1,32 @@
+app = "b2b-inventory"
+primary_region = "bom"          # Mumbai: every instamart.in call is an India round-trip
+
+kill_signal  = "SIGINT"
+kill_timeout = "30s"
+swap_size_mb = 512
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_start_machines = true
+  auto_stop_machines = "off"     # string form, NOT the legacy boolean.
+  min_machines_running = 1       # these two lines are what buy the zero cold start
+
+[http_service.concurrency]
+  type = "requests"              # default "connections" is wrong for a 10-16s endpoint
+  soft_limit = 20
+  hard_limit = 40
+
+[http_service.http_options]
+  idle_timeout = 180             # default 60s is shorter than a slow Swiggy probe
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"               # not 256: curl_cffi + libcurl-impersonate is ~150-250 MB resident
+
+# Deliberately NO [[http_service.checks]]. With a single machine there is no failover, so a
+# failed check just restarts the box -- wiping _SW_CACHE and the minted Swiggy session, and
+# triggering a fresh mint storm against instamart.in. Watch `fly logs` instead.

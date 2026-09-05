@@ -42,7 +42,7 @@ def _mint():
         return _session
     try:
         s = requests.Session()
-        html = s.get(HOST + "/", headers=_headers(), timeout=30, impersonate="chrome124").text or ""
+        html = s.get(HOST + "/", headers=_headers(), timeout=10, impersonate="chrome124").text or ""
     except Exception:
         return None
     m = (re.findall(r'matcher["\']?\s*[:=]\s*["\']([^"\']{4,60})', html, re.I) or [""])[0]
@@ -63,6 +63,28 @@ def _triple(product_id: str):
         return r
     except sqlite3.Error:
         return None
+
+
+def _inner_status(o):
+    """Instamart answers HTTP 200 with an empty item set and a NON-ZERO inner statusCode
+    (150 "cart validation failed", 192, 161...) when it throttles or rejects a batch. The
+    outer envelope still reads 0/200, so status_code alone cannot tell a throttle from a
+    genuine "this store doesn't carry it" -- and calling a throttle "not carried" publishes
+    a fabricated confirmed-zero. Deepest non-zero wins."""
+    seen = []
+
+    def walk(x):
+        if isinstance(x, dict):
+            v = x.get("statusCode")
+            if isinstance(v, int):
+                seen.append(v)
+            for y in x.values():
+                walk(y)
+        elif isinstance(x, list):
+            for y in x:
+                walk(y)
+    walk(o)
+    return next((v for v in seen if v not in (0, 200)), 0)
 
 
 def _probe_one(sess, lat, lng, store_id, item, spin):
@@ -88,7 +110,7 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
     loc = json.dumps({"data": {"lat": lat, "lng": lng, "address": "", "addressId": "",
                                "annotation": "", "clientId": "INSTAMART-APP"}})
     try:
-        rl = requests.post(SELECT_LOC, headers=headers, data=loc, impersonate="chrome124", timeout=20)
+        rl = requests.post(SELECT_LOC, headers=headers, data=loc, impersonate="chrome124", timeout=8)
         if rl.status_code != 200:
             return None, "failed"
         for k, v in dict(rl.cookies).items():
@@ -108,7 +130,7 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
                "cartAnalyticsMetaInfo": {"actionType": "ADD_ITEMS", "itemInfo": {
                    "itemId": pid, "quantity": 1, "spin": spin, "productId": parent}}}
     try:
-        r = requests.post(CART, headers=headers, data=json.dumps(payload), impersonate="chrome124", timeout=25)
+        r = requests.post(CART, headers=headers, data=json.dumps(payload), impersonate="chrome124", timeout=12)
         if r.status_code != 200:
             return None, "failed"
         data = r.json()
@@ -127,11 +149,20 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
                 walk(v)
     walk(data)
     node = found.get(str(spin)) or (next(iter(found.values())) if found else None)
-    return (node, None) if node else (None, "not_carried")
+    if node:
+        return node, None
+    return (None, "throttled") if _inner_status(data) else (None, "not_carried")
 
 
-def check(product_id: str, stores: list, cap: int = 12):
-    """stores: list of dark_stores Store objects. Returns per-store stock/price."""
+def check(product_id: str, stores: list, cap: int = 12, budget: float = 35.0):
+    """stores: list of dark_stores Store objects. Returns per-store stock/price.
+
+    `budget` caps total wall-clock. Without it the worst case is 12 stores x (8s + 12s)
+    plus the mint = ~250s+, but the endpoint writes no bytes until it finishes and Fly's
+    proxy severs an idle connection at 60s -- so a couple of slow stores turned into
+    "Couldn't reach the API" for the visitor. Stores past the deadline report
+    not_scraped ("timed out / not scraped"), which is honest rather than a fake zero."""
+    deadline = time.time() + budget
     trip = _triple(product_id)
     sess = _mint()
     if not trip or not sess:
@@ -140,6 +171,9 @@ def check(product_id: str, stores: list, cap: int = 12):
     item = (pid, parent)
     out = []
     for s in stores[:cap]:
+        if time.time() > deadline:
+            out.append({"store_id": s.store_id, "status": "na", "detail": "not_scraped"})
+            continue
         node, reason = _probe_one(sess, s.lat, s.lng, s.store_id, item, spin)
         if node is None:
             if reason == "not_carried":
@@ -164,4 +198,10 @@ def check(product_id: str, stores: list, cap: int = 12):
                     "price": pr.get("offer_price"), "mrp": pr.get("mrp") or mrp0,
                     "detail": "matched" if instock else "zero_stock"})
         time.sleep(0.3)   # pace
+
+    # Run-level sanity guard: if not ONE store matched across the whole fan-out, that is a
+    # probe failure (throttle, rotated build, dead session) -- not 12 independent confirmed
+    # absences. Publishing the latter as "not carried (confirmed)" is a fabricated claim.
+    if out and all(r.get("detail") == "not_carried" for r in out):
+        out = [{"store_id": r["store_id"], "status": "na", "detail": "throttled"} for r in out]
     return out

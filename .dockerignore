@@ -1,0 +1,18 @@
+.git
+.gitignore
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+render.yaml
+
+# `fly deploy` tars the WORKING DIRECTORY (filtered by this file, not .gitignore), and
+# StaticFiles is a wildcard mount -- so any stray html here becomes publicly reachable.
+# b2b_v2_static.html is a hardcoded fake-data mockup with nothing marking it as one.
+frontend/b2b_v2*.html
+
+# NEVER add *.db, data/, or backend/data below. catalog_lite.db (45 MB) and the store CSVs
+# ARE the app: excluding the DB gives HTTP 500 on every search plus an all-NA Swiggy map;
+# excluding the CSVs gives a booting app reporting {"blinkit":0,"swiggy":0} and zero cities.
