@@ -680,9 +680,14 @@
       done();
       return notice("stale", "Couldn't complete that check. Check your connection and try again.");
     }
-    if (d.client_side && state.platform === "blinkit") { try { await blinkitProbe(d); } catch {} }
+    let probeFailed = false;
+    if (d.client_side && state.platform === "blinkit") {
+      // Runs in the visitor's own browser, so it can fail for reasons the server never
+      // sees: an extension blocking the request, offline mid-run, Blinkit changing shape.
+      try { await blinkitProbe(d); } catch { probeFailed = true; }
+    }
     done();
-    render(d);
+    render(d, { probeFailed });
 
     function done() {
       $("#mapBusy").classList.remove("show");
@@ -748,12 +753,32 @@
   const notice = (kind, html) => $("#notices").insertAdjacentHTML("beforeend", `<div class="notice ${kind}">${html}</div>`);
 
   // ---------- render ----------
-  function render(d) {
+  function render(d, opts = {}) {
     LAST = d;
     const s = d.summary || {}, rows = d.stores || [];
     const area = d.locality || d.city, plat = PLABEL[d.platform] || d.platform;
     const verified = (s.in_stock || 0) + (s.out_of_stock || 0);
-    const unknown = s.na || 0;
+    // probed is set by the client probe on the Blinkit path, so it is absent when that
+    // throws -- falling back to the row count keeps "undefined of 22" off the screen.
+    if (typeof d.probed !== "number") d.probed = rows.length;
+    if (typeof d.total_stores !== "number") d.total_stores = rows.length;
+    const unknown = s.na != null ? s.na : rows.filter(r => r.status !== "in" && r.status !== "oos").length;
+
+    // An area with no stores at all is a coverage gap, not a failed check. Saying
+    // "couldn't verify" there would blame the tool for something it knows for certain.
+    if (!d.total_stores || !rows.length) {
+      $("#results").classList.add("show");
+      $("#resultTitle").textContent = `${state.picked.name} near ${area}`;
+      $("#resultMeta").textContent = `${plat} · ${d.city}`;
+      $("#availabilityPill").classList.add("none");
+      $("#availabilityText").textContent = "No stores mapped here";
+      $("#storeSection").style.display = "none";
+      notice("info", `We have no ${esc(plat)} store mapped in <b>${esc(area)}</b>, so there is nothing to check. Try another area, or the other platform.`);
+      return;
+    }
+    if (opts.probeFailed) {
+      notice("stale", `⚠ The Blinkit check couldn't run in your browser — an extension, ad-blocker or a dropped connection can stop it. Nothing below is confirmed; reload and try again.`);
+    }
 
     $("#resultTitle").textContent = `${state.picked.name} near ${area}`;
     $("#resultMeta").textContent = `${plat} · ${d.city} · ${d.probed} of ${d.total_stores} stores checked · `
