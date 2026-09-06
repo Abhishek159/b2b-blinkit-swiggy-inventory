@@ -12,3 +12,4 @@ backend/data/*.db-shm
 # so anything left in it is publicly reachable -- b2b_v2_static.html is a fake-data
 # mockup. Keep alternates here, out of the served directory, not just gitignored.
 _archive_frontend/
+visits.json

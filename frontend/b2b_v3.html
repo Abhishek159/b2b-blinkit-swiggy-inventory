@@ -102,16 +102,32 @@
   .example-btn{min-height:32px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#4d4957;padding:5px 10px;font-size:12px;font-weight:750}
   .example-btn:hover{border-color:var(--action);color:var(--action)}
 
-  /* live product suggestions over the real catalogue */
-  .suggest{position:absolute;z-index:9;left:0;right:0;top:52px;max-height:320px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:7px;box-shadow:0 14px 30px rgba(32,29,47,.16);display:none}
-  .suggest.open{display:block}
-  .sg{display:flex;gap:10px;align-items:center;width:100%;padding:9px 11px;border:0;border-bottom:1px solid #ecebf0;background:#fff;text-align:left}
-  .sg:last-child{border-bottom:0}
-  .sg:hover{background:var(--soft)}
-  .sg img{width:36px;height:36px;flex:0 0 auto;object-fit:contain;border-radius:6px;background:#fafafa}
-  .sg b{display:block;font-size:13px;font-weight:800;line-height:1.3}
-  .sg small{display:block;margin-top:2px;color:var(--muted);font-size:11.5px}
-  .sg-note{padding:12px;color:var(--muted);font-size:13px}
+  /* product results: image cards, as in the earlier UI -- a picture is how you tell
+     "Amul Butter 100 g" from "Amul Butter 500 g" at a glance. */
+  .itemresults{display:none;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;
+               margin-top:14px;max-height:46vh;overflow-y:auto;padding:2px}
+  .itemresults.open{display:grid}
+  .itemcard{display:flex;flex-direction:column;height:auto;padding:0;overflow:hidden;text-align:left;
+            background:#fff;border:1px solid var(--line);border-radius:8px;color:var(--ink);
+            transition:transform .12s,box-shadow .12s,border-color .12s}
+  .itemcard:hover{border-color:var(--action);transform:translateY(-2px);box-shadow:0 6px 16px rgba(32,29,47,.1)}
+  .itemcard.picked{border-color:var(--action);box-shadow:0 0 0 2px var(--action)}
+  /* padding-bottom:100% forces a true square regardless of flex sizing, so the whole
+     product image is visible instead of a clipped top slice. */
+  .itemthumb{position:relative;width:100%;height:0;padding-bottom:100%;background:#faf9fb;border-bottom:1px solid var(--line)}
+  .itemthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8px}
+  .itemthumb .ph{position:absolute;inset:0;display:grid;place-items:center;color:#b9b6c1;font-size:10px;font-weight:800}
+  .itembody{display:flex;flex-direction:column;gap:5px;padding:8px 9px 10px}
+  .itemname{font-size:12px;font-weight:750;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .itembrand{font-size:10.5px;color:var(--muted);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .itemmeta{display:flex;justify-content:space-between;gap:6px;font-size:10.5px;color:var(--muted)}
+  .itemmeta b{color:var(--ink);font-weight:800}
+  .search-note{margin-top:12px;padding:11px 12px;border-radius:7px;background:var(--soft);border:1px solid var(--line);color:var(--muted);font-size:13px;display:none}
+  .search-note.show{display:block}
+  .sk{height:186px;border-radius:8px;background:linear-gradient(100deg,#f1f0f4 30%,#f8f8fa 50%,#f1f0f4 70%);
+      background-size:220% 100%;animation:shim 1.1s linear infinite}
+  @keyframes shim{0%{background-position:150% 0}100%{background-position:-50% 0}}
+  @media(prefers-reduced-motion:reduce){.sk{animation:none}}
 
   .results{margin-top:22px;scroll-margin-top:18px;display:none}
   .results.show{display:block}
@@ -201,7 +217,7 @@
     .shell{padding:0 16px}.coverage{display:none}.intro{padding:28px 0 22px}h1{font-size:38px}.result-layout{grid-template-columns:1fr}.summary-panel{display:grid;grid-template-columns:1fr 1.25fr}.insight{grid-column:1/-1}.map-panel{min-height:410px}
   }
   @media(max-width:680px){
-    .site-header{height:62px}.brand{font-size:19px;gap:8px}.brand-mark{width:29px;height:29px}.live-badge{display:none}.header-actions .ghost-btn{height:34px;padding:0 10px;font-size:12px}.shell{padding:0 12px}.intro{padding:24px 2px 20px}h1{font-size:32px}.intro p{font-size:15px}.finder-head{align-items:flex-start;padding:16px}.step-line{display:none}.finder-body{padding:14px}.platform-row{gap:5px}.platform-btn{height:44px;padding:0 7px;font-size:13px}.platform-btn .status-label{display:none}.city-btn{flex-basis:130px}.search-row{grid-template-columns:1fr}.primary-btn{width:100%}.result-head{flex-direction:column;gap:10px}.result-head h2{font-size:20px}.map-panel{min-height:350px}.map-topbar{align-items:flex-start}.legend{flex-direction:column;align-items:flex-start;gap:5px}.summary-panel{grid-template-columns:1fr}.metric-grid{grid-column:1/-1}.store-row.header{display:none}.store-row{grid-template-columns:1fr auto;gap:7px;padding:13px 14px}.store-row>*:nth-child(2){display:none}.store-row>*:nth-child(3):before{content:"Units: ";color:var(--muted)}.store-row>*:nth-child(4){text-align:right}.store-row>*:nth-child(5){grid-column:2;text-align:right}.how-grid,.all-cities{grid-template-columns:1fr}.modal-card{padding:18px}
+    .site-header{height:62px}.brand{font-size:19px;gap:8px}.brand-mark{width:29px;height:29px}.live-badge{display:none}.header-actions .ghost-btn{height:34px;padding:0 10px;font-size:12px}.shell{padding:0 12px}.intro{padding:24px 2px 20px}h1{font-size:32px}.intro p{font-size:15px}.finder-head{align-items:flex-start;padding:16px}.step-line{display:none}.finder-body{padding:14px}.platform-row{gap:5px}.platform-btn{height:44px;padding:0 7px;font-size:13px}.platform-btn .status-label{display:none}.city-btn{flex-basis:130px}.search-row{grid-template-columns:1fr}.primary-btn{width:100%}.itemresults{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));max-height:none;gap:8px}.itemname{font-size:11.5px}.sk{height:150px}.result-head{flex-direction:column;gap:10px}.result-head h2{font-size:20px}.map-panel{min-height:350px}.map-topbar{align-items:flex-start}.legend{flex-direction:column;align-items:flex-start;gap:5px}.summary-panel{grid-template-columns:1fr}.metric-grid{grid-column:1/-1}.store-row.header{display:none}.store-row{grid-template-columns:1fr auto;gap:7px;padding:13px 14px}.store-row>*:nth-child(2){display:none}.store-row>*:nth-child(3):before{content:"Units: ";color:var(--muted)}.store-row>*:nth-child(4){text-align:right}.store-row>*:nth-child(5){grid-column:2;text-align:right}.how-grid,.all-cities{grid-template-columns:1fr}.modal-card{padding:18px}
   }
   @media(max-width:390px){.brand{font-size:17px}.platform-btn{font-size:12px}.city-btn{flex-basis:122px}.map-context span{display:none}}
 </style>
@@ -210,7 +226,7 @@
 <header class="site-header">
   <div class="shell">
     <div class="brand"><span class="brand-mark" aria-hidden="true">Q</span><span>Quick <em>Commerce</em> Atlas</span><span class="live-badge">Live store stock</span></div>
-    <div class="header-actions"><span class="coverage" id="coverage">Loading coverage…</span><button class="ghost-btn" id="howButton" type="button">How it works</button></div>
+    <div class="header-actions"><span class="coverage" id="coverage">Loading coverage…</span><span class="coverage" id="visits"></span><button class="ghost-btn" id="howButton" type="button">How it works</button></div>
   </div>
 </header>
 
@@ -251,12 +267,13 @@
           <div class="input-shell">
             <span class="icon" aria-hidden="true">🔍</span>
             <input class="field search-input" id="product" placeholder="Search by product name or SKU" autocomplete="off">
-            <div class="suggest" id="suggest"></div>
           </div>
         </div>
         <button class="primary-btn" id="checkButton" type="button">View availability map</button>
       </div>
       <div class="form-error" id="formError" role="alert"></div>
+      <div class="search-note" id="searchNote"></div>
+      <div class="itemresults" id="itemResults" role="listbox" aria-label="Product results"></div>
       <div class="examples" id="examples"><span>Try an example:</span></div>
     </div>
   </section>
@@ -357,6 +374,10 @@
       $("#coverage").textContent = `${h.cities} cities · ${n.toLocaleString("en-IN")} dark stores`;
     } catch { $("#coverage").textContent = ""; }
     try {
+      const v = await (await api("/api/visit")).json();
+      if (v.visits) $("#visits").textContent = `· ${Number(v.visits).toLocaleString("en-IN")} visits`;
+    } catch {}
+    try {
       const d = await (await api("/api/b2b/cities")).json();
       CITIES = d.cities || []; BY_CITY = d.by_city || {};
       state.city = CITIES.includes("Bengaluru") ? "Bengaluru" : CITIES[0];
@@ -447,34 +468,52 @@
     $("#product").classList.remove("invalid");
     clearTimeout(timer);
     const q = $("#product").value.trim();
-    if (q.length < 2) { $("#suggest").classList.remove("open"); return; }
+    if (q.length < 2) { $("#itemResults").classList.remove("open"); $("#itemResults").innerHTML = ""; searchNote(""); return; }
     timer = setTimeout(() => search(q), 220);
   });
+  const searchNote = msg => {
+    const n = $("#searchNote");
+    n.textContent = msg || ""; n.classList.toggle("show", !!msg);
+  };
   async function search(q) {
-    const mine = ++seq, box = $("#suggest");
-    box.innerHTML = `<div class="sg-note">Searching…</div>`; box.classList.add("open");
+    const mine = ++seq, grid = $("#itemResults");
+    searchNote("");
+    grid.innerHTML = Array.from({ length: 6 }, () => `<div class="sk"></div>`).join("");
+    grid.classList.add("open");
     try {
-      const r = await api(`/api/b2b/catalog-search?q=${encodeURIComponent(q)}&platform=${state.platform}&limit=12`);
+      const r = await api(`/api/b2b/catalog-search?q=${encodeURIComponent(q)}&platform=${state.platform}&limit=18`);
       if (!r.ok) throw new Error(r.status);
       const d = await r.json();
       if (mine !== seq) return;
       if (!d.results.length) {
-        box.innerHTML = `<div class="sg-note">Nothing on ${esc(PLABEL[state.platform])} matches “${esc(q)}”. Try a shorter or different word.</div>`;
+        grid.classList.remove("open"); grid.innerHTML = "";
+        searchNote(`Nothing on ${PLABEL[state.platform]} matches “${q}”. Try a shorter or more common word — brand names work well.`);
         return;
       }
-      box.innerHTML = d.results.map((p, i) => `
-        <button type="button" class="sg" data-i="${i}">
-          <img src="${esc(p.image_url || "")}" alt="" loading="lazy">
-          <span><b>${esc(p.name)}</b><small>${esc(p.brand || "")}${p.pack_size ? " · " + esc(p.pack_size) : ""}${p.mrp ? " · MRP " + inr(p.mrp) : ""}</small></span>
+      grid.innerHTML = d.results.map((p, i) => `
+        <button type="button" class="itemcard" data-i="${i}" role="option">
+          <span class="itemthumb">${p.image_url
+            ? `<img src="${esc(p.image_url)}" alt="" loading="lazy">`
+            : `<span class="ph">No image</span>`}</span>
+          <span class="itembody">
+            <span class="itemname">${esc(p.name)}</span>
+            ${p.brand ? `<span class="itembrand">${esc(p.brand)}</span>` : ""}
+            <span class="itemmeta"><span>${esc(p.pack_size || "")}</span>${p.mrp ? `<b>${inr(p.mrp)}</b>` : ""}</span>
+          </span>
         </button>`).join("");
-      $$("#suggest .sg").forEach(b => b.onclick = () => {
+      $$("#itemResults .itemcard").forEach(b => b.onclick = () => {
         state.picked = d.results[+b.dataset.i];
         $("#product").value = state.picked.name;
-        box.classList.remove("open"); formError(""); steps();
+        $$("#itemResults .itemcard").forEach(x => x.classList.toggle("picked", x === b));
+        $("#product").classList.remove("invalid");
+        formError(""); steps();
+        searchNote(`Selected: ${state.picked.name}. Now press “View availability map”.`);
       });
-    } catch { box.innerHTML = `<div class="sg-note">Search failed — try again.</div>`; }
+    } catch {
+      grid.classList.remove("open"); grid.innerHTML = "";
+      searchNote("Search failed — try again.");
+    }
   }
-  document.addEventListener("click", e => { if (!e.target.closest(".input-shell")) $("#suggest").classList.remove("open"); });
   $("#product").addEventListener("keydown", e => { if (e.key === "Enter" && state.picked) runCheck(); });
 
   // ---------- examples ----------
@@ -529,6 +568,8 @@
     $("#busySub").textContent = state.platform === "swiggy"
       ? `Each store is checked one by one — about ${secs}s. The next check on this product is instant for an hour.`
       : `Checked from your own browser, straight against Blinkit — about ${secs}s.`;
+    $("#itemResults").classList.remove("open");
+    searchNote("");
     $("#results").classList.add("show");
     $("#mapBusy").classList.add("show");
     $("#notices").innerHTML = "";

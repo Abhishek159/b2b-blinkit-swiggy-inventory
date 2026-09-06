@@ -10,6 +10,7 @@ Live inventory (the remaining wiring):
 """
 from __future__ import annotations
 
+import json
 import sqlite3
 import threading
 import time
@@ -47,8 +48,7 @@ async def ratelimit(request: Request, call_next):
     if request.url.path.startswith("/api/b2b/"):
         # Behind Fly's proxy request.client.host is the PROXY (uvicorn trusts only
         # 127.0.0.1 by default), so keying on it would rate-limit all visitors as one.
-        ip = request.headers.get("Fly-Client-IP") or request.headers.get("X-Forwarded-For", "").split(",")[0].strip() \
-            or (request.client.host if request.client else "?")
+        ip = _client_ip(request)
         now = time.time()
         with _HITS_LOCK:
             q = [t for t in _HITS.get(ip, []) if now - t < 60]
@@ -65,6 +65,42 @@ async def ratelimit(request: Request, call_next):
 _SW_CACHE: dict = {}
 _SW_TTL = 60 * 60        # 15m -> 60m: the single biggest lever against Swiggy throttling
 _SW_STALE_MAX = 12 * 3600  # beyond fresh, still serve a past result (labelled) rather than nothing
+
+
+# ---- visit counter. A real count, incremented per visit -- never seeded. Same-visitor
+# reloads inside 30 min are not counted again, so a refresh cannot inflate it.
+# NOTE: this file lives on an ephemeral disk, so the total resets on each redeploy.
+# It moves to Supabase when logging lands, which is what makes it durable.
+_VISITS_FILE = HERE / "visits.json"
+_VIS_LOCK = threading.Lock()
+_VIS_SEEN: dict = {}
+_VISITS = {"total": 0}
+try:
+    _VISITS.update(json.loads(_VISITS_FILE.read_text()))
+except Exception:
+    pass
+
+
+def _client_ip(request: Request) -> str:
+    return (request.headers.get("Fly-Client-IP")
+            or request.headers.get("X-Forwarded-For", "").split(",")[0].strip()
+            or (request.client.host if request.client else "?"))
+
+
+@app.get("/api/visit")
+def visit(request: Request):
+    ip, now = _client_ip(request), time.time()
+    with _VIS_LOCK:
+        if now - _VIS_SEEN.get(ip, 0) > 1800:
+            _VISITS["total"] += 1
+            _VIS_SEEN[ip] = now
+            if len(_VIS_SEEN) > 20000:
+                _VIS_SEEN.clear()
+            try:
+                _VISITS_FILE.write_text(json.dumps(_VISITS))
+            except Exception:
+                pass
+        return {"visits": _VISITS["total"]}
 
 
 def _db():
