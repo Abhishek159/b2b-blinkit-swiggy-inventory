@@ -576,13 +576,12 @@
   // ---------- platform ----------
   $$(".platform-btn:not(:disabled)").forEach(b => b.onclick = async () => {
     if (state.platform === b.dataset.platform) return;
-    // Platform is a COMPARISON TOGGLE, not a reset. City and area are shared across
-    // platforms (all 14 areas in every big city exist on both), so carry them over.
-    // product_id genuinely IS platform-specific, so the id can't survive -- but the
-    // words the user typed can, and re-running them is what they actually meant.
+    // Switching platform clears the product, the search results AND the result panel.
+    // Catalogues and ids are per-platform, so anything on screen belongs to the app you
+    // just left -- leaving a Blinkit map up while the header says Instamart is the most
+    // confusing state the page can be in. City and area DO carry over: they are shared
+    // across platforms, and re-picking your location every time is its own annoyance.
     const keepArea = state.area || $("#area").value;
-    const keepQuery = ($("#product").value || "").trim();
-    const hadResult = !!LAST;
 
     state.platform = b.dataset.platform;
     state.picked = null;
@@ -590,21 +589,23 @@
       x.classList.toggle("active", x === b);
       x.setAttribute("aria-pressed", String(x === b));
     });
+
+    $("#product").value = "";
+    $("#itemResults").classList.remove("open"); $("#itemResults").innerHTML = "";
+    searchNote(""); formError("");
+    $("#results").classList.remove("show");      // drop the other platform's map/metrics
+    $("#storeSection").style.display = "none";
+    $("#notices").innerHTML = "";
+    LAST = null;
+
     renderCityStrip(); renderExamples(); markSearchPlatform();
     await loadAreas();
-
     const stillThere = [...$("#area").options].some(o => o.value === keepArea);
     if (keepArea && stillThere) { $("#area").value = keepArea; state.area = keepArea; }
     else if (keepArea) formError(`${keepArea} has no ${PLABEL[state.platform]} store — pick another area.`);
-
-    if (keepQuery) {
-      $("#product").value = keepQuery;
-      await search(keepQuery, { autoPick: true });
-      // only continue automatically if the switch resolved cleanly end-to-end
-      if (state.picked && state.area && hadResult) runCheck();
-    }
     steps();
   });
+
   $$(".platform-btn[disabled]").forEach(b => b.title = "Zepto sits behind a bot wall that needs a different approach — not wired up yet.");
 
   // ---------- areas, filtered to the chosen platform ----------
