@@ -107,6 +107,15 @@
   .more-city{border-style:dashed}
   .search-row{display:grid;grid-template-columns:.8fr 1.35fr auto;gap:10px;margin-top:16px;align-items:end}
   .field-group label{display:block;margin-bottom:7px;color:#555162;font-size:12px;font-weight:850}
+  /* Catalogues and product ids are per-platform, so the box must always say which one
+     it is searching -- otherwise you type on Blinkit believing you are on Instamart. */
+  .search-on{display:inline-flex;align-items:center;gap:5px;margin-left:6px;padding:2px 8px;
+    border-radius:999px;font-size:11px;font-weight:850;text-transform:none;vertical-align:middle}
+  .search-on i{width:7px;height:7px;border-radius:50%;display:inline-block}
+  .search-on.blinkit{background:#fdf5d8;color:#6b5504}
+  .search-on.blinkit i{background:var(--yellow)}
+  .search-on.swiggy{background:#ffefe0;color:#a24d05}
+  .search-on.swiggy i{background:var(--swiggy)}
   .input-shell{position:relative}
   .input-shell .icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:#595563;font-size:21px;line-height:1;pointer-events:none}
   .field{width:100%;height:48px;border:1px solid #cbc9d1;border-radius:7px;background:#fff;color:var(--ink);padding:0 38px 0 13px;font-size:16px}
@@ -315,7 +324,7 @@
           <div class="input-shell"><select class="field" id="area"></select><span class="select-arrow" aria-hidden="true">⌄</span></div>
         </div>
         <div class="field-group">
-          <label for="product">Search product</label>
+          <label for="product">Search product <span id="searchOn" class="search-on"></span></label>
           <div class="input-shell">
             <span class="icon" aria-hidden="true">🔍</span>
             <input class="field search-input" id="product" placeholder="Search by product name or SKU" autocomplete="off">
@@ -441,7 +450,7 @@
       const d = await (await api("/api/b2b/cities")).json();
       CITIES = d.cities || []; BY_CITY = d.by_city || {};
       state.city = CITIES.includes("Bengaluru") ? "Bengaluru" : CITIES[0];
-      renderCityStrip(); renderCityModal(); renderExamples(); renderRecent();
+      renderCityStrip(); renderCityModal(); renderExamples(); renderRecent(); markSearchPlatform();
       await loadAreas();
     } catch { formError("Couldn't load cities — refresh to try again."); }
     steps();
@@ -457,6 +466,16 @@
     $("#s3").classList.toggle("done", !!state.picked);
   }
   const platStores = c => (BY_CITY[c] || {})[state.platform] || 0;
+  function markSearchPlatform() {
+    const el = $("#searchOn");
+    if (!el) return;
+    el.className = "search-on " + (state.platform || "");
+    el.innerHTML = state.platform ? `<i></i>on ${esc(PLABEL[state.platform])}` : "";
+    const inp = $("#product");
+    if (inp) inp.placeholder = state.platform
+      ? `Search ${PLABEL[state.platform]} by product name or SKU`
+      : "Search by product name or SKU";
+  }
 
   // ---------- city strip + modal ----------
   function renderCityStrip() {
@@ -528,7 +547,7 @@
       x.classList.toggle("active", x === b);
       x.setAttribute("aria-pressed", String(x === b));
     });
-    renderCityStrip(); renderExamples();
+    renderCityStrip(); renderExamples(); markSearchPlatform();
     await loadAreas();
 
     const stillThere = [...$("#area").options].some(o => o.value === keepArea);
@@ -583,7 +602,7 @@
     try {
       const entry = { product_id: item.product_id, name: item.name, brand: item.brand || "",
         pack: item.pack_size || "", mrp: item.mrp || null, image: item.image_url || "",
-        platform: state.platform, city: state.city, area: state.area || $("#area").value || "" };
+        platform: state.platform };
       const list = getRecent().filter(x => !(x.product_id === entry.product_id && x.platform === entry.platform));
       list.unshift(entry);
       localStorage.setItem(RECENT_KEY, JSON.stringify(list.slice(0, 8)));
@@ -595,7 +614,7 @@
     wrap.classList.toggle("show", list.length > 0);
     if (!list.length) { wrap.innerHTML = ""; return; }
     wrap.innerHTML = `<span>Recent:</span>` + list.map((x, i) => `
-      <button class="recent-chip" data-i="${i}" type="button" title="${esc(x.name)} · ${esc(x.city)}${x.area ? " · " + esc(x.area) : ""}">
+      <button class="recent-chip" data-i="${i}" type="button" title="${esc(x.name)} · ${esc(PLABEL[x.platform] || x.platform)}">
         ${x.image ? `<img src="${esc(x.image)}" alt="" loading="lazy">` : `<i class="${esc(x.platform)}"></i>`}
         ${esc(x.name.length > 26 ? x.name.slice(0, 25) + "…" : x.name)}
       </button>`).join("") + `<button class="recent-clear" id="recentClear" type="button">Clear</button>`;
@@ -604,20 +623,33 @@
   }
   async function reopenRecent(x) {
     if (!x) return;
-    state.platform = x.platform;
-    $$(".platform-btn").forEach(b => b.classList.toggle("active", b.dataset.platform === x.platform));
-    if (CITIES.includes(x.city)) state.city = x.city;
-    renderCityStrip(); renderExamples();
-    await loadAreas();
-    if (x.area && [...$("#area").options].some(o => o.value === x.area)) {
-      $("#area").value = x.area; state.area = x.area;
+    // A recent search restores the PRODUCT you looked at -- never your location. You
+    // may well be checking the same SKU in a different area, and having the city and
+    // area yanked back to wherever you last stood is not what "recent" should mean.
+    // The platform is the one exception: product_id is platform-specific, so a stored
+    // Instamart id is meaningless on Blinkit and the platform has to follow the SKU.
+    const keepCity = state.city, keepArea = state.area || $("#area").value;
+    const switching = state.platform !== x.platform;
+
+    if (switching) {
+      state.platform = x.platform;
+      $$(".platform-btn").forEach(b => b.classList.toggle("active", b.dataset.platform === x.platform));
+      renderCityStrip(); renderExamples(); markSearchPlatform();
+      state.city = keepCity;               // stay where the user is
+      await loadAreas();
+      if (keepArea && [...$("#area").options].some(o => o.value === keepArea)) {
+        $("#area").value = keepArea; state.area = keepArea;
+      } else if (keepArea) {
+        formError(`${keepArea} has no ${PLABEL[x.platform]} store — pick another area.`);
+      }
     }
-    // the stored id belongs to this platform, so it can be reused directly
-    state.picked = { product_id: x.product_id, name: x.name, brand: x.brand, pack_size: x.pack, mrp: x.mrp, image_url: x.image };
+
+    state.picked = { product_id: x.product_id, name: x.name, brand: x.brand,
+                     pack_size: x.pack, mrp: x.mrp, image_url: x.image };
     $("#product").value = x.name;
     $("#itemResults").classList.remove("open"); $("#itemResults").innerHTML = "";
-    searchNote(""); formError(""); steps();
-    if (state.area) runCheck();
+    formError(""); steps();
+    searchNote(`Selected: ${x.name}${switching ? ` — switched to ${PLABEL[x.platform]}` : ""}. Press “View availability map”.`);
   }
 
   const searchNote = msg => {
