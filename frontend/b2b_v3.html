@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SKU Availability Map — live dark-store stock</title>
+<meta name="description" content="Check exactly where a product is in stock across Blinkit and Swiggy Instamart dark stores, store by store.">
+<meta name="theme-color" content="#26352d">
+<meta name="referrer" content="no-referrer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SKU Availability Map — live dark-store stock">
+<meta property="og:description" content="Check exactly where a product is in stock across Blinkit and Swiggy Instamart dark stores, store by store.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SKU Availability Map — live dark-store stock">
+<meta name="twitter:description" content="Check exactly where a product is in stock across Blinkit and Swiggy Instamart dark stores, store by store.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHRM72T6JB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZHRM72T6JB');
+</script>
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<style>
+  :root{
+    --bg:#f6f7f5;--card:#fff;--ink:#1f2421;--muted:#69706b;--line:#d9ded8;
+    --accent:#26352d;--soft:#eef2ee;--green:#14824f;--red:#c6443f;
+    --amber:#a8730f;--amberbg:#fff4e2;--grey:#9aa39c;
+    --warn:#fff4e2;--shadow:0 12px 32px rgba(32,40,34,.08);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;overflow-x:hidden}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+  button,input,select{font:inherit}
+  button{cursor:pointer;border:0}
+  a{color:var(--accent)}
+
+  .page{max-width:1220px;margin:0 auto;padding:20px 22px 58px}
+  .top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:16px}
+  .brand h1{margin:0;font-size:23px}
+  .brand p{margin:5px 0 0;color:var(--muted);font-size:14px}
+  .actions{display:flex;gap:9px;align-items:center}
+  .btn{height:40px;border-radius:8px;padding:0 14px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:800}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn[disabled]{opacity:.5;cursor:not-allowed}
+  .coverage{color:var(--muted);font-size:12px;font-weight:700;white-space:nowrap}
+
+  .hero{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:18px;margin-bottom:14px}
+  .hero h2{margin:0;font-size:30px;line-height:1.15}
+  .hero p{margin:8px 0 0;color:var(--muted);font-size:15px}
+  .search{display:grid;grid-template-columns:1fr 1fr 1.15fr 1.4fr auto;gap:10px;margin-top:16px}
+  .field{height:44px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:0 11px;color:var(--ink);min-width:0;font-size:16px}
+  .field.error{border-color:var(--red);background:#fffafa}
+  .prodwrap{position:relative;min-width:0}
+  .prodwrap .field{width:100%}
+  .error-msg{display:none;margin:10px 0 0;padding:10px 12px;border-radius:8px;background:var(--warn);border:1px solid #efd2a1;color:#75470c;font-size:13px;font-weight:750}
+  .error-msg.show{display:block}
+  .samples{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center}
+  .samples .lbl{color:var(--muted);font-size:12px;font-weight:800;margin-right:2px}
+  .chip{height:34px;border-radius:999px;border:1px solid var(--line);background:#fff;padding:0 12px;color:var(--ink);font-weight:750;font-size:13px}
+  .chip.active{background:var(--soft);border-color:var(--accent)}
+
+  /* product suggestions */
+  .suggest{position:absolute;z-index:20;left:0;right:0;top:48px;background:#fff;border:1px solid var(--line);
+    border-radius:10px;box-shadow:0 16px 34px rgba(42,36,28,.15);max-height:330px;overflow:auto;display:none}
+  .suggest.open{display:block}
+  .sg{display:flex;gap:10px;align-items:center;padding:9px 11px;border-bottom:1px solid var(--line);width:100%;background:#fff;text-align:left}
+  .sg:last-child{border-bottom:0}
+  .sg:hover{background:var(--soft)}
+  .sg img{width:36px;height:36px;object-fit:contain;border-radius:6px;background:#fafafa;flex:0 0 auto}
+  .sg .nm{font-size:13px;font-weight:700;line-height:1.25}
+  .sg .mt{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .sg-empty{padding:12px;color:var(--muted);font-size:13px}
+
+  .map-card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+  .map-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .map-head h3{margin:0;font-size:17px}
+  .map-head p{margin:3px 0 0;color:var(--muted);font-size:13px}
+  .status{display:flex;gap:8px;align-items:center;color:var(--green);font-weight:850;white-space:nowrap}
+  .dotkey{width:10px;height:10px;border-radius:50%;background:var(--green);display:inline-block}
+  .map{position:relative;height:460px;background:#e4e6e3}
+  #map{position:absolute;inset:0}
+  .legend{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.95);border:1px solid var(--line);
+    border-radius:8px;padding:11px;font-size:13px;z-index:2}
+  .legend div{display:flex;gap:8px;align-items:center;margin-top:7px}
+  .key{width:10px;height:10px;border-radius:50%;display:inline-block;flex:0 0 auto}
+  .key.in{background:var(--green)}.key.out{background:var(--red)}.key.na{background:#fff;border:2px solid var(--grey)}
+  .maploading{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:rgba(246,247,245,.82);z-index:3;text-align:center;padding:20px}
+  .maploading.show{display:flex}
+  .maploading .inner{max-width:460px}
+  .maploading b{display:block;font-size:16px}
+  .maploading p{margin:6px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5}
+  .bar{height:6px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:12px}
+  .bar i{display:block;height:100%;width:40%;background:var(--accent);animation:slide 1.1s ease-in-out infinite}
+  @keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(320%)}}
+  @media(prefers-reduced-motion:reduce){.bar i{animation:none;width:100%}}
+
+  .notice{margin:14px 0 0;padding:11px 13px;border-radius:9px;font-size:13.5px;font-weight:700;line-height:1.5}
+  .notice.stale{background:var(--amberbg);border:1px solid #efd2a1;color:#75470c}
+  .notice.warn{background:#fff;border:1px solid var(--line);color:var(--muted)}
+
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+  .metric{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px;box-shadow:var(--shadow)}
+  .metric small{display:block;color:var(--muted);font-size:12px;font-weight:850}
+  .metric b{display:block;font-size:28px;margin-top:4px;font-variant-numeric:tabular-nums}
+  .metric .sub{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;font-weight:600}
+
+  .below{display:grid;grid-template-columns:1fr 300px;gap:14px}
+  .table-card,.note{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+  .table-head{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}
+  .table-head h3,.note h3{margin:0;font-size:16px}
+  .table-head p,.note p{margin:4px 0 0;color:var(--muted);font-size:13px;line-height:1.45}
+  .tablewrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+  th{font-size:11px;text-transform:uppercase;color:var(--muted);background:#fbfaf7}
+  .num{text-align:right;font-variant-numeric:tabular-nums}
+  .ok{color:var(--green);font-weight:850}
+  .bad{color:var(--red);font-weight:850}
+  .unk{color:var(--amber);font-weight:850}
+  .note{padding:16px}
+  .note ul{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.55;font-size:14px}
+  .copy{border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 6px;font-size:11px;font-weight:700;color:var(--muted);margin-left:6px}
+
+  .modal{position:fixed;inset:0;background:rgba(35,32,28,.4);display:none;align-items:center;justify-content:center;padding:18px;z-index:30}
+  .modal.open{display:flex}
+  .modal-card{max-width:520px;background:#fff;border-radius:12px;border:1px solid var(--line);padding:20px;box-shadow:var(--shadow)}
+  .modal-card h3{margin:0 0 10px}
+  .modal-card p{color:var(--muted);line-height:1.55;font-size:14px}
+  .modal-card ul{color:var(--muted);line-height:1.6;font-size:14px;padding-left:18px}
+  .mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 12px;z-index:8}
+  footer{margin-top:22px;color:var(--muted);font-size:12px;line-height:1.6}
+
+  @media(max-width:900px){
+    .page{padding:14px 12px 76px}
+    .top{flex-direction:column}
+    .actions{width:100%}
+    .search,.below{grid-template-columns:1fr}
+    .metrics{grid-template-columns:repeat(2,1fr)}
+    .map{height:360px}
+    .mobile-cta{display:block}
+    .hero h2{font-size:24px}
+    .search .btn.primary{display:none}
+  }
+  @media(max-width:520px){
+    .metrics{grid-template-columns:1fr}
+    .map{height:330px}
+    .map-head{align-items:flex-start;flex-direction:column}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <div class="brand">
+      <h1>SKU Availability Map</h1>
+      <p>Check exactly where a product is in stock across quick-commerce dark stores.</p>
+    </div>
+    <div class="actions">
+      <span class="coverage" id="coverage"></span>
+      <button class="btn" id="how">How it works</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2 id="headline">Pick a platform, area and product to see live store-by-store stock.</h2>
+    <p id="subline">Every store in the area is checked live. Nothing here is an estimate.</p>
+    <div class="search">
+      <select class="field" id="platform" aria-label="Platform">
+        <option value="">Select platform</option>
+        <option value="blinkit">Blinkit</option>
+        <option value="swiggy">Swiggy Instamart</option>
+      </select>
+      <select class="field" id="city" aria-label="City"></select>
+      <select class="field" id="area" aria-label="Area"></select>
+      <div class="prodwrap">
+        <input class="field" id="product" placeholder="Product or SKU" autocomplete="off" aria-label="Product">
+        <div class="suggest" id="suggest"></div>
+      </div>
+      <button class="btn primary" id="check">Check availability</button>
+    </div>
+    <div class="error-msg" id="errorMsg"></div>
+    <div class="samples" id="samples"><span class="lbl">Try:</span></div>
+  </section>
+
+  <section class="map-card">
+    <div class="map-head">
+      <div>
+        <h3 id="mapTitle">Availability map</h3>
+        <p>Green means stock available. Red means checked and out of stock. Hollow grey means we couldn't verify.</p>
+      </div>
+      <div class="status" id="mapStatus"></div>
+    </div>
+    <div class="map">
+      <div id="map"></div>
+      <div class="legend">
+        <strong>Store status</strong>
+        <div><i class="key in"></i>Available</div>
+        <div><i class="key out"></i>Out of stock</div>
+        <div><i class="key na"></i>Couldn't verify</div>
+      </div>
+      <div class="maploading" id="maploading">
+        <div class="inner">
+          <b id="loadTitle">Checking stores…</b>
+          <p id="loadSub"></p>
+          <div class="bar"><i></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="notices"></div>
+
+  <section class="metrics" id="metrics">
+    <div class="metric"><small>Stores checked</small><b id="mChecked">—</b><span class="sub" id="mCheckedSub"></span></div>
+    <div class="metric"><small>Available stores</small><b id="mAvail" style="color:var(--green)">—</b><span class="sub" id="mAvailSub"></span></div>
+    <div class="metric"><small>Total units found</small><b id="mUnits">—</b><span class="sub" id="mUnitsSub"></span></div>
+    <div class="metric"><small>Best price</small><b id="mPrice">—</b><span class="sub" id="mPriceSub"></span></div>
+  </section>
+
+  <section class="below">
+    <div class="table-card">
+      <div class="table-head">
+        <div><h3>Store-level inventory</h3><p>The table is proof behind the map.</p></div>
+        <button class="btn" id="csv" disabled>Download CSV</button>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Platform</th><th>Area</th><th>Store</th><th class="num">Units</th><th class="num">Price</th><th class="num">MRP</th><th>Status</th><th>Why</th></tr></thead>
+          <tbody id="rows"><tr><td colspan="8" style="color:var(--muted);white-space:normal">Run a check to see store-level rows.</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <aside class="note">
+      <h3>What to do next</h3>
+      <p>Use this page to decide whether a SKU is actually visible to customers in a locality.</p>
+      <ul>
+        <li>Compare the same SKU on the other platform.</li>
+        <li>Switch area to find stockout pockets.</li>
+        <li>Use store rows for ops follow-up.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <footer>
+    Blinkit stock is checked from your own browser, directly against blinkit.com. Instamart is checked from our server.
+    Store locations come from a periodic snapshot, so a very new store may be missing.
+  </footer>
+</main>
+
+<div class="mobile-cta"><button class="btn primary" id="mobileCheck" style="width:100%">Check availability</button></div>
+<div class="modal" id="modal"><div class="modal-card">
+  <h3>How it works</h3>
+  <p>Pick a platform, city, area and product. We then check <b>every dark store in that area</b>, one by one, and show what each one actually holds right now.</p>
+  <ul>
+    <li><b>Available / Out of stock</b> — the platform confirmed it.</li>
+    <li><b>Couldn't verify</b> — the platform rate-limited or failed the check. That is <i>not</i> the same as out of stock, so we never count it as zero.</li>
+    <li><b>Not carried</b> — that store's catalogue doesn't list the SKU at all.</li>
+  </ul>
+  <p>Results are cached for an hour. If a live check gets rate-limited we show the last successful one and say how old it is.</p>
+  <button class="btn primary" id="close">Got it</button>
+</div></div>
+
+<script>
+  const $ = s => document.querySelector(s);
+  const API = location.origin.startsWith("http") ? location.origin : "";
+  const api = (p, o = {}) => fetch(API + p, o);
+  const esc = s => String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  const PLABEL = { blinkit: "Blinkit", swiggy: "Swiggy Instamart" };
+  const rupee = n => n == null ? "—" : "₹" + Number(n).toLocaleString("en-IN");
+
+  // Honest reason vocabulary. Only zero_stock / not_carried are ever a confirmed zero;
+  // everything else means we do not know, and must never be rendered as absence.
+  const DETAIL_LABEL = {
+    matched: "confirmed in stock", zero_stock: "confirmed zero", not_carried: "not carried by this store",
+    unmatched: "no confident match", blocked: "blocked", failed: "request failed",
+    not_scraped: "timed out", throttled: "rate-limited — retry",
+  };
+  const UNKNOWN = new Set(["unmatched", "blocked", "failed", "not_scraped", "throttled"]);
+
+  let CITIES = [], AREA_STORES = {}, PICKED = null, LAST = null, MAP = null, MAPFAIL = false;
+
+  // ---------- boot ----------
+  (async () => {
+    try {
+      const h = await (await api("/api/health")).json();
+      const n = Object.values(h.stores || {}).reduce((a, b) => a + (b || 0), 0);
+      $("#coverage").textContent = `${n.toLocaleString("en-IN")} stores · ${h.cities} cities`;
+    } catch {}
+    try {
+      const d = await (await api("/api/b2b/cities")).json();
+      CITIES = d.cities || [];
+      $("#city").innerHTML = CITIES.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join("");
+      $("#city").value = CITIES.includes("Bengaluru") ? "Bengaluru" : CITIES[0];
+      await loadAreas();
+    } catch { showError("Couldn't load cities — refresh to try again."); }
+    renderSamples();
+  })();
+
+  function showError(msg) {
+    const e = $("#errorMsg");
+    e.textContent = msg; e.classList.toggle("show", !!msg);
+  }
+
+  // ---------- areas, filtered to the selected platform ----------
+  async function loadAreas() {
+    const city = $("#city").value, plat = $("#platform").value;
+    $("#area").innerHTML = `<option value="">Loading areas…</option>`;
+    try {
+      const d = await (await api("/api/b2b/localities?city=" + encodeURIComponent(city))).json();
+      const cnt = l => plat ? (l.stores[plat] || 0) : ((l.stores.blinkit || 0) + (l.stores.swiggy || 0));
+      // Only offer areas that have stores ON THIS PLATFORM — a combined count used to
+      // advertise areas where the selected app has nothing, and the check came back empty.
+      const usable = (d.localities || []).filter(l => cnt(l) > 0);
+      AREA_STORES = {}; usable.forEach(l => { AREA_STORES[l.name] = cnt(l); });
+      $("#area").innerHTML = `<option value="">Select area</option>` +
+        usable.map(l => `<option value="${esc(l.name)}">${esc(l.name)} (${cnt(l)})</option>`).join("");
+      if (!usable.length) showError(`No ${PLABEL[plat] || "store"} coverage in ${city} yet — try another city or platform.`);
+    } catch { $("#area").innerHTML = `<option value="">Couldn't load areas</option>`; }
+  }
+  $("#city").onchange = loadAreas;
+  $("#platform").onchange = () => { PICKED = null; $("#product").value = ""; loadAreas(); };
+
+  // ---------- product search ----------
+  let seq = 0, timer = null;
+  $("#product").addEventListener("input", () => {
+    PICKED = null;
+    clearTimeout(timer);
+    const q = $("#product").value.trim();
+    if (q.length < 2) { $("#suggest").classList.remove("open"); return; }
+    timer = setTimeout(() => runSearch(q), 220);
+  });
+  async function runSearch(q) {
+    const mine = ++seq, plat = $("#platform").value;
+    if (!plat) { showError("Select a platform first — products differ per app."); return; }
+    const box = $("#suggest");
+    box.innerHTML = `<div class="sg-empty">Searching…</div>`; box.classList.add("open");
+    try {
+      const r = await api(`/api/b2b/catalog-search?q=${encodeURIComponent(q)}&platform=${plat}&limit=12`);
+      if (!r.ok) throw new Error(r.status);
+      const d = await r.json();
+      if (mine !== seq) return;
+      if (!d.results.length) { box.innerHTML = `<div class="sg-empty">No products match “${esc(q)}” on ${esc(PLABEL[plat])}.</div>`; return; }
+      box.innerHTML = d.results.map((p, i) => `
+        <button type="button" class="sg" data-i="${i}">
+          ${p.image_url ? `<img src="${esc(p.image_url)}" alt="" loading="lazy">` : `<img alt="">`}
+          <span><span class="nm">${esc(p.name)}</span>
+          <span class="mt">${esc(p.brand || "")}${p.pack_size ? " · " + esc(p.pack_size) : ""}${p.mrp ? " · MRP " + rupee(p.mrp) : ""}</span></span>
+        </button>`).join("");
+      [...box.querySelectorAll(".sg")].forEach(b => b.onclick = () => {
+        const p = d.results[+b.dataset.i];
+        PICKED = p; $("#product").value = p.name; box.classList.remove("open"); showError("");
+      });
+    } catch { box.innerHTML = `<div class="sg-empty">Search failed — try again.</div>`; }
+  }
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".prodwrap")) $("#suggest").classList.remove("open");
+  });
+
+  // ---------- sample chips ----------
+  const SAMPLES = [
+    { platform: "swiggy", city: "Bengaluru", q: "amul butter" },
+    { platform: "blinkit", city: "Bengaluru", q: "maggi" },
+    { platform: "swiggy", city: "Mumbai", q: "coca cola" },
+  ];
+  function renderSamples() {
+    const wrap = $("#samples");
+    SAMPLES.forEach(s => {
+      const b = document.createElement("button");
+      b.className = "chip";
+      b.textContent = `${s.q} · ${s.city} · ${PLABEL[s.platform]}`;
+      b.onclick = async () => {
+        $("#platform").value = s.platform;
+        $("#city").value = CITIES.includes(s.city) ? s.city : $("#city").value;
+        await loadAreas();
+        const first = [...$("#area").options].find(o => o.value);
+        if (first) $("#area").value = first.value;
+        $("#product").value = s.q;
+        await runSearch(s.q);
+      };
+      wrap.appendChild(b);
+    });
+  }
+
+  // ---------- validation ----------
+  function validate() {
+    const missing = [];
+    const set = (id, bad) => { $(id).classList.toggle("error", bad); if (bad) missing.push(id.slice(1)); };
+    set("#platform", !$("#platform").value);
+    set("#city", !$("#city").value);
+    set("#area", !$("#area").value);
+    set("#product", !PICKED);
+    if (!missing.length) { showError(""); return true; }
+    showError(!PICKED && missing.length === 1
+      ? "Type a product and pick one from the list."
+      : "Select " + missing.join(", ") + " before checking availability.");
+    return false;
+  }
+
+  // ---------- the check ----------
+  async function runCheck() {
+    if (!validate()) return;
+    const platform = $("#platform").value, city = $("#city").value, area = $("#area").value;
+    const n = AREA_STORES[area] || 0;
+    const secs = platform === "swiggy" ? Math.max(5, Math.round(n * 1.5)) : Math.max(3, Math.round(n / 3));
+    $("#loadTitle").textContent = `Checking ${n || "every"} ${PLABEL[platform]} store${n === 1 ? "" : "s"} in ${area}…`;
+    $("#loadSub").textContent = platform === "swiggy"
+      ? `Each store is checked one by one — about ${secs}s. The next check on this product is instant for an hour.`
+      : `Checked from your own browser, straight against Blinkit — about ${secs}s.`;
+    $("#maploading").classList.add("show");
+    $("#notices").innerHTML = "";
+    document.querySelector(".map-card").scrollIntoView({ behavior: "smooth", block: "start" });
+
+    let d;
+    try {
+      const r = await api(`/api/b2b/inventory?platform=${platform}&product_id=${encodeURIComponent(PICKED.product_id)}`
+        + `&name=${encodeURIComponent(PICKED.name)}&city=${encodeURIComponent(city)}&locality=${encodeURIComponent(area)}`);
+      if (r.status === 429) { $("#maploading").classList.remove("show"); return notice("warn", "That's a lot of checks in a row — wait about a minute and try again."); }
+      if (!r.ok) throw new Error(r.status);
+      d = await r.json();
+    } catch {
+      $("#maploading").classList.remove("show");
+      return notice("warn", "Couldn't complete that check. Check your connection and try again.");
+    }
+    if (d.client_side && platform === "blinkit") { try { await blinkitProbe(d); } catch {} }
+    $("#maploading").classList.remove("show");
+    render(d);
+  }
+  $("#check").onclick = runCheck;
+  $("#mobileCheck").onclick = runCheck;
+  $("#product").addEventListener("keydown", e => { if (e.key === "Enter" && PICKED) runCheck(); });
+
+  // ---------- Blinkit: probed in the visitor's own browser ----------
+  function blinkitNode(o) {
+    let best = null;
+    (function w(x) {
+      if (x && typeof x === "object") {
+        if (!Array.isArray(x) && ("normal_price" in x || "is_sold_out" in x)) best = best || x;
+        for (const k in x) w(x[k]);
+      }
+    })(o);
+    return best;
+  }
+  const money = t => { const m = String(t || "").replace(/[^0-9.]/g, ""); return m ? Math.round(+m) : null; };
+  async function blinkitProbe(d) {
+    const prid = PICKED.product_id, stores = d.stores || [];
+    const one = async s => {
+      try {
+        const r = await fetch("https://blinkit.com/v1/layout/product/" + prid, {
+          method: "POST",
+          headers: { "accept": "*/*", "content-type": "application/json", "app_client": "consumer_web",
+                     "lat": String(s.lat), "lon": String(s.lng), "gr_1_lat": String(s.lat),
+                     "gr_1_lon": String(s.lng), "gr_1_l_name": "", "web_app_version": "1008010016" },
+          body: "{}",
+        });
+        if (!r.ok) { s.status = "na"; s.detail = (r.status === 429 || r.status === 403) ? "throttled" : "failed"; return; }
+        const n = blinkitNode(await r.json());
+        if (!n) { s.status = "na"; s.detail = "unmatched"; return; }
+        const price = money(n.normal_price && n.normal_price.text);
+        const inv = (typeof n.inventory === "number") ? n.inventory : null;
+        s.mrp = money(n.mrp && n.mrp.text) ?? s.mrp;
+        if (inv > 0 || n.is_sold_out === false) {
+          // never invent a unit count — Blinkit often omits inventory entirely
+          s.status = "in"; s.price = price; s.qty = (inv > 0) ? inv : null; s.detail = "matched";
+        } else if (price) { s.status = "oos"; s.price = price; s.qty = 0; s.detail = "zero_stock"; }
+        else { s.status = "na"; s.detail = "unmatched"; }
+      } catch { s.status = "na"; s.detail = "blocked"; }
+    };
+    for (let i = 0; i < stores.length; i += 5) await Promise.all(stores.slice(i, i + 5).map(one));
+    const c = k => stores.filter(s => s.status === k).length;
+    const prices = stores.filter(s => s.price != null).map(s => s.price);
+    const units = stores.filter(s => s.status === "in" && typeof s.qty === "number").map(s => s.qty);
+    const dc = {}; stores.forEach(s => { if (s.detail) dc[s.detail] = (dc[s.detail] || 0) + 1; });
+    d.probed = stores.length;
+    d.summary = {
+      in_stock: c("in"), out_of_stock: c("oos"), na: c("na"), detail_counts: dc,
+      availability_pct: (c("in") + c("oos")) ? Math.round(100 * c("in") / (c("in") + c("oos"))) : null,
+      avg_price: prices.length ? Math.round(prices.reduce((a, b) => a + b, 0) / prices.length) : null,
+      total_units: units.length ? units.reduce((a, b) => a + b, 0) : null,
+    };
+  }
+
+  function notice(kind, html) {
+    $("#notices").insertAdjacentHTML("beforeend", `<div class="notice ${kind}">${html}</div>`);
+  }
+
+  // ---------- render ----------
+  function render(d) {
+    LAST = d;
+    const s = d.summary || {}, rows = d.stores || [];
+    const area = d.locality || d.city, plat = PLABEL[d.platform] || d.platform;
+    const reachable = (s.in_stock || 0) + (s.out_of_stock || 0);
+    const unknown = s.na || 0;
+
+    // headline = the answer, in one sentence
+    $("#headline").textContent = reachable
+      ? `${PICKED.name} is available in ${s.in_stock} of ${reachable} ${plat} store${reachable === 1 ? "" : "s"} in ${area}.`
+      : `We couldn't verify ${PICKED.name} at any ${plat} store in ${area} right now.`;
+    const when = d.stale_seconds ? "from an earlier check" : "checked just now";
+    $("#subline").textContent = `${d.city} · ${when} · ${d.probed} of ${d.total_stores} stores in this area`
+      + (unknown ? ` · ${unknown} couldn't be verified` : "");
+    $("#mapTitle").textContent = `${PICKED.name} near ${area}`;
+    $("#mapStatus").innerHTML = `<i class="dotkey"></i> ${s.in_stock || 0} store${s.in_stock === 1 ? "" : "s"} with stock`;
+
+    // honest notices
+    if (d.stale_seconds) {
+      const m = Math.max(1, Math.round(d.stale_seconds / 60));
+      notice("stale", `⏳ Showing the last successful check, about <b>${m} minute${m === 1 ? "" : "s"}</b> old — ${plat} is rate-limiting live checks right now. Try again shortly for current numbers.`);
+    }
+    if (unknown && unknown === d.probed) {
+      notice("stale", `⚠ None of the ${unknown} stores could be verified — ${plat} rate-limited every check. This is <b>not</b> the same as out of stock.`);
+    } else if (unknown) {
+      notice("warn", `${unknown} of ${d.probed} stores couldn't be verified, so they're excluded from the counts above rather than counted as zero.`);
+    }
+    if (d.capped) notice("warn", `This area has ${d.total_stores} stores; we checked the first ${d.probed}.`);
+
+    // metrics
+    const inPrices = rows.filter(r => r.status === "in" && r.price != null).map(r => r.price);
+    $("#mChecked").textContent = d.probed;
+    $("#mCheckedSub").textContent = `of ${d.total_stores} in ${area}`;
+    $("#mAvail").textContent = s.in_stock || 0;
+    $("#mAvailSub").textContent = reachable ? `${s.availability_pct}% of verified stores` : "none verified";
+    $("#mUnits").textContent = s.total_units != null ? s.total_units : "—";
+    $("#mUnitsSub").textContent = s.total_units != null ? "across in-stock stores"
+      : (d.platform === "blinkit" ? "Blinkit rarely publishes unit counts" : "not published");
+    $("#mPrice").textContent = inPrices.length ? rupee(Math.min(...inPrices)) : "—";
+    $("#mPriceSub").textContent = inPrices.length && s.mrp ? `MRP ${rupee(s.mrp)}` : "";
+
+    // table
+    $("#rows").innerHTML = rows.length ? rows.map(r => {
+      const cls = r.status === "in" ? "ok" : r.status === "oos" ? "bad" : "unk";
+      const label = r.status === "in" ? "Available" : r.status === "oos" ? "Out of stock" : "Couldn't verify";
+      return `<tr>
+        <td>${esc(PLABEL[r.platform] || r.platform)}</td>
+        <td>${esc(r.locality || "")}</td>
+        <td>${esc(r.name || "")}<button class="copy" data-copy="${esc(r.store_id)}">${esc(r.store_id)}</button></td>
+        <td class="num">${typeof r.qty === "number" ? r.qty : "—"}</td>
+        <td class="num">${r.price != null ? rupee(r.price) : "—"}</td>
+        <td class="num">${r.mrp != null ? rupee(r.mrp) : "—"}</td>
+        <td class="${cls}">${label}</td>
+        <td style="color:var(--muted)">${esc(DETAIL_LABEL[r.detail] || "")}</td>
+      </tr>`;
+    }).join("") : `<tr><td colspan="8" style="color:var(--muted)">No stores returned.</td></tr>`;
+    [...document.querySelectorAll(".copy")].forEach(b => b.onclick = () => {
+      navigator.clipboard?.writeText(b.dataset.copy); b.textContent = "copied";
+      setTimeout(() => b.textContent = b.dataset.copy, 1200);
+    });
+    $("#csv").disabled = !rows.length;
+
+    paintMap(rows);
+  }
+
+  // ---------- map ----------
+  const COLOR = { in: "#14824f", oos: "#c6443f", na: "#ffffff" };
+  function paintMap(rows) {
+    const pts = rows.filter(r => r.lat && r.lng);
+    if (!pts.length || MAPFAIL) return;
+    try {
+      if (!MAP) {
+        MAP = new maplibregl.Map({
+          container: "map",
+          style: "https://tiles.openfreemap.org/styles/positron",
+          center: [pts[0].lng, pts[0].lat], zoom: 11, attributionControl: { compact: true },
+        });
+        MAP.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+        // one-finger drag should scroll the page on a phone, not pan the map
+        if (window.matchMedia("(max-width:900px)").matches) MAP.dragPan.disable();
+      }
+    } catch { MAPFAIL = true; return; }
+    const maxQty = Math.max(1, ...pts.filter(r => typeof r.qty === "number").map(r => r.qty));
+    const gj = { type: "FeatureCollection", features: pts.map(r => ({
+      type: "Feature", geometry: { type: "Point", coordinates: [r.lng, r.lat] },
+      properties: {
+        color: COLOR[r.status] || "#fff",
+        stroke: r.status === "na" ? "#9aa39c" : "#ffffff",
+        radius: r.status === "na" ? 6 : (typeof r.qty === "number" && r.qty > 0 ? 8 + Math.round(r.qty / maxQty * 12) : (r.status === "in" ? 10 : 6)),
+        label: `<b>${esc(r.name || "Store")}</b><br>${esc(r.locality || "")} · ${esc(r.store_id)}<br>` +
+               (r.status === "in" ? `${typeof r.qty === "number" ? r.qty + " units" : "In stock"}${r.price != null ? " · " + rupee(r.price) : ""}`
+                : r.status === "oos" ? "Out of stock" : "Couldn't verify — " + (DETAIL_LABEL[r.detail] || "")),
+      } })) };
+    const apply = () => {
+      if (MAP.getSource("inv")) { MAP.getSource("inv").setData(gj); }
+      else {
+        MAP.addSource("inv", { type: "geojson", data: gj });
+        MAP.addLayer({ id: "inv", type: "circle", source: "inv", paint: {
+          "circle-radius": ["get", "radius"], "circle-color": ["get", "color"],
+          "circle-stroke-width": 2.5, "circle-stroke-color": ["get", "stroke"] } });
+        MAP.on("click", "inv", e => new maplibregl.Popup().setLngLat(e.lngLat)
+          .setHTML(e.features[0].properties.label).addTo(MAP));
+        MAP.on("mouseenter", "inv", () => MAP.getCanvas().style.cursor = "pointer");
+        MAP.on("mouseleave", "inv", () => MAP.getCanvas().style.cursor = "");
+      }
+      const b = new maplibregl.LngLatBounds();
+      gj.features.forEach(f => b.extend(f.geometry.coordinates));
+      MAP.fitBounds(b, { padding: 60, maxZoom: 13 });
+    };
+    try { MAP.isStyleLoaded() ? apply() : MAP.once("load", apply); } catch { MAPFAIL = true; }
+  }
+
+  // ---------- csv ----------
+  $("#csv").onclick = () => {
+    if (!LAST) return;
+    const head = ["platform","store_id","store_name","locality","lat","lng","status","detail","units","price","mrp"];
+    const body = (LAST.stores || []).map(r => [
+      r.platform, r.store_id, r.name, r.locality, r.lat, r.lng, r.status, r.detail || "",
+      typeof r.qty === "number" ? r.qty : "", r.price ?? "", r.mrp ?? ""
+    ].map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(","));
+    const blob = new Blob([[head.join(","), ...body].join("\n")], { type: "text/csv" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `${(PICKED?.name || "inventory").replace(/[^a-z0-9]+/gi, "-").toLowerCase()}-${LAST.city}.csv`;
+    a.click(); URL.revokeObjectURL(a.href);
+  };
+
+  // ---------- modal ----------
+  $("#how").onclick = () => $("#modal").classList.add("open");
+  $("#close").onclick = () => $("#modal").classList.remove("open");
+  $("#modal").onclick = e => { if (e.target === $("#modal")) $("#modal").classList.remove("open"); };
+</script>
+</body>
+</html>
