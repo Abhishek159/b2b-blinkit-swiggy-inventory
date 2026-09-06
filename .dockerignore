@@ -11,6 +11,7 @@ render.yaml
 # `fly deploy` tars the WORKING DIRECTORY (filtered by this file, not .gitignore), and
 # StaticFiles is a wildcard mount -- so any stray html here becomes publicly reachable.
 # b2b_v2_static.html is a hardcoded fake-data mockup with nothing marking it as one.
+_archive_frontend/
 frontend/b2b_v2*.html
 
 # NEVER add *.db, data/, or backend/data below. catalog_lite.db (45 MB) and the store CSVs
