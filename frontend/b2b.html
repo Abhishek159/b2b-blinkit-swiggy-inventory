@@ -1471,6 +1471,13 @@
         || String(a.locality).localeCompare(String(b.locality)));
     }
 	    const fetchedAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+	    // Swiggy throttles per IP, and every visitor's check leaves from the same server
+	    // address -- so under load a fresh probe can fail while an older successful run is
+	    // still held. Serving that is right; passing it off as live is not.
+	    const staleMins = d.stale_seconds ? Math.max(1, Math.round(d.stale_seconds / 60)) : 0;
+	    const staleNote = staleMins
+	      ? `<div class="v2-result-note" style="color:var(--oos);font-weight:600">⏳ Showing the last successful check, about ${staleMins} minute${staleMins === 1 ? "" : "s"} old — Instamart is rate-limiting live checks right now. Try again shortly for current numbers.</div>`
+	      : "";
 	    $("#out").innerHTML =
 	      `<div class="inhead"><div class="v2-result">
 	        ${image ? `<img class="v2-product-img" src="${esc(thumbUrl(image))}" alt="">` : `<div class="v2-product-ph">SKU</div>`}
@@ -1483,7 +1490,8 @@
 	            <span class="v2-pill">${totalUnits || 0} units found</span>
 	            <span class="v2-pill">${couldNotVerify} could not verify</span>
 	          </div>
-	          <div class="v2-result-note">Last checked ${fetchedAt}. Searched as "${esc(d.search_query || name)}". Unknown stores are not counted as zero.</div>
+	          ${staleNote}
+	          <div class="v2-result-note">${staleMins ? "Data from an earlier check" : `Last checked ${fetchedAt}`}. Searched as "${esc(d.search_query || name)}". Unknown stores are not counted as zero.</div>
 	        </div>
 	        <div class="v2-result-actions"><button id="csv">Download CSV</button></div>
 	      </div></div>`

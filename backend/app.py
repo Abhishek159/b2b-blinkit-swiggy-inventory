@@ -63,7 +63,8 @@ async def ratelimit(request: Request, call_next):
 
 # zone-price cache (prices ~city-uniform): one live Swiggy call per (query,~11km cell)
 _SW_CACHE: dict = {}
-_SW_TTL = 60 * 60   # 15m -> 60m: the single biggest lever against Swiggy throttling
+_SW_TTL = 60 * 60        # 15m -> 60m: the single biggest lever against Swiggy throttling
+_SW_STALE_MAX = 12 * 3600  # beyond fresh, still serve a past result (labelled) rather than nothing
 
 
 def _db():
@@ -164,6 +165,7 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
 
     if platform == "swiggy":
         ck = ("swiggy", product_id, city, locality or "")
+        stale_age = None
         hit = _SW_CACHE.get(ck)
         fresh = bool(hit and time.time() - hit[0] < _SW_TTL)
         if fresh:
@@ -191,6 +193,15 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
                         if len(_SW_CACHE) > 2000:      # unbounded before; ~5 KB/entry
                             _SW_CACHE.clear()
                         _SW_CACHE[ck] = (time.time(), per)
+                    elif hit:
+                        # The fresh probe reached nothing (Swiggy throttles per IP, and every
+                        # visitor's check leaves from the same server address -- so the busier
+                        # this gets, the likelier this branch is). We still hold an older
+                        # successful run: real numbers an hour old beat "couldn't verify"
+                        # for stock levels, as long as we say how old they are.
+                        age = time.time() - hit[0]
+                        if age < _SW_STALE_MAX:
+                            per, stale_age = hit[1], age
         by_id = {p["store_id"]: p for p in per}
         rows = []
         for s in stores_[:24]:
@@ -203,6 +214,7 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
         return {"platform": "swiggy", "product_id": product_id, "name": name, "city": city,
                 "locality": locality, "total_stores": len(stores_), "probed": len(rows),
                 "stores": rows, "summary": _summary(rows), "cached": fresh,
+                "stale_seconds": round(stale_age) if stale_age else None,
                 "capped": len(stores_) > 24}
 
     # Blinkit -> fetched CLIENT-SIDE: hand the browser the stores + prid to probe itself
