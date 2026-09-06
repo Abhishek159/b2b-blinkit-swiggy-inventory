@@ -37,7 +37,9 @@
   button{cursor:pointer}
   button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid rgba(244,81,42,.22);outline-offset:2px}
   .shell{max-width:1280px;margin:0 auto;padding:0 24px}
-  .site-header{height:72px;background:var(--surface);border-bottom:1px solid var(--line)}
+  /* Fixed so the brand and "How it works" stay reachable while reading results. */
+  .site-header{position:sticky;top:0;z-index:15;height:72px;background:var(--surface);
+    border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(32,29,47,.04)}
   .site-header .shell{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
   .brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:24px;white-space:nowrap}
   .brand-mark{display:grid;place-items:center;width:32px;height:32px;border-radius:7px;background:var(--brand);color:#fff;font-size:18px}
@@ -64,7 +66,13 @@
   .control-label{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px;color:#555162;font-size:12px;font-weight:900;text-transform:uppercase}
   .control-label span{color:var(--muted);font-weight:700;text-transform:none}
   .platform-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-  .platform-btn{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;height:52px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);font-weight:900;white-space:nowrap;transition:border-color .15s,box-shadow .15s,transform .15s}
+  /* "Swiggy Instamart" is the longest label and was wrapping out of its box. The text
+     scales with the viewport instead of wrapping, so all three stay one line, one box. */
+  .platform-btn{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;
+    height:52px;min-width:0;padding:0 6px;border:1px solid var(--line);border-radius:7px;background:#fff;
+    color:var(--ink);font-weight:900;white-space:nowrap;overflow:hidden;
+    font-size:clamp(11px,2.4vw,15px);transition:border-color .15s,box-shadow .15s,transform .15s}
+  .platform-btn .pname{overflow:hidden;text-overflow:ellipsis}
   .platform-btn:not(:disabled):hover{border-color:#aaa7b2;box-shadow:0 4px 12px rgba(32,29,47,.07);transform:translateY(-1px)}
   .platform-btn .status-label{font-size:10px;font-weight:850;text-transform:uppercase;opacity:.68}
   .platform-btn.active{box-shadow:0 0 0 1px var(--ink);transform:none}
@@ -74,6 +82,20 @@
   .platform-btn:disabled{border-color:#e4d7f5;background:#f8f4fc;color:#8c8793;cursor:not-allowed;opacity:.74}
   .platform-btn:disabled .status-label{padding:3px 6px;border-radius:999px;background:#e8d8fa;color:var(--zepto);opacity:1}
   .city-section{margin-top:18px}
+  /* The strip scrolls horizontally, but nothing said so -- cities past the fold were
+     simply never found. Arrows + a fade edge make the overflow visible. */
+  .city-wrap{position:relative}
+  .city-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:30px;height:30px;
+    display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:#fff;
+    color:var(--ink);font-size:15px;font-weight:900;box-shadow:0 3px 10px rgba(32,29,47,.14)}
+  .city-nav:hover{border-color:var(--action);color:var(--action)}
+  .city-nav[hidden]{display:none}
+  .city-nav.prev{left:-6px}
+  .city-nav.next{right:-6px}
+  .city-fade{position:absolute;top:0;bottom:9px;width:34px;pointer-events:none;z-index:2}
+  .city-fade.l{left:0;background:linear-gradient(90deg,var(--surface),transparent)}
+  .city-fade.r{right:0;background:linear-gradient(270deg,var(--surface),transparent)}
+  .city-fade[hidden]{display:none}
   .city-strip{display:flex;gap:8px;overflow-x:auto;padding:1px 1px 7px;scrollbar-width:thin;scrollbar-color:#c9c7cf transparent}
   .city-btn{flex:0 0 142px;display:flex;align-items:center;gap:9px;min-height:58px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);padding:8px;text-align:left}
   .city-btn:hover{border-color:#aaa7b2}
@@ -159,6 +181,19 @@
   .legend{display:flex;align-items:center;gap:12px;padding:9px 10px;color:#55515e;font-size:11px;font-weight:750}
   .legend span{display:flex;align-items:center;gap:5px}.legend i{width:8px;height:8px;border-radius:50%}
   .legend .in{background:var(--green)}.legend .out{background:var(--red)}.legend .unk{background:#fff;box-shadow:0 0 0 2px var(--grey)}
+  /* Own zoom buttons, labelled, because MapLibre's default control is two unlabelled
+     glyphs -- and scroll-to-zoom is off so the page keeps scrolling over the map. */
+  .map-zoom{position:absolute;z-index:3;right:12px;bottom:12px;display:flex;flex-direction:column;
+    gap:6px;background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:8px;
+    padding:6px;box-shadow:0 8px 20px rgba(32,29,47,.12)}
+  .map-zoom button{display:flex;align-items:center;gap:6px;height:30px;padding:0 9px;border:0;
+    border-radius:6px;background:#fff;color:var(--ink);font-size:12px;font-weight:800;white-space:nowrap}
+  .map-zoom button:hover{background:var(--soft);color:var(--action)}
+  .map-zoom b{font-size:15px;line-height:1;width:12px;text-align:center}
+  .map-hint{position:absolute;z-index:3;left:50%;bottom:12px;transform:translateX(-50%);
+    padding:6px 11px;border-radius:999px;background:rgba(32,29,47,.78);color:#fff;font-size:11px;
+    font-weight:700;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .25s}
+  .map-hint.show{opacity:1}
   .map-busy{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;z-index:4;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(246,247,249,.86);text-align:center}
   .map-busy.show{display:flex}
   .map-busy b{display:block;font-size:15px}
@@ -258,14 +293,20 @@
     <div class="finder-body">
       <p class="control-label">1. Select platform <span>One platform at a time</span></p>
       <div class="platform-row" id="platforms" role="group" aria-label="Select platform">
-        <button class="platform-btn active" data-platform="blinkit" type="button">Blinkit <span class="status-label">Live</span></button>
-        <button class="platform-btn" data-platform="swiggy" type="button">Swiggy Instamart <span class="status-label">Live</span></button>
-        <button class="platform-btn" data-platform="zepto" type="button" disabled title="Zepto support is coming soon">Zepto <span class="status-label">Coming soon</span></button>
+        <button class="platform-btn active" data-platform="blinkit" type="button"><span class="pname">Blinkit</span> <span class="status-label">Live</span></button>
+        <button class="platform-btn" data-platform="swiggy" type="button"><span class="pname">Swiggy Instamart</span> <span class="status-label">Live</span></button>
+        <button class="platform-btn" data-platform="zepto" type="button" disabled title="Zepto support is coming soon"><span class="pname">Zepto</span> <span class="status-label">Coming soon</span></button>
       </div>
 
       <div class="city-section">
         <p class="control-label">2. Select city <span>Popular cities</span></p>
-        <div class="city-strip" id="cities" role="listbox" aria-label="Select city"></div>
+        <div class="city-wrap">
+          <span class="city-fade l" id="cityFadeL" hidden></span>
+          <span class="city-fade r" id="cityFadeR" hidden></span>
+          <button class="city-nav prev" id="cityPrev" type="button" aria-label="Scroll cities left" hidden>‹</button>
+          <div class="city-strip" id="cities" role="listbox" aria-label="Select city"></div>
+          <button class="city-nav next" id="cityNext" type="button" aria-label="Scroll cities right" hidden>›</button>
+        </div>
       </div>
 
       <div class="search-row">
@@ -302,6 +343,11 @@
           <div class="map-context"><b id="mapArea"></b><span>Store-level inventory visibility</span></div>
           <div class="legend"><span><i class="in"></i>In stock</span><span><i class="out"></i>Out of stock</span><span><i class="unk"></i>Not verified</span></div>
         </div>
+        <div class="map-zoom">
+          <button type="button" id="zoomIn"><b>+</b> Zoom in</button>
+          <button type="button" id="zoomOut"><b>−</b> Zoom out</button>
+        </div>
+        <div class="map-hint" id="mapHint">Use the zoom buttons — scrolling moves the page</div>
         <div class="map-busy" id="mapBusy"><div>
           <b id="busyTitle">Checking stores…</b>
           <p id="busySub"></p>
@@ -427,6 +473,7 @@
       </button>`;
     $$(".city-btn[data-city]").forEach(b => b.onclick = () => pickCity(b.dataset.city));
     $("#moreCities").onclick = () => $("#cityModal").classList.add("open");
+    updateCityNav();
   }
   function renderCityModal(filter = "") {
     const q = filter.trim().toLowerCase();
@@ -438,6 +485,29 @@
       $("#cityModal").classList.remove("open"); pickCity(b.dataset.modalCity);
     });
   }
+  // Show the arrows/fades only when there is actually something off-screen, and keep
+  // them in sync as the strip scrolls or the window resizes.
+  function updateCityNav() {
+    const strip = $("#cities");
+    if (!strip) return;
+    const max = strip.scrollWidth - strip.clientWidth;
+    const x = strip.scrollLeft;
+    const room = max > 4;
+    $("#cityPrev").hidden = !room || x <= 2;
+    $("#cityNext").hidden = !room || x >= max - 2;
+    $("#cityFadeL").hidden = $("#cityPrev").hidden;
+    $("#cityFadeR").hidden = $("#cityNext").hidden;
+  }
+  const nudgeCities = dir => {
+    const strip = $("#cities");
+    strip.scrollBy({ left: dir * Math.max(160, strip.clientWidth * 0.7), behavior: "smooth" });
+    setTimeout(updateCityNav, 380);
+  };
+  $("#cityPrev").addEventListener("click", () => nudgeCities(-1));
+  $("#cityNext").addEventListener("click", () => nudgeCities(1));
+  $("#cities").addEventListener("scroll", updateCityNav, { passive: true });
+  window.addEventListener("resize", updateCityNav);
+
   async function pickCity(c) { state.city = c; renderCityStrip(); await loadAreas(); steps(); }
   $("#citySearch").addEventListener("input", e => renderCityModal(e.target.value));
 
@@ -612,14 +682,14 @@
 
   // ---------- examples ----------
   const EXAMPLES = [
-    { platform: "blinkit", city: "Bengaluru", q: "maggi" },
-    { platform: "swiggy", city: "Bengaluru", q: "amul butter" },
-    { platform: "swiggy", city: "Mumbai", q: "coca cola" },
+    { platform: "swiggy",  city: "Bengaluru", q: "Apple EarPods USB-C", label: "Apple EarPods (USB-C)" },
+    { platform: "blinkit", city: "Bengaluru", q: "Apple AirPods 4",     label: "Apple AirPods 4" },
+    { platform: "blinkit", city: "Bengaluru", q: "Apple AirPods Pro",   label: "Apple AirPods Pro 3" },
   ];
   function renderExamples() {
     const wrap = $("#examples");
     wrap.innerHTML = `<span>Try an example:</span>` + EXAMPLES.map((e, i) =>
-      `<button class="example-btn" data-i="${i}" type="button">${esc(e.q)} · ${esc(e.city)} · ${esc(PLABEL[e.platform])}</button>`).join("");
+      `<button class="example-btn" data-i="${i}" type="button">${esc(e.label || e.q)} · ${esc(e.city)} · ${esc(PLABEL[e.platform])}</button>`).join("");
     $$(".example-btn").forEach(b => b.onclick = async () => {
       const e = EXAMPLES[+b.dataset.i];
       state.platform = e.platform;
@@ -887,9 +957,21 @@
           container: "map", style: "https://tiles.openfreemap.org/styles/positron",
           center: [pts[0].lng, pts[0].lat], zoom: 11, attributionControl: { compact: true },
         });
-        MAP.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
-        // on a phone a one-finger drag should scroll the page, not pan the map
-        if (window.matchMedia("(max-width:900px)").matches) MAP.dragPan.disable();
+        // Scrolling over a map that captures the wheel traps the page -- you scroll to
+        // read on and the map zooms instead. Wheel zoom is off and we give explicit
+        // buttons; on a phone one-finger drag scrolls the page, two fingers pan the map.
+        MAP.scrollZoom.disable();
+        MAP.doubleClickZoom.enable();
+        if (window.matchMedia("(max-width:900px)").matches) {
+          MAP.dragPan.disable();
+          if (MAP.touchZoomRotate) MAP.touchZoomRotate.enable();
+        }
+        const hint = $("#mapHint");
+        MAP.getCanvas().addEventListener("wheel", () => {
+          hint.classList.add("show");
+          clearTimeout(hint._t);
+          hint._t = setTimeout(() => hint.classList.remove("show"), 1600);
+        }, { passive: true });
       }
     } catch {
       MAPFAIL = true;
@@ -930,6 +1012,9 @@
     };
     try { MAP.isStyleLoaded() ? apply() : MAP.once("load", apply); } catch { MAPFAIL = true; }
   }
+
+  $("#zoomIn").addEventListener("click", () => { try { MAP && MAP.zoomIn({ duration: 220 }); } catch {} });
+  $("#zoomOut").addEventListener("click", () => { try { MAP && MAP.zoomOut({ duration: 220 }); } catch {} });
 
   // MapLibre sizes itself to the container when created and does NOT re-measure on
   // its own. On a phone the viewport changes constantly -- rotation, the address bar
