@@ -192,7 +192,7 @@
   .legend .in{background:var(--green)}.legend .out{background:var(--red)}.legend .unk{background:#fff;box-shadow:0 0 0 2px var(--grey)}
   /* Own zoom buttons, labelled, because MapLibre's default control is two unlabelled
      glyphs -- and scroll-to-zoom is off so the page keeps scrolling over the map. */
-  .map-zoom{position:absolute;z-index:3;right:12px;bottom:12px;display:flex;flex-direction:column;
+  .map-zoom{position:absolute;z-index:6;right:12px;bottom:12px;display:flex;flex-direction:column;
     gap:6px;background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:8px;
     padding:6px;box-shadow:0 8px 20px rgba(32,29,47,.12)}
   .map-zoom button{display:flex;align-items:center;gap:6px;height:30px;padding:0 9px;border:0;
@@ -203,7 +203,20 @@
     padding:6px 11px;border-radius:999px;background:rgba(32,29,47,.78);color:#fff;font-size:11px;
     font-weight:700;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .25s}
   .map-hint.show{opacity:1}
-  .map-busy{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;z-index:4;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(246,247,249,.86);text-align:center}
+  /* Mobile: the map is inert until tapped, so a swipe anywhere passes through and
+     scrolls the page. Leaving it always pannable is the classic scroll trap -- the map
+     fills the screen, a downward swipe gets eaten, and the page feels broken. */
+  .map-gate{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;z-index:4;display:none;
+    align-items:flex-end;justify-content:center;padding-bottom:16px;background:transparent;
+    -webkit-tap-highlight-color:transparent}
+  .map-gate.on{display:flex}
+  .map-gate span{padding:8px 14px;border-radius:999px;background:rgba(32,29,47,.82);color:#fff;
+    font-size:12px;font-weight:800;box-shadow:0 6px 18px rgba(32,29,47,.28)}
+  .map-live{position:absolute;z-index:6;left:50%;top:12px;transform:translateX(-50%);
+    padding:6px 12px;border-radius:999px;background:rgba(22,121,75,.94);color:#fff;font-size:11px;
+    font-weight:800;white-space:nowrap;pointer-events:none;display:none}
+  .map-live.on{display:block}
+  .map-busy{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;z-index:8;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(246,247,249,.86);text-align:center}
   .map-busy.show{display:flex}
   .map-busy b{display:block;font-size:15px}
   .map-busy p{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.5;max-width:420px}
@@ -269,10 +282,10 @@
   footer{padding:0 0 40px;color:var(--muted);font-size:12px;line-height:1.6}
 
   @media(max-width:900px){
-    .shell{padding:0 16px}.coverage{display:none}.intro{padding:28px 0 22px}h1{font-size:38px}.result-layout{grid-template-columns:1fr}.summary-panel{display:grid;grid-template-columns:1fr 1.25fr}.insight{grid-column:1/-1}.map-panel{min-height:410px}
+    .shell{padding:0 16px}.coverage{display:none}.intro{padding:28px 0 22px}h1{font-size:38px}.result-layout{grid-template-columns:1fr}.summary-panel{display:grid;grid-template-columns:1fr 1.25fr}.insight{grid-column:1/-1}.map-panel{min-height:min(56vh,440px)}
   }
   @media(max-width:680px){
-    .site-header{height:62px}.brand{font-size:19px;gap:8px}.brand-mark{width:29px;height:29px}.live-badge{display:none}.header-actions .ghost-btn{height:34px;padding:0 10px;font-size:12px}.shell{padding:0 12px}.intro{padding:24px 2px 20px}h1{font-size:32px}.intro p{font-size:15px}.finder-head{align-items:flex-start;padding:16px}.step-line{display:none}.finder-body{padding:14px}.platform-row{gap:5px}.platform-btn{height:auto;min-height:52px;padding:6px 5px;font-size:12px;white-space:normal;line-height:1.15}.platform-btn .pname{white-space:normal;overflow:visible;text-overflow:clip;text-align:center;word-break:normal;overflow-wrap:anywhere}.platform-btn .status-label{display:none}.platform-btn.active:after{width:16px;height:16px;font-size:10px}.city-btn{flex-basis:130px}.search-row{grid-template-columns:1fr}.primary-btn{width:100%}.itemresults{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));max-height:none;gap:8px}.itemname{font-size:11.5px}.sk{height:150px}.result-head{flex-direction:column;gap:10px}.result-head h2{font-size:20px}.map-panel{min-height:320px}.map-topbar{left:8px;right:8px;top:8px;gap:6px}.map-context{padding:7px 9px;max-width:52%}.map-context b{font-size:12px}.legend{flex-direction:column;align-items:flex-start;gap:4px;padding:7px 8px;font-size:10px}.maplibregl-ctrl-bottom-right{display:none}.summary-panel{grid-template-columns:1fr}.metric-grid{grid-column:1/-1}.store-row.header{display:none}.store-row{grid-template-columns:1fr auto;gap:7px;padding:13px 14px}.store-row>*:nth-child(2){display:none}.store-row>*:nth-child(3):before{content:"Units: ";color:var(--muted)}.store-row>*:nth-child(4){text-align:right}.store-row>*:nth-child(5){grid-column:2;text-align:right}.how-grid,.all-cities{grid-template-columns:1fr}.modal-card{padding:18px}
+    .site-header{height:62px}.brand{font-size:19px;gap:8px}.brand-mark{width:29px;height:29px}.live-badge{display:none}.header-actions .ghost-btn{height:34px;padding:0 10px;font-size:12px}.shell{padding:0 12px}.intro{padding:24px 2px 20px}h1{font-size:32px}.intro p{font-size:15px}.finder-head{align-items:flex-start;padding:16px}.step-line{display:none}.finder-body{padding:14px}.platform-row{gap:5px}.platform-btn{height:auto;min-height:52px;padding:6px 5px;font-size:12px;white-space:normal;line-height:1.15}.platform-btn .pname{white-space:normal;overflow:visible;text-overflow:clip;text-align:center;word-break:normal;overflow-wrap:anywhere}.platform-btn .status-label{display:none}.platform-btn.active:after{width:16px;height:16px;font-size:10px}.city-btn{flex-basis:130px}.search-row{grid-template-columns:1fr}.primary-btn{width:100%}.itemresults{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));max-height:none;gap:8px}.itemname{font-size:11.5px}.sk{height:150px}.result-head{flex-direction:column;gap:10px}.result-head h2{font-size:20px}.map-panel{min-height:min(58vh,460px)}.map-topbar{left:8px;right:8px;top:8px;gap:6px}.map-context{padding:7px 9px;max-width:52%}.map-context b{font-size:12px}.legend{flex-direction:column;align-items:flex-start;gap:4px;padding:7px 8px;font-size:10px}.maplibregl-ctrl-bottom-right{display:none}.summary-panel{grid-template-columns:1fr}.metric-grid{grid-column:1/-1}.store-row.header{display:none}.store-row{grid-template-columns:1fr auto;gap:7px;padding:13px 14px}.store-row>*:nth-child(2){display:none}.store-row>*:nth-child(3):before{content:"Units: ";color:var(--muted)}.store-row>*:nth-child(4){text-align:right}.store-row>*:nth-child(5){grid-column:2;text-align:right}.how-grid,.all-cities{grid-template-columns:1fr}.modal-card{padding:18px}
   }
   @media(max-width:390px){.brand{font-size:17px}.platform-btn{font-size:11px;padding:6px 3px}.city-btn{flex-basis:122px}.map-context span{display:none}}
 </style>
@@ -352,6 +365,8 @@
           <div class="map-context"><b id="mapArea"></b><span>Store-level inventory visibility</span></div>
           <div class="legend"><span><i class="in"></i>In stock</span><span><i class="out"></i>Out of stock</span><span><i class="unk"></i>Not verified</span></div>
         </div>
+        <button class="map-gate" id="mapGate" type="button" aria-label="Tap to move the map"><span>Tap the map to move it</span></button>
+        <div class="map-live" id="mapLive">Map active — tap outside to scroll the page</div>
         <div class="map-zoom">
           <button type="button" id="zoomIn"><b>+</b> Zoom in</button>
           <button type="button" id="zoomOut"><b>−</b> Zoom out</button>
@@ -1031,9 +1046,10 @@
         // buttons; on a phone one-finger drag scrolls the page, two fingers pan the map.
         MAP.scrollZoom.disable();
         MAP.doubleClickZoom.enable();
-        if (window.matchMedia("(max-width:900px)").matches) {
-          MAP.dragPan.disable();
-          if (MAP.touchZoomRotate) MAP.touchZoomRotate.enable();
+        if (isTouch()) {
+          MAP.dragPan.disable();                 // inert until the user opts in
+          if (MAP.touchZoomRotate) MAP.touchZoomRotate.enable();   // pinch always works
+          setMapActive(false);
         }
         const hint = $("#mapHint");
         MAP.getCanvas().addEventListener("wheel", () => {
@@ -1074,6 +1090,7 @@
         MAP.on("mouseleave", "inv", () => MAP.getCanvas().style.cursor = "");
       }
       try { MAP.resize(); } catch {}
+      if (isTouch() && !MAP_ACTIVE) setMapActive(false);   // keep the gate showing
       const b = new maplibregl.LngLatBounds();
       gj.features.forEach(f => b.extend(f.geometry.coordinates));
       const pad = window.matchMedia("(max-width:680px)").matches ? 34 : 70;
@@ -1081,6 +1098,31 @@
     };
     try { MAP.isStyleLoaded() ? apply() : MAP.once("load", apply); } catch { MAPFAIL = true; }
   }
+
+  // ---------- tap-to-activate (touch only; a mouse never traps scroll) ----------
+  const isTouch = () => window.matchMedia("(max-width:900px)").matches ||
+                        ("ontouchstart" in window && window.innerWidth <= 1024);
+  let MAP_ACTIVE = false;
+  function setMapActive(on) {
+    MAP_ACTIVE = on;
+    const gate = $("#mapGate"), live = $("#mapLive");
+    if (!gate || !live) return;
+    if (!isTouch()) { gate.classList.remove("on"); live.classList.remove("on"); return; }
+    gate.classList.toggle("on", !on);
+    live.classList.toggle("on", on);
+    try { on ? MAP.dragPan.enable() : MAP.dragPan.disable(); } catch {}
+  }
+  $("#mapGate").addEventListener("click", e => { e.preventDefault(); setMapActive(true); });
+  // tapping anywhere outside the map hands scrolling back to the page
+  document.addEventListener("pointerdown", e => {
+    if (MAP_ACTIVE && !e.target.closest(".map-panel")) setMapActive(false);
+  }, true);
+  // and so does scrolling the map out of view
+  window.addEventListener("scroll", () => {
+    if (!MAP_ACTIVE) return;
+    const r = document.querySelector(".map-panel").getBoundingClientRect();
+    if (r.bottom < 60 || r.top > window.innerHeight - 60) setMapActive(false);
+  }, { passive: true });
 
   $("#zoomIn").addEventListener("click", () => { try { MAP && MAP.zoomIn({ duration: 220 }); } catch {} });
   $("#zoomOut").addEventListener("click", () => { try { MAP && MAP.zoomOut({ duration: 220 }); } catch {} });
