@@ -644,42 +644,37 @@
     wrap.classList.toggle("show", list.length > 0);
     if (!list.length) { wrap.innerHTML = ""; return; }
     wrap.innerHTML = `<span>Recent:</span>` + list.map((x, i) => `
-      <button class="recent-chip" data-i="${i}" type="button" title="${esc(x.name)} · ${esc(PLABEL[x.platform] || x.platform)}">
-        ${x.image ? `<img src="${esc(x.image)}" alt="" loading="lazy">` : `<i class="${esc(x.platform)}"></i>`}
-        ${esc(x.name.length > 26 ? x.name.slice(0, 25) + "…" : x.name)}
+      <button class="recent-chip" data-i="${i}" type="button" title="${esc(x.name)} — saved on ${esc(PLABEL[x.platform] || x.platform)}">
+        ${x.image ? `<img src="${esc(x.image)}" alt="" loading="lazy">` : ""}<i class="${esc(x.platform)}"></i>
+        ${esc(x.name.length > 24 ? x.name.slice(0, 23) + "…" : x.name)}
       </button>`).join("") + `<button class="recent-clear" id="recentClear" type="button">Clear</button>`;
     $$(".recent-chip").forEach(b => b.onclick = () => reopenRecent(getRecent()[+b.dataset.i]));
     $("#recentClear").onclick = () => { try { localStorage.removeItem(RECENT_KEY); } catch {} renderRecent(); };
   }
   async function reopenRecent(x) {
     if (!x) return;
-    // A recent search restores the PRODUCT you looked at -- never your location. You
-    // may well be checking the same SKU in a different area, and having the city and
-    // area yanked back to wherever you last stood is not what "recent" should mean.
-    // The platform is the one exception: product_id is platform-specific, so a stored
-    // Instamart id is meaningless on Blinkit and the platform has to follow the SKU.
-    const keepCity = state.city, keepArea = state.area || $("#area").value;
-    const switching = state.platform !== x.platform;
-
-    if (switching) {
-      state.platform = x.platform;
-      $$(".platform-btn").forEach(b => b.classList.toggle("active", b.dataset.platform === x.platform));
-      renderCityStrip(); renderExamples(); markSearchPlatform();
-      state.city = keepCity;               // stay where the user is
-      await loadAreas();
-      if (keepArea && [...$("#area").options].some(o => o.value === keepArea)) {
-        $("#area").value = keepArea; state.area = keepArea;
-      } else if (keepArea) {
-        formError(`${keepArea} has no ${PLABEL[x.platform]} store — pick another area.`);
-      }
+    // A recent NEVER moves you. Not the city, not the area, and not the platform.
+    // Being on Instamart, tapping a Coca-Cola you once looked at on Blinkit, and being
+    // thrown onto Blinkit in another city is not what "recent" should do -- you wanted
+    // that PRODUCT, here, where you are standing now.
+    if (x.platform === state.platform) {
+      // same platform: the stored id is valid, reuse it directly
+      state.picked = { product_id: x.product_id, name: x.name, brand: x.brand,
+                       pack_size: x.pack, mrp: x.mrp, image_url: x.image };
+      $("#product").value = x.name;
+      $("#itemResults").classList.remove("open"); $("#itemResults").innerHTML = "";
+      formError(""); steps();
+      searchNote(`Selected: ${x.name}. Press “View availability map”.`);
+      return;
     }
-
-    state.picked = { product_id: x.product_id, name: x.name, brand: x.brand,
-                     pack_size: x.pack, mrp: x.mrp, image_url: x.image };
+    // different platform: the id belongs to the other catalogue and is meaningless
+    // here, so look the same product up on the platform you are actually on.
     $("#product").value = x.name;
-    $("#itemResults").classList.remove("open"); $("#itemResults").innerHTML = "";
-    formError(""); steps();
-    searchNote(`Selected: ${x.name}${switching ? ` — switched to ${PLABEL[x.platform]}` : ""}. Press “View availability map”.`);
+    state.picked = null; steps();
+    await search(x.name, { autoPick: true });
+    if (!state.picked) {
+      searchNote(`“${x.name}” was saved on ${PLABEL[x.platform]}; nothing matches it on ${PLABEL[state.platform]}. Switch platform if you want the original.`);
+    }
   }
 
   const searchNote = msg => {
