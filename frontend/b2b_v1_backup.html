@@ -3,17 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>QuickCompare B2B — Live quick-commerce inventory map</title>
-<meta name="description" content="Check live per-store stock, price and MRP for any product across Blinkit and Swiggy Instamart dark stores, city by city." />
-<meta name="theme-color" content="#FF5C39" />
-<!-- every search paints ~24 images hotlinked from the platforms' CDNs; don't hand them this host in a Referer -->
-<meta name="referrer" content="no-referrer" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="QuickCompare B2B — live dark-store inventory" />
-<meta property="og:description" content="Live per-store stock, price and MRP across Blinkit and Swiggy Instamart dark stores, city by city." />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="QuickCompare B2B — live dark-store inventory" />
-<meta name="twitter:description" content="Live per-store stock, price and MRP across Blinkit and Swiggy Instamart dark stores, city by city." />
+<title>QuickCompare B2B — City &amp; store-level price intelligence</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHRM72T6JB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -266,7 +256,7 @@
     display:flex;align-items:center;justify-content:center;margin-top:1px}
 
   /* ---- mobile: the tool was desktop-only; this makes it usable on a phone ---- */
-	  @media (max-width:640px){
+  @media (max-width:640px){
     header{padding:10px 14px}
     .topbar{flex-wrap:wrap;gap:6px 10px}
     h1{font-size:15px}
@@ -281,311 +271,22 @@
     .tiles{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
     .grid{grid-template-columns:1fr}
     .startcard{padding:16px}
-	  }
-
-	  /* ---- V2 visual system: public-facing B2B dashboard, same data plumbing ---- */
-	  html{overflow-x:hidden}
-	  body.v2{
-	    background:
-	      radial-gradient(circle at 78% 10%, rgba(18,183,106,.12), transparent 28%),
-	      linear-gradient(180deg,#fffaf3 0%,#f7f4ee 42%,#f5f7f6 100%);
-	    color:#211c31;
-	    overflow-x:hidden;
-	  }
-	  .v2 header{
-	    position:relative;
-	    padding:22px clamp(16px,3vw,34px) 18px;
-	    background:transparent;
-	    border-bottom:0;
-	  }
-	  .v2-shell{max-width:1280px;margin:0 auto}
-	  .v2-hero{
-	    display:grid;
-	    grid-template-columns:minmax(0,1fr) auto;
-	    gap:18px;
-	    align-items:start;
-	    margin-bottom:16px;
-	  }
-	  .v2 h1{font-size:clamp(24px,3vw,38px);letter-spacing:0;line-height:1.05}
-	  .v2 h1::before{content:"";display:none}
-	  .v2 h1 b{-webkit-text-fill-color:initial;background:none;color:#ff5c39}
-	  .v2 .tag{
-	    background:#fff3df;
-	    border-color:#ffc879;
-	    color:#a75b00;
-	    padding:6px 10px;
-	  }
-	  .v2 .lede{
-	    max-width:780px;
-	    margin:10px 0 0;
-	    color:#5d566c;
-	    font-size:16px;
-	  }
-	  .v2-proof{
-	    display:grid;
-	    grid-template-columns:repeat(3,minmax(92px,1fr));
-	    gap:8px;
-	    min-width:330px;
-	  }
-	  .v2-proof span{
-	    background:rgba(255,255,255,.86);
-	    border:1px solid #ece3d7;
-	    border-radius:8px;
-	    padding:10px 12px;
-	    box-shadow:0 8px 24px rgba(64,52,30,.07);
-	  }
-	  .v2-proof b{display:block;font-size:18px;line-height:1;color:#211c31}
-	  .v2-proof small{display:block;margin-top:5px;color:#7d748a;font-size:11px;font-weight:700;text-transform:uppercase}
-	  .v2-search{
-	    background:rgba(255,255,255,.9);
-	    border:1px solid #eadfce;
-	    border-radius:10px;
-	    box-shadow:0 18px 52px rgba(54,44,27,.12);
-	    padding:14px;
-	  }
-	  .v2 .controls{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:center}
-	  .v2 .segbtns{
-	    border-radius:8px;
-	    padding:3px;
-	    background:#f5efe6;
-	    border-color:#eadfce;
-	  }
-	  .v2 .segbtns button{
-	    border-radius:6px;
-	    min-width:112px;
-	    height:42px;
-	    padding:0 14px;
-	    box-shadow:none;
-	  }
-	  .v2 #platformBtns button.active{transform:none}
-	  .v2 .cityrow{grid-column:1/-1;gap:10px}
-	  .v2 .cityfilter{height:44px;border-radius:8px;width:150px}
-	  .v2 .citytab{
-	    border-radius:8px;
-	    min-height:48px;
-	    padding:6px 12px 6px 6px;
-	  }
-	  .v2 .cmono{border-radius:6px}
-	  .v2 #localityq,.v2 #itemq,.v2 #go{
-	    height:50px;
-	    border-radius:8px;
-	  }
-	  .v2 #localityq{min-width:0!important}
-	  .v2 #itemq{min-width:0!important}
-	  .v2 #go{
-	    background:#ff5638;
-	    box-shadow:0 12px 28px rgba(255,86,56,.26);
-	    padding:0 26px;
-	  }
-	  .v2 #go:disabled{
-	    background:#e9e1d5;
-	    color:#9b907f;
-	    box-shadow:none;
-	  }
-	  .v2 .stepnote{margin:10px 2px 0;color:#746a80;font-size:13px}
-	  .v2 .ver{display:none}
-	  .v2 main{
-	    max-width:1280px;
-	    padding:0 clamp(16px,3vw,34px) 60px;
-	    display:grid;
-	    grid-template-columns:minmax(360px,.78fr) minmax(520px,1.22fr);
-	    grid-template-areas:
-	      "metrics map"
-	      "details details"
-	      "insights insights";
-	    gap:16px;
-	  }
-	  .v2 #tiles{grid-area:metrics;margin:0;align-content:start;grid-template-columns:repeat(2,minmax(0,1fr))}
-	  .v2 .tile{
-	    border-radius:8px;
-	    border-color:#e8dece;
-	    box-shadow:0 10px 28px rgba(54,44,27,.08);
-	    padding:14px;
-	  }
-	  .v2 .tile .v{font-size:30px}
-	  .v2 #mapwrap{
-	    grid-area:map;
-	    height:min(48vw,520px);
-	    min-height:390px;
-	    margin:0;
-	    border-radius:10px;
-	    box-shadow:0 18px 48px rgba(45,45,58,.17);
-	  }
-	  .v2 #maplegend{border-radius:8px}
-	  .v2 #out{grid-area:details}
-	  .v2 #insights{grid-area:insights;margin-top:0}
-	  .v2 .startcard{
-	    border-radius:8px;
-	    box-shadow:0 10px 28px rgba(54,44,27,.08);
-	    min-height:190px;
-	  }
-	  .v2 .startcard h3{font-size:20px}
-	  .v2 .startsteps{grid-template-columns:repeat(4,minmax(0,1fr));max-width:none}
-	  .v2 .startstep{
-	    display:block;
-	    background:#faf7f1;
-	    border:1px solid #eee2d1;
-	    border-radius:8px;
-	    padding:12px;
-	  }
-	  .v2 .stepnum{margin:0 0 10px;border-radius:7px}
-	  .v2 .inhead{
-	    border-radius:8px;
-	    background:#fff;
-	    box-shadow:0 10px 28px rgba(54,44,27,.08);
-	  }
-	  .v2-result{
-	    display:grid;
-	    grid-template-columns:auto minmax(0,1fr) auto;
-	    gap:14px;
-	    align-items:center;
-	  }
-	  .v2-product-img{
-	    width:68px;
-	    height:68px;
-	    border:1px solid #eee2d1;
-	    border-radius:10px;
-	    background:#fff;
-	    object-fit:contain;
-	    padding:7px;
-	  }
-	  .v2-product-ph{
-	    width:68px;
-	    height:68px;
-	    border-radius:10px;
-	    background:#f5efe6;
-	    display:flex;
-	    align-items:center;
-	    justify-content:center;
-	    color:#8e8299;
-	    font-weight:800;
-	  }
-	  .v2-result-title{font-size:18px;font-weight:900;line-height:1.25;margin-bottom:4px}
-	  .v2-result-meta{color:#6f6578;font-size:13px;line-height:1.5}
-	  .v2-result-note{color:#8b8090;font-size:12px;margin-top:4px}
-	  .v2-result-actions{display:flex;gap:8px;align-items:center}
-	  .v2-pill{
-	    display:inline-flex;
-	    align-items:center;
-	    gap:5px;
-	    background:#f7f2eb;
-	    border:1px solid #eadfce;
-	    border-radius:999px;
-	    padding:4px 9px;
-	    margin-right:5px;
-	    color:#51485d;
-	    font-size:12px;
-	    font-weight:700;
-	  }
-	  .v2 #csv{
-	    float:none!important;
-	    background:#fff7ec!important;
-	    color:#b85612!important;
-	    border:1px solid #f2d7b5!important;
-	    border-radius:8px!important;
-	    padding:0 14px!important;
-	    height:38px!important;
-	    box-shadow:none!important;
-	  }
-	  .v2 .tablewrap{border-radius:8px}
-	  .v2 th{position:sticky;top:0;background:#fff;z-index:1}
-	  .v2 .itemresults{
-	    max-width:1280px;
-	    padding-left:0;
-	    padding-right:0;
-	    grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
-	  }
-	  .v2 .itemcard{border-radius:8px}
-	  .v2 .itemthumb{border-radius:0}
-	  @media (max-width:900px){
-	    .v2-hero{grid-template-columns:1fr}
-	    .v2-proof{min-width:0}
-	    .v2 main{
-	      grid-template-columns:1fr;
-	      grid-template-areas:"metrics" "map" "details" "insights";
-	    }
-	    .v2 #mapwrap{height:360px;min-height:320px}
-	    .v2 .startsteps{grid-template-columns:repeat(2,minmax(0,1fr))}
-	  }
-	  @media (max-width:640px){
-	    .v2 header{padding:14px 12px}
-	    .v2 h1{font-size:22px}
-	    .v2 .lede{font-size:13px;line-height:1.45}
-	    .v2-proof{grid-template-columns:repeat(3,1fr)}
-	    .v2-proof span{padding:8px}
-	    .v2-proof b{font-size:15px}
-	    .v2-proof small{font-size:9px}
-	    .v2-search{padding:10px;border-radius:8px}
-	    .v2 .controls{grid-template-columns:1fr}
-	    .v2 #platformBtns{width:100%}
-	    .v2 .segbtns button{min-width:0;padding:0 8px;font-size:13px}
-	    .v2 .cityrow{display:grid;grid-template-columns:1fr}
-	    .v2 .cityfilter{width:100%}
-	    .v2 .citytabs{padding-bottom:8px;min-width:0;max-width:100%}
-	    .v2 main{padding:0 12px 44px;gap:12px}
-	    .v2 #tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
-	    .v2 .tile{padding:11px}
-	    .v2 .tile .v{font-size:22px}
-	    .v2 #mapwrap{height:300px;min-height:300px}
-	    .v2 .startsteps{grid-template-columns:1fr}
-	    .v2-result{grid-template-columns:1fr}
-	    .v2-product-img,.v2-product-ph{width:56px;height:56px}
-	    .v2 .inhead button#csv{float:none!important;width:100%;margin-top:10px}
-
-	    /* --- M1: results were collapsing to ONE column (170px track beat the phone
-	       rule). 104px gives 3 columns at 320-390 and 4 at 430. Dropping max-height is
-	       safe because v2's header is not sticky, and it removes a nested scroll trap. */
-	    .v2 .itemresults{
-	      grid-template-columns:repeat(auto-fill,minmax(104px,1fr));
-	      max-height:none;padding-left:0;padding-right:0;
-	    }
-	    .v2 .itemresults .sk{height:150px}
-	    .v2 .itemname{-webkit-line-clamp:2;font-size:11.5px}
-	    .v2 .itemid{display:none}
-
-	    /* --- M2: the area typeahead only resolved on a byte-exact match INCLUDING the
-	       "(8 stores)" suffix, and the real <select> was hidden at 1px/opacity 0 -- so on
-	       a phone there was no reliable way through step 2 at all. Show the native picker
-	       instead: an iOS wheel / Android dropdown cannot dead-end. */
-	    .v2 #localityq{display:none}
-	    .v2 #locality{
-	      position:static;width:100%;height:50px;opacity:1;pointer-events:auto;overflow:visible;
-	      border:1.5px solid var(--line);border-radius:8px;padding:0 13px;background:var(--card);
-	      font-size:16px;color:var(--txt);
-	    }
-
-	    /* --- M4: iOS Safari zooms the whole page in when an input under 16px is focused,
-	       and never zooms back out. 16px is the threshold, not a preference. */
-	    .v2 input,.v2 select,.v2 textarea{font-size:16px}
-
-	    /* --- M8: the bar-graph labels were painting at 5-7px on a phone. */
-	    .v2 .bargraph text,.v2 .bar-label{font-size:11px}
-	  }
-	</style>
-	</head>
-	<body class="v2">
+  }
+</style>
+</head>
+<body>
 <!-- login removed — open for all, no email/Google gate -->
 
-	<header>
-	<div class="v2-shell">
-	  <div class="v2-hero">
-	    <div>
-	      <div class="topbar">
-	        <h1>Quick<b>Compare</b> B2B <span class="tag">live store stock</span></h1>
-	        <div class="right">
-	          <span class="ver" id="buildTag" title="Build version — if this changes after you reload, you're on fresh code">build 2026-08-26·10</span>
-	          <span class="chip" id="userChip" style="display:none"></span>
-	        </div>
-	      </div>
-	      <p class="lede">A quick glance at SKU availability, price and inventory depth across Blinkit and Swiggy Instamart dark stores.</p>
-	    </div>
-	    <div class="v2-proof" aria-label="Who uses this">
-	      <span><b id="proofStores">—</b><small>dark stores tracked</small></span>
-	      <span><b id="proofCities">—</b><small>cities covered</small></span>
-	      <span><b>Live</b><small>checked on request</small></span>
-	    </div>
-	  </div>
-	  <div class="v2-search">
+<header>
+  <div class="topbar">
+    <h1>Quick<b>Compare</b> B2B <span class="tag">live store stock</span></h1>
+    <div class="right">
+      <span class="ver" id="buildTag" title="Build version — if this changes after you reload, you're on fresh code">build 2026-08-26·10</span>
+      <span class="chip" id="userChip" style="display:none"></span>
+    </div>
+  </div>
+  <p class="lede">See live <b>availability, MRP &amp; discount</b> for any product — <b>store by store</b>, across a city.
+     Pick a platform, your city &amp; area, then search a product.</p>
   <!-- Mandatory cascade: platform -> city -> area -> search an item -> map/inventory.
        Each step stays disabled until the one before it has a real value. Platform
        is a one-click 3-way toggle (no search needed); city is a plain <select>
@@ -595,7 +296,7 @@
   <div class="controls">
     <div class="segbtns" id="platformBtns">
       <button type="button" data-v="blinkit">Blinkit</button>
-      <button type="button" data-v="swiggy">Swiggy Instamart</button>
+      <button type="button" data-v="swiggy">Instamart</button>
       <button type="button" class="soon" data-v="zepto" title="Zepto — coming soon">Zepto <span class="soontag">soon</span></button>
     </div>
     <!-- The 3 options here MUST exist for select.value="blinkit" to take at all —
@@ -626,14 +327,12 @@
            aria-label="Search a product" autocomplete="off"
            style="min-width:280px" disabled />
 
-    <button id="go" disabled>Check inventory</button>
+    <button id="go" disabled>Check availability</button>
   </div>
-	  <div class="stepnote" id="stepnote"></div>
-	  <!-- Search results: a compact image grid, same visual language as search.html. -->
-	  <div id="itemResults" class="itemresults" style="display:none"></div>
-	  </div>
-	</div>
-	</header>
+  <div class="stepnote" id="stepnote"></div>
+  <!-- Search results: a compact image grid, same visual language as search.html. -->
+  <div id="itemResults" class="itemresults" style="display:none"></div>
+</header>
 
 <main>
   <div id="tiles" class="tiles"></div>
@@ -641,19 +340,18 @@
     <div id="map"></div>
     <div id="maplegend">
       <div style="font-weight:700;margin-bottom:3px">Stores</div>
-      <div class="lg"><span class="dot" style="background:var(--blinkit)"></span><span id="lg-blinkit">Blinkit</span></div>
-      <div class="lg"><span class="dot" style="background:var(--swiggy)"></span><span id="lg-swiggy">Swiggy Instamart</span></div>
+      <div class="lg"><span class="dot" style="background:var(--blinkit)"></span><span id="lg-blinkit">Blinkit</span></div>      <div class="lg"><span class="dot" style="background:var(--swiggy)"></span><span id="lg-swiggy">Instamart</span></div>
     </div>
   </div>
   <div id="out">
     <div class="startcard">
-      <h3>Start with a SKU, end with a store-level answer</h3>
-      <p class="lede">Built for category managers, D2C founders, ops teams and investors who need a quick read on quick-commerce inventory.</p>
+      <h3>See what's really on the shelf — store by store</h3>
+      <p class="lede">Live inventory, MRP, discount depth and stock value across Blinkit &amp; Instamart stores. Four quick steps:</p>
       <div class="startsteps">
-        <div class="startstep"><span class="stepnum">1</span><div><b>Choose a platform</b> — Blinkit or Swiggy Instamart.</div></div>
+        <div class="startstep"><span class="stepnum">1</span><div><b>Choose a platform</b> — Blinkit or Instamart.</div></div>
         <div class="startstep"><span class="stepnum">2</span><div><b>Pick your city and area</b> — we only check stores in that neighbourhood.</div></div>
         <div class="startstep"><span class="stepnum">3</span><div><b>Search the product</b> you want to check and tap a result — no need to know the brand.</div></div>
-        <div class="startstep"><span class="stepnum">4</span><div><b>Check inventory</b> to see stock, price and availability by store.</div></div>
+        <div class="startstep"><span class="stepnum">4</span><div><b>Hit “Map inventory”</b> to see every store's live stock, price and discount on the map, graph and table.</div></div>
       </div>
     </div>
   </div>
@@ -673,21 +371,7 @@
   }
   const _gate = $("#gate"); if (_gate) _gate.remove();          // no email/Google gate
   const _uc = $("#userChip"); if (_uc) _uc.style.display = "none";
-  loadCities();
-
-  // Real, verifiable coverage numbers -- a true figure people can check beats an
-  // invented visitor count, and these are already exposed by /api/health.
-  (async () => {
-    try {
-      const r = await api("/api/health");
-      if (!r.ok) return;
-      const h = await r.json();
-      const stores = Object.values(h.stores || {}).reduce((a, b) => a + (b || 0), 0);
-      const st = $("#proofStores"), ct = $("#proofCities");
-      if (st && stores) st.textContent = stores.toLocaleString("en-IN");
-      if (ct && h.cities) ct.textContent = h.cities;
-    } catch {}
-  })();                                                 // straight to the app
+  loadCities();                                                 // straight to the app
 
   const esc = s => String(s == null ? "" : s)
     .replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -741,7 +425,7 @@
   // it's restored first (by hand, not via syncSelect — we need to await the
   // locality fetch it triggers before we can find the saved area's <option>).
   async function restoreLastSelection(last) {
-	    if (!last.platform || last.platform === "zepto") { updateStepNote(); return; }
+    if (!last.platform) { updateStepNote(); return; }
     const btn = [...$("#platformBtns").children].find(b => b.dataset.v === last.platform);
     if (!btn) { updateStepNote(); return; }
     [...$("#platformBtns").children].forEach(b => b.classList.toggle("active", b === btn));
@@ -769,29 +453,10 @@
   // equal to one <option>'s visible label — never on partial/free-typed text,
   // so "mandatory" still means a real listed choice, just reached by typing.
   function wireTypeahead(inputEl, selectEl, onResolved) {
-    // Matching used to be byte-exact on the FULL option label including its
-    // " (8 stores)" suffix, so typing a real area name -- especially a merged one like
-    // "BTM Layout-HSR Layout-Bannerghatta" -- resolved nothing and the visitor was
-    // stuck with no error and a dead product box. Fall back to a normalised compare.
-    const norm = v => String(v || "").trim().toLowerCase()
-      .replace(/\s*\(\d+[^)]*\)\s*$/, "").replace(/\s+/g, " ");
-    const resolve = () => {
+    inputEl.addEventListener("input", () => {
       const label = inputEl.value;
-      if (!label.trim()) return false;
-      const opts = [...selectEl.options].filter(o => o.value);
-      const opt = opts.find(o => o.textContent === label)
-               || opts.find(o => norm(o.textContent) === norm(label))
-               || opts.find(o => norm(o.value) === norm(label));
-      if (opt) { syncSelect(selectEl, opt.value); if (onResolved) onResolved(); return true; }
-      return false;
-    };
-    inputEl.addEventListener("input", resolve);
-    // On blur, either resolve what they typed or say plainly that it did not match --
-    // silence here is what made this step feel broken.
-    inputEl.addEventListener("blur", () => {
-      if (!inputEl.value.trim() || resolve()) return;
-      const note = $("#stepnote");
-      if (note) note.textContent = `"${inputEl.value.trim()}" isn't one of the listed areas — pick one from the list.`;
+      const opt = [...selectEl.options].find(o => o.textContent === label);
+      if (opt) { syncSelect(selectEl, opt.value); if (onResolved) onResolved(); }
     });
   }
 
@@ -818,10 +483,10 @@
   function updateStepNote() {
     const plat = $("#platform").value, loc = $("#locality").value;
     const note = $("#stepnote");
-	    if (!plat) note.textContent = "Pick one platform — Blinkit or Swiggy Instamart — to continue.";
+    if (!plat) note.textContent = "Pick one platform — Blinkit or Instamart — to continue.";
     else if (!loc) note.textContent = "Pick a city and area to continue.";
     else note.textContent = PICKED_ITEM
-	      ? `Selected: ${PICKED_ITEM.name}. Check inventory, or pick a different result.`
+      ? `Selected: ${PICKED_ITEM.name} (${PICKED_ITEM.id_label} ${PICKED_ITEM.product_id || "—"}). Click Map inventory, or pick a different result.`
       : "Search for a product — no need to know the brand.";
     renderCityTabs();   // keep the city tabs in sync with the cascade state
   }
@@ -886,21 +551,11 @@
       if (r.status === 401) { $("#stepnote").textContent = "⚠ Session expired — log in again (refresh the page)."; return; }
       if (!r.ok) { $("#stepnote").textContent = "⚠ Couldn't load areas — refresh to try again."; return; }
       const d = await r.json();
-      // Only offer areas that actually have stores ON THE SELECTED PLATFORM. The list is
-      // pooled across platforms, so a combined count advertised areas with 0 stores for
-      // the current one: 159 areas have no Instamart store and 86 have no Blinkit, and
-      // picking one ran a real check that could only ever come back empty.
-      const plat = $("#platform").value;
-      const cnt = l => plat ? (l.stores[plat] || 0)
-                            : ((l.stores.blinkit || 0) + (l.stores.swiggy || 0));
-      const usable = d.localities.filter(l => cnt(l) > 0);
-      const opts = usable.map(l =>
-        ({ label: `${l.name} (${cnt(l)} store${cnt(l) === 1 ? "" : "s"})`, value: l.name }));
+      const opts = d.localities.map(l =>
+        ({ label: `${l.name} (${(l.stores.blinkit || 0) + (l.stores.swiggy || 0)} stores)`, value: l.name }));
       $("#locality").innerHTML += opts.map(o => `<option value="${esc(o.value)}">${esc(o.label)}</option>`).join("");
       $("#localityList").innerHTML = opts.map(o => `<option value="${esc(o.label)}">`).join("");
-      if (!usable.length) $("#stepnote").textContent = d.localities.length
-        ? `No ${IPLABEL[$("#platform").value] || "store"} coverage in ${city} yet — try another city or platform.`
-        : `No areas mapped for ${city} yet — pick another city.`;
+      if (!d.localities.length) $("#stepnote").textContent = `No areas mapped for ${city} yet — pick another city.`;
     } catch { $("#stepnote").textContent = "⚠ Couldn't reach the API — refresh to try again."; }
   }
 
@@ -926,21 +581,10 @@
     updateStepNote();
   });
 
-  // The real <select> is the visible control on phones (see the 640px block), so it
-  // needs its own handler -- the typeahead's "input" event never fires for it.
-  $("#locality").addEventListener("change", () => {
-    resetFrom(3);
-    const on = !!$("#locality").value;
-    $("#itemq").disabled = !on;
-    $("#localityq").value = on ? (($("#locality").selectedOptions[0] || {}).textContent || "") : "";
-    if (on) saveLast({ city: $("#city").value, locality: $("#locality").value });
-    updateStepNote();
-  });
-
   $("#platformBtns").addEventListener("click", e => {
     const btn = e.target.closest("button"); if (!btn || btn.disabled) return;
     if (btn.classList.contains("soon")) {          // Zepto — masked, coming soon
-      $("#stepnote").textContent = "Zepto is coming soon — for now, compare on Blinkit and Swiggy Instamart.";
+      $("#stepnote").textContent = "🚧 Zepto is coming soon — for now, compare on Blinkit & Instamart.";
       return;
     }
     syncSelect($("#platform"), btn.dataset.v);
@@ -954,17 +598,6 @@
     if ($("#locality").options.length <= 1) {
       onCityChange(false);              // first platform pick: load the city's areas
     } else {
-      // The area list is filtered to the CURRENT platform, so it must be rebuilt on a
-      // platform switch -- otherwise an area with no store on the new app stays selected.
-      const keep = $("#locality").value;
-      loadLocalities($("#city").value).then(() => {
-        const still = [...$("#locality").options].some(o => o.value === keep);
-        if (keep && still) { syncSelect($("#locality"), keep); }
-        else if (keep) {
-          resetFrom(3);
-          $("#stepnote").textContent = `That area has no ${IPLABEL[$("#platform").value] || "store"} coverage — pick another area.`;
-        }
-      });
       // Platform is a LENS, not a gate: KEEP city + area, and re-run the current
       // search on the new app. The picked SKU's id is platform-specific, so clear
       // the pick and let the user re-pick from the fresh results.
@@ -982,7 +615,7 @@
   // Debounced, sequence-guarded catalog search — same pattern as search.html,
   // scoped to whichever platform is already chosen so results are never a
   // dead end (every hit is guaranteed probeable in THIS platform).
-  const IPLABEL = { blinkit: "Blinkit", zepto: "Zepto", swiggy: "Swiggy Instamart" };
+  const IPLABEL = { blinkit: "Blinkit", zepto: "Zepto", swiggy: "Instamart" };
   const IPCLASS = { blinkit: "ib", zepto: "iz", swiggy: "is" };
   // All platforms probe by product_id -- this deployable app's swiggy_probe.py
   // resolves parent_id/spin_id internally from catalog_lite.db by product_id
@@ -1045,7 +678,7 @@
     }
     $("#itemq").disabled = false; $("#itemq").value = x.name;
     $("#itemResults").style.display = "none"; $("#itemResults").innerHTML = "";
-	    PICKED_ITEM = { name: x.name, product_id: x.product_id, id_label: x.id_label, pack: x.pack, mrp: x.mrp, image: x.image || "" };
+    PICKED_ITEM = { name: x.name, product_id: x.product_id, id_label: x.id_label, pack: x.pack, mrp: x.mrp };
     $("#go").disabled = !$("#locality").value;
     updateStepNote();
   }
@@ -1125,7 +758,7 @@
         // product_id - same precedence enriched.skus() uses elsewhere.
         product_id: probeIdOf(it),
         id_label: IDLABEL[it.platform] || "ID",
-	        pack: it.pack_size || "", mrp: it.mrp || "", image: it.image_url || "",
+        pack: it.pack_size || "", mrp: it.mrp || "",
       };
       $("#itemq").value = it.name;
       $("#go").disabled = false;
@@ -1227,44 +860,39 @@
       initMap(d.center); paintStores(d);
       const c = d.counts || {};
       $("#lg-blinkit").textContent = `Blinkit · ${c.blinkit || 0}`;
-      $("#lg-swiggy").textContent = `Swiggy Instamart · ${c.swiggy || 0}`;
+      $("#lg-swiggy").textContent = `Instamart · ${c.swiggy || 0}`;
     } catch {}
   }
 
   // ---- per-store inventory: fan-out, map, graph, table ---------------------
   const STATUS_COLOR = { in: "#12B76A", oos: "#E24B4A", na: "#8E8299" };  // == --in / --oos / --na
   const PLATFORM_COLOR = { blinkit: "#f8cb46", zepto: "#7b2ff7", swiggy: "#ff6a2b" };
-  const PLABEL = { blinkit: "Blinkit", zepto: "Zepto", swiggy: "Swiggy Instamart" };
+  const PLABEL = { blinkit: "Blinkit", zepto: "Zepto", swiggy: "Instamart" };
   const PTAG = { blinkit: "BLK", zepto: "ZEP", swiggy: "SWG" };
   // the honest reason behind status/na — see b2b.py's _inventory_for docstring.
   // Only zero_stock/not_carried are ever a REAL confirmed zero; everything else
   // (unmatched/blocked/failed/not_scraped) is "we don't actually know".
-	  const DETAIL_LABEL = {
-	    matched: "live checked", zero_stock: "confirmed out of stock", not_carried: "not carried",
-	    unmatched: "could not verify", blocked: "blocked", failed: "request failed",
-	    not_scraped: "not checked", throttled: "rate-limited — retry",
-	  };
+  const DETAIL_LABEL = {
+    matched: "matched", zero_stock: "zero stock (confirmed)", not_carried: "not carried (confirmed)",
+    unmatched: "no confident match — unknown", blocked: "blocked", failed: "request failed",
+    not_scraped: "timed out / not scraped", throttled: "throttled (rate-limited — retry)",
+  };
 
   function oosBreakdown(dc) {
     dc = dc || {};
     const confirmed = (dc.zero_stock || 0) + (dc.not_carried || 0);
-    // throttled/failed/blocked/not_scraped are NOT evidence of absence -- claiming
-    // "confirmed not available" off the back of a rate-limited probe is a fabricated
-    // certainty, the same bug the backend had.
-    const unknown = (dc.unmatched || 0) + (dc.throttled || 0) + (dc.failed || 0)
-                  + (dc.blocked || 0) + (dc.not_scraped || 0);
-    if (!confirmed && unknown) return `couldn't verify ${unknown} store${unknown === 1 ? "" : "s"} — retry shortly`;
+    const unknown = dc.unmatched || 0;
     return unknown
-      ? `${confirmed} confirmed out, ${unknown} could not verify`
-      : "confirmed not available";
+      ? `${confirmed} confirmed zero, ${unknown} unmatched (unknown)`
+      : "reachable, confirmed not in stock";
   }
 
   function naBreakdown(dc) {
     dc = dc || {};
     const parts = ["blocked", "throttled", "failed", "not_scraped"]
       .filter(k => dc[k]).map(k => `${dc[k]} ${DETAIL_LABEL[k]}`);
-	    return parts.length ? parts.join(", ") : "could not verify";
-	  }
+    return parts.length ? parts.join(", ") : "unreachable";
+  }
 
   function paintInventory(d) {
     if (!MAP) initMap({ lat: 12.9716, lng: 77.5946 });
@@ -1289,7 +917,7 @@
         // provenance for cross-verification: did the platform serve the pinned store?
         prov: r.store_match === false ? ("⚠ served by " + (r.served_store_id || "?"))
           : (r.served_store_id ? "✓ served this store" : ""),
-	        label: r.status === "na" ? "Could not verify — " + (DETAIL_LABEL[r.detail] || "unknown")
+        label: r.status === "na" ? "NA — " + (DETAIL_LABEL[r.detail] || "unreachable")
           : (typeof r.qty === "number") ? r.qty + " units" + (r.status === "oos" ? ` (${DETAIL_LABEL[r.detail] || "OOS"})` : "")
           : (r.status === "in" ? "in stock" : (DETAIL_LABEL[r.detail] || "out of stock")),
         price: r.price != null ? ("₹" + r.price) : "",
@@ -1329,11 +957,11 @@
          <div class="lg"><span class="dot" style="background:${PLATFORM_COLOR.blinkit}"></span>Blinkit</div>
          <div class="lg"><span class="dot" style="background:${PLATFORM_COLOR.zepto}"></span>Zepto</div>
          <div class="lg"><span class="dot" style="background:${PLATFORM_COLOR.swiggy}"></span>Instamart</div>
-	         <div class="lg" style="color:var(--mut)">red ring = not available · grey ring = could not verify</div>`
-	      : `<div style="font-weight:700;margin-bottom:3px">Inventory map</div>
-	         <div class="lg"><span class="dot" style="background:${STATUS_COLOR.in}"></span>Available</div>
-	         <div class="lg"><span class="dot" style="background:${STATUS_COLOR.oos}"></span>Not available</div>
-	         <div class="lg"><span class="dot" style="background:#fff;border:2px solid ${STATUS_COLOR.na}"></span>Could not verify${naCount ? " (" + naCount + ")" : ""}</div>`;
+         <div class="lg" style="color:var(--mut)">red ring = OOS · hollow grey = NA</div>`
+      : `<div style="font-weight:700;margin-bottom:3px">Inventory (qty ∝ dot size)</div>
+         <div class="lg"><span class="dot" style="background:${STATUS_COLOR.in}"></span>In stock</div>
+         <div class="lg"><span class="dot" style="background:${STATUS_COLOR.oos}"></span>Out of stock</div>
+         <div class="lg"><span class="dot" style="background:#fff;border:2px solid ${STATUS_COLOR.na}"></span>NA — ${naBreakdown(d.summary && d.summary.detail_counts)}${naCount ? " (" + naCount + ")" : ""}</div>`;
   }
 
   function inventoryGraph(rows, allMode) {
@@ -1345,16 +973,16 @@
       const label = `${tag}${(r.name || "store").slice(0, 22)}${r.locality ? " · " + r.locality : ""}`;
       const col = STATUS_COLOR[r.status];
       let barW, txt;
-	      if (r.status === "na") { barW = 6; txt = "Could not verify"; }
-	      else if (typeof r.qty === "number") { barW = Math.max(3, Math.round(r.qty / maxQty * TRACK)); txt = r.qty + (r.status === "oos" ? " not available" : " units"); }
-	      else { barW = r.status === "in" ? 40 : 6; txt = r.status === "in" ? "Available" : "Not available"; }
+      if (r.status === "na") { barW = 6; txt = "NA"; }
+      else if (typeof r.qty === "number") { barW = Math.max(3, Math.round(r.qty / maxQty * TRACK)); txt = r.qty + (r.status === "oos" ? " (OOS)" : " u"); }
+      else { barW = r.status === "in" ? 40 : 6; txt = r.status === "in" ? "in stock" : "OOS"; }
       return `<g transform="translate(0,${i * H})">
         <text x="0" y="15" fill="#8E8299" font-size="11">${esc(label)}</text>
         <rect x="${LBL}" y="4" width="${barW}" height="14" rx="3" fill="${col}"></rect>
         <text x="${LBL + barW + 6}" y="15" fill="#2B2440" font-size="11" font-weight="600">${txt}</text></g>`;
     }).join("");
     const height = rows.length * H + 10;
-	    return `<h3 style="margin:16px 0 8px;font-size:14px">Store inventory snapshot</h3>
+    return `<h3 style="margin:16px 0 8px;font-size:14px">Inventory by store</h3>
       <div style="overflow:auto;max-height:440px;border:1px solid var(--line);border-radius:12px;padding:10px;background:var(--card)">
       <svg width="${W}" height="${height}" viewBox="0 0 ${W} ${height}" style="max-width:100%">${bars}</svg></div>`;
   }
@@ -1362,9 +990,9 @@
   function inventoryTable(rows, allMode) {
     const body = rows.map(r => {
       const why = esc(DETAIL_LABEL[r.detail] || r.detail || "");
-	      const badge = r.status === "in" ? `<span style="color:var(--in);font-weight:700" title="${why}">Available</span>`
-	        : r.status === "oos" ? `<span style="color:var(--oos);font-weight:700" title="${why}">Not available</span>`
-	        : `<span class="na" title="${why}">Could not verify</span>`;
+      const badge = r.status === "in" ? `<span style="color:var(--in);font-weight:700" title="${why}">● in</span>`
+        : r.status === "oos" ? `<span style="color:var(--oos);font-weight:700" title="${why}">● OOS</span>`
+        : `<span class="na" title="${why}">◌ NA</span>`;
       const platCell = allMode
         ? `<td><span style="color:${PLATFORM_COLOR[r.platform] || "#888"}">●</span> ${PLABEL[r.platform] || ""}</td>` : "";
       const idCell = `<td>${copyChip(r.store_id)}${r.store_match === false ? ` <span class="na" title="Served by ${esc(r.served_store_id || "?")}">⚠</span>` : ""}</td>`;
@@ -1375,8 +1003,8 @@
         <td class="num">${r.discount_pct != null ? `<span class="disc">${r.discount_pct}%</span>` : '<span class="na">—</span>'}</td>
         <td class="num">${badge}</td></tr>`;
     }).join("");
-	    return `<h3 style="margin:16px 0 8px;font-size:14px">Store-level details</h3>
-	      <div class="tablewrap"><table><thead><tr>${allMode ? "<th>Platform</th>" : ""}<th>Store ID</th><th>Store</th><th>Area</th><th class="num">Units</th><th class="num">MRP</th><th class="num">Selling</th><th class="num">Discount</th><th class="num">Availability</th></tr></thead>
+    return `<h3 style="margin:16px 0 8px;font-size:14px">Store-by-store (for cross-verification)</h3>
+      <div class="tablewrap"><table><thead><tr>${allMode ? "<th>Platform</th>" : ""}<th>Store ID</th><th>Store</th><th>Locality</th><th class="num">Qty</th><th class="num">MRP</th><th class="num">Selling</th><th class="num">Disc</th><th class="num">Status</th></tr></thead>
       <tbody>${body}</tbody></table></div>`;
   }
 
@@ -1385,16 +1013,7 @@
   // nothing" unless we call it out explicitly.
   function noStoreNotice(d) {
     if (d.total_stores) return false;
-    // An error body (429/500) has no platform/city either, and used to render the
-    // literal words "undefined has no stores mapped in undefined".
-    if (!d.platform || !d.city) {
-      $("#tiles").innerHTML = ""; $("#insights").innerHTML = "";
-      $("#out").innerHTML = `<p class="hint">⚠ Couldn't complete that check. Give it a moment and try again.</p>`;
-      return true;
-    }
-    // Only ever suggest a platform that actually works -- Zepto is disabled, so
-    // recommending it sent people to a button that does nothing.
-    const others = ["blinkit", "swiggy"]
+    const others = ["blinkit", "zepto", "swiggy"]
       .filter(p => p !== d.platform).map(p => PLABEL[p] || p).join(" or ");
     $("#tiles").innerHTML = "";
     $("#insights").innerHTML = "";
@@ -1424,39 +1043,28 @@
     a.click(); URL.revokeObjectURL(a.href);
   }
 
-	  function renderInventory(d, name, opt) {
-	    if (noStoreNotice(d)) return;
-	    const s = d.summary || {};
-	    const allMode = d.platform === "all";
-	    const platLabel = allMode ? "all platforms" : (PLABEL[d.platform] || d.platform);
-	    const mrp = opt && opt.dataset.mrp ? opt.dataset.mrp : null;
-	    const pack = opt && opt.dataset.pack ? opt.dataset.pack : "";
-	    const image = opt && opt.dataset.image ? opt.dataset.image : "";
-	    const checked = d.probed || 0;
-	    const verified = (s.in_stock || 0) + (s.out_of_stock || 0);
-	    const couldNotVerify = s.na || 0;
-	    const totalUnits = s.total_units != null
-	      ? s.total_units
-	      : (d.stores || []).reduce((sum, r) => sum + (r.status === "in" && typeof r.qty === "number" ? r.qty : 0), 0);
-	    const priceLabel = s.avg_price != null ? "₹" + s.avg_price : "—";
-	    const valueLabel = s.value_at_selling != null
-	      ? "₹" + s.value_at_selling.toLocaleString("en-IN")
-	      : (s.avg_price != null && totalUnits ? "₹" + (s.avg_price * totalUnits).toLocaleString("en-IN") : "—");
-	    $("#tiles").innerHTML = `
-	      <div class="tile"><div class="k">Stores checked</div><div class="v">${checked}</div>
-	        <div class="s">of ${d.total_stores} across ${platLabel} in ${d.city}${d.capped ? " · capped" : ""}</div></div>
-	      <div class="tile"><div class="k">Available stores</div><div class="v" style="color:var(--in);font-variant-numeric:tabular-nums">${s.in_stock || 0}</div>
-	        <div class="s">${s.availability_pct != null ? s.availability_pct + "% of verified stores" : verified + " verified"}</div></div>
-	      <div class="tile"><div class="k">Not available</div><div class="v" style="color:var(--oos);font-variant-numeric:tabular-nums">${s.out_of_stock || 0}</div>
-	        <div class="s">${oosBreakdown(s.detail_counts)}</div></div>
-	      <div class="tile"><div class="k">Units found</div><div class="v">${totalUnits || 0}</div>
-	        <div class="s">${couldNotVerify ? couldNotVerify + " stores could not verify" : "all checked stores verified"}</div></div>
-	      <div class="tile"><div class="k">Price</div>
-	        <div class="v">${priceLabel}</div>
-	        <div class="s">MRP ${s.mrp != null ? "₹" + s.mrp : (mrp ? "₹" + mrp : "—")}${s.avg_discount_pct != null ? " · avg disc " + s.avg_discount_pct + "%" : ""}</div></div>
-	      <div class="tile"><div class="k">Stock value</div>
-	        <div class="v">${valueLabel}</div>
-	        <div class="s">estimated at selling price</div></div>`;
+  function renderInventory(d, name, opt) {
+    if (noStoreNotice(d)) return;
+    const s = d.summary || {};
+    const allMode = d.platform === "all";
+    const platLabel = allMode ? "all platforms" : (PLABEL[d.platform] || d.platform);
+    const mrp = opt && opt.dataset.mrp ? opt.dataset.mrp : null;
+    const pack = opt && opt.dataset.pack ? opt.dataset.pack : "";
+    $("#tiles").innerHTML = `
+      <div class="tile"><div class="k">Stores probed</div><div class="v">${d.probed}</div>
+        <div class="s">of ${d.total_stores} across ${platLabel} in ${d.city}${d.capped ? " · capped" : ""}</div></div>
+      <div class="tile"><div class="k">In stock</div><div class="v" style="color:var(--in);font-variant-numeric:tabular-nums">${s.in_stock || 0}</div>
+        <div class="s">${s.availability_pct != null ? s.availability_pct + "% of reachable" : "—"}</div></div>
+      <div class="tile"><div class="k">Out of stock</div><div class="v" style="color:var(--oos);font-variant-numeric:tabular-nums">${s.out_of_stock || 0}</div>
+        <div class="s">${oosBreakdown(s.detail_counts)}</div></div>
+      <div class="tile"><div class="k">Total units on hand</div><div class="v">${s.total_units != null ? s.total_units : '<span class="na">NA</span>'}</div>
+        <div class="s">${s.na ? s.na + " stores NA — " + naBreakdown(s.detail_counts) : "all reachable"}</div></div>
+      <div class="tile"><div class="k">MRP / Selling</div>
+        <div class="v">${s.avg_price != null ? "₹" + s.avg_price : '<span class="na">NA</span>'}</div>
+        <div class="s">MRP ${s.mrp != null ? "₹" + s.mrp : (mrp ? "₹" + mrp : "—")}${s.avg_discount_pct != null ? " · avg disc " + s.avg_discount_pct + "%" : ""}</div></div>
+      <div class="tile"><div class="k">Inventory value</div>
+        <div class="v">${s.value_at_selling != null ? "₹" + s.value_at_selling.toLocaleString("en-IN") : '<span class="na">NA</span>'}</div>
+        <div class="s">at selling price${s.value_at_mrp != null ? " · ₹" + s.value_at_mrp.toLocaleString("en-IN") + " at MRP" : ""}</div></div>`;
     paintInventory(d);
     const rows = (d.stores || []).slice();
     const rank = { in: 0, oos: 1, na: 2 };
@@ -1468,24 +1076,13 @@
       rows.sort((a, b) => (rank[a.status] - rank[b.status]) || ((b.qty || 0) - (a.qty || 0))
         || String(a.locality).localeCompare(String(b.locality)));
     }
-	    const fetchedAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-	    $("#out").innerHTML =
-	      `<div class="inhead"><div class="v2-result">
-	        ${image ? `<img class="v2-product-img" src="${esc(thumbUrl(image))}" alt="">` : `<div class="v2-product-ph">SKU</div>`}
-	        <div>
-	          <div class="v2-result-title">${esc(name)}</div>
-	          <div class="v2-result-meta">${pack ? esc(pack) + " · " : ""}${mrp ? "MRP ₹" + mrp + " · " : ""}${esc(platLabel)} · ${esc(d.city)}${d.locality ? " · " + esc(d.locality) : ""}</div>
-	          <div class="v2-result-note">
-	            <span class="v2-pill">${checked} stores checked</span>
-	            <span class="v2-pill">${s.in_stock || 0} available</span>
-	            <span class="v2-pill">${totalUnits || 0} units found</span>
-	            <span class="v2-pill">${couldNotVerify} could not verify</span>
-	          </div>
-	          <div class="v2-result-note">Last checked ${fetchedAt}. Searched as "${esc(d.search_query || name)}". Unknown stores are not counted as zero.</div>
-	        </div>
-	        <div class="v2-result-actions"><button id="csv">Download CSV</button></div>
-	      </div></div>`
-	      + inventoryGraph(rows, allMode) + inventoryTable(rows, allMode);
+    const fetchedAt = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    $("#out").innerHTML =
+      `<div class="inhead">📦 <b>${esc(name)}</b>${pack ? " · " + esc(pack) : ""}${mrp ? " · MRP ₹" + mrp : ""} — inventory across <b>${d.probed}</b> ${platLabel} stores in <b>${esc(d.city)}${d.locality ? " · " + esc(d.locality) : ""}</b>.
+        <span style="color:var(--mut)">Searched as “${esc(d.search_query || name)}”. Live per-store probe; <b>NA</b> = unreachable (never a guessed 0).</span>
+        <div style="color:var(--mut);font-size:12px;margin-top:5px">Probed <b>${d.probed}</b> of ${d.total_stores}${d.capped ? " (capped)" : ""} · ${d.probed - (s.na || 0)} reachable · ${s.na || 0} unreachable${(s.in_stock === 0 && (s.na || 0) === 0 && d.probed > 0) ? " · confirmed 0 in stock across all checked" : ""} · fetched ${fetchedAt}</div>
+        <button id="csv" style="float:right;background:var(--soft);color:var(--swiggy);border:1px solid var(--line);padding:5px 12px;font-weight:700;border-radius:9px">⬇ CSV</button></div>`
+      + inventoryGraph(rows, allMode) + inventoryTable(rows, allMode);
     $("#csv").onclick = () => exportCsv(d);
     // per-platform breakdown when in all mode
     if (allMode && d.per_platform) {
@@ -1527,12 +1124,7 @@
     })(o);
     return best;
   }
-	  const _rupee = t => {
-	    const m = String(t || "").match(/[0-9][0-9,]*(?:\.[0-9]+)?/);
-	    if (!m) return null;
-	    const v = Math.round(Number(m[0].replace(/,/g, "")));
-	    return Number.isFinite(v) && v > 0 && v < 1000000 ? v : null;
-	  };
+  const _rupee = t => { const m = String(t || "").replace(/[^0-9.]/g, ""); return m ? Math.round(+m) : null; };
   async function blinkitClientProbe(d, it) {
     const prid = it.product_id, stores = d.stores || [];
     const probe = async (s) => {
@@ -1550,30 +1142,20 @@
         const price = _rupee(n.normal_price && n.normal_price.text);
         const inv = (typeof n.inventory === "number") ? n.inventory : 0;
         const instock = inv > 0 || n.is_sold_out === false;
-	        const parsedMrp = _rupee(n.mrp && n.mrp.text);
-	        s.mrp = (parsedMrp && (!price || parsedMrp >= price)) ? parsedMrp : (Number(it.mrp) || s.mrp);
-	        // Never invent a unit count: Blinkit's product endpoint often omits inventory,
-        // and a placeholder 1 was being shown as fact in the table, the bar labels, the
-        // CSV, and summed into a rupee stock value. null renders as "in stock" instead.
-        if (instock) { s.status = "in"; s.price = price; s.qty = (typeof inv === "number" && inv > 0) ? inv : null; s.detail = "matched"; }
+        s.mrp = _rupee(n.mrp && n.mrp.text) ?? s.mrp;
+        if (instock) { s.status = "in"; s.price = price; s.qty = inv || 1; s.detail = "zero_stock"; }
         else if (price) { s.status = "oos"; s.price = price; s.qty = 0; s.detail = "zero_stock"; }
         else { s.status = "na"; s.detail = "unmatched"; }   // ₹0/dead prid -> unknown, not a fake 0
       } catch { s.status = "na"; }
     };
     for (let i = 0; i < stores.length; i += 5) await Promise.all(stores.slice(i, i + 5).map(probe));  // 5 at a time
-	    const inn = stores.filter(s => s.status === "in").length, oos = stores.filter(s => s.status === "oos").length;
-	    const na = stores.filter(s => s.status === "na").length, pr = stores.filter(s => s.price != null).map(s => s.price);
-	    const totalUnits = stores.reduce((sum, s) => sum + (s.status === "in" && typeof s.qty === "number" ? s.qty : 0), 0);
-	    const mrps = stores.filter(s => s.mrp != null).map(s => s.mrp);
-	    const avgPrice = pr.length ? Math.round(pr.reduce((a, b) => a + b, 0) / pr.length) : null;
-	    const avgMrp = mrps.length ? Math.round(mrps.reduce((a, b) => a + b, 0) / mrps.length) : null;
-	    d.probed = stores.length;
-	    d.summary = { in_stock: inn, out_of_stock: oos, na, total_units: totalUnits,
-	      mrp: avgMrp, value_at_selling: avgPrice != null ? avgPrice * totalUnits : null,
-	      detail_counts: { matched: inn, zero_stock: oos, unmatched: na },
-	      availability_pct: (inn + oos) ? Math.round(100 * inn / (inn + oos)) : null,
-	      avg_price: avgPrice, avg_discount_pct: avgMrp && avgPrice && avgMrp >= avgPrice ? Math.round(100 * (avgMrp - avgPrice) / avgMrp) : null };
-	  }
+    const inn = stores.filter(s => s.status === "in").length, oos = stores.filter(s => s.status === "oos").length;
+    const na = stores.filter(s => s.status === "na").length, pr = stores.filter(s => s.price != null).map(s => s.price);
+    d.probed = stores.length;
+    d.summary = { in_stock: inn, out_of_stock: oos, na, detail_counts: { zero_stock: oos },
+      availability_pct: (inn + oos) ? Math.round(100 * inn / (inn + oos)) : null,
+      avg_price: pr.length ? Math.round(pr.reduce((a, b) => a + b, 0) / pr.length) : null };
+  }
 
   async function mapInventory() {
     const platform = $("#platform").value;
@@ -1587,12 +1169,8 @@
     // Zepto's first probe after idle re-mints a secure (WAF) session in a headless
     // browser — that one call can take ~10-15s; warm probes are ~1s. Say so, so a
     // slow first check reads as "warming up" not "broken".
-    // Instamart is probed store-by-store on the server and genuinely takes 10-16s the
-    // first time; the result is then cached ~15 min. This copy was previously gated to
-    // Zepto -- which is disabled -- so the real wait showed a bare spinner and people
-    // assumed the tool had hung.
-    const slow = platform === "swiggy"
-      ? " <b>Instamart is checked store-by-store and takes 10-15s.</b> The next check on this product is instant."
+    const slow = platform === "zepto"
+      ? " <b>Zepto's first live check warms up a secure session — up to ~15s.</b> After that it's near-instant."
       : "";
     showLoading(`Checking “${esc(it.name)}” live across ${esc(city)}${loc ? " · " + esc(loc) : ""} ${IPLABEL[platform] || platform} stores…${slow}`);
     $("#mapwrap").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1602,20 +1180,12 @@
         + (it.pack ? `&pack=${encodeURIComponent(it.pack)}` : "")
         + (it.mrp ? `&mrp=${encodeURIComponent(it.mrp)}` : "")
         + `&name=${encodeURIComponent(it.name)}&city=${encodeURIComponent(city)}${loc ? "&locality=" + encodeURIComponent(loc) : ""}`);
-      if (r.status === 429) {
-        $("#out").innerHTML = `<p class="hint">⏳ That's a lot of checks in a row — wait about a minute and try again.</p>`;
-        return;
-      }
-      if (!r.ok) throw new Error("HTTP " + r.status);
       d = await r.json();
-    } catch {
-      $("#out").innerHTML = `<p class="hint">⚠ Couldn't complete that check. Check your connection and try again.</p>`;
-      return;
-    }
+    } catch { $("#out").innerHTML = `<p class="hint">Couldn't reach the API.</p>`; return; }
     if (d.client_side && platform === "blinkit") {   // finish Blinkit's probe in the browser
       try { await blinkitClientProbe(d, it); } catch {}
     }
-	    renderInventory(d, it.name, { dataset: { mrp: it.mrp, pack: it.pack, image: it.image || "" } });
+    renderInventory(d, it.name, { dataset: { mrp: it.mrp, pack: it.pack } });
   }
 
   $("#go").onclick = mapInventory;

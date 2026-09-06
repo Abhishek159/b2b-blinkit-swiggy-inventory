@@ -410,9 +410,13 @@ _AREA_RE = re.compile(r"^[A-Za-z]{2,4}-(.+)$")   # "CHN-Sholinganallur New" -> a
 _SNAP_KM = 7.0   # snap stores to the nearest clean locality within this
 _MAX_DERIVED_LOCS = 25   # per city: cap the auto-derived snap targets (bounds sprawl)
 # Hard cap on how many sub-areas ANY city may expose. Snapping alone still left the
-# big metros at ~30 areas, which is an unusable dropdown. Past this cap the closest
-# pair of areas is merged repeatedly ("HSR Layout-Koramangala") until the city fits.
-_MAX_LOCALITIES_PER_CITY = 12
+# big metros at ~30 areas, which is an unusable dropdown. Past this cap the smallest
+# area is folded into its nearest neighbour ("Koramangala-Indiranagar-HSR Layout")
+# until the city fits. 14 rather than 12 keeps the merged labels shorter, since every
+# member name is spelled out in full — see _merged_name.
+_MAX_LOCALITIES_PER_CITY = 14
+_MAX_LABEL_CHARS = 52   # soft budget: keeps a merged name readable on a narrow phone
+_ALWAYS_NAME_MIN_STORES = 4   # but an area with this many stores is ALWAYS named in full
 _CITY_ALIAS = {
     "bangalore": "Bengaluru", "bengaluru": "Bengaluru", "bombay": "Mumbai",
     "delhi": "Delhi NCR", "new delhi": "Delhi NCR", "gurugram": "Delhi NCR",
@@ -579,11 +583,68 @@ def _enrich_geo(base: dict[str, list[Store]]) -> dict[str, list[Store]]:
 
 
 def _merged_name(members: dict) -> str:
-    """Name a merged area after its two biggest members: "HSR Layout-Koramangala".
-    Three or more keeps the label readable with a +N rather than a run-on chain."""
-    ordered = sorted(members.items(), key=lambda kv: (-kv[1], kv[0]))
-    head = "-".join(n for n, _ in ordered[:2])
-    return f"{head} +{len(ordered) - 2}" if len(ordered) > 2 else head
+    """Spell out EVERY member, biggest first: "Koramangala-Indiranagar-HSR Layout".
+
+    An earlier version truncated to two names plus "+N". That made well-known areas
+    unfindable -- HSR Layout vanished inside "JP Nagar-Bannerghatta +5" with nothing
+    telling you which entry to pick to reach it. A long label beats a hidden one:
+    the whole point of the list is that someone can find their own neighbourhood."""
+    ranked = sorted(members.items(), key=lambda kv: (-kv[1], kv[0]))
+    ordered = [n for n, _ in ranked]
+    label = "-".join(ordered)
+    if len(label) <= _MAX_LABEL_CHARS:
+        return label
+    # Over budget. Never drop an area that has REAL store presence -- hiding "Najafgarh"
+    # (8 stores) behind a +N is the same bug as hiding HSR Layout: someone searching for
+    # their own neighbourhood cannot tell which entry reaches it. So every member at or
+    # above the threshold is named however long that runs, and only the genuinely minor
+    # tail (one or two stores, names like "Venice Mall") collapses into the count.
+    kept = [n for n, c in ranked if c >= _ALWAYS_NAME_MIN_STORES]
+    for n, _ in ranked:                      # then fill the remaining budget, biggest first
+        if n in kept:
+            continue
+        if len("-".join(kept + [n])) > _MAX_LABEL_CHARS:
+            continue
+        kept.append(n)
+    kept = [n for n in ordered if n in kept]  # keep the biggest-first order
+    hidden = len(ordered) - len(kept)
+    return "-".join(kept) + (f" +{hidden}" if hidden else "")
+
+
+def _variant_canon(names: dict) -> dict:
+    """Map spelling variants of ONE area onto a single canonical name.
+
+    The sources spell the same neighbourhood several ways -- "Hsr" / "HSR Layout",
+    "Btm" / "BTM Layout" -- which not only reads as a duplicate inside a merged label
+    but can land the SAME place in two different clusters. Treat a shorter normalised
+    name that prefixes a longer one as the same area, keeping the busier spelling."""
+    norm = {n: re.sub(r"[^a-z0-9]", "", n.lower()) for n in names}
+    canon = {}
+    for a in names:
+        for b in names:
+            if a is b:
+                continue
+            na, nb = norm[a], norm[b]
+            # exact match after normalising ("Gillco Park Hills" == "Gillco Parkhills"),
+            # or the shorter one prefixes the longer ("Hsr" -> "HSR Layout").
+            if len(na) >= 3 and (na == nb or nb.startswith(na)):
+                # Prefer the MORE DESCRIPTIVE spelling, not the busier one: which stores
+                # end up in the area is identical either way, so the only thing the name
+                # decides is whether a human recognises it ("BTM Layout" beats "Btm").
+                winner = max((a, b), key=lambda n: (len(n), n))
+                canon[a] = winner
+                canon[b] = winner
+    # resolve chains so every variant lands on one final name
+    for k in list(canon):
+        seen = set()
+        while canon.get(k) and canon[k] != k and canon[k] not in seen:
+            seen.add(canon[k])
+            k2 = canon[k]
+            if canon.get(k2) and canon[k2] != k2:
+                canon[k] = canon[k2]
+            else:
+                break
+    return canon
 
 
 def _apply_locality_cap(base: dict) -> None:
@@ -597,6 +658,29 @@ def _apply_locality_cap(base: dict) -> None:
                 continue
             d = agg.setdefault(s.city, {}).setdefault(s.locality, [0.0, 0.0, 0])
             d[0] += s.lat; d[1] += s.lng; d[2] += 1
+
+    # collapse spelling variants BEFORE clustering, so "Hsr" and "HSR Layout" are one
+    # area rather than two members of a label (or worse, two separate clusters).
+    var_renames: dict = {}
+    for city, areas in list(agg.items()):
+        counts = {n: v[2] for n, v in areas.items()}
+        canon = _variant_canon(counts)
+        if not canon:
+            continue
+        merged: dict = {}
+        for name, v in areas.items():
+            tgt = canon.get(name, name)
+            if tgt != name:
+                var_renames[(city, name)] = tgt
+            d = merged.setdefault(tgt, [0.0, 0.0, 0])
+            d[0] += v[0]; d[1] += v[1]; d[2] += v[2]
+        agg[city] = merged
+    if var_renames:
+        for stores in base.values():
+            for s in stores:
+                tgt = var_renames.get((s.city, s.locality))
+                if tgt:
+                    s.locality = tgt
 
     renames: dict = {}
     for city, areas in agg.items():
@@ -633,6 +717,28 @@ def _apply_locality_cap(base: dict) -> None:
                 new = renames.get((s.city, s.locality))
                 if new:
                     s.locality = new
+
+    # Final pass: adopt the orphans. A store that never snapped to any anchor keeps
+    # locality=None, and since the UI's cascade REQUIRES an area, such a store can
+    # never be reached or checked -- it is invisible inventory. Assign each to the
+    # nearest final area in its own city so every store in a city is reachable.
+    final: dict = {}
+    for stores in base.values():
+        for s in stores:
+            if not s.city or s.city == "Other" or not s.locality:
+                continue
+            d = final.setdefault(s.city, {}).setdefault(s.locality, [0.0, 0.0, 0])
+            d[0] += s.lat; d[1] += s.lng; d[2] += 1
+    cents = {c: {n: (v[0] / v[2], v[1] / v[2]) for n, v in areas.items()}
+             for c, areas in final.items()}
+    for stores in base.values():
+        for s in stores:
+            if s.locality or not s.city or s.city == "Other":
+                continue
+            opts = cents.get(s.city)
+            if not opts:
+                continue
+            s.locality = min(opts, key=lambda n: haversine_km(s.lat, s.lng, *opts[n]))
 
 
 def _load_all() -> dict[str, list[Store]]:

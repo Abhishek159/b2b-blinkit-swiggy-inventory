@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SKU Availability Map</title>
+<style>
+  :root{--bg:#f6f7f5;--card:#fff;--ink:#1f2421;--muted:#69706b;--line:#d9ded8;--accent:#26352d;--soft:#eef2ee;--green:#14824f;--red:#c6443f;--warn:#fff4e2;--shadow:0 12px 32px rgba(32,40,34,.08)}
+  *{box-sizing:border-box}html,body{margin:0;overflow-x:hidden}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer;border:0}
+  .page{max-width:1220px;margin:0 auto;padding:20px 22px 58px}.top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:16px}.brand h1{margin:0;font-size:23px;letter-spacing:0}.brand p{margin:5px 0 0;color:var(--muted);font-size:14px}.actions{display:flex;gap:9px}.btn{height:40px;border-radius:8px;padding:0 14px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:800}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .hero{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:18px;margin-bottom:14px}.hero h2{margin:0;font-size:30px;line-height:1.15;letter-spacing:0}.hero p{margin:8px 0 0;color:var(--muted);font-size:15px}.search{display:grid;grid-template-columns:1fr 1fr 1.15fr 1.4fr auto;gap:10px;margin-top:16px}.field{height:44px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:0 11px;color:var(--ink);min-width:0}.field.error{border-color:var(--red);background:#fffafa}.error-msg{display:none;margin:10px 0 0;padding:10px 12px;border-radius:8px;background:var(--warn);border:1px solid #efd2a1;color:#75470c;font-size:13px;font-weight:750}.error-msg.show{display:block}.show-more{height:34px;border-radius:999px;border:1px solid var(--line);background:#fff;padding:0 12px;color:var(--ink);font-weight:750}
+  .map-card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}.map-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}.map-head h3{margin:0;font-size:17px}.map-head p{margin:3px 0 0;color:var(--muted);font-size:13px}.status{display:flex;gap:10px;align-items:center;color:var(--green);font-weight:850}.dotkey{width:10px;height:10px;border-radius:50%;background:var(--green)}
+  .map{position:relative;height:460px;background:#e4e6e3;overflow:hidden}.roads{position:absolute;inset:0;background:linear-gradient(25deg,transparent 35%,rgba(255,255,255,.9) 36%,rgba(255,255,255,.9) 38%,transparent 39%),linear-gradient(115deg,transparent 48%,rgba(255,255,255,.85) 49%,rgba(255,255,255,.85) 51%,transparent 52%),repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.38) 35px 37px),repeating-linear-gradient(0deg,transparent 0 32px,rgba(255,255,255,.34) 33px 35px)}.pin{position:absolute;border-radius:50%;border:3px solid #fff;box-shadow:0 10px 28px rgba(0,0,0,.2)}.pin.in{background:var(--green)}.pin.out{background:var(--red)}.pin.big{width:44px;height:44px}.pin.mid{width:32px;height:32px}.pin.small{width:24px;height:24px}.popup{position:absolute;left:38%;top:20%;width:285px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px;box-shadow:0 16px 34px rgba(42,36,28,.15)}.popup b{display:block}.popup p{margin:5px 0 0;color:var(--muted);font-size:13px}.legend{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:8px;padding:11px;font-size:13px}.legend div{display:flex;gap:8px;align-items:center;margin-top:7px}.key{width:10px;height:10px;border-radius:50%;display:inline-block}.key.in{background:var(--green)}.key.out{background:var(--red)}
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}.metric{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px;box-shadow:var(--shadow)}.metric small{display:block;color:var(--muted);font-size:12px;font-weight:850}.metric b{display:block;font-size:28px;margin-top:4px}
+  .below{display:grid;grid-template-columns:1fr 300px;gap:14px}.table-card,.note{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}.table-head{padding:14px 16px;border-bottom:1px solid var(--line)}.table-head h3,.note h3{margin:0;font-size:16px}.table-head p,.note p{margin:4px 0 0;color:var(--muted);font-size:13px;line-height:1.45}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}th{font-size:11px;text-transform:uppercase;color:var(--muted);background:#fbfaf7}.num{text-align:right}.ok{color:var(--green);font-weight:850}.bad{color:var(--red);font-weight:850}.note{padding:16px}.note ul{margin:10px 0 0;padding-left:18px;color:var(--muted);line-height:1.55;font-size:14px}
+  .samples{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.chip{height:34px;border-radius:999px;border:1px solid var(--line);background:#fff;padding:0 12px;color:var(--ink);font-weight:750}.chip.active{background:var(--soft);border-color:var(--accent)}
+  .modal{position:fixed;inset:0;background:rgba(35,32,28,.4);display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal.open{display:flex}.modal-card{max-width:480px;background:#fff;border-radius:12px;border:1px solid var(--line);padding:20px;box-shadow:var(--shadow)}.modal-card h3{margin:0 0 10px}.modal-card p{color:var(--muted);line-height:1.5}.mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 12px;z-index:8}
+  @media(max-width:900px){.page{padding:14px 12px 76px}.top{flex-direction:column}.actions,.actions .btn{width:100%}.search,.below{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.map{height:360px}.mobile-cta{display:block}.hero h2{font-size:24px}table{display:block;overflow-x:auto;white-space:nowrap}}
+  @media(max-width:520px){.metrics{grid-template-columns:1fr}.map{height:330px}.popup{left:10%;top:18%;width:240px}.map-head{align-items:flex-start;flex-direction:column}.btn.primary{width:100%}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <div class="brand">
+      <h1>SKU Availability Map</h1>
+      <p>Check exactly where a product is in stock across quick-commerce dark stores.</p>
+    </div>
+    <div class="actions"><button class="btn" id="how">How it works</button></div>
+  </header>
+
+  <section class="hero">
+    <h2 id="headline">Apple AirTag is available in 3 of 4 Blinkit stores near Indiranagar.</h2>
+    <p id="subline">Open from a shared link, see the map first, then change SKU, platform or location if needed.</p>
+    <div class="search">
+      <select class="field" id="platform" aria-label="Select platform"><option value="">Select platform</option><option>Blinkit</option><option>Swiggy Instamart</option><option>Zepto</option></select>
+      <select class="field" id="city"><option>Bengaluru</option><option>Mumbai</option><option>Delhi NCR</option><option>Hyderabad</option><option>Chennai</option><option>Kolkata</option><option>Pune</option><option>Ahmedabad</option><option>Show more cities...</option></select>
+      <select class="field" id="area"><option>Indiranagar</option><option>Koramangala</option><option>HSR Layout</option><option>BTM Layout</option><option>Whitefield</option><option>Jayanagar</option><option>Marathahalli</option><option>Electronic City</option><option>Bandra West</option><option>Andheri West</option></select>
+      <input class="field" id="product" value="Apple AirTag" placeholder="Product or SKU">
+      <button class="btn primary" id="check">Check availability</button>
+    </div>
+    <div class="error-msg" id="errorMsg">Enter a product or SKU before checking availability.</div>
+    <div class="samples">
+      <button class="chip active" data-platform="Blinkit" data-city="Bengaluru" data-area="Indiranagar" data-product="Apple AirTag">Apple AirTag · Indiranagar, Bengaluru</button>
+      <button class="chip" data-platform="Swiggy Instamart" data-city="Bengaluru" data-area="Koramangala" data-product="Type C charger">Type C charger · Koramangala, Bengaluru</button>
+      <button class="chip" data-platform="Blinkit" data-city="Mumbai" data-area="Bandra West" data-product="Protein bar">Protein bar · Bandra West, Mumbai</button>
+      <button class="show-more" id="showMore" type="button">Show more cities</button>
+    </div>
+  </section>
+
+  <section class="map-card">
+    <div class="map-head">
+      <div><h3 id="mapTitle">Availability map</h3><p>Green means stock available. Red means checked but out of stock.</p></div>
+      <div class="status"><i class="dotkey"></i> 3 stores with stock</div>
+    </div>
+    <div class="map">
+      <div class="roads"></div>
+      <span class="pin in big" style="left:46%;top:44%"></span>
+      <span class="pin in mid" style="left:58%;top:62%"></span>
+      <span class="pin in small" style="left:66%;top:35%"></span>
+      <span class="pin out small" style="left:35%;top:65%"></span>
+      <div class="popup"><b id="popupStore">Super Store Indiranagar</b><p>2 units available · ₹2999</p><p>Last checked 06:19 PM</p></div>
+      <div class="legend"><strong>Store status</strong><div><i class="key in"></i>Available</div><div><i class="key out"></i>Out of stock</div></div>
+    </div>
+  </section>
+
+  <section class="metrics">
+    <div class="metric"><small>Stores checked</small><b>4</b></div>
+    <div class="metric"><small>Available stores</small><b style="color:var(--green)">3</b></div>
+    <div class="metric"><small>Total units found</small><b>8</b></div>
+    <div class="metric"><small>Best price</small><b>₹2999</b></div>
+  </section>
+
+  <section class="below">
+    <div class="table-card">
+      <div class="table-head"><h3>Store-level inventory</h3><p>The table is proof behind the map.</p></div>
+      <table>
+        <thead><tr><th>Platform</th><th>City</th><th>Area</th><th>Store</th><th>SKU</th><th class="num">Units</th><th class="num">Price</th><th>Status</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <aside class="note">
+      <h3>What to do next</h3>
+      <p>Use this page to decide whether a SKU is actually visible to customers in a locality.</p>
+      <ul>
+        <li>Compare the same SKU on another platform.</li>
+        <li>Switch area to find stockout pockets.</li>
+        <li>Use store rows for ops follow-up.</li>
+      </ul>
+    </aside>
+  </section>
+</main>
+
+<div class="mobile-cta"><button class="btn primary" id="mobileSearch">Check availability</button></div>
+<div class="modal" id="modal"><div class="modal-card"><h3>How it works</h3><p>Select platform, city, area and product. The map shows where the SKU is available store by store. The table gives the store-level proof behind the map.</p><button class="btn primary" id="close">Got it</button></div></div>
+<script>
+  const state={platform:"Blinkit",city:"Bengaluru",area:"Indiranagar",product:"Apple AirTag"};
+  const stores=["Super Store","Main Warehouse","Dark Store","Supply Point"];
+  const modal=document.querySelector("#modal");
+  const controls=["platform","city","area","product"].map(id=>document.querySelector("#"+id));
+  const errorMsg=document.querySelector("#errorMsg");
+  function validate(){
+    let missing=[];
+    controls.forEach(el=>{
+      const invalid=!String(el.value||"").trim()||el.value==="Show more cities...";
+      el.classList.toggle("error",invalid);
+      if(invalid) missing.push(el.id==="product"?"product or SKU":el.id);
+    });
+    errorMsg.textContent=missing.length?"Select "+missing.join(", ")+" before checking availability.":"";
+    errorMsg.classList.toggle("show",missing.length>0);
+    return missing.length===0;
+  }
+  function render(){
+    for(const key of ["platform","city","area","product"]) document.querySelector("#"+key).value=state[key];
+    document.querySelector("#headline").textContent=`${state.product} is available in 3 of 4 ${state.platform} stores near ${state.area}.`;
+    document.querySelector("#subline").textContent=`${state.city} · checked at 06:19 PM · change any field and run another availability check.`;
+    document.querySelector("#mapTitle").textContent=`${state.product} availability near ${state.area}`;
+    document.querySelector("#popupStore").textContent=`${stores[0]} ${state.area}`;
+    document.querySelector("#rows").innerHTML=stores.map((s,i)=>`<tr><td>${state.platform}</td><td>${state.city}</td><td>${state.area}</td><td>${s} ${state.area}</td><td>${state.product}</td><td class="num">${i===2?0:2}</td><td class="num">₹2999</td><td class="${i===2?"bad":"ok"}">${i===2?"Out of stock":"Available"}</td></tr>`).join("");
+    document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("active",c.dataset.product===state.product&&c.dataset.area===state.area));
+  }
+  function update(next){Object.assign(state,next);render();errorMsg.classList.remove("show");controls.forEach(el=>el.classList.remove("error"));document.querySelector(".map-card").scrollIntoView({behavior:"smooth",block:"start"})}
+  function runCheck(){if(!validate())return;update({platform:platform.value,city:city.value,area:area.value,product:product.value.trim()})}
+  document.querySelector("#check").onclick=runCheck;
+  document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>update({platform:c.dataset.platform,city:c.dataset.city,area:c.dataset.area,product:c.dataset.product}));
+  document.querySelector("#showMore").onclick=()=>alert("Prototype action: this opens the full city selector with 56 top cities.");
+  document.querySelector("#how").onclick=()=>modal.classList.add("open");document.querySelector("#close").onclick=()=>modal.classList.remove("open");modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")};
+  document.querySelector("#mobileSearch").onclick=runCheck;
+  controls.forEach(el=>el.addEventListener("input",()=>{el.classList.remove("error");if(controls.every(c=>String(c.value||"").trim()&&c.value!=="Show more cities..."))errorMsg.classList.remove("show")}));
+  render();
+</script>
+</body>
+</html>
