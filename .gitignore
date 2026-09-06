@@ -13,3 +13,6 @@ backend/data/*.db-shm
 # mockup. Keep alternates here, out of the served directory, not just gitignored.
 _archive_frontend/
 visits.json
+
+# personal contact details — public repo, so these never get committed
+backend/contact.json

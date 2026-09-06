@@ -1,0 +1,27 @@
+{
+  "_readme": [
+    "Copy this file to  contact.json  in the same folder and fill it in.",
+    "contact.json is gitignored, so it never reaches GitHub (your repo is public).",
+    "",
+    "Any field left empty is simply not rendered - no broken icon, no empty link.",
+    "Delete a line entirely and it disappears too.",
+    "",
+    "ON RENDER: contact.json is not in git, so it will not be deployed. Instead paste",
+    "the whole JSON as an environment variable named CONTACT_JSON (Render dashboard ->",
+    "Environment -> Add Environment Variable). The server prefers the env var and falls",
+    "back to the file, so local dev uses the file and production uses the variable, and",
+    "your details sit in neither git nor this conversation."
+  ],
+
+  "name": "Your Name",
+  "tagline": "Built this to track quick-commerce stock. Happy to talk shop.",
+
+  "whatsapp": "+919999999999",
+  "show_number": false,
+
+  "email": "you@example.com",
+  "linkedin": "https://www.linkedin.com/in/your-handle",
+  "twitter": "https://x.com/your-handle",
+  "github": "",
+  "website": ""
+}

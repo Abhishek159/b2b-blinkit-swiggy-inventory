@@ -11,6 +11,7 @@ Live inventory (the remaining wiring):
 from __future__ import annotations
 
 import json
+import os
 import sqlite3
 import threading
 import time
@@ -108,6 +109,40 @@ def visit(request: Request):
             except Exception:
                 pass
         return {"visits": _VISITS["total"]}
+
+
+# ---- contact details. Deliberately NOT in the repo: this GitHub repo is public, so
+# the file is gitignored and production reads an env var instead. Any missing field is
+# simply not rendered, so a half-filled file degrades to fewer links rather than broken
+# ones, and an absent file hides the strip entirely.
+_CONTACT_FILE = HERE / "contact.json"
+_ALLOWED_CONTACT = {"name", "tagline", "whatsapp", "show_number", "email",
+                    "linkedin", "twitter", "github", "website"}
+
+
+def _load_contact() -> dict:
+    raw = os.environ.get("CONTACT_JSON")
+    data = None
+    if raw:
+        try:
+            data = json.loads(raw)
+        except Exception:
+            data = None
+    if data is None:
+        try:
+            data = json.loads(_CONTACT_FILE.read_text())
+        except Exception:
+            return {}
+    if not isinstance(data, dict):
+        return {}
+    # whitelist the keys so a stray note or comment in the file is never served
+    out = {k: v for k, v in data.items() if k in _ALLOWED_CONTACT and v not in ("", None)}
+    return out
+
+
+@app.get("/api/contact")
+def contact():
+    return _load_contact()
 
 
 def _db():

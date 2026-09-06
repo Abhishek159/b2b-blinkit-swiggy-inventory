@@ -280,6 +280,20 @@
   .all-cities button{min-height:42px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);font-weight:800;padding:0 6px;font-size:12.5px}
   .all-cities button:hover{border-color:var(--action)}
   footer{padding:0 0 40px;color:var(--muted);font-size:12px;line-height:1.6}
+  .contact{display:none;margin:0 0 18px;padding:16px;border:1px solid var(--line);border-radius:8px;
+    background:var(--surface);box-shadow:var(--shadow)}
+  .contact.on{display:block}
+  .contact h4{margin:0;font-size:14px;color:var(--ink)}
+  .contact p{margin:5px 0 0;color:var(--muted);font-size:12.5px;line-height:1.5}
+  .contact-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  /* 44px tall: a real thumb target, not a decorative icon */
+  .contact-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;
+    border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);
+    font-size:13px;font-weight:800;text-decoration:none}
+  .contact-links a:hover{border-color:var(--action);color:var(--action)}
+  .contact-links svg{width:17px;height:17px;flex:0 0 auto}
+  .contact-links a.wa:hover{border-color:#25d366;color:#128c4a}
+  .contact-links a.li:hover{border-color:#0a66c2;color:#0a66c2}
 
   @media(max-width:900px){
     .shell{padding:0 16px}.coverage{display:none}.intro{padding:28px 0 22px}h1{font-size:38px}.result-layout{grid-template-columns:1fr}.summary-panel{display:grid;grid-template-columns:1fr 1.25fr}.insight{grid-column:1/-1}.map-panel{min-height:min(56vh,440px)}
@@ -400,6 +414,7 @@
     <div class="store-list" id="storeList"></div>
   </section>
 
+  <section class="contact" id="contact" aria-label="Contact"></section>
   <footer>
     Blinkit stock is checked from your own browser, directly against blinkit.com. Instamart is checked from our server and cached for an hour.
     Store locations come from a periodic snapshot, so a very new store may be missing.
@@ -1138,6 +1153,39 @@
   };
   window.addEventListener("resize", resizeMap);
   window.addEventListener("orientationchange", () => setTimeout(resizeMap, 350));
+
+  // ---------- contact strip ----------
+  // Details come from the server (env var in production, gitignored file locally), so
+  // they live in neither the repo nor the page source until deploy time.
+  const ICON = {
+    wa: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.1 15.08l-.3-.17-3.1.81.83-3.02-.2-.31A8.1 8.1 0 0 1 12.04 3.8Zm4.68 10.3c-.25-.13-1.48-.73-1.7-.81-.23-.09-.4-.13-.56.12s-.64.8-.78.97c-.15.16-.29.18-.53.06a6.6 6.6 0 0 1-3.3-2.88c-.25-.43.25-.4.71-1.32.08-.16.04-.3-.02-.42s-.56-1.35-.77-1.85c-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.65.3 2.75 2.75 0 0 0-.86 2.05c0 1.2.88 2.37 1 2.53.12.17 1.72 2.62 4.15 3.68 1.55.67 2.16.72 2.93.6.47-.06 1.48-.6 1.69-1.19.2-.58.2-1.08.15-1.19-.06-.1-.23-.17-.48-.29Z"/></svg>',
+    li: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05a4.2 4.2 0 0 1 3.75-2c4 0 4.75 2.5 4.75 5.9V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21H9Z"/></svg>',
+    x:  '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.3 3h3.3l-7.2 8.2L22 21h-6.6l-5.2-6.8L4.3 21H1l7.7-8.8L1.7 3h6.8l4.7 6.2Zm-1.2 16h1.8L7.9 4.8H6Z"/></svg>',
+    mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 6.5L21 6"/></svg>',
+    gh: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7C6.7 19.9 6.14 18 6.14 18c-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>',
+    web:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c5 5.5 5 13.5 0 19M12 2.5c-5 5.5-5 13.5 0 19"/></svg>',
+  };
+  (async () => {
+    let c = {};
+    try { c = await (await api("/api/contact")).json(); } catch { return; }
+    if (!c || !Object.keys(c).length) return;      // nothing configured -> no strip
+    const links = [];
+    if (c.whatsapp) {
+      const digits = String(c.whatsapp).replace(/[^0-9]/g, "");
+      links.push(`<a class="wa" href="https://wa.me/${digits}" target="_blank" rel="noopener noreferrer">${ICON.wa}WhatsApp${c.show_number ? " · " + esc(c.whatsapp) : ""}</a>`);
+    }
+    if (c.email) links.push(`<a href="mailto:${esc(c.email)}">${ICON.mail}Email</a>`);
+    if (c.linkedin) links.push(`<a class="li" href="${esc(c.linkedin)}" target="_blank" rel="noopener noreferrer">${ICON.li}LinkedIn</a>`);
+    if (c.twitter) links.push(`<a href="${esc(c.twitter)}" target="_blank" rel="noopener noreferrer">${ICON.x}X</a>`);
+    if (c.github) links.push(`<a href="${esc(c.github)}" target="_blank" rel="noopener noreferrer">${ICON.gh}GitHub</a>`);
+    if (c.website) links.push(`<a href="${esc(c.website)}" target="_blank" rel="noopener noreferrer">${ICON.web}Website</a>`);
+    if (!links.length) return;
+    const el = $("#contact");
+    el.innerHTML = (c.name ? `<h4>${esc(c.name)}</h4>` : "")
+      + (c.tagline ? `<p>${esc(c.tagline)}</p>` : "")
+      + `<div class="contact-links">${links.join("")}</div>`;
+    el.classList.add("on");
+  })();
 
   // ---------- modals ----------
   $("#howButton").addEventListener("click", () => $("#howModal").classList.add("open"));
