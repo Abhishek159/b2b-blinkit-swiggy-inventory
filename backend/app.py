@@ -63,7 +63,7 @@ async def ratelimit(request: Request, call_next):
 
 # zone-price cache (prices ~city-uniform): one live Swiggy call per (query,~11km cell)
 _SW_CACHE: dict = {}
-_SW_TTL = 15 * 60
+_SW_TTL = 60 * 60   # 15m -> 60m: the single biggest lever against Swiggy throttling
 
 
 def _db():
@@ -193,7 +193,7 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
                         _SW_CACHE[ck] = (time.time(), per)
         by_id = {p["store_id"]: p for p in per}
         rows = []
-        for s in stores_[:12]:
+        for s in stores_[:24]:
             p = by_id.get(s.store_id, {"status": "na", "detail": "not_scraped"})
             rows.append({"platform": "swiggy", "store_id": s.store_id, "name": s.name,
                          "locality": s.locality, "lat": s.lat, "lng": s.lng,
@@ -203,15 +203,15 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
         return {"platform": "swiggy", "product_id": product_id, "name": name, "city": city,
                 "locality": locality, "total_stores": len(stores_), "probed": len(rows),
                 "stores": rows, "summary": _summary(rows), "cached": fresh,
-                "capped": len(stores_) > 12}
+                "capped": len(stores_) > 24}
 
     # Blinkit -> fetched CLIENT-SIDE: hand the browser the stores + prid to probe itself
     return {"platform": "blinkit", "product_id": product_id, "name": name, "city": city,
             "locality": locality, "total_stores": len(stores_), "client_side": True,
-            "capped": len(stores_) > 20,
+            "capped": len(stores_) > 40,
             "stores": [{"platform": "blinkit", "store_id": s.store_id, "name": s.name,
                         "locality": s.locality, "lat": s.lat, "lng": s.lng, "status": "pending"}
-                       for s in stores_[:20]]}
+                       for s in stores_[:40]]}
 
 
 @app.get("/")

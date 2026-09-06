@@ -154,8 +154,13 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
     return (None, "throttled") if _inner_status(data) else (None, "not_carried")
 
 
-def check(product_id: str, stores: list, cap: int = 12, budget: float = 35.0):
+def check(product_id: str, stores: list, cap: int = 24, budget: float = 55.0):
     """stores: list of dark_stores Store objects. Returns per-store stock/price.
+
+    `cap` covers a WHOLE area rather than sampling it. The largest Instamart area in
+    the data holds 21 stores, so 24 reaches 100% of them; the median area holds 1, so
+    this costs nothing on the typical check. Sampling 12 of 22 and presenting the result
+    as the area's stock was simply wrong information.
 
     `budget` caps total wall-clock. Without it the worst case is 12 stores x (8s + 12s)
     plus the mint = ~250s+, but the endpoint writes no bytes until it finishes and Fly's

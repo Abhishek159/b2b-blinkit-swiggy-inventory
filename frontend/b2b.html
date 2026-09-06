@@ -796,6 +796,7 @@
   }
 
   let PICKED_ITEM = null;   // set on a search-result click; see mapInventory()
+  let AREA_STORES = {};     // area name -> store count on the current platform
 
   function resetFrom(step) {
     // step: which control just changed, so we know how much downstream to clear
@@ -894,6 +895,7 @@
       const cnt = l => plat ? (l.stores[plat] || 0)
                             : ((l.stores.blinkit || 0) + (l.stores.swiggy || 0));
       const usable = d.localities.filter(l => cnt(l) > 0);
+      AREA_STORES = {}; usable.forEach(l => { AREA_STORES[l.name] = cnt(l); });
       const opts = usable.map(l =>
         ({ label: `${l.name} (${cnt(l)} store${cnt(l) === 1 ? "" : "s"})`, value: l.name }));
       $("#locality").innerHTML += opts.map(o => `<option value="${esc(o.value)}">${esc(o.label)}</option>`).join("");
@@ -1591,9 +1593,13 @@
     // first time; the result is then cached ~15 min. This copy was previously gated to
     // Zepto -- which is disabled -- so the real wait showed a bare spinner and people
     // assumed the tool had hung.
+    // Every store in the area is checked, so the wait scales with the area: quote the
+    // real count and a real estimate rather than a fixed number that is often wrong.
+    const nStores = AREA_STORES[loc] || 0;
+    const secs = nStores ? Math.max(5, Math.round(nStores * 1.5)) : 15;
     const slow = platform === "swiggy"
-      ? " <b>Instamart is checked store-by-store and takes 10-15s.</b> The next check on this product is instant."
-      : "";
+      ? ` <b>Checking ${nStores || "every"} Instamart store${nStores === 1 ? "" : "s"} one by one — about ${secs}s.</b> The next check on this product is instant for an hour.`
+      : (nStores > 20 ? ` Checking ${nStores} stores.` : "");
     showLoading(`Checking “${esc(it.name)}” live across ${esc(city)}${loc ? " · " + esc(loc) : ""} ${IPLABEL[platform] || platform} stores…${slow}`);
     $("#mapwrap").scrollIntoView({ behavior: "smooth", block: "start" });
     let d;
