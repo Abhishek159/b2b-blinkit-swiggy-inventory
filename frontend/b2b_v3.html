@@ -780,20 +780,57 @@
     return best;
   }
   const money = t => { const m = String(t || "").replace(/[^0-9.]/g, ""); return m ? Math.round(+m) : null; };
+  // Same 50-70 m nudge the server-side Instamart probe uses: pinning the identical
+  // coordinate on every check is a fingerprint, and a slightly different point is what
+  // reveals whether a neighbouring store is really the one serving that spot.
+  const JITTER_MIN_M = 50, JITTER_MAX_M = 70;
+  function jitter(lat, lng, attempt) {
+    const dist = JITTER_MIN_M + Math.random() * (JITTER_MAX_M - JITTER_MIN_M);
+    const ang = attempt ? (attempt * 2 * Math.PI / 3) + (Math.random() - 0.5) * 0.7
+                        : Math.random() * 2 * Math.PI;
+    return [lat + (dist * Math.cos(ang)) / 111320,
+            lng + (dist * Math.sin(ang)) / (111320 * Math.cos(lat * Math.PI / 180) || 1e-9)];
+  }
+  // Blinkit sometimes names the merchant that answered; keep it when it is there so a
+  // hand-off is visible rather than silently attributed to the store we pinned.
+  function bMerchant(o) {
+    let id = null;
+    (function w(x) {
+      if (x && typeof x === "object") {
+        for (const k in x) {
+          if (/^(merchant_id|merchantId)$/.test(k) && (typeof x[k] === "number" || typeof x[k] === "string")) id = id || String(x[k]);
+          w(x[k]);
+        }
+      }
+    })(o);
+    return id;
+  }
   async function blinkitProbe(d) {
     const prid = state.picked.product_id, stores = d.stores || [];
+    const attemptOnce = async (s, attempt) => {
+      const [jlat, jlng] = jitter(s.lat, s.lng, attempt);
+      const r = await fetch("https://blinkit.com/v1/layout/product/" + prid, {
+        method: "POST",
+        headers: { "accept": "*/*", "content-type": "application/json", "app_client": "consumer_web",
+                   "lat": String(jlat), "lon": String(jlng), "gr_1_lat": String(jlat),
+                   "gr_1_lon": String(jlng), "gr_1_l_name": "", "web_app_version": "1008010016" },
+        body: "{}",
+      });
+      if (!r.ok) return { fail: (r.status === 429 || r.status === 403) ? "throttled" : "failed" };
+      const body = await r.json();
+      const n = bNode(body);
+      if (!n) return { fail: "unmatched" };
+      return { node: n, merchant: bMerchant(body) };
+    };
     const one = async s => {
       try {
-        const r = await fetch("https://blinkit.com/v1/layout/product/" + prid, {
-          method: "POST",
-          headers: { "accept": "*/*", "content-type": "application/json", "app_client": "consumer_web",
-                     "lat": String(s.lat), "lon": String(s.lng), "gr_1_lat": String(s.lat),
-                     "gr_1_lon": String(s.lng), "gr_1_l_name": "", "web_app_version": "1008010016" },
-          body: "{}",
-        });
-        if (!r.ok) { s.status = "na"; s.detail = (r.status === 429 || r.status === 403) ? "throttled" : "failed"; return; }
-        const n = bNode(await r.json());
-        if (!n) { s.status = "na"; s.detail = "unmatched"; return; }
+        // Retry only a TECHNICAL failure, and only once -- this runs on the visitor's own
+        // connection, so a retry storm would burn their Blinkit budget, not ours.
+        let res = await attemptOnce(s, 0);
+        if (res.fail === "throttled" || res.fail === "failed") res = await attemptOnce(s, 1);
+        if (res.fail) { s.status = "na"; s.detail = res.fail; return; }
+        const n = res.node;
+        if (res.merchant && String(res.merchant) !== String(s.store_id)) s.served_store_id = String(res.merchant);
         const price = money(n.normal_price && n.normal_price.text);
         const inv = (typeof n.inventory === "number") ? n.inventory : null;
         s.mrp = money(n.mrp && n.mrp.text) ?? s.mrp;
