@@ -112,12 +112,12 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
     try:
         rl = requests.post(SELECT_LOC, headers=headers, data=loc, impersonate="chrome124", timeout=8)
         if rl.status_code != 200:
-            return None, "failed"
+            return None, "failed", None
         for k, v in dict(rl.cookies).items():
             jar[k] = v
         headers["Cookie"] = "; ".join(f"{k}={v}" for k, v in jar.items())
     except Exception:
-        return None, "failed"
+        return None, "failed", None
     sid = re.sub(r"\D", "", str(store_id)) or "0"
     pid, parent = item[0], item[1]
     cart_items = [{"productId": parent, "quantity": 1, "itemId": pid, "spin": spin,
@@ -132,10 +132,10 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
     try:
         r = requests.post(CART, headers=headers, data=json.dumps(payload), impersonate="chrome124", timeout=12)
         if r.status_code != 200:
-            return None, "failed"
+            return None, "failed", None
         data = r.json()
     except Exception:
-        return None, "failed"
+        return None, "failed", None
     found = {}
 
     def walk(o):
@@ -148,10 +148,29 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
             for v in o:
                 walk(v)
     walk(data)
+
+    # Which store did Swiggy ACTUALLY serve? meta.storeId is advisory: the serving store
+    # is derived from the pinned lat/lng, so a closed or non-serving warehouse is silently
+    # handed off to a neighbour -- and its stock came back labelled as the pinned store's.
+    served = set()
+
+    def store_ids(o):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                if k == "storeId" and str(v).isdigit():
+                    served.add(str(v))
+                store_ids(v)
+        elif isinstance(o, list):
+            for v in o:
+                store_ids(v)
+    store_ids(data)
+    served_id = next(iter(served)) if len(served) == 1 else None
+
     node = found.get(str(spin)) or (next(iter(found.values())) if found else None)
     if node:
-        return node, None
-    return (None, "throttled") if _inner_status(data) else (None, "not_carried")
+        return node, None, served_id
+    return ((None, "throttled", served_id) if _inner_status(data)
+            else (None, "not_carried", served_id))
 
 
 def check(product_id: str, stores: list, cap: int = 24, budget: float = 55.0):
@@ -179,7 +198,16 @@ def check(product_id: str, stores: list, cap: int = 24, budget: float = 55.0):
         if time.time() > deadline:
             out.append({"store_id": s.store_id, "status": "na", "detail": "not_scraped"})
             continue
-        node, reason = _probe_one(sess, s.lat, s.lng, s.store_id, item, spin)
+        node, reason, served = _probe_one(sess, s.lat, s.lng, s.store_id, item, spin)
+        mismatch = bool(served and str(served) != re.sub(r"\D", "", str(s.store_id)))
+        if mismatch:
+            # Another warehouse answered. We therefore know nothing about THIS store, and
+            # counting the reading here would both mislabel it and double-count whenever
+            # several pinned stores are handed off to the same neighbour.
+            out.append({"store_id": s.store_id, "status": "na", "detail": "served_other",
+                        "served_store_id": served})
+            time.sleep(0.3)
+            continue
         if node is None:
             if reason == "not_carried":
                 # Swiggy's cart confirmed (HTTP 200, no error) this store doesn't stock the
@@ -201,7 +229,8 @@ def check(product_id: str, stores: list, cap: int = 24, budget: float = 55.0):
                     "status": "in" if instock else "oos",
                     "qty": inv.get("total") if instock else 0,
                     "price": pr.get("offer_price"), "mrp": pr.get("mrp") or mrp0,
-                    "detail": "matched" if instock else "zero_stock"})
+                    "detail": "matched" if instock else "zero_stock",
+                    "served_store_id": served})
         time.sleep(0.3)   # pace
 
     # Run-level sanity guard: if not ONE store matched across the whole fan-out, that is a

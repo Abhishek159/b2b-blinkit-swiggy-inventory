@@ -368,6 +368,7 @@
     matched: "confirmed in stock", zero_stock: "confirmed zero", not_carried: "not carried by this store",
     unmatched: "no confident match", blocked: "blocked", failed: "request failed",
     not_scraped: "timed out", throttled: "rate-limited — retry",
+    served_other: "a different store answered for this one",
   };
 
   const state = { platform: "blinkit", city: "", area: "", picked: null };
@@ -843,7 +844,7 @@
         <span>${esc(PLABEL[r.platform] || r.platform)}</span>
         <strong>${typeof r.qty === "number" ? r.qty : "—"}</strong>
         <strong>${r.price != null ? inr(r.price) : "—"}</strong>
-        <span class="status-chip ${cls}" title="${esc(DETAIL_LABEL[r.detail] || "")}">${label}</span>
+        <span class="status-chip ${cls}" title="${esc(DETAIL_LABEL[r.detail] || "")}${r.served_store_id && r.detail === "served_other" ? " — store " + esc(r.served_store_id) + " responded" : ""}">${label}</span>
       </div>`;
     }).join("") : `<div class="store-row"><span style="color:var(--muted)">No stores returned.</span></div>`);
     $$(".copy-id").forEach(b => b.onclick = e => {
@@ -905,7 +906,7 @@
         html: `<b>${esc(r.name || "Store")}</b>`
             + `<p>${r.status === "in" ? `<strong style="color:var(--green)">${typeof r.qty === "number" ? r.qty + " units available" : "In stock"}</strong>${r.price != null ? " · " + inr(r.price) : ""}`
                  : r.status === "oos" ? `<strong style="color:var(--red)">Out of stock</strong>${r.price != null ? " · " + inr(r.price) : ""}`
-                 : `<strong style="color:var(--amber)">Not verified</strong> · ${esc(DETAIL_LABEL[r.detail] || "")}`}</p>`
+                 : `<strong style="color:var(--amber)">Not verified</strong> · ${esc(DETAIL_LABEL[r.detail] || "")}${r.served_store_id ? " (" + esc(r.served_store_id) + ")" : ""}`}</p>`
             + `<p>${esc(PLABEL[r.platform] || r.platform)} · Store ${esc(r.store_id)}</p>`,
       } })) };
     const apply = () => {

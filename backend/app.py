@@ -246,7 +246,8 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
                          "locality": s.locality, "lat": s.lat, "lng": s.lng,
                          "status": p.get("status", "na"), "qty": p.get("qty"),
                          "price": p.get("price"), "mrp": p.get("mrp"),
-                         "detail": p.get("detail") or "not_scraped"})
+                         "detail": p.get("detail") or "not_scraped",
+                         "served_store_id": p.get("served_store_id")})
         return {"platform": "swiggy", "product_id": product_id, "name": name, "city": city,
                 "locality": locality, "total_stores": len(stores_), "probed": len(rows),
                 "stores": rows, "summary": _summary(rows), "cached": fresh,
