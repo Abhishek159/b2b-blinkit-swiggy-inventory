@@ -369,6 +369,7 @@
     unmatched: "no confident match", blocked: "blocked", failed: "request failed",
     not_scraped: "timed out", throttled: "rate-limited — retry",
     served_other: "a different store answered for this one",
+    not_available: "no reading — this store never answered",
   };
 
   const state = { platform: "blinkit", city: "", area: "", picked: null };
@@ -840,7 +841,7 @@
       const cls = r.status === "in" ? "in" : r.status === "oos" ? "out" : "unk";
       const label = r.status === "in" ? "In stock" : r.status === "oos" ? "Out of stock" : "Not verified";
       return `<div class="store-row">
-        <span class="store-name"><b>${esc(r.name || "Store")}</b><small>${esc(r.locality || "")} · Store ${esc(r.store_id)}<button class="copy-id" data-copy="${esc(r.store_id)}" type="button">copy</button></small></span>
+        <span class="store-name"><b>${esc(r.name || "Store")}</b><small>${esc(r.locality || "")} · Store ${esc(r.store_id)}${r.pinned_from ? ` · serves ${esc(r.pinned_from)}` : ""}${r.in_snapshot === false ? " · not in our store map" : ""}<button class="copy-id" data-copy="${esc(r.store_id)}" type="button">copy</button></small></span>
         <span>${esc(PLABEL[r.platform] || r.platform)}</span>
         <strong>${typeof r.qty === "number" ? r.qty : "—"}</strong>
         <strong>${r.price != null ? inr(r.price) : "—"}</strong>

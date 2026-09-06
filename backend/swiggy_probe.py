@@ -7,6 +7,8 @@ store's stock + price. Triples come from the bundled catalog_lite.db.
 from __future__ import annotations
 
 import json
+import math
+import random
 import re
 import sqlite3
 import time
@@ -85,6 +87,31 @@ def _inner_status(o):
                 walk(y)
     walk(o)
     return next((v for v in seen if v not in (0, 200)), 0)
+
+
+_JITTER_MIN_M = 50.0
+_JITTER_MAX_M = 70.0
+_MAX_ATTEMPTS = 3
+
+
+def _digits(v) -> str:
+    return re.sub(r"\D", "", str(v))
+
+
+def _jitter(lat: float, lng: float, attempt: int):
+    """Nudge the pin 50-70 m in a direction that rotates per attempt.
+
+    Two reasons. Probing the exact same coordinate for every check is a fingerprint;
+    and when a warehouse hands the pin to a neighbour, re-asking from a slightly
+    different side is what tells us whether that hand-off is real or incidental.
+    Attempts fan out ~120 degrees apart so a retry samples a genuinely different side.
+    """
+    dist = random.uniform(_JITTER_MIN_M, _JITTER_MAX_M)
+    ang = random.uniform(0, 2 * math.pi) if attempt == 0 else \
+        (attempt * 2 * math.pi / _MAX_ATTEMPTS) + random.uniform(-0.35, 0.35)
+    dlat = (dist * math.cos(ang)) / 111320.0
+    dlng = (dist * math.sin(ang)) / (111320.0 * math.cos(math.radians(lat)) or 1e-9)
+    return lat + dlat, lng + dlng
 
 
 def _probe_one(sess, lat, lng, store_id, item, spin):
@@ -193,45 +220,91 @@ def check(product_id: str, stores: list, cap: int = 24, budget: float = 55.0):
         return None
     pid, parent, spin, mrp0 = trip
     item = (pid, parent)
-    out = []
-    for s in stores[:cap]:
-        if time.time() > deadline:
-            out.append({"store_id": s.store_id, "status": "na", "detail": "not_scraped"})
-            continue
-        node, reason, served = _probe_one(sess, s.lat, s.lng, s.store_id, item, spin)
-        mismatch = bool(served and str(served) != re.sub(r"\D", "", str(s.store_id)))
-        if mismatch:
-            # Another warehouse answered. We therefore know nothing about THIS store, and
-            # counting the reading here would both mislabel it and double-count whenever
-            # several pinned stores are handed off to the same neighbour.
-            out.append({"store_id": s.store_id, "status": "na", "detail": "served_other",
-                        "served_store_id": served})
-            time.sleep(0.3)
-            continue
+
+    def row(store_id, node, detail_reason=None, pinned=None, served=None, attempts=1):
         if node is None:
-            if reason == "not_carried":
-                # Swiggy's cart confirmed (HTTP 200, no error) this store doesn't stock the
-                # SKU at all -- a real "not available here", same league as zero_stock, not
-                # an unknown/unreachable result. See DETAIL_LABEL taxonomy in b2b.html.
-                out.append({"store_id": s.store_id, "status": "oos", "qty": 0,
-                            "price": None, "mrp": mrp0, "detail": "not_carried"})
-            else:
-                out.append({"store_id": s.store_id, "status": "na", "detail": reason or "failed"})
+            r = {"store_id": store_id, "status": "na", "detail": detail_reason or "failed"}
+        else:
+            inv = node.get("inventory", {}) or {}
+            pr = node.get("price", {}) or {}
+            instock = bool(inv.get("in_stock"))
+            # inv["total"] is the true stock count. NOT cart_allowed_quantity /
+            # max_allowed_quantity -- those are per-order purchase caps.
+            r = {"store_id": store_id,
+                 "status": "in" if instock else "oos",
+                 "qty": inv.get("total") if instock else 0,
+                 "price": pr.get("offer_price"), "mrp": pr.get("mrp") or mrp0,
+                 "detail": "matched" if instock else "zero_stock"}
+        if pinned and _digits(pinned) != _digits(store_id):
+            r["pinned_from"] = pinned          # we aimed at one store, this one answered
+        r["attempts"] = attempts
+        if served:
+            r["served_store_id"] = served
+        return r
+
+    resolved: dict = {}     # store_id that the data ACTUALLY belongs to -> row
+    unresolved: list = []   # pinned stores we never got a reading for
+
+    for s_ in stores[:cap]:
+        sid = _digits(s_.store_id)
+        if sid in resolved:
+            continue        # a previous pin already produced this store's reading
+        last_served, last_node, last_reason = None, None, None
+        got = False
+
+        for attempt in range(_MAX_ATTEMPTS):
+            if time.time() > deadline:
+                last_reason = "not_scraped"
+                break
+            jlat, jlng = _jitter(s_.lat, s_.lng, attempt)
+            node, reason, served = _probe_one(sess, jlat, jlng, s_.store_id, item, spin)
+            served = _digits(served) if served else None
+            last_reason = reason or last_reason
             time.sleep(0.3)
-            continue
-        inv = node.get("inventory", {}) or {}
-        pr = node.get("price", {}) or {}
-        instock = bool(inv.get("in_stock"))
-        # inv["total"] is the true stock count (verified against raw response). Do NOT use
-        # cart_allowed_quantity/max_allowed_quantity -- those are per-order purchase caps
-        # and understate real stock (e.g. total=12 in stock but allowedQuantity=2).
-        out.append({"store_id": s.store_id,
-                    "status": "in" if instock else "oos",
-                    "qty": inv.get("total") if instock else 0,
-                    "price": pr.get("offer_price"), "mrp": pr.get("mrp") or mrp0,
-                    "detail": "matched" if instock else "zero_stock",
-                    "served_store_id": served})
-        time.sleep(0.3)   # pace
+
+            if served and served == sid:
+                resolved[sid] = row(sid, node, reason, pinned=sid, served=served,
+                                    attempts=attempt + 1)
+                got = True
+                break
+
+            if served:
+                # A neighbour answered. Re-ask from a different side: if the SAME
+                # neighbour answers again, the hand-off is real and its stock is the
+                # honest answer for this point -- for a high-value SKU that IS how
+                # Swiggy fulfils. One-off disagreement means keep looking.
+                if served == last_served:
+                    if served not in resolved:
+                        resolved[served] = row(served, node, reason, pinned=sid,
+                                               served=served, attempts=attempt + 1)
+                    got = True
+                    break
+                last_served, last_node = served, node
+                continue
+
+            if node is not None:            # answered, but told us no store id
+                resolved[sid] = row(sid, node, reason, pinned=sid, attempts=attempt + 1)
+                got = True
+                break
+            if reason in ("throttled", "failed"):
+                break                        # retrying a throttle only deepens it
+
+        if not got:
+            # accept a single-sighting neighbour rather than discard a real reading
+            if last_served and last_node is not None and last_served not in resolved:
+                resolved[last_served] = row(last_served, last_node, None, pinned=sid,
+                                            served=last_served, attempts=_MAX_ATTEMPTS)
+            else:
+                unresolved.append((sid, last_reason))
+
+    out = list(resolved.values())
+    # every pinned store we never resolved is reported explicitly as unavailable data,
+    # never as zero -- "we could not read this store" is not "this store has none".
+    for sid, reason in unresolved:
+        if sid not in resolved:
+            out.append({"store_id": sid, "status": "na",
+                        "detail": reason if reason in ("throttled", "not_scraped", "failed",
+                                                       "not_carried") else "not_available"})
 
     # Run-level sanity guard: if not ONE store matched across the whole fan-out, that is a
     # probe failure (throttle, rotated build, dead session) -- not 12 independent confirmed

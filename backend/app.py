@@ -238,16 +238,28 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
                         age = time.time() - hit[0]
                         if age < _SW_STALE_MAX:
                             per, stale_age = hit[1], age
-        by_id = {p["store_id"]: p for p in per}
+        # Rows are keyed by the store the reading ACTUALLY belongs to, which may be a
+        # neighbour that answered for a pinned store -- so resolve coordinates city-wide,
+        # not just within the chosen area, and fall back to the pinned store's position
+        # when the responder isn't in our snapshot at all.
+        city_index = {str(x.store_id): x for x in ds.stores_in_city("swiggy", city)}
+        area_index = {str(x.store_id): x for x in stores_}
         rows = []
-        for s in stores_[:24]:
-            p = by_id.get(s.store_id, {"status": "na", "detail": "not_scraped"})
-            rows.append({"platform": "swiggy", "store_id": s.store_id, "name": s.name,
-                         "locality": s.locality, "lat": s.lat, "lng": s.lng,
+        for p in per:
+            sid = str(p.get("store_id"))
+            st = city_index.get(sid) or area_index.get(sid)
+            src = area_index.get(str(p.get("pinned_from"))) if p.get("pinned_from") else None
+            rows.append({"platform": "swiggy", "store_id": sid,
+                         "name": st.name if st else "Instamart",
+                         "locality": st.locality if st else (src.locality if src else locality),
+                         "lat": st.lat if st else (src.lat if src else None),
+                         "lng": st.lng if st else (src.lng if src else None),
                          "status": p.get("status", "na"), "qty": p.get("qty"),
                          "price": p.get("price"), "mrp": p.get("mrp"),
                          "detail": p.get("detail") or "not_scraped",
-                         "served_store_id": p.get("served_store_id")})
+                         "pinned_from": p.get("pinned_from"),
+                         "in_snapshot": bool(st),
+                         "attempts": p.get("attempts")})
         return {"platform": "swiggy", "product_id": product_id, "name": name, "city": city,
                 "locality": locality, "total_stores": len(stores_), "probed": len(rows),
                 "stores": rows, "summary": _summary(rows), "cached": fresh,
