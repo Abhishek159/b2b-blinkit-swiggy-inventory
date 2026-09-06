@@ -242,11 +242,12 @@ def check(product_id: str, stores: list, cap: int = 24, budget: float = 55.0):
             r["served_store_id"] = served
         return r
 
-    resolved: dict = {}     # store_id that the data ACTUALLY belongs to -> row
-    unresolved: list = []   # pinned stores we never got a reading for
+    resolved: dict = {}     # store_id the data ACTUALLY belongs to -> row
+    attempted: dict = {}    # every pinned store we tried -> last reason, so none vanish
 
     for s_ in stores[:cap]:
         sid = _digits(s_.store_id)
+        attempted.setdefault(sid, None)
         if sid in resolved:
             continue        # a previous pin already produced this store's reading
         last_served, last_node, last_reason = None, None, None
@@ -294,17 +295,23 @@ def check(product_id: str, stores: list, cap: int = 24, budget: float = 55.0):
             if last_served and last_node is not None and last_served not in resolved:
                 resolved[last_served] = row(last_served, last_node, None, pinned=sid,
                                             served=last_served, attempts=_MAX_ATTEMPTS)
-            else:
-                unresolved.append((sid, last_reason))
+        attempted[sid] = last_reason
 
-    out = list(resolved.values())
-    # every pinned store we never resolved is reported explicitly as unavailable data,
-    # never as zero -- "we could not read this store" is not "this store has none".
-    for sid, reason in unresolved:
-        if sid not in resolved:
+    # One row per store we were asked about, ALWAYS. A neighbour answering is extra
+    # information, not a substitute -- if we never read the pinned store we say so,
+    # because "we could not read this store" is not "this store has none". Responders
+    # from outside the list are appended so their reading is not lost either.
+    out = []
+    for sid, reason in attempted.items():
+        if sid in resolved:
+            out.append(resolved[sid])
+        else:
             out.append({"store_id": sid, "status": "na",
                         "detail": reason if reason in ("throttled", "not_scraped", "failed",
                                                        "not_carried") else "not_available"})
+    for sid, r in resolved.items():
+        if sid not in attempted:
+            out.append(r)
 
     # Run-level sanity guard: if not ONE store matched across the whole fan-out, that is a
     # probe failure (throttle, rotated build, dead session) -- not 12 independent confirmed
