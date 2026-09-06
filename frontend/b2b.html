@@ -576,12 +576,15 @@
   // ---------- platform ----------
   $$(".platform-btn:not(:disabled)").forEach(b => b.onclick = async () => {
     if (state.platform === b.dataset.platform) return;
-    // Switching platform clears the product, the search results AND the result panel.
-    // Catalogues and ids are per-platform, so anything on screen belongs to the app you
-    // just left -- leaving a Blinkit map up while the header says Instamart is the most
-    // confusing state the page can be in. City and area DO carry over: they are shared
-    // across platforms, and re-picking your location every time is its own annoyance.
+    // What actually confuses people is a STALE RESULT -- a Blinkit map and store table
+    // sitting under a header that now says Instamart. The typed product name is not
+    // confusing, and wiping it forces a retype mid-task, which is why changing the area
+    // keeps your product but changing the platform used to throw it away.
+    // So: results are cleared, the query survives and is re-run on the new catalogue.
+    // The product is NOT auto-picked -- the ids differ per platform and "Apple AirPods 4"
+    // could land on the wrong variant -- so you confirm the match with one tap.
     const keepArea = state.area || $("#area").value;
+    const keepQuery = ($("#product").value || "").trim();
 
     state.platform = b.dataset.platform;
     state.picked = null;
@@ -590,19 +593,24 @@
       x.setAttribute("aria-pressed", String(x === b));
     });
 
-    $("#product").value = "";
+    // drop everything that belonged to the platform we just left
     $("#itemResults").classList.remove("open"); $("#itemResults").innerHTML = "";
-    searchNote(""); formError("");
-    $("#results").classList.remove("show");      // drop the other platform's map/metrics
+    $("#results").classList.remove("show");
     $("#storeSection").style.display = "none";
     $("#notices").innerHTML = "";
-    LAST = null;
+    searchNote(""); formError(""); LAST = null;
 
     renderCityStrip(); renderExamples(); markSearchPlatform();
     await loadAreas();
     const stillThere = [...$("#area").options].some(o => o.value === keepArea);
     if (keepArea && stillThere) { $("#area").value = keepArea; state.area = keepArea; }
     else if (keepArea) formError(`${keepArea} has no ${PLABEL[state.platform]} store — pick another area.`);
+
+    if (keepQuery) {
+      $("#product").value = keepQuery;
+      await search(keepQuery);                 // cards shown, nothing auto-selected
+      if (!state.picked) searchNote(`Showing “${keepQuery}” on ${PLABEL[state.platform]} — tap the matching product.`);
+    }
     steps();
   });
 
