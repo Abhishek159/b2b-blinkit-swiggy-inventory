@@ -122,6 +122,17 @@
   .itembrand{font-size:10.5px;color:var(--muted);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .itemmeta{display:flex;justify-content:space-between;gap:6px;font-size:10.5px;color:var(--muted)}
   .itemmeta b{color:var(--ink);font-weight:800}
+  .recent{display:none;align-items:center;gap:7px;flex-wrap:wrap;margin-top:12px}
+  .recent.show{display:flex}
+  .recent>span{color:var(--muted);font-size:12px;font-weight:800}
+  .recent-chip{display:flex;align-items:center;gap:7px;min-height:36px;padding:4px 10px 4px 4px;
+    border:1px solid var(--line);border-radius:999px;background:#fff;color:#4d4957;font-size:12px;font-weight:750}
+  .recent-chip:hover{border-color:var(--action);color:var(--action)}
+  .recent-chip img{width:26px;height:26px;border-radius:50%;object-fit:contain;background:#faf9fb;flex:0 0 auto}
+  .recent-chip i{width:7px;height:7px;border-radius:50%;flex:0 0 auto}
+  .recent-chip i.blinkit{background:var(--yellow)}
+  .recent-chip i.swiggy{background:var(--swiggy)}
+  .recent-clear{border:0;background:none;color:var(--muted);font-size:12px;font-weight:750;text-decoration:underline}
   .search-note{margin-top:12px;padding:11px 12px;border-radius:7px;background:var(--soft);border:1px solid var(--line);color:var(--muted);font-size:13px;display:none}
   .search-note.show{display:block}
   .sk{height:186px;border-radius:8px;background:linear-gradient(100deg,#f1f0f4 30%,#f8f8fa 50%,#f1f0f4 70%);
@@ -217,7 +228,7 @@
     .shell{padding:0 16px}.coverage{display:none}.intro{padding:28px 0 22px}h1{font-size:38px}.result-layout{grid-template-columns:1fr}.summary-panel{display:grid;grid-template-columns:1fr 1.25fr}.insight{grid-column:1/-1}.map-panel{min-height:410px}
   }
   @media(max-width:680px){
-    .site-header{height:62px}.brand{font-size:19px;gap:8px}.brand-mark{width:29px;height:29px}.live-badge{display:none}.header-actions .ghost-btn{height:34px;padding:0 10px;font-size:12px}.shell{padding:0 12px}.intro{padding:24px 2px 20px}h1{font-size:32px}.intro p{font-size:15px}.finder-head{align-items:flex-start;padding:16px}.step-line{display:none}.finder-body{padding:14px}.platform-row{gap:5px}.platform-btn{height:44px;padding:0 7px;font-size:13px}.platform-btn .status-label{display:none}.city-btn{flex-basis:130px}.search-row{grid-template-columns:1fr}.primary-btn{width:100%}.itemresults{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));max-height:none;gap:8px}.itemname{font-size:11.5px}.sk{height:150px}.result-head{flex-direction:column;gap:10px}.result-head h2{font-size:20px}.map-panel{min-height:350px}.map-topbar{align-items:flex-start}.legend{flex-direction:column;align-items:flex-start;gap:5px}.summary-panel{grid-template-columns:1fr}.metric-grid{grid-column:1/-1}.store-row.header{display:none}.store-row{grid-template-columns:1fr auto;gap:7px;padding:13px 14px}.store-row>*:nth-child(2){display:none}.store-row>*:nth-child(3):before{content:"Units: ";color:var(--muted)}.store-row>*:nth-child(4){text-align:right}.store-row>*:nth-child(5){grid-column:2;text-align:right}.how-grid,.all-cities{grid-template-columns:1fr}.modal-card{padding:18px}
+    .site-header{height:62px}.brand{font-size:19px;gap:8px}.brand-mark{width:29px;height:29px}.live-badge{display:none}.header-actions .ghost-btn{height:34px;padding:0 10px;font-size:12px}.shell{padding:0 12px}.intro{padding:24px 2px 20px}h1{font-size:32px}.intro p{font-size:15px}.finder-head{align-items:flex-start;padding:16px}.step-line{display:none}.finder-body{padding:14px}.platform-row{gap:5px}.platform-btn{height:44px;padding:0 7px;font-size:13px}.platform-btn .status-label{display:none}.city-btn{flex-basis:130px}.search-row{grid-template-columns:1fr}.primary-btn{width:100%}.itemresults{grid-template-columns:repeat(auto-fill,minmax(104px,1fr));max-height:none;gap:8px}.itemname{font-size:11.5px}.sk{height:150px}.result-head{flex-direction:column;gap:10px}.result-head h2{font-size:20px}.map-panel{min-height:320px}.map-topbar{left:8px;right:8px;top:8px;gap:6px}.map-context{padding:7px 9px;max-width:52%}.map-context b{font-size:12px}.legend{flex-direction:column;align-items:flex-start;gap:4px;padding:7px 8px;font-size:10px}.maplibregl-ctrl-bottom-right{display:none}.summary-panel{grid-template-columns:1fr}.metric-grid{grid-column:1/-1}.store-row.header{display:none}.store-row{grid-template-columns:1fr auto;gap:7px;padding:13px 14px}.store-row>*:nth-child(2){display:none}.store-row>*:nth-child(3):before{content:"Units: ";color:var(--muted)}.store-row>*:nth-child(4){text-align:right}.store-row>*:nth-child(5){grid-column:2;text-align:right}.how-grid,.all-cities{grid-template-columns:1fr}.modal-card{padding:18px}
   }
   @media(max-width:390px){.brand{font-size:17px}.platform-btn{font-size:12px}.city-btn{flex-basis:122px}.map-context span{display:none}}
 </style>
@@ -274,6 +285,7 @@
       <div class="form-error" id="formError" role="alert"></div>
       <div class="search-note" id="searchNote"></div>
       <div class="itemresults" id="itemResults" role="listbox" aria-label="Product results"></div>
+      <div class="recent" id="recent"></div>
       <div class="examples" id="examples"><span>Try an example:</span></div>
     </div>
   </section>
@@ -381,7 +393,7 @@
       const d = await (await api("/api/b2b/cities")).json();
       CITIES = d.cities || []; BY_CITY = d.by_city || {};
       state.city = CITIES.includes("Bengaluru") ? "Bengaluru" : CITIES[0];
-      renderCityStrip(); renderCityModal(); renderExamples();
+      renderCityStrip(); renderCityModal(); renderExamples(); renderRecent();
       await loadAreas();
     } catch { formError("Couldn't load cities — refresh to try again."); }
     steps();
@@ -429,14 +441,35 @@
 
   // ---------- platform ----------
   $$(".platform-btn:not(:disabled)").forEach(b => b.onclick = async () => {
+    if (state.platform === b.dataset.platform) return;
+    // Platform is a COMPARISON TOGGLE, not a reset. City and area are shared across
+    // platforms (all 14 areas in every big city exist on both), so carry them over.
+    // product_id genuinely IS platform-specific, so the id can't survive -- but the
+    // words the user typed can, and re-running them is what they actually meant.
+    const keepArea = state.area || $("#area").value;
+    const keepQuery = ($("#product").value || "").trim();
+    const hadResult = !!LAST;
+
     state.platform = b.dataset.platform;
-    state.picked = null; $("#product").value = "";
+    state.picked = null;
     $$(".platform-btn").forEach(x => {
       x.classList.toggle("active", x === b);
       x.setAttribute("aria-pressed", String(x === b));
     });
     renderCityStrip(); renderExamples();
-    await loadAreas(); steps(); formError("");
+    await loadAreas();
+
+    const stillThere = [...$("#area").options].some(o => o.value === keepArea);
+    if (keepArea && stillThere) { $("#area").value = keepArea; state.area = keepArea; }
+    else if (keepArea) formError(`${keepArea} has no ${PLABEL[state.platform]} store — pick another area.`);
+
+    if (keepQuery) {
+      $("#product").value = keepQuery;
+      await search(keepQuery, { autoPick: true });
+      // only continue automatically if the switch resolved cleanly end-to-end
+      if (state.picked && state.area && hadResult) runCheck();
+    }
+    steps();
   });
   $$(".platform-btn[disabled]").forEach(b => b.title = "Zepto sits behind a bot wall that needs a different approach — not wired up yet.");
 
@@ -471,11 +504,55 @@
     if (q.length < 2) { $("#itemResults").classList.remove("open"); $("#itemResults").innerHTML = ""; searchNote(""); return; }
     timer = setTimeout(() => search(q), 220);
   });
+  // ---------- recent searches (kept on this device) ----------
+  const RECENT_KEY = "qca_recent_v1";
+  const getRecent = () => { try { return JSON.parse(localStorage.getItem(RECENT_KEY) || "[]"); } catch { return []; } };
+  function saveRecent(item) {
+    try {
+      const entry = { product_id: item.product_id, name: item.name, brand: item.brand || "",
+        pack: item.pack_size || "", mrp: item.mrp || null, image: item.image_url || "",
+        platform: state.platform, city: state.city, area: state.area || $("#area").value || "" };
+      const list = getRecent().filter(x => !(x.product_id === entry.product_id && x.platform === entry.platform));
+      list.unshift(entry);
+      localStorage.setItem(RECENT_KEY, JSON.stringify(list.slice(0, 8)));
+      renderRecent();
+    } catch {}
+  }
+  function renderRecent() {
+    const list = getRecent(), wrap = $("#recent");
+    wrap.classList.toggle("show", list.length > 0);
+    if (!list.length) { wrap.innerHTML = ""; return; }
+    wrap.innerHTML = `<span>Recent:</span>` + list.map((x, i) => `
+      <button class="recent-chip" data-i="${i}" type="button" title="${esc(x.name)} · ${esc(x.city)}${x.area ? " · " + esc(x.area) : ""}">
+        ${x.image ? `<img src="${esc(x.image)}" alt="" loading="lazy">` : `<i class="${esc(x.platform)}"></i>`}
+        ${esc(x.name.length > 26 ? x.name.slice(0, 25) + "…" : x.name)}
+      </button>`).join("") + `<button class="recent-clear" id="recentClear" type="button">Clear</button>`;
+    $$(".recent-chip").forEach(b => b.onclick = () => reopenRecent(getRecent()[+b.dataset.i]));
+    $("#recentClear").onclick = () => { try { localStorage.removeItem(RECENT_KEY); } catch {} renderRecent(); };
+  }
+  async function reopenRecent(x) {
+    if (!x) return;
+    state.platform = x.platform;
+    $$(".platform-btn").forEach(b => b.classList.toggle("active", b.dataset.platform === x.platform));
+    if (CITIES.includes(x.city)) state.city = x.city;
+    renderCityStrip(); renderExamples();
+    await loadAreas();
+    if (x.area && [...$("#area").options].some(o => o.value === x.area)) {
+      $("#area").value = x.area; state.area = x.area;
+    }
+    // the stored id belongs to this platform, so it can be reused directly
+    state.picked = { product_id: x.product_id, name: x.name, brand: x.brand, pack_size: x.pack, mrp: x.mrp, image_url: x.image };
+    $("#product").value = x.name;
+    $("#itemResults").classList.remove("open"); $("#itemResults").innerHTML = "";
+    searchNote(""); formError(""); steps();
+    if (state.area) runCheck();
+  }
+
   const searchNote = msg => {
     const n = $("#searchNote");
     n.textContent = msg || ""; n.classList.toggle("show", !!msg);
   };
-  async function search(q) {
+  async function search(q, opts = {}) {
     const mine = ++seq, grid = $("#itemResults");
     searchNote("");
     grid.innerHTML = Array.from({ length: 6 }, () => `<div class="sk"></div>`).join("");
@@ -501,14 +578,29 @@
             <span class="itemmeta"><span>${esc(p.pack_size || "")}</span>${p.mrp ? `<b>${inr(p.mrp)}</b>` : ""}</span>
           </span>
         </button>`).join("");
-      $$("#itemResults .itemcard").forEach(b => b.onclick = () => {
-        state.picked = d.results[+b.dataset.i];
-        $("#product").value = state.picked.name;
-        $$("#itemResults .itemcard").forEach(x => x.classList.toggle("picked", x === b));
+      const pick = (item, card, note) => {
+        state.picked = item;
+        $("#product").value = item.name;
+        $$("#itemResults .itemcard").forEach(x => x.classList.toggle("picked", x === card));
         $("#product").classList.remove("invalid");
-        formError(""); steps();
-        searchNote(`Selected: ${state.picked.name}. Now press “View availability map”.`);
-      });
+        formError(""); steps(); saveRecent(item);
+        searchNote(note);
+      };
+      const cards = $$("#itemResults .itemcard");
+      cards.forEach(b => b.onclick = () => pick(d.results[+b.dataset.i], b,
+        `Selected: ${d.results[+b.dataset.i].name}. Now press “View availability map”.`));
+
+      // Carrying a search across platforms: land on the closest match so the compare
+      // is one click, but say WHICH SKU it landed on -- never swap the product silently.
+      if (opts.autoPick) {
+        const norm = v => String(v || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+        const want = norm(q);
+        const i = d.results.findIndex(r => norm(r.name) === want);
+        const j = i >= 0 ? i : 0;
+        pick(d.results[j], cards[j],
+          `On ${PLABEL[state.platform]} this matched “${d.results[j].name}”. Pick a different card if that's the wrong variant.`);
+        cards[j].scrollIntoView({ block: "nearest" });
+      }
     } catch {
       grid.classList.remove("open"); grid.innerHTML = "";
       searchNote("Search failed — try again.");
@@ -742,7 +834,14 @@
   const FILL = { in: "#16794b", oos: "#bd3636", na: "#ffffff" };
   function paintMap(rows) {
     const pts = rows.filter(r => r.lat && r.lng);
-    if (!pts.length || MAPFAIL) return;
+    if (MAPFAIL) return;
+    if (!pts.length) return;
+    if (typeof maplibregl === "undefined") {   // CDN blocked / offline
+      MAPFAIL = true;
+      $("#map").innerHTML = `<div style="display:grid;place-items:center;height:100%;padding:24px;text-align:center;color:var(--muted);font-size:13px">
+        The map couldn't load.<br>The store list below has every result.</div>`;
+      return;
+    }
     try {
       if (!MAP) {
         MAP = new maplibregl.Map({
@@ -753,7 +852,12 @@
         // on a phone a one-finger drag should scroll the page, not pan the map
         if (window.matchMedia("(max-width:900px)").matches) MAP.dragPan.disable();
       }
-    } catch { MAPFAIL = true; return; }
+    } catch {
+      MAPFAIL = true;
+      $("#map").innerHTML = `<div style="display:grid;place-items:center;height:100%;padding:24px;text-align:center;color:var(--muted);font-size:13px">
+        The map couldn't load in this browser.<br>The store list below has every result.</div>`;
+      return;
+    }
     const maxQty = Math.max(1, ...pts.filter(r => typeof r.qty === "number").map(r => r.qty));
     const gj = { type: "FeatureCollection", features: pts.map(r => ({
       type: "Feature", geometry: { type: "Point", coordinates: [r.lng, r.lat] },
@@ -779,12 +883,26 @@
         MAP.on("mouseenter", "inv", () => MAP.getCanvas().style.cursor = "pointer");
         MAP.on("mouseleave", "inv", () => MAP.getCanvas().style.cursor = "");
       }
+      try { MAP.resize(); } catch {}
       const b = new maplibregl.LngLatBounds();
       gj.features.forEach(f => b.extend(f.geometry.coordinates));
-      MAP.fitBounds(b, { padding: 70, maxZoom: 13.5 });
+      const pad = window.matchMedia("(max-width:680px)").matches ? 34 : 70;
+      MAP.fitBounds(b, { padding: pad, maxZoom: 13.5 });
     };
     try { MAP.isStyleLoaded() ? apply() : MAP.once("load", apply); } catch { MAPFAIL = true; }
   }
+
+  // MapLibre sizes itself to the container when created and does NOT re-measure on
+  // its own. On a phone the viewport changes constantly -- rotation, the address bar
+  // collapsing, the keyboard opening -- and without this the canvas keeps the old
+  // size and the map renders letterboxed or clipped.
+  let rz = null;
+  const resizeMap = () => {
+    clearTimeout(rz);
+    rz = setTimeout(() => { try { MAP && MAP.resize(); } catch {} }, 180);
+  };
+  window.addEventListener("resize", resizeMap);
+  window.addEventListener("orientationchange", () => setTimeout(resizeMap, 350));
 
   // ---------- modals ----------
   $("#howButton").addEventListener("click", () => $("#howModal").classList.add("open"));
