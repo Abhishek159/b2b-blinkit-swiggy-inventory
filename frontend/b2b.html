@@ -280,20 +280,33 @@
   .all-cities button{min-height:42px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);font-weight:800;padding:0 6px;font-size:12.5px}
   .all-cities button:hover{border-color:var(--action)}
   footer{padding:0 0 40px;color:var(--muted);font-size:12px;line-height:1.6}
-  .contact{display:none;margin:0 0 18px;padding:16px;border:1px solid var(--line);border-radius:8px;
-    background:var(--surface);box-shadow:var(--shadow)}
+  .contact{display:none;margin:0 0 20px}
   .contact.on{display:block}
-  .contact h4{margin:0;font-size:14px;color:var(--ink)}
-  .contact p{margin:5px 0 0;color:var(--muted);font-size:12.5px;line-height:1.5}
-  .contact-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .contact-eyebrow{margin:0 0 10px;color:var(--muted);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+  .contact-card{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+    padding:20px;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:var(--shadow)}
+  .avatar{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--brand),#ff8a5c);color:#fff;font-size:20px;font-weight:900;
+    letter-spacing:.02em;box-shadow:0 6px 16px rgba(244,81,42,.28)}
+  .contact-body h4{margin:0;font-size:17px;font-weight:850;letter-spacing:-.01em}
+  .contact-body .who{margin:2px 0 0;color:var(--brand);font-size:12px;font-weight:850}
+  .contact-body p{margin:9px 0 0;color:var(--muted);font-size:13.5px;line-height:1.55;max-width:62ch}
+  .contact-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
   /* 44px tall: a real thumb target, not a decorative icon */
-  .contact-links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;
-    border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);
-    font-size:13px;font-weight:800;text-decoration:none}
-  .contact-links a:hover{border-color:var(--action);color:var(--action)}
-  .contact-links svg{width:17px;height:17px;flex:0 0 auto}
+  .contact-links a{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 13px;
+    border:1px solid var(--line);border-radius:999px;background:#fff;color:#4d4957;
+    font-size:12.5px;font-weight:800;text-decoration:none;transition:border-color .15s,color .15s,transform .15s}
+  .contact-links a:hover{transform:translateY(-1px)}
+  .contact-links svg{width:16px;height:16px;flex:0 0 auto}
   .contact-links a.wa:hover{border-color:#25d366;color:#128c4a}
   .contact-links a.li:hover{border-color:#0a66c2;color:#0a66c2}
+  .contact-links a.mail:hover{border-color:var(--brand);color:var(--brand)}
+  .contact-links a.x:hover{border-color:var(--ink);color:var(--ink)}
+  @media(max-width:680px){
+    .contact-card{grid-template-columns:1fr;gap:12px;padding:16px}
+    .avatar{width:46px;height:46px;font-size:17px}
+    .contact-links a{flex:1 1 calc(50% - 4px);justify-content:center}
+  }
 
   @media(max-width:900px){
     .shell{padding:0 16px}.coverage{display:none}.intro{padding:28px 0 22px}h1{font-size:38px}.result-layout{grid-template-columns:1fr}.summary-panel{display:grid;grid-template-columns:1fr 1.25fr}.insight{grid-column:1/-1}.map-panel{min-height:min(56vh,440px)}
@@ -1169,16 +1182,24 @@
       const digits = String(c.whatsapp).replace(/[^0-9]/g, "");
       links.push(`<a class="wa" href="https://wa.me/${digits}" target="_blank" rel="noopener noreferrer">${ICON.wa}WhatsApp${c.show_number ? " · " + esc(c.whatsapp) : ""}</a>`);
     }
-    if (c.email) links.push(`<a href="mailto:${esc(c.email)}">${ICON.mail}Email</a>`);
+    if (c.email) links.push(`<a class="mail" href="mailto:${esc(c.email)}">${ICON.mail}Email</a>`);
     if (c.linkedin) links.push(`<a class="li" href="${esc(c.linkedin)}" target="_blank" rel="noopener noreferrer">${ICON.li}LinkedIn</a>`);
-    if (c.twitter) links.push(`<a href="${esc(c.twitter)}" target="_blank" rel="noopener noreferrer">${ICON.x}X</a>`);
+    if (c.twitter) links.push(`<a class="x" href="${esc(c.twitter)}" target="_blank" rel="noopener noreferrer">${ICON.x}X</a>`);
     if (c.github) links.push(`<a href="${esc(c.github)}" target="_blank" rel="noopener noreferrer">${ICON.gh}GitHub</a>`);
     if (c.website) links.push(`<a href="${esc(c.website)}" target="_blank" rel="noopener noreferrer">${ICON.web}Website</a>`);
     if (!links.length) return;
+    const initials = (c.name || "").split(/\s+/).filter(Boolean).slice(0, 2)
+      .map(w => w[0].toUpperCase()).join("") || "•";
     const el = $("#contact");
-    el.innerHTML = (c.name ? `<h4>${esc(c.name)}</h4>` : "")
-      + (c.tagline ? `<p>${esc(c.tagline)}</p>` : "")
-      + `<div class="contact-links">${links.join("")}</div>`;
+    el.innerHTML = `<p class="contact-eyebrow">About</p>
+      <div class="contact-card">
+        <span class="avatar" aria-hidden="true">${esc(initials)}</span>
+        <div class="contact-body">
+          ${c.name ? `<h4>Hi, I'm ${esc(c.name)}</h4>` : ""}
+          ${c.tagline ? `<p>${esc(c.tagline)}</p>` : ""}
+          <div class="contact-links">${links.join("")}</div>
+        </div>
+      </div>`;
     el.classList.add("on");
   })();
 
