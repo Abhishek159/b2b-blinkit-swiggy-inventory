@@ -59,7 +59,14 @@ async def ratelimit(request: Request, call_next):
         if len(q) > 40:
             return JSONResponse({"detail": "Too many requests — slow down a moment."},
                                 status_code=429)
-    return await call_next(request)
+    resp = await call_next(request)
+    # StaticFiles sends only ETag/Last-Modified. With no Cache-Control a browser may
+    # heuristically cache the page and never revalidate -- mobile Safari in particular --
+    # so a deployed change simply is not seen. no-cache still allows a 304, it just
+    # forces the check. Assets keep their own long cache.
+    if request.url.path.endswith(".html") or request.url.path == "/":
+        resp.headers["Cache-Control"] = "no-cache, must-revalidate"
+    return resp
 
 # zone-price cache (prices ~city-uniform): one live Swiggy call per (query,~11km cell)
 _SW_CACHE: dict = {}
