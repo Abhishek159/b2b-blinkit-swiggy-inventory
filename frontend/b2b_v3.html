@@ -53,6 +53,15 @@
   .eyebrow{margin:0 0 10px;color:var(--brand);font-size:12px;font-weight:900;text-transform:uppercase}
   h1{margin:0;font-size:42px;line-height:1.08;max-width:none;letter-spacing:0}
   .intro p{margin:12px 0 0;max-width:900px;color:var(--muted);font-size:16px;line-height:1.5}
+  .maplink{display:inline-flex;align-items:center;gap:9px;min-height:42px;margin-top:14px;padding:0 15px;
+    border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);
+    font-size:13px;font-weight:800;text-decoration:none;box-shadow:var(--shadow);
+    transition:border-color .15s,color .15s,transform .15s}
+  .maplink:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-1px)}
+  .maplink svg{width:17px;height:17px;flex:0 0 auto}
+  .maplink .arrow{color:var(--muted);font-weight:900}
+  .maplink:hover .arrow{color:var(--brand)}
+  .maplink-note{display:block;margin-top:7px;color:var(--muted);font-size:11.5px;font-weight:650}
 
   .finder{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
   .finder-head{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
@@ -331,6 +340,15 @@
       <p class="eyebrow">Dark-store intelligence</p>
       <h1>Product availability across India's dark stores.</h1>
       <p>Check where a product is in stock, its selling price and visible inventory across Blinkit and Swiggy Instamart, store by store.</p>
+      <!-- viewer URL, not the /edit one: an edit link either asks strangers to sign in
+           or, if sharing is open, lets them change the map. -->
+      <a class="maplink" href="https://www.google.com/maps/d/viewer?mid=1pD-SizQchBOzukqFRhRHJ_oOwG2fS_g&amp;ll=20.739304584779976%2C79.6328315&amp;z=5"
+         target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        See every dark store on Google Maps
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <small class="maplink-note">Location snapshot — store positions only, not live stock.</small>
     </div>
   </section>
 
