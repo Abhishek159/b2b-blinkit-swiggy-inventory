@@ -923,7 +923,9 @@
         // Retry only a TECHNICAL failure, and only once -- this runs on the visitor's own
         // connection, so a retry storm would burn their Blinkit budget, not ours.
         let res = await attemptOnce(s, 0);
-        if (res.fail === "throttled" || res.fail === "failed") res = await attemptOnce(s, 1);
+        // Retry a genuine network/server failure, but NEVER a 429 -- re-asking a
+        // rate-limiter immediately is what turns one throttle into a longer one.
+        if (res.fail === "failed") res = await attemptOnce(s, 1);
         if (res.fail) { s.status = "na"; s.detail = res.fail; return; }
         const n = res.node;
         if (res.merchant && String(res.merchant) !== String(s.store_id)) s.served_store_id = String(res.merchant);
@@ -937,7 +939,12 @@
         else { s.status = "na"; s.detail = "unmatched"; }
       } catch { s.status = "na"; s.detail = "blocked"; }
     };
-    for (let i = 0; i < stores.length; i += 5) await Promise.all(stores.slice(i, i + 5).map(one));
+    // 3 at a time with a short gap, rather than 5 back-to-back. This runs on the
+    // visitor's own connection, and an unpaced burst is what Blinkit rate-limits.
+    for (let i = 0; i < stores.length; i += 3) {
+      await Promise.all(stores.slice(i, i + 3).map(one));
+      if (i + 3 < stores.length) await new Promise(r => setTimeout(r, 220));
+    }
     const c = k => stores.filter(s => s.status === k).length;
     const prices = stores.filter(s => s.price != null).map(s => s.price);
     const units = stores.filter(s => s.status === "in" && typeof s.qty === "number").map(s => s.qty);

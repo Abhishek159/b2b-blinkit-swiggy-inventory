@@ -414,7 +414,7 @@ _MAX_DERIVED_LOCS = 25   # per city: cap the auto-derived snap targets (bounds s
 # area is folded into its nearest neighbour ("Koramangala-Indiranagar-HSR Layout")
 # until the city fits. 14 rather than 12 keeps the merged labels shorter, since every
 # member name is spelled out in full — see _merged_name.
-_MAX_LOCALITIES_PER_CITY = 14
+_MAX_LOCALITIES_PER_CITY = 22
 _MAX_LABEL_CHARS = 52   # soft budget: keeps a merged name readable on a narrow phone
 _ALWAYS_NAME_MIN_STORES = 4   # but an area with this many stores is ALWAYS named in full
 _CITY_ALIAS = {

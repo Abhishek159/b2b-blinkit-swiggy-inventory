@@ -200,12 +200,12 @@ def _probe_one(sess, lat, lng, store_id, item, spin):
             else (None, "not_carried", served_id))
 
 
-def check(product_id: str, stores: list, cap: int = 24, budget: float = 55.0):
+def check(product_id: str, stores: list, cap: int = 12, budget: float = 40.0):
     """stores: list of dark_stores Store objects. Returns per-store stock/price.
 
-    `cap` covers a WHOLE area rather than sampling it. The largest Instamart area in
-    the data holds 21 stores, so 24 reaches 100% of them; the median area holds 1, so
-    this costs nothing on the typical check. Sampling 12 of 22 and presenting the result
+    `cap` covers a WHOLE area rather than sampling it. With 22 areas per city the median area holds 1
+    store and the 99th percentile holds 12, so 12 covers 99% of areas while halving the
+    outbound burst that was rate-limiting us. Sampling 12 of 22 and presenting the result
     as the area's stock was simply wrong information.
 
     `budget` caps total wall-clock. Without it the worst case is 12 stores x (8s + 12s)

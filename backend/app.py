@@ -306,15 +306,15 @@ def inventory(platform: str = Query(...), product_id: str = Query(...),
                 "locality": locality, "total_stores": len(stores_), "probed": len(rows),
                 "stores": rows, "summary": _summary(rows), "cached": fresh,
                 "stale_seconds": round(stale_age) if stale_age else None,
-                "capped": len(stores_) > 24}
+                "capped": len(stores_) > 12}
 
     # Blinkit -> fetched CLIENT-SIDE: hand the browser the stores + prid to probe itself
     return {"platform": "blinkit", "product_id": product_id, "name": name, "city": city,
             "locality": locality, "total_stores": len(stores_), "client_side": True,
-            "capped": len(stores_) > 40,
+            "capped": len(stores_) > 12,
             "stores": [{"platform": "blinkit", "store_id": s.store_id, "name": s.name,
                         "locality": s.locality, "lat": s.lat, "lng": s.lng, "status": "pending"}
-                       for s in stores_[:40]]}
+                       for s in stores_[:12]]}
 
 
 @app.get("/")
